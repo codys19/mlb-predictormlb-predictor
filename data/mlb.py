@@ -18,7 +18,7 @@ import json
 import os
 import glob
 
-ODDS_API_KEY = "YOUR_KEY_HERE"  # paste your key here
+ODDS_API_KEY = os.environ.get("ODDS_API_KEY", "")  # set via GitHub Secret
 
 MODEL_PATH      = "raw/model.json"
 GAMES_PATH      = "raw/game_results.csv"
