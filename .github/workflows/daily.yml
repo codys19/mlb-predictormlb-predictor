@@ -1,0 +1,41 @@
+name: Daily MLB Picks
+
+on:
+  schedule:
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-predictor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy xgboost scikit-learn requests mlb-statsapi pybaseball
+
+      - name: Run MLB predictor
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python data/mlb.py
+
+      - name: Commit updated files back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add raw/record.json mlb_predictor.html
+          git add raw/picks_*.json history_*.html || true
+          git diff --staged --quiet || git commit -m "Daily picks $(date +'%Y-%m-%d')"
+          git push
