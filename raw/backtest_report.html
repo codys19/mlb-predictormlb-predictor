@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MLB Model Backtest Report</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f3f4f6;color:#111;min-height:100vh}
+  .wrap{max-width:720px;margin:0 auto;padding:20px 14px 60px}
+  table{width:100%;border-collapse:collapse;}
+  th{padding:10px 12px;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;text-align:left;border-bottom:0.5px solid #e5e7eb;}
+  tr:hover td{background:#fafafa;}
+</style>
+</head><body><div class="wrap">
+
+  <div style="margin-bottom:24px;">
+    <h1 style="font-size:22px;font-weight:500;">⚾ MLB Model Backtest</h1>
+    <div style="font-size:13px;color:#9ca3af;margin-top:3px;">
+      2025–2026 seasons · 1,515 games · Generated April 12 2026
+    </div>
+  </div>
+
+  <!-- Summary cards -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+    <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:16px;text-align:center;">
+      <div style="font-size:10px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Overall accuracy</div>
+      <div style="font-size:32px;font-weight:500;color:#65a30d;">55.0%</div>
+      <div style="font-size:12px;color:#9ca3af;margin-top:4px;">834 of 1,515 correct</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:16px;text-align:center;">
+      <div style="font-size:10px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Total profit ($10 flat)</div>
+      <div style="font-size:32px;font-weight:500;color:#dc2626;">$-397</div>
+      <div style="font-size:12px;color:#9ca3af;margin-top:4px;">$15,150 wagered</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:16px;text-align:center;">
+      <div style="font-size:10px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">Overall ROI</div>
+      <div style="font-size:32px;font-weight:500;color:#dc2626;">-2.6%</div>
+      <div style="font-size:12px;color:#9ca3af;margin-top:4px;">vs 52.4% break-even</div>
+    </div>
+  </div>
+
+  <!-- Confidence tiers -->
+  <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:20px;margin-bottom:20px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:16px;">Accuracy by confidence tier</div>
+    
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">50–54%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">468 games</span>
+      <span style="font-size:13px;font-weight:600;color:#9ca3af;">52.6%</span>
+      <span style="font-size:12px;font-weight:500;color:#dc2626;">ROI -7.0%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:52%;height:100%;background:#9ca3af;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">55–59%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">375 games</span>
+      <span style="font-size:13px;font-weight:600;color:#9ca3af;">50.9%</span>
+      <span style="font-size:12px;font-weight:500;color:#dc2626;">ROI -9.9%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:50%;height:100%;background:#9ca3af;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">60–64%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">257 games</span>
+      <span style="font-size:13px;font-weight:600;color:#65a30d;">57.6%</span>
+      <span style="font-size:12px;font-weight:500;color:#16a34a;">ROI +1.9%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:57%;height:100%;background:#65a30d;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">65–69%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">190 games</span>
+      <span style="font-size:13px;font-weight:600;color:#65a30d;">57.4%</span>
+      <span style="font-size:12px;font-weight:500;color:#16a34a;">ROI +1.5%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:57%;height:100%;background:#65a30d;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">70–74%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">112 games</span>
+      <span style="font-size:13px;font-weight:600;color:#16a34a;">63.4%</span>
+      <span style="font-size:12px;font-weight:500;color:#16a34a;">ROI +12.1%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:63%;height:100%;background:#16a34a;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">75–79%</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">70 games</span>
+      <span style="font-size:13px;font-weight:600;color:#9ca3af;">52.9%</span>
+      <span style="font-size:12px;font-weight:500;color:#dc2626;">ROI -6.5%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:52%;height:100%;background:#9ca3af;border-radius:99px;"></div>
+  </div>
+</div>
+<div style="margin-bottom:14px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+    <span style="font-size:13px;font-weight:500;">80%+</span>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <span style="font-size:12px;color:#9ca3af;">43 games</span>
+      <span style="font-size:13px;font-weight:600;color:#16a34a;">74.4%</span>
+      <span style="font-size:12px;font-weight:500;color:#16a34a;">ROI +31.6%</span>
+    </div>
+  </div>
+  <div style="height:6px;background:#f3f4f6;border-radius:99px;overflow:hidden;">
+    <div style="width:74%;height:100%;background:#16a34a;border-radius:99px;"></div>
+  </div>
+</div>
+    <div style="font-size:11px;color:#9ca3af;margin-top:8px;padding-top:12px;border-top:0.5px solid #f3f4f6;">
+      ◀ marks tiers hitting 60%+ accuracy target · ROI assumes favourite at -130, underdog at +110
+    </div>
+  </div>
+
+  <!-- Monthly breakdown -->
+  <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:20px;margin-bottom:20px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:16px;">Monthly breakdown</div>
+    <table>
+      <thead><tr>
+        <th>Month</th><th style="text-align:center;">Games</th>
+        <th style="text-align:center;">Accuracy</th><th style="text-align:center;">ROI</th>
+      </tr></thead>
+      <tbody><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-01</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">275</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#374151;">54.9%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#dc2626;">-2.9%</td>
+        </tr><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-02</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">253</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#374151;">51.0%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#dc2626;">-9.8%</td>
+        </tr><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-03</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">278</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#374151;">54.0%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#dc2626;">-4.6%</td>
+        </tr><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-04</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">283</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#65a30d;">58.3%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#16a34a;">+3.1%</td>
+        </tr><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-05</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">310</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#65a30d;">55.8%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#dc2626;">-1.3%</td>
+        </tr><tr>
+          <td style="padding:10px 12px;font-size:13px;">2025-06</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;">116</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#65a30d;">56.9%</td>
+          <td style="padding:10px 12px;font-size:13px;text-align:center;font-weight:500;color:#16a34a;">+0.7%</td>
+        </tr></tbody>
+    </table>
+    <div style="font-size:11px;color:#9ca3af;margin-top:10px;">
+      Accuracy generally improves mid-season as rolling stats stabilise — expect first 2–3 weeks to be weakest.
+    </div>
+  </div>
+
+  <!-- Recent picks -->
+  <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:20px;margin-bottom:20px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:16px;">Last 20 backtest picks</div>
+    <table>
+      <thead><tr>
+        <th>Date</th><th>Matchup</th><th>Pick</th>
+        <th style="text-align:center;">Conf</th>
+        <th style="text-align:center;">Result</th>
+        <th style="text-align:right;">Profit</th>
+      </tr></thead>
+      <tbody><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">SFG @ SDP</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">57%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">COL @ TOR</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">81%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">PIT @ CIN</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">71%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">CLE @ LAD</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">AWAY</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">54%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">MIN @ KCR</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">64%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">DET @ ARI</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">AWAY</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">51%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">NYY @ SEA</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">AWAY</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">82%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">WSN @ PHI</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">72%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">TEX @ BAL</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">72%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">BOS @ HOU</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">58%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-11</td>
+          <td style="padding:8px 12px;font-size:12px;">TBR @ MIL</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">AWAY</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">55%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">COL @ TOR</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">68%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">TBR @ MIL</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">51%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">BOS @ HOU</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">61%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">MIN @ KCR</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">60%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">CLE @ LAD</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">AWAY</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">54%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">PIT @ CIN</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">58%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">✅</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#16a34a;">$+7.69</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">WSN @ PHI</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">76%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">TEX @ BAL</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">50%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr><tr style="border-bottom:0.5px solid #f3f4f6;">
+          <td style="padding:8px 12px;font-size:12px;color:#9ca3af;">2025-06-10</td>
+          <td style="padding:8px 12px;font-size:12px;">SFG @ SDP</td>
+          <td style="padding:8px 12px;font-size:12px;font-weight:500;">HOME</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">56%</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:center;">❌</td>
+          <td style="padding:8px 12px;font-size:12px;text-align:right;color:#dc2626;">$-10.00</td>
+        </tr></tbody>
+    </table>
+  </div>
+
+  <!-- What to improve -->
+  <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:20px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:12px;">What would improve accuracy</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:#f9fafb;border-radius:8px;">
+        <div><div style="font-size:13px;font-weight:500;">Individual starter ERA/FIP</div><div style="font-size:11px;color:#9ca3af;margin-top:2px;">Biggest single upgrade — replaces team average pitcher stats</div></div>
+        <div style="font-size:12px;color:#16a34a;font-weight:500;">+3–4%</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:#f9fafb;border-radius:8px;">
+        <div><div style="font-size:13px;font-weight:500;">Vegas moneyline as a feature</div><div style="font-size:11px;color:#9ca3af;margin-top:2px;">The market already prices in injuries, weather, lineups</div></div>
+        <div style="font-size:12px;color:#16a34a;font-weight:500;">+2–3%</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:#f9fafb;border-radius:8px;">
+        <div><div style="font-size:13px;font-weight:500;">Bullpen fatigue</div><div style="font-size:11px;color:#9ca3af;margin-top:2px;">Relievers used in last 3 days significantly affects late-game outcomes</div></div>
+        <div style="font-size:12px;color:#65a30d;font-weight:500;">+1–2%</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:#f9fafb;border-radius:8px;">
+        <div><div style="font-size:13px;font-weight:500;">Park factors</div><div style="font-size:11px;color:#9ca3af;margin-top:2px;">Coors Field inflates COL stats — model currently overrates them at home</div></div>
+        <div style="font-size:12px;color:#65a30d;font-weight:500;">+1%</div>
+      </div>
+    </div>
+  </div>
+
+</div></body></html>

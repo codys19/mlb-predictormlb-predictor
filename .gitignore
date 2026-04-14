@@ -1,0 +1,7 @@
+raw/game_results.csv
+raw/training_data.csv
+raw/backtest_results.csv
+mlb_log.txt
+__pycache__/
+*.pyc
+.env

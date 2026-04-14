@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MLB AI Predictor</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f3f4f6;color:#111;min-height:100vh}
+.wrap{max-width:680px;margin:0 auto;padding:20px 14px 60px}
+@media(max-width:480px){.wrap{padding:14px 10px 40px}}</style>
+</head><body><div class="wrap">
+  <div style="margin-bottom:20px;">
+    <h1 style="font-size:22px;font-weight:500;">MLB AI Predictor</h1>
+    <div style="font-size:13px;color:#9ca3af;margin-top:3px;">Monday, April 13 2026 · 6 games</div>
+  </div>
+  <div style="background:#f9fafb;border-radius:12px;border:0.5px solid #e5e7eb;padding:16px 18px;margin-bottom:20px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:12px;">Model record</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">
+      <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">All time</div><div style="font-size:22px;font-weight:500;">14-14</div><div style="font-size:11px;color:#16a34a;">50.0%</div></div>
+      <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">This month</div><div style="font-size:22px;font-weight:500;">14-14</div></div>
+      <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">This week</div><div style="font-size:22px;font-weight:500;">14-14</div></div>
+      <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">Yesterday</div><div style="font-size:22px;font-weight:500;">7-7</div></div>
+    </div>
+    <div style="height:5px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin-bottom:4px;">
+      <div style="width:50.0%;height:100%;background:#16a34a;border-radius:99px;"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-bottom:12px;">
+      <span>Hit rate</span><span>Target 65% · Break-even 52.4%</span>
+    </div>
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">Record by confidence</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+      <div style="background:#fff;border-radius:8px;padding:10px 6px;text-align:center;border:0.5px solid #e5e7eb;">
+      <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">50-59%</div>
+      <div style="font-size:13px;font-weight:500;">1-3</div>
+      <div style="font-size:10px;color:#374151;margin-top:1px;">25%</div></div><div style="background:#fff;border-radius:8px;padding:10px 6px;text-align:center;border:0.5px solid #e5e7eb;">
+      <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">60-69%</div>
+      <div style="font-size:13px;font-weight:500;">6-2</div>
+      <div style="font-size:10px;color:#16a34a;margin-top:1px;">75%</div></div><div style="background:#fff;border-radius:8px;padding:10px 6px;text-align:center;border:0.5px solid #e5e7eb;">
+      <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">70-79%</div>
+      <div style="font-size:13px;font-weight:500;">5-7</div>
+      <div style="font-size:10px;color:#374151;margin-top:1px;">42%</div></div><div style="background:#fff;border-radius:8px;padding:10px 6px;text-align:center;border:0.5px solid #e5e7eb;">
+      <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">80%+</div>
+      <div style="font-size:13px;font-weight:500;">2-2</div>
+      <div style="font-size:10px;color:#374151;margin-top:1px;">50%</div></div>
+    </div>
+  </div>
+  <div style="overflow-x:auto;white-space:nowrap;margin-bottom:16px;padding-bottom:4px;"><a href="mlb_predictor.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#111;color:#fff;">Today - Apr 13</a><a href="history_2026-04-12.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#f3f4f6;color:#374151;">Apr 12<span style="font-size:11px;color:#9ca3af;"> 7-7</span></a><a href="history_2026-04-10.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#f3f4f6;color:#374151;">Apr 10<span style="font-size:11px;color:#9ca3af;"> 7-7</span></a></div>
+  <div style="display:flex;justify-content:flex-end;margin-bottom:12px;font-size:11px;color:#9ca3af;gap:5px;">
+    EV: <span style="color:#16a34a;">+8 excellent</span> · <span style="color:#65a30d;">+3 good</span> · <span style="color:#d97706;">marginal</span> · <span style="color:#dc2626;">neg = skip</span>
+  </div>
+  
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(0)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">7:40 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#16a34a;">75% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">Boston Red Sox</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 2-3 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: Garrett Crochet</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:13px;color:#9ca3af;">24%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:26px;font-weight:600;color:#111;">75%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Minnesota Twins</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 3-2 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Bailey Ober SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:24%;background:#93c5fd;border-radius:99px 0 0 99px;"></div>
+        <div style="width:75%;background:#16a34a;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Minnesota Twins</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint0">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body0" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Minnesota Twins</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 75%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">BOS (Away)</div>
+        <div style="font-size:13px;font-weight:500;">Boston Red Sox</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 33% · RD: -1.0</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Garrett Crochet</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">MIN (Home)</div>
+        <div style="font-size:13px;font-weight:500;">Minnesota Twins</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 47% · RD: +0.4</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Bailey Ober</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(0)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(1)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">7:45 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#65a30d;">60% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Cleveland Guardians</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 3-2 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: Gavin Williams</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:26px;font-weight:600;color:#111;">60%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:13px;color:#9ca3af;">39%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">St. Louis Cardinals</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 2-3 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Matthew Liberatore SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:60%;background:#65a30d;border-radius:99px 0 0 99px;"></div>
+        <div style="width:39%;background:#93c5fd;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Cleveland Guardians</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint1">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body1" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Cleveland Guardians</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 60%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">CLE (Away)</div>
+        <div style="font-size:13px;font-weight:500;">Cleveland Guardians</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 53% · RD: -0.7</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Gavin Williams</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">STL (Home)</div>
+        <div style="font-size:13px;font-weight:500;">St. Louis Cardinals</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 47% · RD: -1.5</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Matthew Liberatore</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(1)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(2)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">7:05 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#d97706;">58% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Los Angeles Angels</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 3-2 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: Yusei Kikuchi</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:26px;font-weight:600;color:#111;">58%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:13px;color:#9ca3af;">41%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">New York Yankees</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 4-1 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Will Warren SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:58%;background:#d97706;border-radius:99px 0 0 99px;"></div>
+        <div style="width:41%;background:#93c5fd;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Los Angeles Angels</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint2">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body2" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Los Angeles Angels</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 58%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">LAA (Away)</div>
+        <div style="font-size:13px;font-weight:500;">Los Angeles Angels</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 47% · RD: -0.9</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Yusei Kikuchi</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">NYY (Home)</div>
+        <div style="font-size:13px;font-weight:500;">New York Yankees</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 87% · RD: +3.1</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Will Warren</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(2)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(3)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">9:40 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">54% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">Texas Rangers</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 2-3 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: Nathan Eovaldi</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:13px;color:#9ca3af;">45%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:26px;font-weight:600;color:#111;">54%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Athletics</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 2-3 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Luis Severino SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:45%;background:#93c5fd;border-radius:99px 0 0 99px;"></div>
+        <div style="width:54%;background:#9ca3af;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Athletics</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint3">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body3" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Athletics</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 54%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">TEX (Away)</div>
+        <div style="font-size:13px;font-weight:500;">Texas Rangers</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 53% · RD: +0.2</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Nathan Eovaldi</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">ATH (Home)</div>
+        <div style="font-size:13px;font-weight:500;">Athletics</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 33% · RD: -1.8</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Luis Severino</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(3)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(4)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">10:10 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">52% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">New York Mets</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 4-1 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: David Peterson</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:13px;color:#9ca3af;">47%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:26px;font-weight:600;color:#111;">52%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Los Angeles Dodgers</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 5-0 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Justin Wrobleski SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:47%;background:#93c5fd;border-radius:99px 0 0 99px;"></div>
+        <div style="width:52%;background:#9ca3af;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Los Angeles Dodgers</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint4">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body4" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Los Angeles Dodgers</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 52%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">NYM (Away)</div>
+        <div style="font-size:13px;font-weight:500;">New York Mets</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 60% · RD: +1.0</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: David Peterson</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">LAD (Home)</div>
+        <div style="font-size:13px;font-weight:500;">Los Angeles Dodgers</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 87% · RD: +3.1</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Justin Wrobleski</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(4)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle(5)" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">7:15 PM ET</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">52% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;color:#9ca3af;">Miami Marlins</div>
+        <div style="font-size:11px;color:#9ca3af;">Away · 1-4 last 5</div>
+        <div style="margin-top:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: Eury Pérez</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
+        <span style="font-size:13px;color:#9ca3af;">47%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:26px;font-weight:600;color:#111;">52%</span>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;font-weight:600;">Atlanta Braves</div>
+        <div style="font-size:11px;color:#9ca3af;">Home · 2-3 last 5</div>
+        <div style="margin-top:3px;text-align:right;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#dc2626;margin-right:2px;"></span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:2px;"></span></div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">Grant Holmes SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">--</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:47%;background:#93c5fd;border-radius:99px 0 0 99px;"></div>
+        <div style="width:52%;background:#9ca3af;border-radius:0 99px 99px 0;"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">Atlanta Braves</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">--</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:#9ca3af;">EV no odds</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint5">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body5" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+      <span style="font-size:19px;font-weight:500;">Atlanta Braves</span>
+      <span style="font-size:14px;font-weight:500;color:#374151;">--</span>
+      <span style="font-size:12px;color:#9ca3af;">book 0% vs model 52%</span>
+      <span style="font-size:13px;font-weight:500;color:#9ca3af;">EV no odds</span>
+    </div>
+    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">MIA (Away)</div>
+        <div style="font-size:13px;font-weight:500;">Miami Marlins</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 47% · RD: -0.6</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Eury Pérez</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">ATL (Home)</div>
+        <div style="font-size:13px;font-weight:500;">Atlanta Braves</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: --</div>
+        <div style="font-size:12px;color:#9ca3af;">Win rate: 47% · RD: +1.3</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: Grant Holmes</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
+      Based on last 15-game rolling stats + starter pool ERA/WHIP/FIP averages.
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle(5)" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>
+  <div style="margin-top:20px;padding:12px 14px;background:#fffbeb;border-radius:8px;border:0.5px solid #fde68a;">
+    <p style="font-size:11px;color:#92400e;line-height:1.6;">AI-generated picks for informational purposes only. Always gamble responsibly.</p>
+  </div>
+</div>
+<script>
+function toggle(i){var b=document.getElementById('body'+i);var h=document.getElementById('hint'+i);var o=b.style.display!=='none';b.style.display=o?'none':'block';h.innerHTML=o?'tap for details':'collapse';}
+</script></body></html>
