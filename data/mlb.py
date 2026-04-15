@@ -2,7 +2,7 @@
 mlb.py
 ------
 Run every morning. Grades yesterday, predicts today.
-No emoji in print statements so Windows Task Scheduler doesn't crash.
+Tabs: ML / O/U / Props. $10 flat P&L tracking. Reasoning blurbs.
 
 RUN:
   python data/mlb.py
@@ -18,18 +18,17 @@ import json
 import os
 import glob
 
-ODDS_API_KEY = os.environ.get("ODDS_API_KEY", "")  # set via GitHub Secret
+ODDS_API_KEY   = os.environ.get("ODDS_API_KEY", "")
 
-MODEL_PATH      = "raw/model.json"
-GAMES_PATH      = "raw/game_results.csv"
-PITCHER_PATH    = "raw/pitcher_stats.csv"
-STARTER_PATH    = "raw/starter_logs.csv"
-TEAM_POOL_PATH  = "raw/team_starter_pool.csv"
-OUTPUT_HTML     = "mlb_predictor.html"
-RECORD_PATH     = "raw/record.json"
-ROLLING_WINDOW  = 15
+MODEL_PATH     = "raw/model.json"
+GAMES_PATH     = "raw/game_results.csv"
+PITCHER_PATH   = "raw/pitcher_stats.csv"
+STARTER_PATH   = "raw/starter_logs.csv"
+TEAM_POOL_PATH = "raw/team_starter_pool.csv"
+OUTPUT_HTML    = "mlb_predictor.html"
+RECORD_PATH    = "raw/record.json"
+ROLLING_WINDOW = 15
 
-# Base features always used
 BASE_FEATURES = [
     "home_rolling_runs_scored","home_rolling_runs_allowed",
     "home_rolling_win_rate","home_rolling_run_diff",
@@ -41,7 +40,6 @@ BASE_FEATURES = [
     "era_diff","whip_diff","so9_diff",
 ]
 
-# Starter features — only used if team_starter_pool.csv exists
 STARTER_FEATURES = [
     "home_starter_era","home_starter_whip","home_starter_k_per_9",
     "home_starter_bb_per_9","home_starter_fip_proxy",
@@ -75,7 +73,7 @@ PITCHER_NAME_MAP = {
 }
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# ── Helpers ───────────────────────────────────────────────────────
 
 def utc_to_et(utc_str):
     try:
@@ -96,6 +94,15 @@ def calc_ev(prob,odds):
     if odds is None or prob is None: return None
     profit = odds if odds>0 else 10000/abs(odds)
     return round((prob*profit)-((1-prob)*100),1)
+
+def calc_pnl(result, odds):
+    """$10 flat bet P&L."""
+    if odds is None: return 0.0
+    if result == "W":
+        if odds > 0: return round(10 * odds / 100, 2)
+        else: return round(10 * 100 / abs(odds), 2)
+    else:
+        return -10.0
 
 def os_(o):
     if o is None: return "--"
@@ -128,74 +135,132 @@ def el(ev):
     if ev>=0:  return f"+{ev} marginal"
     return f"{ev} skip"
 
-
-# ═══════════════════════════════════════════════════════════════════
-# PART 1 — GRADE ALL UNGRADED PAST PICKS
-# ═══════════════════════════════════════════════════════════════════
-
-def load_record():
-    if os.path.exists(RECORD_PATH):
-        with open(RECORD_PATH) as f: return json.load(f)
-    return {"all_time":{"w":0,"l":0},
-            "by_conf":{"50":{"w":0,"l":0},"55":{"w":0,"l":0},"60":{"w":0,"l":0},"70":{"w":0,"l":0}},
-            "daily":{}}
-
-def save_record(r):
-    with open(RECORD_PATH,"w") as f: json.dump(r,f,indent=2)
-
 def conf_bucket(c):
     if c>=0.70: return "70"
     if c>=0.60: return "60"
     if c>=0.55: return "55"
     return "50"
 
-def grade_all_ungraded(record):
-    today_str  = datetime.now().strftime("%Y-%m-%d")
-    pick_files = sorted(glob.glob("raw/picks_*.json"))
-    ungraded   = []
-    for path in pick_files:
-        basename = os.path.basename(path)
-        date_str = basename.replace("picks_","").replace(".json","")
-        if date_str == today_str: continue
-        if date_str not in record["daily"]:
-            ungraded.append((date_str, path))
 
-    if not ungraded:
-        print("All past picks already graded")
-        return record
+# ═══════════════════════════════════════════════════════════════════
+# RECORD — load / save / migrate
+# ═══════════════════════════════════════════════════════════════════
 
-    for date_str, path in ungraded:
-        record = grade_one_day(record, date_str, path)
+def _empty_bet_record():
+    return {
+        "all_time": {"w":0,"l":0},
+        "by_conf": {
+            "50":{"w":0,"l":0,"pnl":0.0},
+            "55":{"w":0,"l":0,"pnl":0.0},
+            "60":{"w":0,"l":0,"pnl":0.0},
+            "70":{"w":0,"l":0,"pnl":0.0}
+        },
+        "daily": {}
+    }
+
+def load_record():
+    if os.path.exists(RECORD_PATH):
+        with open(RECORD_PATH) as f: r = json.load(f)
+        # Migrate old flat structure → new nested ml/ou/props structure
+        if "ml" not in r:
+            old = r
+            r = {"ml":_empty_bet_record(),"ou":_empty_bet_record(),"props":_empty_bet_record()}
+            r["ml"]["all_time"] = old.get("all_time",{"w":0,"l":0})
+            r["ml"]["daily"]    = old.get("daily",{})
+            for k,v in old.get("by_conf",{}).items():
+                r["ml"]["by_conf"][k] = {"w":v.get("w",0),"l":v.get("l",0),"pnl":0.0}
+            # Backfill P&L from existing ML picks files
+            r = _backfill_ml_pnl(r)
+            save_record(r)
+        # Ensure all three sections exist
+        for bt in ["ml","ou","props"]:
+            if bt not in r: r[bt] = _empty_bet_record()
+            # Ensure pnl field exists in each bucket
+            for bk in r[bt]["by_conf"].values():
+                if "pnl" not in bk: bk["pnl"] = 0.0
+        return r
+    return {"ml":_empty_bet_record(),"ou":_empty_bet_record(),"props":_empty_bet_record()}
+
+def _backfill_ml_pnl(record):
+    for path in sorted(glob.glob("raw/picks_*.json")):
+        try:
+            with open(path) as f: picks = json.load(f)
+            for p in picks:
+                if p.get("result") not in ("W","L"): continue
+                bkt = conf_bucket(p.get("confidence",0.5))
+                pnl = calc_pnl(p["result"], p.get("pick_odds"))
+                record["ml"]["by_conf"][bkt]["pnl"] = round(
+                    record["ml"]["by_conf"][bkt].get("pnl",0) + pnl, 2)
+        except: pass
     return record
 
-def grade_one_day(record, date_str, path):
-    with open(path) as f: picks = json.load(f)
+def save_record(r):
+    with open(RECORD_PATH,"w") as f: json.dump(r,f,indent=2)
 
-    if all(p.get("result") not in (None,"no_result") for p in picks):
-        if date_str not in record["daily"]:
-            dw = sum(1 for p in picks if p.get("result")=="W")
-            dl = sum(1 for p in picks if p.get("result")=="L")
-            record["daily"][date_str]={"w":dw,"l":dl}
-            save_record(record)
-        return record
 
-    print(f"Grading {date_str}...")
+# ═══════════════════════════════════════════════════════════════════
+# PART 1 — GRADE ALL UNGRADED PAST PICKS
+# ═══════════════════════════════════════════════════════════════════
+
+def grade_all_ungraded(record):
+    today_str  = datetime.now().strftime("%Y-%m-%d")
+
+    # Grade ML picks
+    for path in sorted(glob.glob("raw/picks_*.json")):
+        date_str = os.path.basename(path).replace("picks_","").replace(".json","")
+        if date_str == today_str: continue
+        if date_str not in record["ml"]["daily"]:
+            record = grade_ml_day(record, date_str, path)
+
+    # Grade O/U picks
+    for path in sorted(glob.glob("raw/ou_*.json")):
+        date_str = os.path.basename(path).replace("ou_","").replace(".json","")
+        if date_str == today_str: continue
+        if date_str not in record["ou"]["daily"]:
+            record = grade_ou_day(record, date_str, path)
+
+    # Grade Props picks
+    for path in sorted(glob.glob("raw/props_*.json")):
+        date_str = os.path.basename(path).replace("props_","").replace(".json","")
+        if date_str == today_str: continue
+        if date_str not in record["props"]["daily"]:
+            record = grade_props_day(record, date_str, path)
+
+    return record
+
+def _fetch_day_results(date_str):
+    """Returns dict keyed HA_AA with scores, and also {game_id: {home_score, away_score, ha, aa}}."""
     dt = datetime.strptime(date_str,"%Y-%m-%d")
     try:
         sched = statsapi.schedule(date=dt.strftime("%m/%d/%Y"))
     except Exception as e:
-        print(f"  Could not fetch results: {e}"); return record
-
-    results={}
+        print(f"  Could not fetch results: {e}"); return {}, {}
+    by_teams = {}; by_gameid = {}
     for g in sched:
         if g.get("status") not in ("Final","Game Over","Completed Early"): continue
         hn=g.get("home_name",""); an=g.get("away_name","")
         ha=TEAM_MAP.get(hn,hn[:3].upper()); aa=TEAM_MAP.get(an,an[:3].upper())
         hs=g.get("home_score",0); as_=g.get("away_score",0)
-        results[f"{ha}_{aa}"]={"winner":ha if hs>as_ else aa,
-            "home_score":hs,"away_score":as_,"home_name":hn,"away_name":an,
-            "home_abbr":ha,"away_abbr":aa}
+        gid=g.get("game_id")
+        entry={"winner":ha if hs>as_ else aa,"home_score":hs,"away_score":as_,
+               "home_name":hn,"away_name":an,"home_abbr":ha,"away_abbr":aa,
+               "total":hs+as_,"game_id":gid}
+        by_teams[f"{ha}_{aa}"] = entry
+        if gid: by_gameid[str(gid)] = entry
+    return by_teams, by_gameid
 
+def grade_ml_day(record, date_str, path):
+    with open(path) as f: picks = json.load(f)
+    if all(p.get("result") not in (None,"no_result") for p in picks):
+        if date_str not in record["ml"]["daily"]:
+            dw=sum(1 for p in picks if p.get("result")=="W")
+            dl=sum(1 for p in picks if p.get("result")=="L")
+            record["ml"]["daily"][date_str]={"w":dw,"l":dl}
+            save_record(record)
+        return record
+
+    print(f"Grading ML {date_str}...")
+    by_teams, _ = _fetch_day_results(date_str)
     day_w=day_l=0; graded=[]
     print("-"*55)
     for pick in picks:
@@ -205,28 +270,161 @@ def grade_one_day(record, date_str, path):
             elif pick["result"]=="L": day_l+=1
             continue
         key=f"{pick['home_abbr']}_{pick['away_abbr']}"
-        result=results.get(key)
+        result=by_teams.get(key)
         if not result:
             pick["result"]="no_result"; graded.append(pick); continue
         correct=result["winner"]==pick["pick_abbr"]
         pick.update({"result":"W" if correct else "L","actual_winner":result["winner"],
                      "home_score":result["home_score"],"away_score":result["away_score"]})
         bkt=conf_bucket(pick["confidence"])
-        if correct: record["all_time"]["w"]+=1; record["by_conf"][bkt]["w"]+=1; day_w+=1
-        else:       record["all_time"]["l"]+=1; record["by_conf"][bkt]["l"]+=1; day_l+=1
+        pnl=calc_pnl(pick["result"],pick.get("pick_odds"))
+        if correct:
+            record["ml"]["all_time"]["w"]+=1
+            record["ml"]["by_conf"][bkt]["w"]+=1
+            record["ml"]["by_conf"][bkt]["pnl"]=round(record["ml"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_w+=1
+        else:
+            record["ml"]["all_time"]["l"]+=1
+            record["ml"]["by_conf"][bkt]["l"]+=1
+            record["ml"]["by_conf"][bkt]["pnl"]=round(record["ml"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_l+=1
         icon="OK" if correct else "XX"
         print(f"  {icon}  {pick['pick_abbr']:<4} | {pick['home_abbr']} {result['home_score']}-{result['away_score']} {pick['away_abbr']} | {result['winner']} ({int(pick['confidence']*100)}%)")
         graded.append(pick)
 
-    record["daily"][date_str]={"w":day_w,"l":day_l}
+    record["ml"]["daily"][date_str]={"w":day_w,"l":day_l}
     save_record(record)
     with open(path,"w") as f: json.dump(graded,f,indent=2)
-    at=record["all_time"]; pct=f"{at['w']/(at['w']+at['l']):.1%}" if (at['w']+at['l'])>0 else "--"
-    print(f"  {date_str}: {day_w}-{day_l}  |  All time: {at['w']}-{at['l']} ({pct})")
-    _save_history_html(graded,date_str,day_w,day_l)
+    at=record["ml"]["all_time"]; tot=at["w"]+at["l"]
+    pct=f"{at['w']/tot:.1%}" if tot>0 else "--"
+    print(f"  ML {date_str}: {day_w}-{day_l}  |  All time: {at['w']}-{at['l']} ({pct})")
+    _save_history_html(graded, date_str, day_w, day_l)
     return record
 
-def _save_history_html(picks,date_str,day_w,day_l):
+def grade_ou_day(record, date_str, path):
+    with open(path) as f: picks = json.load(f)
+    if all(p.get("result") not in (None,"no_result") for p in picks):
+        if date_str not in record["ou"]["daily"]:
+            dw=sum(1 for p in picks if p.get("result")=="W")
+            dl=sum(1 for p in picks if p.get("result")=="L")
+            record["ou"]["daily"][date_str]={"w":dw,"l":dl}
+            save_record(record)
+        return record
+
+    print(f"Grading O/U {date_str}...")
+    by_teams, _ = _fetch_day_results(date_str)
+    day_w=day_l=0; graded=[]
+    for pick in picks:
+        if pick.get("result") not in (None,"no_result"):
+            graded.append(pick)
+            if pick["result"]=="W": day_w+=1
+            elif pick["result"]=="L": day_l+=1
+            continue
+        key=f"{pick['home_abbr']}_{pick['away_abbr']}"
+        result=by_teams.get(key)
+        if not result:
+            pick["result"]="no_result"; graded.append(pick); continue
+        actual_total=result["total"]; line=pick["line"]
+        if actual_total==line:
+            pick["result"]="push"; graded.append(pick); continue
+        actual_ou="over" if actual_total>line else "under"
+        correct=(actual_ou==pick["pick"].lower())
+        pick.update({"result":"W" if correct else "L","actual_total":actual_total})
+        bkt=conf_bucket(pick["confidence"])
+        pnl=calc_pnl(pick["result"],pick.get("pick_odds"))
+        if correct:
+            record["ou"]["all_time"]["w"]+=1
+            record["ou"]["by_conf"][bkt]["w"]+=1
+            record["ou"]["by_conf"][bkt]["pnl"]=round(record["ou"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_w+=1
+        else:
+            record["ou"]["all_time"]["l"]+=1
+            record["ou"]["by_conf"][bkt]["l"]+=1
+            record["ou"]["by_conf"][bkt]["pnl"]=round(record["ou"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_l+=1
+        icon="OK" if correct else "XX"
+        print(f"  {icon}  {pick['pick']} {line} | Actual: {actual_total} | {pick['home_abbr']} vs {pick['away_abbr']}")
+        graded.append(pick)
+
+    record["ou"]["daily"][date_str]={"w":day_w,"l":day_l}
+    save_record(record)
+    with open(path,"w") as f: json.dump(graded,f,indent=2)
+    print(f"  O/U {date_str}: {day_w}-{day_l}")
+    return record
+
+def grade_props_day(record, date_str, path):
+    with open(path) as f: picks = json.load(f)
+    if all(p.get("result") not in (None,"no_result") for p in picks):
+        if date_str not in record["props"]["daily"]:
+            dw=sum(1 for p in picks if p.get("result")=="W")
+            dl=sum(1 for p in picks if p.get("result")=="L")
+            record["props"]["daily"][date_str]={"w":dw,"l":dl}
+            save_record(record)
+        return record
+
+    print(f"Grading Props {date_str}...")
+    _, by_gameid = _fetch_day_results(date_str)
+    day_w=day_l=0; graded=[]
+    for pick in picks:
+        if pick.get("result") not in (None,"no_result"):
+            graded.append(pick)
+            if pick["result"]=="W": day_w+=1
+            elif pick["result"]=="L": day_l+=1
+            continue
+        # Try to get pitcher Ks from box score
+        gid=str(pick.get("game_id",""))
+        actual_k=_fetch_pitcher_ks(gid, pick.get("pitcher",""), pick.get("team_abbr",""))
+        if actual_k is None:
+            pick["result"]="no_result"; graded.append(pick); continue
+        line=pick["line"]
+        if actual_k==line:
+            pick["result"]="push"; graded.append(pick); continue
+        actual_ou="over" if actual_k>line else "under"
+        correct=(actual_ou==pick["pick"].lower())
+        pick.update({"result":"W" if correct else "L","actual_k":actual_k})
+        bkt=conf_bucket(pick["confidence"])
+        pnl=calc_pnl(pick["result"],pick.get("pick_odds"))
+        if correct:
+            record["props"]["all_time"]["w"]+=1
+            record["props"]["by_conf"][bkt]["w"]+=1
+            record["props"]["by_conf"][bkt]["pnl"]=round(record["props"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_w+=1
+        else:
+            record["props"]["all_time"]["l"]+=1
+            record["props"]["by_conf"][bkt]["l"]+=1
+            record["props"]["by_conf"][bkt]["pnl"]=round(record["props"]["by_conf"][bkt]["pnl"]+pnl,2)
+            day_l+=1
+        icon="OK" if correct else "XX"
+        print(f"  {icon}  {pick['pitcher']} K {pick['pick']} {line} | Actual: {actual_k}")
+        graded.append(pick)
+
+    record["props"]["daily"][date_str]={"w":day_w,"l":day_l}
+    save_record(record)
+    with open(path,"w") as f: json.dump(graded,f,indent=2)
+    print(f"  Props {date_str}: {day_w}-{day_l}")
+    return record
+
+def _fetch_pitcher_ks(game_id, pitcher_name, team_abbr):
+    """Fetch actual pitcher Ks from MLB Stats API box score."""
+    if not game_id or game_id=="None": return None
+    try:
+        box = statsapi.boxscore_data(game_id)
+        for side in ["home","away"]:
+            pitchers = box.get(side,{}).get("pitchers",[])
+            for pid in pitchers:
+                pdata = box.get(side,{}).get("players",{}).get(f"ID{pid}",{})
+                pname = pdata.get("person",{}).get("fullName","")
+                stats = pdata.get("stats",{}).get("pitching",{})
+                ks = stats.get("strikeOuts")
+                if ks is not None:
+                    last = pname.split()[-1].lower() if pname else ""
+                    search = pitcher_name.split()[-1].lower() if pitcher_name else ""
+                    if search and last and (search in last or last in search):
+                        return int(ks)
+    except: pass
+    return None
+
+def _save_history_html(picks, date_str, day_w, day_l):
     dt=datetime.strptime(date_str,"%Y-%m-%d"); title=dt.strftime("%A, %B %d %Y")
     rows=""
     for p in picks:
@@ -269,7 +467,6 @@ def _save_history_html(picks,date_str,day_w,day_l):
 def load_model():
     print("\nLoading model...")
     m=XGBClassifier(); m.load_model(MODEL_PATH)
-    # Detect which features the model was trained with
     feature_names = m.get_booster().feature_names
     print(f"  Model uses {len(feature_names)} features")
     return m, feature_names
@@ -280,9 +477,6 @@ def build_team_stats():
     games["home_away"]=games["home_away"].astype(str).str.strip().replace({"@":"AWAY","Home":"HOME"})
     games["result"]=games["result"].astype(str).str.strip().str.split("-").str[0].str.upper()
     SEASONS=[2021,2022,2023,2024,2025,2026]
-    def assign_season(grp):
-        idx=np.minimum(np.arange(len(grp))//162,len(SEASONS)-1)
-        grp=grp.copy(); grp["season"]=[SEASONS[i] for i in idx]; return grp
     result_frames = []
     for team, grp in games.groupby("team"):
         grp = grp.copy()
@@ -326,20 +520,14 @@ def build_pitcher_stats():
             for _,row in latest.iterrows()}
 
 def build_starter_pool():
-    """Load team starter pool for use in predictions."""
-    if not os.path.exists(TEAM_POOL_PATH):
-        return None
+    if not os.path.exists(TEAM_POOL_PATH): return None
     pool=pd.read_csv(TEAM_POOL_PATH)
     pool["season"]=pool["season"].astype(int)
-    # Build lookup: team_abbr+season -> starter stats dict
     starter_stats={}
     starter_cols=[c for c in pool.columns if c.startswith("team_avg_starter_")]
     for _,row in pool.iterrows():
         key=f"{row['team_abbr']}_{int(row['season'])}"
-        starter_stats[key]={
-            c.replace("team_avg_starter_","starter_"): row[c]
-            for c in starter_cols
-        }
+        starter_stats[key]={c.replace("team_avg_starter_","starter_"):row[c] for c in starter_cols}
     print(f"  Starter pool loaded: {len(starter_stats)} team-seasons")
     return starter_stats
 
@@ -364,9 +552,9 @@ def fetch_probable_starters():
     return starters
 
 def fetch_odds():
-    if ODDS_API_KEY=="YOUR_KEY_HERE":
-        print("No odds key set -- skipping"); return {}
-    print("Fetching odds...")
+    if not ODDS_API_KEY:
+        print("No odds key -- skipping"); return {}
+    print("Fetching ML odds...")
     try:
         r=requests.get("https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/",
             params={"apiKey":ODDS_API_KEY,"regions":"us","markets":"h2h",
@@ -384,9 +572,83 @@ def fetch_odds():
                             if ab==h: hl.append(o["price"])
                             elif ab==a: al.append(o["price"])
             if hl and al: out[f"{h}_{a}"]={"home_odds":int(np.mean(hl)),"away_odds":int(np.mean(al))}
-        print(f"  Odds for {len(out)} games"); return out
+        print(f"  ML odds for {len(out)} games"); return out
     except Exception as e:
         print(f"  Failed: {e}"); return {}
+
+def fetch_totals_odds():
+    """Fetch run totals (O/U lines) from Odds API."""
+    if not ODDS_API_KEY: return {}
+    print("Fetching totals odds...")
+    try:
+        r=requests.get("https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/",
+            params={"apiKey":ODDS_API_KEY,"regions":"us","markets":"totals",
+                    "oddsFormat":"american","bookmakers":"draftkings,fanduel,betmgm"},timeout=10)
+        out={}
+        for game in r.json():
+            h=TEAM_MAP.get(game.get("home_team",""),""); a=TEAM_MAP.get(game.get("away_team",""),"")
+            if not h or not a: continue
+            over_odds_list=[]; under_odds_list=[]; lines=[]
+            for bk in game.get("bookmakers",[]):
+                for mkt in bk.get("markets",[]):
+                    if mkt["key"]=="totals":
+                        for o in mkt["outcomes"]:
+                            if o["name"]=="Over":
+                                over_odds_list.append(o["price"]); lines.append(o.get("point",8.5))
+                            elif o["name"]=="Under":
+                                under_odds_list.append(o["price"])
+            if lines:
+                out[f"{h}_{a}"]={
+                    "line": round(np.mean(lines),1),
+                    "over_odds": int(np.mean(over_odds_list)) if over_odds_list else -110,
+                    "under_odds": int(np.mean(under_odds_list)) if under_odds_list else -110,
+                }
+        print(f"  Totals for {len(out)} games"); return out
+    except Exception as e:
+        print(f"  Totals failed: {e}"); return {}
+
+def fetch_props_odds():
+    """Fetch pitcher strikeout props from Odds API."""
+    if not ODDS_API_KEY: return []
+    print("Fetching pitcher K props...")
+    try:
+        # First get event IDs
+        r=requests.get("https://api.the-odds-api.com/v4/sports/baseball_mlb/events/",
+            params={"apiKey":ODDS_API_KEY},timeout=10)
+        events=r.json()
+        props=[]
+        count=0
+        for ev in events[:16]:  # limit to save API calls
+            h=TEAM_MAP.get(ev.get("home_team",""),""); a=TEAM_MAP.get(ev.get("away_team",""),"")
+            if not h or not a: continue
+            eid=ev.get("id","")
+            try:
+                pr=requests.get(f"https://api.the-odds-api.com/v4/sports/baseball_mlb/events/{eid}/odds",
+                    params={"apiKey":ODDS_API_KEY,"regions":"us","markets":"pitcher_strikeouts",
+                            "oddsFormat":"american","bookmakers":"draftkings,fanduel"},timeout=10)
+                count+=1
+                for bk in pr.json().get("bookmakers",[]):
+                    for mkt in bk.get("markets",[]):
+                        if mkt["key"]=="pitcher_strikeouts":
+                            pitcher_lines={}
+                            for o in mkt["outcomes"]:
+                                pname=o.get("description","")
+                                side=o.get("name","")
+                                pt=o.get("point",5.5)
+                                price=o.get("price",-115)
+                                if pname not in pitcher_lines:
+                                    pitcher_lines[pname]={"line":pt,"over_odds":None,"under_odds":None,"home_abbr":h,"away_abbr":a,"game_id":eid}
+                                if side=="Over": pitcher_lines[pname]["over_odds"]=price
+                                elif side=="Under": pitcher_lines[pname]["under_odds"]=price
+                            for pname,pd_ in pitcher_lines.items():
+                                if pd_["over_odds"] and pd_["under_odds"]:
+                                    props.append({**pd_,"pitcher":pname})
+                    break  # one bookmaker enough
+            except: pass
+        print(f"  Props: {len(props)} pitcher lines from {count} games")
+        return props
+    except Exception as e:
+        print(f"  Props fetch failed: {e}"); return []
 
 def get_schedule():
     print("Fetching today's schedule...")
@@ -409,17 +671,15 @@ def get_schedule():
 # ═══════════════════════════════════════════════════════════════════
 
 def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool):
-    print("Running predictions...")
+    print("Running ML predictions...")
     current_season=datetime.now().year
     results=[]
-
     for g in games:
         ha=g["home_abbr"]; aa=g["away_abbr"]
         hs=ts.get(ha,{}); as_=ts.get(aa,{})
         hp=ps.get(ha,{}); ap=ps.get(aa,{})
         if not hs or not as_: print(f"  No stats for {ha}/{aa}"); continue
 
-        # Base row
         row={
             "home_rolling_runs_scored": hs.get("rolling_runs_scored",4.5),
             "home_rolling_runs_allowed":hs.get("rolling_runs_allowed",4.5),
@@ -442,66 +702,216 @@ def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool):
             "so9_diff":  hp.get("avg_so9",8.0) -ap.get("avg_so9",8.0),
         }
 
-        # Add starter pool features if model expects them
         if starter_pool is not None and any("starter_" in f for f in feature_names):
             h_key=f"{ha}_{current_season}"; a_key=f"{aa}_{current_season}"
-            # Fall back to previous season if current not available
             h_sp=starter_pool.get(h_key, starter_pool.get(f"{ha}_{current_season-1}",{}))
             a_sp=starter_pool.get(a_key, starter_pool.get(f"{aa}_{current_season-1}",{}))
+            for k,v in h_sp.items(): row[f"home_{k}"]=v
+            for k,v in a_sp.items(): row[f"away_{k}"]=v
+            h_era=h_sp.get("starter_era",row["home_avg_era"]); a_era=a_sp.get("starter_era",row["away_avg_era"])
+            h_whip=h_sp.get("starter_whip",row["home_avg_whip"]); a_whip=a_sp.get("starter_whip",row["away_avg_whip"])
+            h_k9=h_sp.get("starter_k_per_9",row["home_avg_so9"]); a_k9=a_sp.get("starter_k_per_9",row["away_avg_so9"])
+            h_fip=h_sp.get("starter_fip_proxy",row["home_avg_era"]); a_fip=a_sp.get("starter_fip_proxy",row["away_avg_era"])
+            row["starter_era_diff"]=a_era-h_era; row["starter_whip_diff"]=a_whip-h_whip
+            row["starter_k_diff"]=h_k9-a_k9; row["starter_fip_diff"]=a_fip-h_fip
 
-            for k,v in h_sp.items():
-                row[f"home_{k}"] = v
-            for k,v in a_sp.items():
-                row[f"away_{k}"] = v
-
-            # Compute diff features
-            h_era = h_sp.get("starter_era", row["home_avg_era"])
-            a_era = a_sp.get("starter_era", row["away_avg_era"])
-            h_whip= h_sp.get("starter_whip", row["home_avg_whip"])
-            a_whip= a_sp.get("starter_whip", row["away_avg_whip"])
-            h_k9  = h_sp.get("starter_k_per_9", row["home_avg_so9"])
-            a_k9  = a_sp.get("starter_k_per_9", row["away_avg_so9"])
-            h_fip = h_sp.get("starter_fip_proxy", row["home_avg_era"])
-            a_fip = a_sp.get("starter_fip_proxy", row["away_avg_era"])
-
-            row["starter_era_diff"]  = a_era  - h_era
-            row["starter_whip_diff"] = a_whip - h_whip
-            row["starter_k_diff"]    = h_k9   - a_k9
-            row["starter_fip_diff"]  = a_fip  - h_fip
-
-        # Build feature vector using exactly the features the model expects
-        X = pd.DataFrame([{f: row.get(f, 0.0) for f in feature_names}])
-
+        X=pd.DataFrame([{f: row.get(f,0.0) for f in feature_names}])
         prob_home=float(model.predict_proba(X)[0][1]); prob_away=1-prob_home
-        go=odds.get(f"{ha}_{aa}",{}); home_odds=go.get("home_odds"); away_odds=go.get("away_odds")
+        go=odds.get(f"{ha}_{aa}",{}); home_odds_=go.get("home_odds"); away_odds_=go.get("away_odds")
         st=starters.get(f"{ha}_{aa}",{}); home_p=st.get("home_pitcher","TBD"); away_p=st.get("away_pitcher","TBD")
 
         if prob_home>=prob_away:
-            pick=g["home_name"]; pick_abbr=ha; conf=prob_home; pick_odds=home_odds
+            pick=g["home_name"]; pick_abbr=ha; conf=prob_home; pick_odds=home_odds_
         else:
-            pick=g["away_name"]; pick_abbr=aa; conf=prob_away; pick_odds=away_odds
+            pick=g["away_name"]; pick_abbr=aa; conf=prob_away; pick_odds=away_odds_
 
         ev=calc_ev(conf,pick_odds)
         results.append({**g,
             "prob_home":prob_home,"prob_away":prob_away,
             "pick":pick,"pick_abbr":pick_abbr,"confidence":conf,
-            "home_odds":home_odds,"away_odds":away_odds,"pick_odds":pick_odds,"ev":ev,
+            "home_odds":home_odds_,"away_odds":away_odds_,"pick_odds":pick_odds,"ev":ev,
             "h_wr":hs.get("rolling_win_rate",0.5),"a_wr":as_.get("rolling_win_rate",0.5),
             "h_rd":hs.get("rolling_run_diff",0.0),"a_rd":as_.get("rolling_run_diff",0.0),
+            "h_rs":hs.get("rolling_runs_scored",4.5),"a_rs":as_.get("rolling_runs_scored",4.5),
+            "h_ra":hs.get("rolling_runs_allowed",4.5),"a_ra":as_.get("rolling_runs_allowed",4.5),
             "h_last5":hs.get("last5",""),"a_last5":as_.get("last5",""),
             "h_last5_w":hs.get("last5_w",0),"h_last5_l":hs.get("last5_l",0),
             "a_last5_w":as_.get("last5_w",0),"a_last5_l":as_.get("last5_l",0),
             "home_pitcher":home_p,"away_pitcher":away_p,
+            "h_era":hp.get("avg_era",4.5),"a_era":ap.get("avg_era",4.5),
+            "h_so9":hp.get("avg_so9",8.0),"a_so9":ap.get("avg_so9",8.0),
         })
         print(f"  {ha} vs {aa}  ->  {pick_abbr} ({int(conf*100)}%)  {away_p} vs {home_p}")
 
     results.sort(key=lambda x: x["confidence"],reverse=True)
     return results
 
-def save_todays_picks(predictions,date_str):
+def predict_totals(games, ts, totals_odds):
+    """Predict over/under for each game using rolling run averages."""
+    print("Predicting totals...")
+    results=[]
+    for g in games:
+        ha=g["home_abbr"]; aa=g["away_abbr"]
+        key=f"{ha}_{aa}"
+        tod=totals_odds.get(key)
+        if not tod: continue
+        hs=ts.get(ha,{}); as_=ts.get(aa,{})
+        if not hs or not as_: continue
+
+        line=tod["line"]
+        h_rs=hs.get("rolling_runs_scored",4.5); h_ra=hs.get("rolling_runs_allowed",4.5)
+        a_rs=as_.get("rolling_runs_scored",4.5); a_ra=as_.get("rolling_runs_allowed",4.5)
+        # Expected total: blend of offensive and defensive estimates
+        proj_total=round((h_rs + a_rs + h_ra + a_ra) / 2, 1)
+        margin=proj_total - line
+        # Confidence: further from line = more confident, cap at 80%
+        raw_conf=0.50 + min(abs(margin)/3.0, 0.30)
+        conf=round(raw_conf, 3)
+
+        if margin > 0:
+            pick="Over"; pick_odds=tod["over_odds"]
+        else:
+            pick="Under"; pick_odds=tod["under_odds"]
+
+        ev=calc_ev(conf, pick_odds)
+        results.append({
+            "home_name":g["home_name"],"away_name":g["away_name"],
+            "home_abbr":ha,"away_abbr":aa,"time":g["time"],"game_id":g["game_id"],
+            "line":line,"pick":pick,"confidence":conf,
+            "pick_odds":pick_odds,"over_odds":tod["over_odds"],"under_odds":tod["under_odds"],
+            "ev":ev,"proj_total":proj_total,
+            "h_rs":h_rs,"a_rs":a_rs,"h_ra":h_ra,"a_ra":a_ra,
+        })
+        print(f"  {ha} vs {aa}  ->  {pick} {line} ({int(conf*100)}%)  proj: {proj_total}")
+    results.sort(key=lambda x: x["confidence"],reverse=True)
+    return results
+
+def predict_props(games, starters, ps, starter_pool, props_odds):
+    """Predict pitcher strikeout props using K/9 rates."""
+    print("Predicting pitcher props...")
+    current_season=datetime.now().year
+    results=[]
+    seen=set()
+    for prop in props_odds:
+        ha=prop.get("home_abbr",""); aa=prop.get("away_abbr","")
+        pitcher=prop.get("pitcher",""); line=prop.get("line",5.5)
+        if not pitcher or pitcher in seen: continue
+
+        # Find which team's starter this is
+        st=starters.get(f"{ha}_{aa}",{})
+        if pitcher==st.get("home_pitcher",""):
+            team_abbr=ha; opp_abbr=aa; is_home=True
+        elif pitcher==st.get("away_pitcher",""):
+            team_abbr=aa; opp_abbr=ha; is_home=False
+        else:
+            # Try partial match
+            hp=st.get("home_pitcher",""); ap=st.get("away_pitcher","")
+            last=pitcher.split()[-1].lower() if pitcher else ""
+            if last and hp and last in hp.lower(): team_abbr=ha; opp_abbr=aa; is_home=True
+            elif last and ap and last in ap.lower(): team_abbr=aa; opp_abbr=ha; is_home=False
+            else: continue
+
+        # Get pitcher K rate from team stats
+        team_ps=ps.get(team_abbr,{})
+        k_per_9=team_ps.get("avg_so9",8.0)
+
+        # Try to get starter-specific K rate from starter pool
+        if starter_pool:
+            sp_key=f"{team_abbr}_{current_season}"
+            sp=starter_pool.get(sp_key, starter_pool.get(f"{team_abbr}_{current_season-1}",{}))
+            if sp.get("starter_k_per_9"): k_per_9=sp["starter_k_per_9"]
+
+        # Opponent K rate (proxy for how many Ks they allow)
+        opp_ps=ps.get(opp_abbr,{})
+        opp_so9=opp_ps.get("avg_so9",8.0)  # higher = hitters strike out more
+
+        # Project Ks in ~5.5 innings (average starter)
+        innings=5.5
+        # Blend pitcher's K rate with opponent's tendency
+        blended_k9=(k_per_9*0.6 + opp_so9*0.4)
+        proj_k=round(blended_k9 * innings / 9, 1)
+
+        margin=proj_k - line
+        raw_conf=0.50 + min(abs(margin)/2.0, 0.28)
+        conf=round(raw_conf, 3)
+
+        if margin > 0:
+            pick="Over"; pick_odds=prop["over_odds"]
+        else:
+            pick="Under"; pick_odds=prop["under_odds"]
+
+        ev=calc_ev(conf, pick_odds)
+        game_name=f"{aa} @ {ha}"
+        # Find game time
+        game_time="TBD"
+        for g in games:
+            if g["home_abbr"]==ha and g["away_abbr"]==aa:
+                game_time=g["time"]; break
+
+        seen.add(pitcher)
+        results.append({
+            "pitcher":pitcher,"team_abbr":team_abbr,"opp_abbr":opp_abbr,
+            "home_abbr":ha,"away_abbr":aa,"game_name":game_name,"time":game_time,
+            "game_id":prop.get("game_id"),
+            "line":line,"pick":pick,"confidence":conf,
+            "pick_odds":pick_odds,"over_odds":prop["over_odds"],"under_odds":prop["under_odds"],
+            "ev":ev,"proj_k":proj_k,"k_per_9":k_per_9,"is_home":is_home,
+        })
+        print(f"  {pitcher} K {pick} {line} ({int(conf*100)}%)  proj: {proj_k}")
+    results.sort(key=lambda x: x["confidence"],reverse=True)
+    return results
+
+
+# ── Reasoning blurbs ──────────────────────────────────────────────
+
+def ml_reasoning(g):
+    pick_abbr=g["pick_abbr"]; opp_abbr=g["away_abbr"] if g["pick_abbr"]==g["home_abbr"] else g["home_abbr"]
+    pick_rs=g["h_rs"] if pick_abbr==g["home_abbr"] else g["a_rs"]
+    opp_ra=g["a_ra"] if pick_abbr==g["home_abbr"] else g["h_ra"]
+    pick_era=g["h_era"] if pick_abbr==g["home_abbr"] else g["a_era"]
+    opp_era=g["a_era"] if pick_abbr==g["home_abbr"] else g["h_era"]
+    wr=g["h_wr"] if pick_abbr==g["home_abbr"] else g["a_wr"]
+    hp=g.get("home_pitcher","TBD"); ap=g.get("away_pitcher","TBD")
+    pick_p=hp if pick_abbr==g["home_abbr"] else ap
+    opp_p=ap if pick_abbr==g["home_abbr"] else hp
+    conf_pct=int(g["confidence"]*100)
+    blurb=(f"{pick_abbr} averaging {pick_rs:.1f} runs/game over last {ROLLING_WINDOW} and "
+           f"allowing {opp_ra:.1f} runs against — "
+           f"{'a strong offensive edge' if pick_rs>opp_ra else 'backed by pitching'}. "
+           f"Staff ERA of {pick_era:.2f} vs {opp_abbr}'s {opp_era:.2f}. "
+           f"Model gives {pick_abbr} {conf_pct}% win probability with "
+           f"{'solid starter advantage' if pick_era < opp_era else 'lineup edge'}.")
+    return blurb
+
+def ou_reasoning(g):
+    proj=g["proj_total"]; line=g["line"]; pick=g["pick"]
+    h=g["home_abbr"]; a=g["away_abbr"]
+    h_rs=g["h_rs"]; a_rs=g["a_rs"]; h_ra=g["h_ra"]; a_ra=g["a_ra"]
+    direction="above" if proj>line else "below"
+    run_desc="both offenses running hot" if (h_rs+a_rs)/2>5 else "pitching-heavy matchup expected"
+    blurb=(f"Rolling combined run average: {h} {h_rs:.1f} RS/{h_ra:.1f} RA, "
+           f"{a} {a_rs:.1f} RS/{a_ra:.1f} RA. "
+           f"Model projects {proj} total runs — {direction} the {line} line ({run_desc}). "
+           f"Lean {pick}.")
+    return blurb
+
+def prop_reasoning(p):
+    pitcher=p["pitcher"]; line=p["line"]; proj=p["proj_k"]; pick=p["pick"]
+    k9=p["k_per_9"]; opp=p["opp_abbr"]
+    direction="above" if proj>line else "below"
+    edge=abs(proj-line)
+    blurb=(f"{pitcher} posting {k9:.1f} K/9 this season. "
+           f"Projected ~{proj} strikeouts in ~5.5 IP vs {opp} — {direction} the {line} line. "
+           f"{'Comfortable edge' if edge>0.8 else 'Slim edge'}, lean {pick}.")
+    return blurb
+
+
+# ── Save picks ────────────────────────────────────────────────────
+
+def save_todays_picks(predictions, date_str):
     path=f"raw/picks_{date_str}.json"
     if os.path.exists(path):
-        print(f"  Picks already saved for {date_str}"); return
+        print(f"  ML picks already saved for {date_str}"); return
     with open(path,"w") as f:
         json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "home_name":g["home_name"],"away_name":g["away_name"],
@@ -510,52 +920,83 @@ def save_todays_picks(predictions,date_str):
             "home_pitcher":g.get("home_pitcher","TBD"),
             "away_pitcher":g.get("away_pitcher","TBD"),
             "game_id":g.get("game_id"),"result":None} for g in predictions],f,indent=2)
-    print(f"  Picks saved -> {path}")
+    print(f"  ML picks saved -> {path}")
+
+def save_ou_picks(predictions, date_str):
+    path=f"raw/ou_{date_str}.json"
+    if os.path.exists(path):
+        print(f"  O/U picks already saved for {date_str}"); return
+    with open(path,"w") as f:
+        json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
+            "home_name":g["home_name"],"away_name":g["away_name"],
+            "pick":g["pick"],"line":g["line"],"confidence":g["confidence"],
+            "pick_odds":g.get("pick_odds"),"game_id":g.get("game_id"),"result":None}
+            for g in predictions],f,indent=2)
+    print(f"  O/U picks saved -> {path}")
+
+def save_props_picks(predictions, date_str):
+    path=f"raw/props_{date_str}.json"
+    if os.path.exists(path):
+        print(f"  Props picks already saved for {date_str}"); return
+    with open(path,"w") as f:
+        json.dump([{"pitcher":g["pitcher"],"team_abbr":g["team_abbr"],
+            "home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
+            "pick":g["pick"],"line":g["line"],"confidence":g["confidence"],
+            "pick_odds":g.get("pick_odds"),"game_id":g.get("game_id"),"result":None}
+            for g in predictions],f,indent=2)
+    print(f"  Props picks saved -> {path}")
 
 
 # ═══════════════════════════════════════════════════════════════════
 # PART 4 — HTML
 # ═══════════════════════════════════════════════════════════════════
 
-def record_strings(record):
-    at=record["all_time"]; total=at["w"]+at["l"]
+def record_strings(rec):
+    at=rec["all_time"]; total=at["w"]+at["l"]
     at_str=f"{at['w']}-{at['l']}"; at_pct=f"{at['w']/total:.1%}" if total>0 else "--"
     pct_w=at["w"]/total*100 if total>0 else 0
-    now=datetime.now(); mw=ml=ww=wl=0
-    for ds,d in record["daily"].items():
+    now=datetime.now(); mw=ml_=ww=wl=0
+    for ds,d in rec["daily"].items():
         try:
             dt=datetime.strptime(ds,"%Y-%m-%d")
-            if dt.year==now.year and dt.month==now.month: mw+=d["w"]; ml+=d["l"]
+            if dt.year==now.year and dt.month==now.month: mw+=d["w"]; ml_+=d["l"]
             if (now-dt).days<=7: ww+=d["w"]; wl+=d["l"]
         except: pass
     yest=(now-timedelta(days=1)).strftime("%Y-%m-%d")
-    yd=record["daily"].get(yest,{})
+    yd=rec["daily"].get(yest,{})
     yest_str=f"{yd.get('w',0)}-{yd.get('l',0)}" if yd else "--"
-    return at_str,at_pct,f"{mw}-{ml}",f"{ww}-{wl}",yest_str,pct_w
+    return at_str,at_pct,f"{mw}-{ml_}",f"{ww}-{wl}",yest_str,pct_w
 
-def conf_cell_html(record,key,label):
-    bc=record["by_conf"]; w=bc.get(key,{}).get("w",0); l=bc.get(key,{}).get("l",0); t=w+l
+def conf_cell_html(rec, key, label):
+    bc=rec["by_conf"]; w=bc.get(key,{}).get("w",0); l=bc.get(key,{}).get("l",0)
+    pnl=bc.get(key,{}).get("pnl",0.0); t=w+l
     pct=f"{w/t:.0%}" if t>0 else "--"
     clr="#16a34a" if t>0 and w/t>=0.60 else ("#65a30d" if t>0 and w/t>=0.55 else "#374151")
+    pnl_clr="#16a34a" if pnl>=0 else "#dc2626"
+    pnl_str=f"+${pnl:.2f}" if pnl>=0 else f"-${abs(pnl):.2f}"
     return f"""<div style="background:#fff;border-radius:8px;padding:10px 6px;text-align:center;border:0.5px solid #e5e7eb;">
       <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">{label}</div>
       <div style="font-size:13px;font-weight:500;">{w}-{l}</div>
-      <div style="font-size:10px;color:{clr};margin-top:1px;">{pct}</div></div>"""
+      <div style="font-size:10px;color:{clr};margin-top:1px;">{pct}</div>
+      <div style="font-size:10px;font-weight:600;color:{pnl_clr};margin-top:4px;border-top:0.5px solid #f3f4f6;padding-top:4px;">$10 flat: {pnl_str}</div></div>"""
 
-def generate_html(predictions,record,today_str,date_str):
+def generate_html(ml_preds, ou_preds, prop_preds, record, today_str, date_str):
     print("Generating HTML...")
-    at_str,at_pct,mo_str,wk_str,ye_str,pct_w=record_strings(record)
+    ml_rec=record["ml"]; ou_rec=record["ou"]; props_rec=record["props"]
+    at_str,at_pct,mo_str,wk_str,ye_str,pct_w = record_strings(ml_rec)
 
+    # Nav
     nav=f'<a href="mlb_predictor.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#111;color:#fff;">Today - {datetime.now().strftime("%b %d")}</a>'
-    for ds,d in sorted(record["daily"].items(),reverse=True)[:5]:
+    for ds,d in sorted(ml_rec["daily"].items(),reverse=True)[:6]:
         try:
             lbl=datetime.strptime(ds,"%Y-%m-%d").strftime("%b %d")
             wlc="#16a34a" if d["w"]>d["l"] else ("#dc2626" if d["l"]>d["w"] else "#9ca3af")
             nav+=f'<a href="history_{ds}.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#f3f4f6;color:#374151;">{lbl}<span style="font-size:11px;color:{wlc};"> {d["w"]}-{d["l"]}</span></a>'
         except: pass
 
-    cards=""
-    for i,g in enumerate(predictions):
+    # ML cards
+    ml_cards=""
+    for i,g in enumerate(ml_preds):
         conf=g["confidence"]; pih=g["pick_abbr"]==g["home_abbr"]
         pick_pct=int(conf*100); clr=cc(conf)
         ev=g["ev"]; ev_clr=ec(ev); ev_lbl=el(ev)
@@ -567,10 +1008,11 @@ def generate_html(predictions,record,today_str,date_str):
         hp=g.get("home_pitcher","TBD"); ap=g.get("away_pitcher","TBD")
         bk_prob=int((american_to_prob(g["pick_odds"]) or 0)*100)
         pick_name=g["pick"]
+        reason=ml_reasoning(g)
 
-        cards+=f"""
+        ml_cards+=f"""
 <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
-  <div onclick="toggle({i})" style="padding:16px 18px;cursor:pointer;user-select:none;">
+  <div onclick="toggle('ml{i}')" style="padding:16px 18px;cursor:pointer;user-select:none;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
       <span style="font-size:11px;color:#9ca3af;">{g['time']}</span>
       <span style="font-size:13px;font-weight:500;color:{clr};">{pick_pct}% confidence</span>
@@ -613,12 +1055,12 @@ def generate_html(predictions,record,today_str,date_str):
         </div>
         <div style="text-align:right;">
           <div style="font-size:12px;font-weight:500;color:{ev_clr};">EV {ev_lbl}</div>
-          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint{i}">tap for details</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint_ml{i}">tap for details</div>
         </div>
       </div>
     </div>
   </div>
-  <div id="body{i}" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+  <div id="body_ml{i}" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
     <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:6px;">Moneyline pick</div>
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
       <span style="font-size:19px;font-weight:500;">{g['pick']}</span>
@@ -626,7 +1068,7 @@ def generate_html(predictions,record,today_str,date_str):
       <span style="font-size:12px;color:#9ca3af;">book {bk_prob}% vs model {pick_pct}%</span>
       <span style="font-size:13px;font-weight:500;color:{ev_clr};">EV {ev_lbl}</span>
     </div>
-    <div style="font-size:12px;color:#9ca3af;margin-bottom:10px;">EV = expected value per $100 using model probability vs book price</div>
+    <div style="font-size:12px;color:#374151;line-height:1.65;margin-bottom:10px;padding:10px 12px;background:#f9fafb;border-radius:8px;">{reason}</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
       <div style="background:#f9fafb;border-radius:8px;padding:10px;">
         <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">{g['away_abbr']} (Away)</div>
@@ -643,14 +1085,112 @@ def generate_html(predictions,record,today_str,date_str):
         <div style="font-size:11px;color:#374151;margin-top:4px;">SP: {hp}</div>
       </div>
     </div>
-    <div style="font-size:11px;color:#9ca3af;background:#f9fafb;border-radius:8px;padding:8px 10px;">
-      Based on last {ROLLING_WINDOW}-game rolling stats + starter pool ERA/WHIP/FIP averages.
-    </div>
-    <div style="text-align:center;margin-top:12px;"><span onclick="toggle({i})" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle('ml{i}')" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
   </div>
 </div>"""
 
-    n=len(predictions)
+    # O/U cards
+    ou_cards=""
+    if not ou_preds:
+        ou_cards='<div style="padding:20px;text-align:center;color:#9ca3af;font-size:13px;">No totals available today.</div>'
+    for i,g in enumerate(ou_preds):
+        conf=g["confidence"]; pick_pct=int(conf*100); clr=cc(conf)
+        ev=g["ev"]; ev_clr=ec(ev); ev_lbl=el(ev)
+        pick=g["pick"]; line=g["line"]; proj=g["proj_total"]
+        over_clr="#16a34a" if pick=="Over" else "#9ca3af"
+        under_clr="#16a34a" if pick=="Under" else "#9ca3af"
+        reason=ou_reasoning(g)
+        ou_cards+=f"""
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle('ou{i}')" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">{g['time']} · {g['away_abbr']} @ {g['home_abbr']}</span>
+      <span style="font-size:13px;font-weight:500;color:{clr};">{pick_pct}% confidence</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <div style="flex:1;">
+        <div style="font-size:13px;color:#9ca3af;">{g['away_name']} @ {g['home_name']}</div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:4px;">Proj: {proj} runs · Line: {line}</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">Total</div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span style="font-size:18px;font-weight:600;color:{over_clr};">O {line}</span>
+          <span style="font-size:14px;color:#d1d5db;">/</span>
+          <span style="font-size:18px;font-weight:600;color:{under_clr};">U {line}</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:16px;font-weight:600;color:{clr};">{'OVER' if pick=='Over' else 'UNDER'} {line}</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">{os_(g['pick_odds'])}</span>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;font-weight:500;color:{ev_clr};">EV {ev_lbl}</div>
+          <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint_ou{i}">tap for details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="body_ou{i}" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="font-size:12px;color:#374151;line-height:1.65;margin-bottom:10px;padding:10px 12px;background:#f9fafb;border-radius:8px;">{reason}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:10px;color:#9ca3af;">Over {line}</div>
+        <div style="font-size:16px;font-weight:600;margin-top:4px;">{os_(g['over_odds'])}</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:10px;color:#9ca3af;">Under {line}</div>
+        <div style="font-size:16px;font-weight:600;margin-top:4px;">{os_(g['under_odds'])}</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:12px;"><span onclick="toggle('ou{i}')" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>"""
+
+    # Props cards
+    prop_cards=""
+    if not prop_preds:
+        prop_cards='<div style="padding:20px;text-align:center;color:#9ca3af;font-size:13px;">No pitcher props available today.</div>'
+    for i,p in enumerate(prop_preds):
+        conf=p["confidence"]; pick_pct=int(conf*100); clr=cc(conf)
+        ev=p["ev"]; ev_clr=ec(ev); ev_lbl=el(ev)
+        pick=p["pick"]; line=p["line"]
+        bg_clr="#eff6ff" if pick=="Over" else "#f5f3ff"
+        bd_clr="#bfdbfe" if pick=="Over" else "#ddd6fe"
+        arrow_clr="#2563eb" if pick=="Over" else "#7c3aed"
+        arrow="OVER" if pick=="Over" else "UNDER"
+        reason=prop_reasoning(p)
+        prop_cards+=f"""
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div style="padding:16px 18px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <span style="font-size:11px;color:#9ca3af;">{p['game_name']} · {p['time']}</span>
+      <span style="font-size:12px;font-weight:500;color:{clr};">{pick_pct}% conf</span>
+    </div>
+    <div style="font-size:16px;font-weight:600;color:#111;margin-bottom:8px;">{p['pitcher']}</div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;border-radius:10px;background:{bg_clr};border:0.5px solid {bd_clr};">
+      <span style="font-size:18px;font-weight:600;color:{arrow_clr};">{arrow}</span>
+      <span style="font-size:16px;font-weight:500;color:#111;">{line} Strikeouts</span>
+      <span style="font-size:13px;color:#374151;">{os_(p['pick_odds'])}</span>
+      <span style="font-size:12px;font-weight:500;color:{ev_clr};">EV {ev_lbl}</span>
+    </div>
+    <div style="font-size:12px;color:#374151;line-height:1.65;margin-top:10px;padding:10px 12px;background:#f9fafb;border-radius:8px;">{reason}</div>
+  </div>
+</div>"""
+
+    # Record section — 3 rows
+    def rec_row(label, rec_):
+        at=rec_["all_time"]; tot=at["w"]+at["l"]
+        pct=f"{at['w']/tot:.1%}" if tot>0 else "--"
+        return f'<div style="background:#fff;border-radius:8px;padding:8px 10px;text-align:center;border:0.5px solid #e5e7eb;"><div style="font-size:10px;color:#9ca3af;">{label}</div><div style="font-size:14px;font-weight:500;">{at["w"]}-{at["l"]}</div><div style="font-size:10px;color:#16a34a;">{pct}</div></div>'
+
+    n=len(ml_preds)
     html=f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -664,8 +1204,9 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
     <h1 style="font-size:22px;font-weight:500;">MLB AI Predictor</h1>
     <div style="font-size:13px;color:#9ca3af;margin-top:3px;">{today_str} · {n} games</div>
   </div>
+
   <div style="background:#f9fafb;border-radius:12px;border:0.5px solid #e5e7eb;padding:16px 18px;margin-bottom:20px;">
-    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:12px;">Model record</div>
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:12px;">Model record · Moneyline</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">
       <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">All time</div><div style="font-size:22px;font-weight:500;">{at_str}</div><div style="font-size:11px;color:#16a34a;">{at_pct}</div></div>
       <div style="text-align:center;"><div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">This month</div><div style="font-size:22px;font-weight:500;">{mo_str}</div></div>
@@ -678,22 +1219,62 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
     <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-bottom:12px;">
       <span>Hit rate</span><span>Target 65% · Break-even 52.4%</span>
     </div>
-    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">Record by confidence</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px;">
+      {rec_row("ML",ml_rec)}{rec_row("O/U",ou_rec)}{rec_row("Props",props_rec)}
+    </div>
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">ML record by confidence</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
-      {conf_cell_html(record,"50","50-59%")}{conf_cell_html(record,"55","60-69%")}{conf_cell_html(record,"60","70-79%")}{conf_cell_html(record,"70","80%+")}
+      {conf_cell_html(ml_rec,"50","50-59%")}{conf_cell_html(ml_rec,"55","60-69%")}{conf_cell_html(ml_rec,"60","70-79%")}{conf_cell_html(ml_rec,"70","80%+")}
     </div>
   </div>
+
   <div style="overflow-x:auto;white-space:nowrap;margin-bottom:16px;padding-bottom:4px;">{nav}</div>
-  <div style="display:flex;justify-content:flex-end;margin-bottom:12px;font-size:11px;color:#9ca3af;gap:5px;">
-    EV: <span style="color:#16a34a;">+8 excellent</span> · <span style="color:#65a30d;">+3 good</span> · <span style="color:#d97706;">marginal</span> · <span style="color:#dc2626;">neg = skip</span>
+
+  <div style="display:flex;gap:6px;margin-bottom:16px;">
+    <button onclick="showTab('ml')" id="tab-ml" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#111;color:#fff;">ML</button>
+    <button onclick="showTab('ou')" id="tab-ou" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#f3f4f6;color:#374151;">O/U</button>
+    <button onclick="showTab('props')" id="tab-props" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#f3f4f6;color:#374151;">Props</button>
   </div>
-  {cards}
+
+  <div id="section-ml">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:12px;font-size:11px;color:#9ca3af;gap:5px;">
+      EV: <span style="color:#16a34a;">+8 excellent</span> · <span style="color:#65a30d;">+3 good</span> · <span style="color:#d97706;">marginal</span> · <span style="color:#dc2626;">neg = skip</span>
+    </div>
+    {ml_cards}
+  </div>
+
+  <div id="section-ou" style="display:none;">
+    <div style="display:flex;justify-content:flex-end;margin-bottom:12px;font-size:11px;color:#9ca3af;gap:5px;">
+      EV: <span style="color:#16a34a;">+8 excellent</span> · <span style="color:#65a30d;">+3 good</span> · <span style="color:#d97706;">marginal</span> · <span style="color:#dc2626;">neg = skip</span>
+    </div>
+    {ou_cards}
+  </div>
+
+  <div id="section-props" style="display:none;">
+    {prop_cards}
+  </div>
+
   <div style="margin-top:20px;padding:12px 14px;background:#fffbeb;border-radius:8px;border:0.5px solid #fde68a;">
     <p style="font-size:11px;color:#92400e;line-height:1.6;">AI-generated picks for informational purposes only. Always gamble responsibly.</p>
   </div>
 </div>
 <script>
-function toggle(i){{var b=document.getElementById('body'+i);var h=document.getElementById('hint'+i);var o=b.style.display!=='none';b.style.display=o?'none':'block';h.innerHTML=o?'tap for details':'collapse';}}
+function toggle(id){{
+  var b=document.getElementById('body_'+id);
+  var h=document.getElementById('hint_'+id);
+  if(!b)return;
+  var o=b.style.display!=='none';
+  b.style.display=o?'none':'block';
+  if(h) h.innerHTML=o?'tap for details':'collapse';
+}}
+function showTab(t){{
+  ['ml','ou','props'].forEach(function(id){{
+    var active=t===id;
+    document.getElementById('section-'+id).style.display=active?'block':'none';
+    document.getElementById('tab-'+id).style.background=active?'#111':'#f3f4f6';
+    document.getElementById('tab-'+id).style.color=active?'#fff':'#374151';
+  }});
+}}
 </script></body></html>"""
 
     with open(OUTPUT_HTML,"w",encoding="utf-8") as f: f.write(html)
@@ -718,14 +1299,24 @@ if __name__=="__main__":
     starter_pool  = build_starter_pool()
     starters      = fetch_probable_starters()
     odds          = fetch_odds()
+    totals_odds   = fetch_totals_odds()
+    props_odds_raw= fetch_props_odds()
     games         = get_schedule()
 
     if not games:
         print("No games today.")
+        generate_html([],[],[],record,today_str,date_str)
     else:
-        preds = run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool)
-        save_todays_picks(preds,date_str)
-        generate_html(preds,record,today_str,date_str)
-        at=record["all_time"]
+        ml_preds   = run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool)
+        ou_preds   = predict_totals(games,ts,totals_odds)
+        prop_preds = predict_props(games,starters,ps,starter_pool,props_odds_raw)
+
+        save_todays_picks(ml_preds,date_str)
+        save_ou_picks(ou_preds,date_str)
+        save_props_picks(prop_preds,date_str)
+
+        generate_html(ml_preds,ou_preds,prop_preds,record,today_str,date_str)
+
+        at=record["ml"]["all_time"]
         print(f"\nDone! Open mlb_predictor.html in Chrome.")
-        print(f"Record: {at['w']}-{at['l']} all time")
+        print(f"ML Record: {at['w']}-{at['l']} all time")
