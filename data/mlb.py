@@ -291,6 +291,7 @@ def build_team_stats():
         result_frames.append(grp)
     games = pd.concat(result_frames).reset_index(drop=True)
     games=games.sort_values(["season","team"]).reset_index(drop=True)
+    games["game_index"]=games.groupby(["team","season"]).cumcount()
     games["date"]=(pd.to_datetime(games["season"].astype(str)+"-01-01")
                    +pd.to_timedelta(games["game_index"],unit="D"))
     games["runs_scored"]=pd.to_numeric(games["runs_scored"],errors="coerce")
