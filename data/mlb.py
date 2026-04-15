@@ -566,10 +566,7 @@ def generate_html(predictions,record,today_str,date_str):
         home_bar_clr=clr if pih else "#93c5fd"
         hp=g.get("home_pitcher","TBD"); ap=g.get("away_pitcher","TBD")
         bk_prob=int((american_to_prob(g["pick_odds"]) or 0)*100)
-        if pih:
-            prob_display=f'<span style="font-size:13px;color:#9ca3af;">{away_pct}%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:26px;font-weight:600;color:#111;">{home_pct}%</span>'
-        else:
-            prob_display=f'<span style="font-size:26px;font-weight:600;color:#111;">{away_pct}%</span><span style="font-size:11px;color:#d1d5db;margin:0 4px;">-</span><span style="font-size:13px;color:#9ca3af;">{home_pct}%</span>'
+        pick_name=g["pick"]
 
         cards+=f"""
 <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
@@ -586,10 +583,6 @@ def generate_html(predictions,record,today_str,date_str):
         <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: {ap}</div>
         <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">{os_(g['away_odds'])}</div>
       </div>
-      <div style="text-align:center;padding:0 10px;flex-shrink:0;">
-        <div style="font-size:10px;color:#9ca3af;margin-bottom:6px;">Win prob</div>
-        {prob_display}
-      </div>
       <div style="flex:1;min-width:0;text-align:right;">
         <div style="font-size:15px;font-weight:500;{hsty}">{g['home_name']}</div>
         <div style="font-size:11px;color:#9ca3af;">Home · {g['h_last5_w']}-{g['h_last5_l']} last 5</div>
@@ -602,6 +595,11 @@ def generate_html(predictions,record,today_str,date_str):
       <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
         <div style="width:{away_pct}%;background:{away_bar_clr};border-radius:99px 0 0 99px;"></div>
         <div style="width:{home_pct}%;background:{home_bar_clr};border-radius:0 99px 99px 0;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:3px;">
+        <span>{g['away_abbr']} {away_pct}%</span>
+        <span style="color:#374151;font-weight:500;">Proj: {pick_name} wins</span>
+        <span>{g['home_abbr']} {home_pct}%</span>
       </div>
     </div>
     <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
