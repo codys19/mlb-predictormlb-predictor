@@ -11,7 +11,10 @@
     "home_pitcher": "Ryan Weiss",
     "away_pitcher": "Juan Mejia",
     "game_id": 824208,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "CLE",
@@ -25,7 +28,10 @@
     "home_pitcher": "Parker Messick",
     "away_pitcher": "Shane Baz",
     "game_id": 824453,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "SDP",
@@ -39,7 +45,10 @@
     "home_pitcher": "Walker Buehler",
     "away_pitcher": "Luis Castillo",
     "game_id": 823313,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "CHW",
@@ -53,7 +62,10 @@
     "home_pitcher": "Jordan Leasure",
     "away_pitcher": "Steven Matz",
     "game_id": 824614,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 3,
+    "away_score": 5
   },
   {
     "home_abbr": "MIL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Brandon Sproat",
     "away_pitcher": "Patrick Corbin",
     "game_id": 823801,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "home_abbr": "PIT",
@@ -81,7 +96,10 @@
     "home_pitcher": "Braxton Ashcraft",
     "away_pitcher": "Foster Griffin",
     "game_id": 823396,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 7,
+    "away_score": 8
   },
   {
     "home_abbr": "NYY",
@@ -95,7 +113,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Brent Suter",
     "game_id": 823560,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAA",
+    "home_score": 4,
+    "away_score": 11
   },
   {
     "home_abbr": "ATH",
@@ -109,7 +130,10 @@
     "home_pitcher": "Jacob Lopez",
     "away_pitcher": "Jack Leiter",
     "game_id": 825023,
-    "result": null
+    "result": "W",
+    "actual_winner": "TEX",
+    "home_score": 6,
+    "away_score": 9
   },
   {
     "home_abbr": "CIN",
@@ -123,7 +147,10 @@
     "home_pitcher": "Chase Burns",
     "away_pitcher": "Landen Roupp",
     "game_id": 824530,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 0,
+    "away_score": 3
   },
   {
     "home_abbr": "DET",
@@ -137,6 +164,9 @@
     "home_pitcher": "Keider Montero",
     "away_pitcher": "Kris Bubic",
     "game_id": 824289,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 10,
+    "away_score": 9
   }
 ]
