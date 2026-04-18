@@ -60,8 +60,11 @@ def build_feature_list(df):
         feature_cols += tp_available
         print(f"  ✅ Team pitcher features: {len(tp_available)}")
 
-    # Add starter features if populated (need at least 50% coverage)
-    st_available = [c for c in STARTER_FEATURES if c in df.columns and df[c].notna().mean() > 0.5]
+    # Add starter features if populated.
+    # Threshold is 0.25 (not 0.5) because starter cols are intentionally NaN
+    # for unmatched games — XGBoost handles missing values natively, so 47%
+    # population is perfectly fine and better than filling with pool averages.
+    st_available = [c for c in STARTER_FEATURES if c in df.columns and df[c].notna().mean() > 0.25]
     if st_available:
         feature_cols += st_available
         print(f"  ✅ Starter features: {len(st_available)} — model will use individual starter stats!")
@@ -75,8 +78,15 @@ def build_feature_list(df):
 def split_data(df, feature_cols):
     print(f"\n✂️  Splitting (train=2021-2024, test=2025-2026)...")
 
-    train = df[df["season"] <= 2024].dropna(subset=feature_cols + [TARGET])
-    test  = df[df["season"] >= 2025].dropna(subset=feature_cols + [TARGET])
+    # Only require non-NaN on base/team features.
+    # Starter columns are intentionally sparse (NaN when no individual match) —
+    # XGBoost handles missing values natively so we must NOT drop those rows.
+    required = [c for c in feature_cols if not any(
+        c.startswith(p) for p in ("home_starter_","away_starter_","starter_","has_individual_")
+    )]
+
+    train = df[df["season"] <= 2024].dropna(subset=required + [TARGET])
+    test  = df[df["season"] >= 2025].dropna(subset=required + [TARGET])
 
     X_train = train[feature_cols]; y_train = train[TARGET].astype(int)
     X_test  = test[feature_cols];  y_test  = test[TARGET].astype(int)
@@ -89,8 +99,14 @@ def split_data(df, feature_cols):
 def train_model(X_train, y_train):
     print("\n🤖 Training XGBoost...")
     model = XGBClassifier(
-        n_estimators=500, max_depth=4, learning_rate=0.05,
-        subsample=0.8, colsample_bytree=0.8, min_child_weight=5,
+        n_estimators=400,
+        max_depth=3,           # shallower trees generalise better
+        learning_rate=0.05,
+        subsample=0.7,
+        colsample_bytree=0.6,  # fewer features per tree reduces multicollinearity
+        min_child_weight=15,   # require more samples per leaf
+        reg_alpha=0.1,         # L1 regularization
+        reg_lambda=2.0,        # L2 regularization
         eval_metric="logloss", random_state=42, verbosity=0,
     )
     model.fit(X_train, y_train, verbose=False)

@@ -531,6 +531,66 @@ def build_starter_pool():
     print(f"  Starter pool loaded: {len(starter_stats)} team-seasons")
     return starter_stats
 
+def build_starter_stats_by_name():
+    """
+    Build a name-keyed lookup for individual pitcher season stats.
+    Used by run_predictions() and predict_props() to replace team rotation
+    averages with the actual starting pitcher's ERA/WHIP/K9.
+
+    Returns: {pitcher_name: {era, whip, k_per_9, bb_per_9, fip_proxy}}
+    Also stores {"__lastname_index__": {last_name: [full_name, ...]}} for fuzzy matching.
+    """
+    if not os.path.exists(STARTER_PATH): return {}
+    print("Loading individual starter stats by name...")
+    df=pd.read_csv(STARTER_PATH)
+    df["season"]=df["season"].astype(int)
+    if "gs" in df.columns:
+        df=df[df["gs"]>=3].copy()
+    df=df.sort_values("season")
+    latest=df.groupby("name").last().reset_index()
+    def sf(val,default):
+        try: v=float(val or default); return v if not np.isnan(v) and v>0 else default
+        except: return default
+    stats_by_name={}
+    lastname_index={}
+    for _,row in latest.iterrows():
+        name=str(row.get("name","")).strip()
+        if not name or name=="nan": continue
+        stats_by_name[name]={
+            "era":      sf(row.get("era"),      4.50),
+            "whip":     sf(row.get("whip"),     1.30),
+            "k_per_9":  sf(row.get("k_per_9"),  8.00),
+            "bb_per_9": sf(row.get("bb_per_9"), 3.00),
+            "fip_proxy":sf(row.get("fip_proxy"),4.50),
+        }
+        last=name.split()[-1].lower()
+        lastname_index.setdefault(last,[]).append(name)
+    stats_by_name["__lastname_index__"]=lastname_index
+    print(f"  Individual starter stats: {len(stats_by_name)-1} pitchers")
+    return stats_by_name
+
+def _lookup_pitcher_stats(pitcher_name, stats_by_name, pool_fallback=None):
+    """
+    Look up an individual pitcher's stats. Priority:
+      1. Exact name match
+      2. Last-name fuzzy match (unique last names only; uses first initial for ambiguous)
+      3. pool_fallback dict
+      4. League averages
+    """
+    LEAGUE_AVG={"era":4.50,"whip":1.30,"k_per_9":8.00,"bb_per_9":3.00,"fip_proxy":4.50}
+    if not pitcher_name or pitcher_name=="TBD": return pool_fallback or LEAGUE_AVG
+    if pitcher_name in stats_by_name: return stats_by_name[pitcher_name]
+    lastname_index=stats_by_name.get("__lastname_index__",{})
+    last=pitcher_name.split()[-1].lower()
+    candidates=lastname_index.get(last,[])
+    if len(candidates)==1: return stats_by_name[candidates[0]]
+    if len(candidates)>1:
+        first=pitcher_name[0].lower() if pitcher_name else ""
+        for cname in candidates:
+            if cname[0].lower()==first: return stats_by_name[cname]
+        return stats_by_name[candidates[0]]
+    return pool_fallback or LEAGUE_AVG
+
 def fetch_probable_starters():
     print("Fetching probable starters...")
     today=datetime.now().strftime("%m/%d/%Y")
@@ -670,7 +730,8 @@ def get_schedule():
 # PART 3 — PREDICT
 # ═══════════════════════════════════════════════════════════════════
 
-def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool):
+def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,starter_stats_by_name=None):
+    if starter_stats_by_name is None: starter_stats_by_name={}
     print("Running ML predictions...")
     current_season=datetime.now().year
     results=[]
@@ -702,18 +763,33 @@ def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool):
             "so9_diff":  hp.get("avg_so9",8.0) -ap.get("avg_so9",8.0),
         }
 
-        if starter_pool is not None and any("starter_" in f for f in feature_names):
-            h_key=f"{ha}_{current_season}"; a_key=f"{aa}_{current_season}"
-            h_sp=starter_pool.get(h_key, starter_pool.get(f"{ha}_{current_season-1}",{}))
-            a_sp=starter_pool.get(a_key, starter_pool.get(f"{aa}_{current_season-1}",{}))
-            for k,v in h_sp.items(): row[f"home_{k}"]=v
-            for k,v in a_sp.items(): row[f"away_{k}"]=v
-            h_era=h_sp.get("starter_era",row["home_avg_era"]); a_era=a_sp.get("starter_era",row["away_avg_era"])
-            h_whip=h_sp.get("starter_whip",row["home_avg_whip"]); a_whip=a_sp.get("starter_whip",row["away_avg_whip"])
-            h_k9=h_sp.get("starter_k_per_9",row["home_avg_so9"]); a_k9=a_sp.get("starter_k_per_9",row["away_avg_so9"])
-            h_fip=h_sp.get("starter_fip_proxy",row["home_avg_era"]); a_fip=a_sp.get("starter_fip_proxy",row["away_avg_era"])
-            row["starter_era_diff"]=a_era-h_era; row["starter_whip_diff"]=a_whip-h_whip
-            row["starter_k_diff"]=h_k9-a_k9; row["starter_fip_diff"]=a_fip-h_fip
+        if any("starter_" in f for f in feature_names):
+            # ── Individual starter lookup (falls back to pool → league avg) ──
+            st_game = starters.get(f"{ha}_{aa}",{})
+            home_p_n = st_game.get("home_pitcher","TBD")
+            away_p_n = st_game.get("away_pitcher","TBD")
+
+            # Build pool fallbacks for when individual stats not found
+            h_pool={}; a_pool={}
+            if starter_pool is not None:
+                h_raw=starter_pool.get(f"{ha}_{current_season}",starter_pool.get(f"{ha}_{current_season-1}",{}))
+                a_raw=starter_pool.get(f"{aa}_{current_season}",starter_pool.get(f"{aa}_{current_season-1}",{}))
+                if h_raw: h_pool={"era":h_raw.get("starter_era",row["home_avg_era"]),"whip":h_raw.get("starter_whip",row["home_avg_whip"]),"k_per_9":h_raw.get("starter_k_per_9",row["home_avg_so9"]),"bb_per_9":h_raw.get("starter_bb_per_9",3.0),"fip_proxy":h_raw.get("starter_fip_proxy",row["home_avg_era"])}
+                if a_raw: a_pool={"era":a_raw.get("starter_era",row["away_avg_era"]),"whip":a_raw.get("starter_whip",row["away_avg_whip"]),"k_per_9":a_raw.get("starter_k_per_9",row["away_avg_so9"]),"bb_per_9":a_raw.get("starter_bb_per_9",3.0),"fip_proxy":a_raw.get("starter_fip_proxy",row["away_avg_era"])}
+
+            h_sp = _lookup_pitcher_stats(home_p_n, starter_stats_by_name, h_pool or None)
+            a_sp = _lookup_pitcher_stats(away_p_n, starter_stats_by_name, a_pool or None)
+
+            row["home_starter_era"]=h_sp["era"]; row["home_starter_whip"]=h_sp["whip"]
+            row["home_starter_k_per_9"]=h_sp["k_per_9"]; row["home_starter_bb_per_9"]=h_sp["bb_per_9"]
+            row["home_starter_fip_proxy"]=h_sp["fip_proxy"]
+            row["away_starter_era"]=a_sp["era"]; row["away_starter_whip"]=a_sp["whip"]
+            row["away_starter_k_per_9"]=a_sp["k_per_9"]; row["away_starter_bb_per_9"]=a_sp["bb_per_9"]
+            row["away_starter_fip_proxy"]=a_sp["fip_proxy"]
+            row["starter_era_diff"]=a_sp["era"]-h_sp["era"]
+            row["starter_whip_diff"]=a_sp["whip"]-h_sp["whip"]
+            row["starter_k_diff"]=h_sp["k_per_9"]-a_sp["k_per_9"]
+            row["starter_fip_diff"]=a_sp["fip_proxy"]-h_sp["fip_proxy"]
 
         X=pd.DataFrame([{f: row.get(f,0.0) for f in feature_names}])
         prob_home=float(model.predict_proba(X)[0][1]); prob_away=1-prob_home
@@ -786,8 +862,9 @@ def predict_totals(games, ts, totals_odds):
     results.sort(key=lambda x: x["confidence"],reverse=True)
     return results
 
-def predict_props(games, starters, ps, starter_pool, props_odds):
+def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_by_name=None):
     """Predict pitcher strikeout props using K/9 rates."""
+    if starter_stats_by_name is None: starter_stats_by_name={}
     print("Predicting pitcher props...")
     current_season=datetime.now().year
     results=[]
@@ -815,8 +892,11 @@ def predict_props(games, starters, ps, starter_pool, props_odds):
         team_ps=ps.get(team_abbr,{})
         k_per_9=team_ps.get("avg_so9",8.0)
 
-        # Try to get starter-specific K rate from starter pool
-        if starter_pool:
+        # Try individual pitcher stats first, fall back to team pool
+        individual=_lookup_pitcher_stats(pitcher, starter_stats_by_name)
+        if individual.get("k_per_9") and individual["k_per_9"] != 8.0:
+            k_per_9=individual["k_per_9"]
+        elif starter_pool:
             sp_key=f"{team_abbr}_{current_season}"
             sp=starter_pool.get(sp_key, starter_pool.get(f"{team_abbr}_{current_season-1}",{}))
             if sp.get("starter_k_per_9"): k_per_9=sp["starter_k_per_9"]
@@ -1297,6 +1377,7 @@ if __name__=="__main__":
     ts            = build_team_stats()
     ps            = build_pitcher_stats()
     starter_pool  = build_starter_pool()
+    starter_stats_by_name = build_starter_stats_by_name()
     starters      = fetch_probable_starters()
     odds          = fetch_odds()
     totals_odds   = fetch_totals_odds()
@@ -1307,9 +1388,9 @@ if __name__=="__main__":
         print("No games today.")
         generate_html([],[],[],record,today_str,date_str)
     else:
-        ml_preds   = run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool)
+        ml_preds   = run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,starter_stats_by_name)
         ou_preds   = predict_totals(games,ts,totals_odds)
-        prop_preds = predict_props(games,starters,ps,starter_pool,props_odds_raw)
+        prop_preds = predict_props(games,starters,ps,starter_pool,props_odds_raw,starter_stats_by_name)
 
         save_todays_picks(ml_preds,date_str)
         save_ou_picks(ou_preds,date_str)
