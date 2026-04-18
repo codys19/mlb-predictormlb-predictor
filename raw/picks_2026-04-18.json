@@ -7,14 +7,11 @@
     "pick_abbr": "CLE",
     "pick": "Cleveland Guardians",
     "confidence": 0.8276934623718262,
-    "pick_odds": -135,
-    "home_pitcher": "Tanner Bibee",
-    "away_pitcher": "Chris Bassitt",
-    "game_id": 824454,
-    "result": "L",
-    "actual_winner": "BAL",
-    "home_score": 4,
-    "away_score": 6
+    "pick_odds": -138,
+    "home_pitcher": "Gavin Williams",
+    "away_pitcher": "Dean Kremer",
+    "game_id": 824451,
+    "result": null
   },
   {
     "home_abbr": "COL",
@@ -24,14 +21,11 @@
     "pick_abbr": "LAD",
     "pick": "Los Angeles Dodgers",
     "confidence": 0.767451822757721,
-    "pick_odds": -316,
-    "home_pitcher": "Tomoyuki Sugano",
-    "away_pitcher": "Tyler Glasnow",
-    "game_id": 824373,
-    "result": "W",
-    "actual_winner": "LAD",
-    "home_score": 1,
-    "away_score": 7
+    "pick_odds": -297,
+    "home_pitcher": "Ryan Feltner",
+    "away_pitcher": "Emmet Sheehan",
+    "game_id": 824372,
+    "result": null
   },
   {
     "home_abbr": "NYY",
@@ -41,14 +35,11 @@
     "pick_abbr": "KCR",
     "pick": "Kansas City Royals",
     "confidence": 0.7188552618026733,
-    "pick_odds": 153,
-    "home_pitcher": "Cam Schlittler",
-    "away_pitcher": "Michael Wacha",
-    "game_id": 823559,
-    "result": "L",
-    "actual_winner": "NYY",
-    "home_score": 4,
-    "away_score": 2
+    "pick_odds": 137,
+    "home_pitcher": "Will Warren",
+    "away_pitcher": "Noah Cameron",
+    "game_id": 823558,
+    "result": null
   },
   {
     "home_abbr": "PHI",
@@ -58,14 +49,11 @@
     "pick_abbr": "ATL",
     "pick": "Atlanta Braves",
     "confidence": 0.6677050590515137,
-    "pick_odds": -112,
-    "home_pitcher": "Taijuan Walker",
-    "away_pitcher": "Mart\u00edn P\u00e9rez",
-    "game_id": 823476,
-    "result": "W",
-    "actual_winner": "ATL",
-    "home_score": 0,
-    "away_score": 9
+    "pick_odds": 109,
+    "home_pitcher": "Cristopher S\u00e1nchez",
+    "away_pitcher": "Chris Sale",
+    "game_id": 823474,
+    "result": null
   },
   {
     "home_abbr": "HOU",
@@ -75,14 +63,11 @@
     "pick_abbr": "HOU",
     "pick": "Houston Astros",
     "confidence": 0.6574209332466125,
-    "pick_odds": -142,
-    "home_pitcher": "Peter Lambert",
-    "away_pitcher": "Kyle Leahy",
-    "game_id": 824207,
-    "result": "L",
-    "actual_winner": "STL",
-    "home_score": 4,
-    "away_score": 9
+    "pick_odds": -144,
+    "home_pitcher": "Lance McCullers Jr.",
+    "away_pitcher": "Andre Pallante",
+    "game_id": 824206,
+    "result": null
   },
   {
     "home_abbr": "PIT",
@@ -92,14 +77,11 @@
     "pick_abbr": "TBR",
     "pick": "Tampa Bay Rays",
     "confidence": 0.6415928602218628,
-    "pick_odds": 111,
-    "home_pitcher": "Bubba Chandler",
-    "away_pitcher": "Nick Martinez",
-    "game_id": 823397,
-    "result": "L",
-    "actual_winner": "PIT",
-    "home_score": 5,
-    "away_score": 1
+    "pick_odds": 134,
+    "home_pitcher": "Paul Skenes",
+    "away_pitcher": "Drew Rasmussen",
+    "game_id": 823394,
+    "result": null
   },
   {
     "home_abbr": "ARI",
@@ -109,14 +91,11 @@
     "pick_abbr": "ARI",
     "pick": "Arizona Diamondbacks",
     "confidence": 0.6376948356628418,
-    "pick_odds": -134,
-    "home_pitcher": "Michael Soroka",
-    "away_pitcher": "Eric Lauer",
-    "game_id": 825101,
-    "result": "W",
-    "actual_winner": "ARI",
-    "home_score": 6,
-    "away_score": 3
+    "pick_odds": -123,
+    "home_pitcher": "Zac Gallen",
+    "away_pitcher": "Max Scherzer",
+    "game_id": 825098,
+    "result": null
   },
   {
     "home_abbr": "WSN",
@@ -126,14 +105,11 @@
     "pick_abbr": "WSN",
     "pick": "Washington Nationals",
     "confidence": 0.6371535658836365,
-    "pick_odds": 133,
-    "home_pitcher": "Zack Littell",
-    "away_pitcher": "Logan Webb",
-    "game_id": 822752,
-    "result": "L",
-    "actual_winner": "SFG",
-    "home_score": 5,
-    "away_score": 10
+    "pick_odds": -103,
+    "home_pitcher": "Cade Cavalli",
+    "away_pitcher": "Adrian Houser",
+    "game_id": 822751,
+    "result": null
   },
   {
     "home_abbr": "CHC",
@@ -143,14 +119,11 @@
     "pick_abbr": "NYM",
     "pick": "New York Mets",
     "confidence": 0.6016245484352112,
-    "pick_odds": 126,
-    "home_pitcher": "Edward Cabrera",
-    "away_pitcher": "Kodai Senga",
-    "game_id": 824693,
-    "result": "L",
-    "actual_winner": "CHC",
-    "home_score": 12,
-    "away_score": 4
+    "pick_odds": -109,
+    "home_pitcher": "Jameson Taillon",
+    "away_pitcher": "Freddy Peralta",
+    "game_id": 824694,
+    "result": null
   },
   {
     "home_abbr": "LAA",
@@ -160,14 +133,11 @@
     "pick_abbr": "LAA",
     "pick": "Los Angeles Angels",
     "confidence": 0.6000948548316956,
-    "pick_odds": -135,
-    "home_pitcher": "Jos\u00e9 Soriano",
-    "away_pitcher": "Matt Waldron",
-    "game_id": 824048,
-    "result": "W",
-    "actual_winner": "LAA",
-    "home_score": 8,
-    "away_score": 0
+    "pick_odds": -109,
+    "home_pitcher": "Yusei Kikuchi",
+    "away_pitcher": "Germ\u00e1n M\u00e1rquez",
+    "game_id": 824049,
+    "result": null
   },
   {
     "home_abbr": "ATH",
@@ -177,14 +147,11 @@
     "pick_abbr": "ATH",
     "pick": "Athletics",
     "confidence": 0.5738388299942017,
-    "pick_odds": -160,
-    "home_pitcher": "Aaron Civale",
-    "away_pitcher": "Davis Martin",
-    "game_id": 825019,
-    "result": "L",
-    "actual_winner": "CHW",
-    "home_score": 2,
-    "away_score": 9
+    "pick_odds": -165,
+    "home_pitcher": "Luis Severino",
+    "away_pitcher": "Erick Fedde",
+    "game_id": 825020,
+    "result": null
   },
   {
     "home_abbr": "BOS",
@@ -194,14 +161,11 @@
     "pick_abbr": "DET",
     "pick": "Detroit Tigers",
     "confidence": 0.5509128868579865,
-    "pick_odds": 107,
-    "home_pitcher": "Ranger Suarez",
-    "away_pitcher": "Casey Mize",
-    "game_id": 824778,
-    "result": "L",
-    "actual_winner": "BOS",
-    "home_score": 1,
-    "away_score": 0
+    "pick_odds": -164,
+    "home_pitcher": "Brayan Bello",
+    "away_pitcher": "Tarik Skubal",
+    "game_id": 824775,
+    "result": null
   },
   {
     "home_abbr": "SEA",
@@ -211,14 +175,11 @@
     "pick_abbr": "SEA",
     "pick": "Seattle Mariners",
     "confidence": 0.527220606803894,
-    "pick_odds": -133,
-    "home_pitcher": "Logan Gilbert",
-    "away_pitcher": "Jacob deGrom",
-    "game_id": 823152,
-    "result": "L",
-    "actual_winner": "TEX",
-    "home_score": 0,
-    "away_score": 5
+    "pick_odds": -136,
+    "home_pitcher": "George Kirby",
+    "away_pitcher": "Nathan Eovaldi",
+    "game_id": 823151,
+    "result": null
   },
   {
     "home_abbr": "MIA",
@@ -228,14 +189,11 @@
     "pick_abbr": "MIL",
     "pick": "Milwaukee Brewers",
     "confidence": 0.5111201107501984,
-    "pick_odds": -104,
-    "home_pitcher": "Janson Junk",
-    "away_pitcher": "TBD",
-    "game_id": 823883,
-    "result": "W",
-    "actual_winner": "MIL",
-    "home_score": 5,
-    "away_score": 7
+    "pick_odds": -107,
+    "home_pitcher": "Sandy Alcantara",
+    "away_pitcher": "Brandon Woodruff",
+    "game_id": 823882,
+    "result": null
   },
   {
     "home_abbr": "MIN",
@@ -245,13 +203,10 @@
     "pick_abbr": "MIN",
     "pick": "Minnesota Twins",
     "confidence": 0.5031632781028748,
-    "pick_odds": -178,
-    "home_pitcher": "Joe Ryan",
-    "away_pitcher": "Brandon Williamson",
-    "game_id": 823720,
-    "result": "L",
-    "actual_winner": "CIN",
-    "home_score": 1,
-    "away_score": 2
+    "pick_odds": -134,
+    "home_pitcher": "Taj Bradley",
+    "away_pitcher": "Andrew Abbott",
+    "game_id": 823721,
+    "result": null
   }
 ]
