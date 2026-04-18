@@ -1,0 +1,38 @@
+name: Weekly Game Results Refresh
+
+on:
+  schedule:
+    - cron: '0 15 * * 1'   # Mondays at 3 PM UTC = 8 AM PT (after daily run)
+  workflow_dispatch:         # allow manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-game-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy pybaseball requests
+
+      - name: Refresh current season game results
+        run: |
+          python data/fetch_games_update.py
+
+      - name: Commit updated game_results.csv
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add raw/game_results.csv
+          git diff --staged --quiet || git commit -m "Weekly refresh: game_results.csv $(date +'%Y-%m-%d')"
+          git push
