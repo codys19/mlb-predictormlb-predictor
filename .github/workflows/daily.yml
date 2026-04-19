@@ -37,5 +37,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add raw/record.json mlb_predictor.html
           git add raw/picks_*.json history_*.html || true
+          git add raw/odds_history.csv || true
           git diff --staged --quiet || git commit -m "Daily picks $(date +'%Y-%m-%d')"
           git push
