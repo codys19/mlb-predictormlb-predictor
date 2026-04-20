@@ -263,13 +263,11 @@ def build_team_stats():
     games["result"]    = games["result"].astype(str).str.strip().str.split("-").str[0].str.upper()
 
     SEASONS = [2021,2022,2023,2024,2025,2026]
-    def assign_season(grp):
-        idx  = np.minimum(np.arange(len(grp))//162, len(SEASONS)-1)
-        grp  = grp.copy()
-        grp["season"] = [SEASONS[i] for i in idx]
-        return grp
-
-    games = games.groupby("team", group_keys=False).apply(lambda grp: assign_season(grp)).reset_index(drop=True)
+    # Assign season by row position per team — avoids groupby.apply include_groups issue
+    games["season"] = 0
+    for team, grp in games.groupby("team", sort=False):
+        idx = np.minimum(np.arange(len(grp)) // 162, len(SEASONS) - 1)
+        games.loc[grp.index, "season"] = [SEASONS[i] for i in idx]
     games = games.sort_values(["season","team"]).reset_index(drop=True)
     games["game_index"] = games.groupby(["team","season"]).cumcount()
     games["date"]        = (pd.to_datetime(games["season"].astype(str)+"-01-01")
