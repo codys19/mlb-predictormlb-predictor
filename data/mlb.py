@@ -1001,9 +1001,76 @@ def predict_totals(games, ts, totals_odds):
     results.sort(key=lambda x: x["confidence"],reverse=True)
     return results
 
-def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_by_name=None):
-    """Predict pitcher strikeout props using K/9 rates."""
+def build_pitcher_gamelogs():
+    """
+    Build a name-keyed lookup of each pitcher's recent K/9 from their
+    last 5 starts using pybaseball game logs.
+
+    Returns: {pitcher_name: {"recent_k_per_9": float, "recent_starts": int,
+                              "recent_k_per_start": float, "recent_ip_per_start": float}}
+
+    Falls back gracefully if pybaseball is unavailable or rate-limited.
+    Uses a 30-day window to capture ~5 recent starts.
+    """
+    print("Loading recent pitcher game logs (last 30 days)...")
+    try:
+        from pybaseball import pitching_stats_range
+        end   = datetime.now()
+        start = end - timedelta(days=30)
+        df = pitching_stats_range(
+            start.strftime("%Y-%m-%d"),
+            end.strftime("%Y-%m-%d")
+        )
+        if df is None or len(df) == 0:
+            print("  No recent game log data available")
+            return {}
+
+        # Filter to starters (GS > 0) with at least 1 start
+        if "GS" in df.columns:
+            df = df[df["GS"] >= 1]
+
+        out = {}
+        name_col = "Name" if "Name" in df.columns else (
+                   "PlayerName" if "PlayerName" in df.columns else None)
+        if name_col is None:
+            print("  Could not find pitcher name column in game logs")
+            return {}
+
+        for _, row in df.iterrows():
+            name = str(row.get(name_col, "")).strip()
+            if not name or name == "nan":
+                continue
+            gs  = float(row.get("GS", 1)) or 1
+            so  = float(row.get("SO", 0) or 0)
+            ip  = float(row.get("IP", 0) or 0)
+            if ip > 0:
+                k_per_9        = round(so / ip * 9, 2)
+                k_per_start    = round(so / gs, 2)
+                ip_per_start   = round(ip / gs, 2)
+            else:
+                k_per_9 = 8.0; k_per_start = 5.0; ip_per_start = 5.5
+            out[name] = {
+                "recent_k_per_9":      k_per_9,
+                "recent_k_per_start":  k_per_start,
+                "recent_ip_per_start": ip_per_start,
+                "recent_starts":       int(gs),
+            }
+
+        print(f"  Recent game logs loaded: {len(out)} pitchers (last 30 days)")
+        return out
+
+    except ImportError:
+        print("  pybaseball not available — props will use season K/9")
+        return {}
+    except Exception as e:
+        print(f"  Game log fetch failed ({e}) — props will use season K/9")
+        return {}
+
+
+def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_by_name=None, pitcher_gamelogs=None):
+    """Predict pitcher strikeout props using recent game log K rates."""
     if starter_stats_by_name is None: starter_stats_by_name={}
+    if pitcher_gamelogs is None: pitcher_gamelogs={}
     print("Predicting pitcher props...")
     current_season=datetime.now().year
     results=[]
@@ -1020,52 +1087,70 @@ def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_b
         elif pitcher==st.get("away_pitcher",""):
             team_abbr=aa; opp_abbr=ha; is_home=False
         else:
-            # Try partial match
             hp=st.get("home_pitcher",""); ap=st.get("away_pitcher","")
             last=pitcher.split()[-1].lower() if pitcher else ""
             if last and hp and last in hp.lower(): team_abbr=ha; opp_abbr=aa; is_home=True
             elif last and ap and last in ap.lower(): team_abbr=aa; opp_abbr=ha; is_home=False
             else: continue
 
-        # Get pitcher K rate from team stats
-        team_ps=ps.get(team_abbr,{})
-        k_per_9=team_ps.get("avg_so9",8.0)
+        # ── K/9 lookup priority: recent logs → season individual → pool → team avg ──
+        k_per_9     = None
+        innings     = 5.5   # default projected IP
+        data_source = "team_avg"
 
-        # Try individual pitcher stats first, fall back to team pool
-        individual=_lookup_pitcher_stats(pitcher, starter_stats_by_name)
-        if individual.get("k_per_9") and individual["k_per_9"] != 8.0:
-            k_per_9=individual["k_per_9"]
-        elif starter_pool:
-            sp_key=f"{team_abbr}_{current_season}"
-            sp=starter_pool.get(sp_key, starter_pool.get(f"{team_abbr}_{current_season-1}",{}))
-            if sp.get("starter_k_per_9"): k_per_9=sp["starter_k_per_9"]
+        # 1. Recent game logs (last 30 days) — best signal
+        gl = pitcher_gamelogs.get(pitcher)
+        if gl is None:
+            # Try last-name fuzzy match
+            last = pitcher.split()[-1].lower() if pitcher else ""
+            for pname, pgl in pitcher_gamelogs.items():
+                if pname.split()[-1].lower() == last:
+                    gl = pgl; break
+        if gl and gl.get("recent_starts", 0) >= 2:
+            k_per_9     = gl["recent_k_per_9"]
+            innings     = gl.get("recent_ip_per_start", 5.5)
+            data_source = f"recent_{gl['recent_starts']}gs"
 
-        # Opponent K rate (proxy for how many Ks they allow)
-        opp_ps=ps.get(opp_abbr,{})
-        opp_so9=opp_ps.get("avg_so9",8.0)  # higher = hitters strike out more
+        # 2. Season individual stats
+        if k_per_9 is None:
+            individual = _lookup_pitcher_stats(pitcher, starter_stats_by_name)
+            if individual.get("k_per_9") and individual["k_per_9"] != 8.0:
+                k_per_9     = individual["k_per_9"]
+                data_source = "season_individual"
 
-        # Project Ks in ~5.5 innings (average starter)
-        innings=5.5
-        # Blend pitcher's K rate with opponent's tendency
-        blended_k9=(k_per_9*0.6 + opp_so9*0.4)
-        proj_k=round(blended_k9 * innings / 9, 1)
+        # 3. Team rotation pool
+        if k_per_9 is None and starter_pool:
+            sp_key = f"{team_abbr}_{current_season}"
+            sp = starter_pool.get(sp_key, starter_pool.get(f"{team_abbr}_{current_season-1}", {}))
+            if sp.get("starter_k_per_9"):
+                k_per_9     = sp["starter_k_per_9"]
+                data_source = "pool"
 
-        margin=proj_k - line
-        raw_conf=0.50 + min(abs(margin)/2.0, 0.28)
-        conf=round(raw_conf, 3)
+        # 4. Team average fallback
+        if k_per_9 is None:
+            k_per_9     = ps.get(team_abbr, {}).get("avg_so9", 8.0)
+            data_source = "team_avg"
+
+        # Blend with opponent K-susceptibility (how much the opposing lineup Ks)
+        opp_so9    = ps.get(opp_abbr, {}).get("avg_so9", 8.0)
+        blended_k9 = round(k_per_9 * 0.65 + opp_so9 * 0.35, 2)  # more weight on pitcher
+        proj_k     = round(blended_k9 * innings / 9, 1)
+
+        margin   = proj_k - line
+        raw_conf = 0.50 + min(abs(margin) / 2.0, 0.28)
+        conf     = round(raw_conf, 3)
 
         if margin > 0:
-            pick="Over"; pick_odds=prop["over_odds"]
+            pick = "Over";  pick_odds = prop["over_odds"]
         else:
-            pick="Under"; pick_odds=prop["under_odds"]
+            pick = "Under"; pick_odds = prop["under_odds"]
 
-        ev=calc_ev(conf, pick_odds)
-        game_name=f"{aa} @ {ha}"
-        # Find game time
-        game_time="TBD"
+        ev        = calc_ev(conf, pick_odds)
+        game_name = f"{aa} @ {ha}"
+        game_time = "TBD"
         for g in games:
-            if g["home_abbr"]==ha and g["away_abbr"]==aa:
-                game_time=g["time"]; break
+            if g["home_abbr"] == ha and g["away_abbr"] == aa:
+                game_time = g["time"]; break
 
         seen.add(pitcher)
         results.append({
@@ -1075,8 +1160,9 @@ def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_b
             "line":line,"pick":pick,"confidence":conf,
             "pick_odds":pick_odds,"over_odds":prop["over_odds"],"under_odds":prop["under_odds"],
             "ev":ev,"proj_k":proj_k,"k_per_9":k_per_9,"is_home":is_home,
+            "data_source":data_source,
         })
-        print(f"  {pitcher} K {pick} {line} ({int(conf*100)}%)  proj: {proj_k}")
+        print(f"  {pitcher} K {pick} {line} ({int(conf*100)}%)  proj:{proj_k}  [{data_source}]")
     results.sort(key=lambda x: x["confidence"],reverse=True)
     return results
 
@@ -1517,6 +1603,7 @@ if __name__=="__main__":
     ps            = build_pitcher_stats()
     starter_pool  = build_starter_pool()
     starter_stats_by_name = build_starter_stats_by_name()
+    pitcher_gamelogs      = build_pitcher_gamelogs()
     starters      = fetch_probable_starters()
     odds          = fetch_odds()
     archive_odds(odds, date_str)
@@ -1531,7 +1618,7 @@ if __name__=="__main__":
     else:
         ml_preds   = run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,starter_stats_by_name,bullpen_fatigue)
         ou_preds   = predict_totals(games,ts,totals_odds)
-        prop_preds = predict_props(games,starters,ps,starter_pool,props_odds_raw,starter_stats_by_name)
+        prop_preds = predict_props(games,starters,ps,starter_pool,props_odds_raw,starter_stats_by_name,pitcher_gamelogs)
 
         save_todays_picks(ml_preds,date_str)
         save_ou_picks(ou_preds,date_str)
