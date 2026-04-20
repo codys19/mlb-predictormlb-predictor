@@ -269,7 +269,7 @@ def build_team_stats():
         grp["season"] = [SEASONS[i] for i in idx]
         return grp
 
-    games = games.groupby("team", group_keys=False).apply(assign_season, include_groups=False).reset_index(drop=True).reset_index(drop=True)
+    games = games.groupby("team", group_keys=False).apply(lambda grp: assign_season(grp)).reset_index(drop=True)
     games = games.sort_values(["season","team"]).reset_index(drop=True)
     games["game_index"] = games.groupby(["team","season"]).cumcount()
     games["date"]        = (pd.to_datetime(games["season"].astype(str)+"-01-01")
