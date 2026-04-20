@@ -11,7 +11,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Dean Kremer",
     "game_id": 824451,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "COL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Ryan Feltner",
     "away_pitcher": "Emmet Sheehan",
     "game_id": 824372,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "NYY",
@@ -39,7 +45,10 @@
     "home_pitcher": "Will Warren",
     "away_pitcher": "Noah Cameron",
     "game_id": 823558,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYY",
+    "home_score": 13,
+    "away_score": 4
   },
   {
     "home_abbr": "PHI",
@@ -53,7 +62,10 @@
     "home_pitcher": "Cristopher S\u00e1nchez",
     "away_pitcher": "Chris Sale",
     "game_id": 823474,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 1,
+    "away_score": 3
   },
   {
     "home_abbr": "HOU",
@@ -67,7 +79,10 @@
     "home_pitcher": "Lance McCullers Jr.",
     "away_pitcher": "Andre Pallante",
     "game_id": 824206,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 5,
+    "away_score": 7
   },
   {
     "home_abbr": "PIT",
@@ -81,7 +96,10 @@
     "home_pitcher": "Paul Skenes",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 823394,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 7,
+    "away_score": 8
   },
   {
     "home_abbr": "ARI",
@@ -95,7 +113,10 @@
     "home_pitcher": "Zac Gallen",
     "away_pitcher": "Max Scherzer",
     "game_id": 825098,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "WSN",
@@ -109,7 +130,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Adrian Houser",
     "game_id": 822751,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "CHC",
@@ -123,7 +147,10 @@
     "home_pitcher": "Jameson Taillon",
     "away_pitcher": "Freddy Peralta",
     "game_id": 824694,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "LAA",
@@ -137,7 +164,10 @@
     "home_pitcher": "Yusei Kikuchi",
     "away_pitcher": "Germ\u00e1n M\u00e1rquez",
     "game_id": 824049,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "ATH",
@@ -151,7 +181,10 @@
     "home_pitcher": "Luis Severino",
     "away_pitcher": "Erick Fedde",
     "game_id": 825020,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATH",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "BOS",
@@ -165,7 +198,10 @@
     "home_pitcher": "Brayan Bello",
     "away_pitcher": "Tarik Skubal",
     "game_id": 824775,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "SEA",
@@ -179,7 +215,10 @@
     "home_pitcher": "George Kirby",
     "away_pitcher": "Nathan Eovaldi",
     "game_id": 823151,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 7,
+    "away_score": 3
   },
   {
     "home_abbr": "MIA",
@@ -193,7 +232,10 @@
     "home_pitcher": "Sandy Alcantara",
     "away_pitcher": "Brandon Woodruff",
     "game_id": 823882,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 5
   },
   {
     "home_abbr": "MIN",
@@ -207,6 +249,9 @@
     "home_pitcher": "Taj Bradley",
     "away_pitcher": "Andrew Abbott",
     "game_id": 823721,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 4,
+    "away_score": 5
   }
 ]
