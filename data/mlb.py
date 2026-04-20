@@ -262,14 +262,15 @@ def build_team_stats():
     games["home_away"] = games["home_away"].astype(str).str.strip().replace({"@":"AWAY","Home":"HOME"})
     games["result"]    = games["result"].astype(str).str.strip().str.split("-").str[0].str.upper()
 
-    SEASONS = [2021,2022,2023,2024,2025,2026]
-    def assign_season(grp):
-        idx  = np.minimum(np.arange(len(grp))//162, len(SEASONS)-1)
-        grp  = grp.copy()
-        grp["season"] = [SEASONS[i] for i in idx]
-        return grp
-
-    games = games.groupby("team", group_keys=False).apply(assign_season, include_groups=True)
+    SEASONS=[2021,2022,2023,2024,2025,2026]
+    # Assign season by row position per team (avoids groupby.apply pandas compat issues)
+    result_frames=[]
+    for team,grp in games.groupby('team'):
+        grp=grp.copy()
+        idx=np.minimum(np.arange(len(grp))//162,len(SEASONS)-1)
+        grp['season']=[SEASONS[i] for i in idx]
+        result_frames.append(grp)
+    games=pd.concat(result_frames).reset_index(drop=True)
     games = games.sort_values(["season","team"]).reset_index(drop=True)
     games["game_index"] = games.groupby(["team","season"]).cumcount()
     games["date"]        = (pd.to_datetime(games["season"].astype(str)+"-01-01")
