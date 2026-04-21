@@ -40,6 +40,12 @@ STARTER_FEATURES = [
     "starter_era_diff","starter_whip_diff","starter_k_diff","starter_fip_diff",
 ]
 
+BULLPEN_FEATURES = [
+    "home_bullpen_ip_3d","away_bullpen_ip_3d",
+    "home_bullpen_appearances_3d","away_bullpen_appearances_3d",
+    "bullpen_fatigue_diff",
+]
+
 TARGET = "home_team_won"
 
 
@@ -59,6 +65,14 @@ def build_feature_list(df):
     if tp_available:
         feature_cols += tp_available
         print(f"  ✅ Team pitcher features: {len(tp_available)}")
+
+    # Add bullpen fatigue features if available (requires fetch_bullpen.py to have run)
+    bp_available = [c for c in BULLPEN_FEATURES if c in df.columns and df[c].notna().mean() > 0.5]
+    if bp_available:
+        feature_cols += bp_available
+        print(f"  ✅ Bullpen fatigue features: {len(bp_available)}")
+    else:
+        print("  ℹ️  No bullpen features — run fetch_bullpen.py to add fatigue signal")
 
     # Add starter features if populated.
     # Threshold is 0.25 (not 0.5) because starter cols are intentionally NaN
@@ -82,7 +96,7 @@ def split_data(df, feature_cols):
     # Starter columns are intentionally sparse (NaN when no individual match) —
     # XGBoost handles missing values natively so we must NOT drop those rows.
     required = [c for c in feature_cols if not any(
-        c.startswith(p) for p in ("home_starter_","away_starter_","starter_","has_individual_")
+        c.startswith(p) for p in ("home_starter_","away_starter_","starter_","has_individual_","home_bullpen_","away_bullpen_","bullpen_")
     )]
 
     train = df[df["season"] <= 2024].dropna(subset=required + [TARGET])
