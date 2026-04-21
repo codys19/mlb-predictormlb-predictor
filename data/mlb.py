@@ -425,38 +425,98 @@ def _fetch_pitcher_ks(game_id, pitcher_name, team_abbr):
     return None
 
 def _save_history_html(picks, date_str, day_w, day_l):
-    dt=datetime.strptime(date_str,"%Y-%m-%d"); title=dt.strftime("%A, %B %d %Y")
-    rows=""
+    dt    = datetime.strptime(date_str, "%Y-%m-%d")
+    title = dt.strftime("%A, %B %d %Y")
+    cards = ""
+
     for p in picks:
-        if p.get("result") in ("no_result",None): continue
-        ok=p["result"]=="W"; clr="#16a34a" if ok else "#dc2626"; icon="WIN" if ok else "LOSS"
-        hp=p.get("home_pitcher","TBD"); ap=p.get("away_pitcher","TBD")
-        rows+=f"""<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;padding:14px 18px;margin-bottom:10px;">
-  <div style="display:flex;justify-content:space-between;align-items:center;">
-    <div>
-      <div style="font-size:14px;font-weight:600;color:{clr};">[{icon}] {p['pick']}</div>
-      <div style="font-size:12px;color:#9ca3af;margin-top:2px;">{p['home_name']} vs {p['away_name']}</div>
-      <div style="font-size:12px;color:#374151;margin-top:2px;">Final: {p.get('home_score','')}–{p.get('away_score','')} · Winner: {p.get('actual_winner','?')}</div>
-      <div style="font-size:11px;color:#9ca3af;margin-top:2px;">SP: {ap} vs {hp}</div>
+        result = p.get("result")
+        if result in ("no_result", None):
+            continue
+
+        ok       = result == "W"
+        conf     = int(p["confidence"] * 100)
+        pick_tm  = p["pick"]
+        home_n   = p["home_name"];  away_n  = p["away_name"]
+        home_a   = p["home_abbr"];  away_a  = p["away_abbr"]
+        hp       = p.get("home_pitcher", "TBD")
+        ap       = p.get("away_pitcher", "TBD")
+        hs       = p.get("home_score", "")
+        as_      = p.get("away_score", "")
+        winner   = p.get("actual_winner", "")
+        odds_str = f"{p['pick_odds']:+d}" if p.get("pick_odds") else "--"
+
+        badge_bg  = "#dcfce7" if ok else "#fee2e2"
+        badge_clr = "#16a34a" if ok else "#dc2626"
+        badge_txt = "✓ WIN" if ok else "✗ LOSS"
+        conf_clr  = "#16a34a" if conf >= 70 else ("#65a30d" if conf >= 60 else "#d97706")
+
+        # Score display
+        if hs != "" and as_ != "":
+            score_html = f'<div style="font-size:28px;font-weight:300;color:#111;letter-spacing:-1px;margin:10px 0 4px;">{away_a} <span style="color:#9ca3af;font-size:20px;">@</span> {home_a}</div><div style="font-size:22px;font-weight:600;color:#111;">{as_} – {hs}</div>'
+        else:
+            score_html = f'<div style="font-size:15px;color:#9ca3af;margin:10px 0;">Score unavailable</div>'
+
+        cards += f"""
+<div style="background:#fff;border-radius:14px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div style="padding:14px 16px 12px;">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <span style="font-size:11px;color:#9ca3af;">{away_n} @ {home_n}</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:12px;font-weight:500;color:{conf_clr};">{conf}% conf</span>
+        <span style="font-size:11px;font-weight:600;color:{badge_clr};background:{badge_bg};padding:3px 8px;border-radius:20px;">{badge_txt}</span>
+      </div>
     </div>
-    <div style="font-size:13px;font-weight:500;color:#374151;">{int(p['confidence']*100)}%</div>
+
+    {score_html}
+
+    <div style="margin-top:10px;padding-top:10px;border-top:0.5px solid #f3f4f6;display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:10px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;">Model pick</div>
+        <div style="font-size:15px;font-weight:600;color:#111;">{pick_tm} <span style="font-size:13px;font-weight:400;color:#374151;">{odds_str}</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">Starters</div>
+        <div style="font-size:11px;color:#374151;">{ap} vs {hp}</div>
+      </div>
+    </div>
+
   </div>
 </div>"""
-    wlc="#16a34a" if day_w>=day_l else "#dc2626"
-    total=day_w+day_l; pct=f"{day_w/total:.0%}" if total>0 else "--"
-    html=f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+    wlc   = "#16a34a" if day_w >= day_l else "#dc2626"
+    total = day_w + day_l
+    pct   = f"{day_w/total:.0%}" if total > 0 else "--"
+
+    if not cards:
+        cards = '<div style="padding:32px;text-align:center;color:#9ca3af;font-size:13px;">No graded picks for this day.</div>'
+
+    html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MLB Picks - {date_str}</title>
-<style>*{{box-sizing:border-box;margin:0;padding:0}}body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f3f4f6;color:#111;min-height:100vh}}.wrap{{max-width:680px;margin:0 auto;padding:20px 14px 60px}}</style>
+<style>
+  *{{box-sizing:border-box;margin:0;padding:0}}
+  body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f3f4f6;color:#111;min-height:100vh}}
+  .wrap{{max-width:680px;margin:0 auto;padding:20px 14px 60px}}
+  a{{text-decoration:none}}
+</style>
 </head><body><div class="wrap">
+
   <div style="margin-bottom:20px;">
-    <a href="mlb_predictor.html" style="font-size:12px;color:#9ca3af;text-decoration:none;">Back to today</a>
-    <h1 style="font-size:22px;font-weight:500;margin-top:8px;">MLB {title}</h1>
-    <div style="font-size:18px;font-weight:600;color:{wlc};margin-top:4px;">{day_w}–{day_l} · {pct}</div>
-  </div>{rows}
+    <a href="mlb_predictor.html" style="font-size:12px;color:#9ca3af;">← Back to today</a>
+    <h1 style="font-size:22px;font-weight:500;margin-top:10px;">⚾ MLB · {title}</h1>
+    <div style="font-size:24px;font-weight:600;color:{wlc};margin-top:6px;">{day_w}–{day_l} <span style="font-size:15px;font-weight:400;color:#9ca3af;">· {pct}</span></div>
+  </div>
+
+  {cards}
+
 </div></body></html>"""
-    out=f"history_{date_str}.html"
-    with open(out,"w",encoding="utf-8") as f: f.write(html)
+
+    out = f"history_{date_str}.html"
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(html)
     print(f"  History saved -> {out}")
 
 
@@ -1216,7 +1276,13 @@ def prop_reasoning(p):
 def save_todays_picks(predictions, date_str):
     path=f"raw/picks_{date_str}.json"
     if os.path.exists(path):
-        print(f"  ML picks already saved for {date_str}"); return
+        # Only skip if picks are already graded — don't skip partial/empty saves
+        try:
+            existing = json.load(open(path))
+            graded = [p for p in existing if p.get("result") not in (None, "no_result")]
+            if graded:
+                print(f"  ML picks already saved and graded for {date_str}"); return
+        except: pass
     with open(path,"w") as f:
         json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "home_name":g["home_name"],"away_name":g["away_name"],
@@ -1225,7 +1291,7 @@ def save_todays_picks(predictions, date_str):
             "home_pitcher":g.get("home_pitcher","TBD"),
             "away_pitcher":g.get("away_pitcher","TBD"),
             "game_id":g.get("game_id"),"result":None} for g in predictions],f,indent=2)
-    print(f"  ML picks saved -> {path}")
+    print(f"  ML picks saved -> {path} ({len(predictions)} games)")
 
 def save_ou_picks(predictions, date_str):
     path=f"raw/ou_{date_str}.json"
