@@ -11,7 +11,7 @@
     "home_pitcher": "Jose Quintana",
     "away_pitcher": "Justin Wrobleski",
     "game_id": 824370,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "KCR",
@@ -25,7 +25,7 @@
     "home_pitcher": "Seth Lugo",
     "away_pitcher": "Kyle Bradish",
     "game_id": 824125,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "TBR",
@@ -39,7 +39,7 @@
     "home_pitcher": "Jesse Scholtens",
     "away_pitcher": "Rhett Lowder",
     "game_id": 822994,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "SEA",
@@ -53,7 +53,7 @@
     "home_pitcher": "Emerson Hancock",
     "away_pitcher": "J.T. Ginn",
     "game_id": 823149,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "MIA",
@@ -67,7 +67,7 @@
     "home_pitcher": "Max Meyer",
     "away_pitcher": "Michael McGreevy",
     "game_id": 823879,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "LAA",
@@ -81,7 +81,7 @@
     "home_pitcher": "Reid Detmers",
     "away_pitcher": "Dylan Cease",
     "game_id": 824046,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "CLE",
@@ -95,7 +95,10 @@
     "home_pitcher": "Slade Cecconi",
     "away_pitcher": "Spencer Arrighetti",
     "game_id": 824450,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 2,
+    "away_score": 9
   },
   {
     "home_abbr": "WSN",
@@ -109,7 +112,7 @@
     "home_pitcher": "Jake Irvin",
     "away_pitcher": "Bryce Elder",
     "game_id": 822749,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "CHC",
@@ -123,6 +126,6 @@
     "home_pitcher": "Colin Rea",
     "away_pitcher": "Aaron Nola",
     "game_id": 824692,
-    "result": null
+    "result": "no_result"
   }
 ]
