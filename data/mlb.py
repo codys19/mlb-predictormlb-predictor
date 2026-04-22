@@ -429,66 +429,98 @@ def _save_history_html(picks, date_str, day_w, day_l):
     title = dt.strftime("%A, %B %d %Y")
     cards = ""
 
-    for p in picks:
+    for i, p in enumerate(picks):
         result = p.get("result")
-        if result in ("no_result", None):
-            continue
+        if result in ("no_result", None): continue
 
         ok       = result == "W"
-        conf     = int(p["confidence"] * 100)
+        conf     = p["confidence"]
+        pick_pct = int(conf * 100)
+        clr      = cc(conf)
         pick_tm  = p["pick"]
-        home_n   = p["home_name"];  away_n  = p["away_name"]
-        home_a   = p["home_abbr"];  away_a  = p["away_abbr"]
+        pick_a   = p.get("pick_abbr", "")
+        home_n   = p.get("home_name", ""); home_a = p.get("home_abbr", "")
+        away_n   = p.get("away_name", ""); away_a = p.get("away_abbr", "")
         hp       = p.get("home_pitcher", "TBD")
         ap       = p.get("away_pitcher", "TBD")
-        hs       = p.get("home_score", "")
-        as_      = p.get("away_score", "")
-        winner   = p.get("actual_winner", "")
-        odds_str = f"{p['pick_odds']:+d}" if p.get("pick_odds") else "--"
+        hs       = p.get("home_score", ""); as_ = p.get("away_score", "")
+        home_odds = p.get("home_odds"); away_odds = p.get("away_odds")
+        pick_odds = p.get("pick_odds")
 
-        badge_bg  = "#dcfce7" if ok else "#fee2e2"
-        badge_clr = "#16a34a" if ok else "#dc2626"
-        badge_txt = "✓ WIN" if ok else "✗ LOSS"
-        conf_clr  = "#16a34a" if conf >= 70 else ("#65a30d" if conf >= 60 else "#d97706")
+        pih      = pick_a == home_a
+        asty     = "color:#9ca3af;" if pih else "font-weight:600;"
+        hsty     = "font-weight:600;" if pih else "color:#9ca3af;"
+        away_pct = int((1 - conf) * 100) if pih else int(conf * 100)
+        home_pct = 100 - away_pct
+        away_bar = clr if not pih else "#93c5fd"
+        home_bar = clr if pih else "#93c5fd"
 
-        # Score display
-        if hs != "" and as_ != "":
-            score_html = f'<div style="font-size:28px;font-weight:300;color:#111;letter-spacing:-1px;margin:10px 0 4px;">{away_a} <span style="color:#9ca3af;font-size:20px;">@</span> {home_a}</div><div style="font-size:22px;font-weight:600;color:#111;">{as_} – {hs}</div>'
+        # WIN/LOSS badge
+        if ok:
+            badge = f'<span style="font-size:11px;font-weight:600;color:#16a34a;background:#dcfce7;padding:3px 9px;border-radius:20px;">✓ WIN</span>'
         else:
-            score_html = f'<div style="font-size:15px;color:#9ca3af;margin:10px 0;">Score unavailable</div>'
+            badge = f'<span style="font-size:11px;font-weight:600;color:#dc2626;background:#fee2e2;padding:3px 9px;border-radius:20px;">✗ LOSS</span>'
+
+        # Final score display
+        if hs != "" and as_ != "":
+            score_line = f'<span style="font-size:11px;color:#374151;font-weight:500;">Final: {away_a} {as_}–{hs} {home_a}</span>'
+        else:
+            score_line = ""
+
+        odds_str = os_(pick_odds)
 
         cards += f"""
-<div style="background:#fff;border-radius:14px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
-  <div style="padding:14px 16px 12px;">
-
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <span style="font-size:11px;color:#9ca3af;">{away_n} @ {home_n}</span>
-      <div style="display:flex;align-items:center;gap:8px;">
-        <span style="font-size:12px;font-weight:500;color:{conf_clr};">{conf}% conf</span>
-        <span style="font-size:11px;font-weight:600;color:{badge_clr};background:{badge_bg};padding:3px 8px;border-radius:20px;">{badge_txt}</span>
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div style="padding:16px 18px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;">{score_line}</div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="font-size:13px;font-weight:500;color:{clr};">{pick_pct}% conf</span>
+        {badge}
       </div>
     </div>
-
-    {score_html}
-
-    <div style="margin-top:10px;padding-top:10px;border-top:0.5px solid #f3f4f6;display:flex;justify-content:space-between;align-items:center;">
-      <div>
-        <div style="font-size:10px;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;">Model pick</div>
-        <div style="font-size:15px;font-weight:600;color:#111;">{pick_tm} <span style="font-size:13px;font-weight:400;color:#374151;">{odds_str}</span></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;{asty}">{away_n}</div>
+        <div style="font-size:11px;color:#9ca3af;">Away</div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: {ap}</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">{os_(away_odds)}</div>
       </div>
-      <div style="text-align:right;">
-        <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">Starters</div>
-        <div style="font-size:11px;color:#374151;">{ap} vs {hp}</div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;{hsty}">{home_n}</div>
+        <div style="font-size:11px;color:#9ca3af;">Home</div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">{hp} SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">{os_(home_odds)}</div>
       </div>
     </div>
-
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:{away_pct}%;background:{away_bar};border-radius:99px 0 0 99px;"></div>
+        <div style="width:{home_pct}%;background:{home_bar};border-radius:0 99px 99px 0;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:3px;">
+        <span>{away_a} {away_pct}%</span>
+        <span style="color:#374151;font-weight:500;">Proj: {pick_tm} wins</span>
+        <span>{home_a} {home_pct}%</span>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">{pick_tm}</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">{odds_str}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>"""
 
     wlc   = "#16a34a" if day_w >= day_l else "#dc2626"
     total = day_w + day_l
     pct   = f"{day_w/total:.0%}" if total > 0 else "--"
-
     if not cards:
         cards = '<div style="padding:32px;text-align:center;color:#9ca3af;font-size:13px;">No graded picks for this day.</div>'
 
@@ -503,15 +535,22 @@ def _save_history_html(picks, date_str, day_w, day_l):
   a{{text-decoration:none}}
 </style>
 </head><body><div class="wrap">
-
   <div style="margin-bottom:20px;">
     <a href="mlb_predictor.html" style="font-size:12px;color:#9ca3af;">← Back to today</a>
     <h1 style="font-size:22px;font-weight:500;margin-top:10px;">⚾ MLB · {title}</h1>
     <div style="font-size:24px;font-weight:600;color:{wlc};margin-top:6px;">{day_w}–{day_l} <span style="font-size:15px;font-weight:400;color:#9ca3af;">· {pct}</span></div>
   </div>
-
   {cards}
-
+  <script>
+  function toggle(id){{
+    var b=document.getElementById('body_'+id);
+    var h=document.getElementById('hint_'+id);
+    if(!b)return;
+    var o=b.style.display!=='none';
+    b.style.display=o?'none':'block';
+    if(h) h.innerHTML=o?'tap for details':'collapse';
+  }}
+  </script>
 </div></body></html>"""
 
     out = f"history_{date_str}.html"
@@ -1276,13 +1315,7 @@ def prop_reasoning(p):
 def save_todays_picks(predictions, date_str):
     path=f"raw/picks_{date_str}.json"
     if os.path.exists(path):
-        # Only skip if picks are already graded — don't skip partial/empty saves
-        try:
-            existing = json.load(open(path))
-            graded = [p for p in existing if p.get("result") not in (None, "no_result")]
-            if graded:
-                print(f"  ML picks already saved and graded for {date_str}"); return
-        except: pass
+        print(f"  ML picks already saved for {date_str}"); return
     with open(path,"w") as f:
         json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "home_name":g["home_name"],"away_name":g["away_name"],
@@ -1291,7 +1324,7 @@ def save_todays_picks(predictions, date_str):
             "home_pitcher":g.get("home_pitcher","TBD"),
             "away_pitcher":g.get("away_pitcher","TBD"),
             "game_id":g.get("game_id"),"result":None} for g in predictions],f,indent=2)
-    print(f"  ML picks saved -> {path} ({len(predictions)} games)")
+    print(f"  ML picks saved -> {path}")
 
 def save_ou_picks(predictions, date_str):
     path=f"raw/ou_{date_str}.json"
@@ -1351,19 +1384,158 @@ def conf_cell_html(rec, key, label):
       <div style="font-size:10px;color:{clr};margin-top:1px;">{pct}</div>
       <div style="font-size:10px;font-weight:600;color:{pnl_clr};margin-top:4px;border-top:0.5px solid #f3f4f6;padding-top:4px;">$10 flat: {pnl_str}</div></div>"""
 
+def build_history_section(date_str):
+    """Build HTML cards for a past day's picks from the saved JSON file."""
+    path = f"raw/picks_{date_str}.json"
+    if not os.path.exists(path):
+        return "", 0, 0
+    try:
+        picks = json.load(open(path))
+    except:
+        return "", 0, 0
+
+    graded = [p for p in picks if p.get("result") not in (None, "no_result")]
+    if not graded:
+        return "", 0, 0
+
+    day_w = sum(1 for p in graded if p.get("result") == "W")
+    day_l = sum(1 for p in graded if p.get("result") == "L")
+    cards = ""
+
+    for i, p in enumerate(graded):
+        result   = p.get("result")
+        ok       = result == "W"
+        conf     = p["confidence"]
+        pick_pct = int(conf * 100)
+        clr      = cc(conf)
+        pick_tm  = p["pick"]
+        pick_a   = p.get("pick_abbr", "")
+        home_n   = p.get("home_name", ""); home_a = p.get("home_abbr", "")
+        away_n   = p.get("away_name", ""); away_a = p.get("away_abbr", "")
+        hp       = p.get("home_pitcher", "TBD")
+        ap       = p.get("away_pitcher", "TBD")
+        hs       = p.get("home_score", ""); as_ = p.get("away_score", "")
+        home_odds = p.get("home_odds"); away_odds = p.get("away_odds")
+        pick_odds = p.get("pick_odds")
+
+        pih      = pick_a == home_a
+        asty     = "color:#9ca3af;" if pih else "font-weight:600;"
+        hsty     = "font-weight:600;" if pih else "color:#9ca3af;"
+        away_pct = int((1-conf)*100) if pih else int(conf*100)
+        home_pct = 100 - away_pct
+        away_bar = clr if not pih else "#93c5fd"
+        home_bar = clr if pih else "#93c5fd"
+
+        badge = (f'<span style="font-size:11px;font-weight:600;color:#16a34a;background:#dcfce7;padding:3px 9px;border-radius:20px;">✓ WIN</span>'
+                 if ok else
+                 f'<span style="font-size:11px;font-weight:600;color:#dc2626;background:#fee2e2;padding:3px 9px;border-radius:20px;">✗ LOSS</span>')
+
+        score_txt = f"Final: {away_a} {as_}–{hs} {home_a}" if hs != "" and as_ != "" else ""
+
+        uid = f"h{date_str.replace('-','')}_{i}"
+        cards += f"""
+<div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
+  <div onclick="toggle('{uid}')" style="padding:16px 18px;cursor:pointer;user-select:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+      <span style="font-size:11px;color:#9ca3af;">{score_txt}</span>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="font-size:13px;font-weight:500;color:{clr};">{pick_pct}% conf</span>
+        {badge}
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:15px;font-weight:500;{asty}">{away_n}</div>
+        <div style="font-size:11px;color:#9ca3af;">Away</div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">SP: {ap}</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">{os_(away_odds)}</div>
+      </div>
+      <div style="flex:1;min-width:0;text-align:right;">
+        <div style="font-size:15px;font-weight:500;{hsty}">{home_n}</div>
+        <div style="font-size:11px;color:#9ca3af;">Home</div>
+        <div style="font-size:11px;color:#9ca3af;margin-top:3px;">{hp} SP</div>
+        <div style="font-size:12px;font-weight:500;color:#374151;margin-top:2px;">{os_(home_odds)}</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;">
+      <div style="height:5px;background:#f3f4f6;border-radius:99px;overflow:hidden;display:flex;">
+        <div style="width:{away_pct}%;background:{away_bar};border-radius:99px 0 0 99px;"></div>
+        <div style="width:{home_pct}%;background:{home_bar};border-radius:0 99px 99px 0;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:3px;">
+        <span>{away_a} {away_pct}%</span>
+        <span style="color:#374151;font-weight:500;">Pick: {pick_tm}</span>
+        <span>{home_a} {home_pct}%</span>
+      </div>
+    </div>
+    <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:15px;font-weight:600;">{pick_tm}</span>
+            <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">{os_(pick_odds)}</span>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#d1d5db;margin-top:4px;" id="hint_{uid}">tap for details</div>
+      </div>
+    </div>
+  </div>
+  <div id="body_{uid}" style="display:none;border-top:0.5px solid #f3f4f6;padding:16px 18px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">{away_a} (Away)</div>
+        <div style="font-size:13px;font-weight:500;">{away_n}</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: {os_(away_odds)}</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: {ap}</div>
+      </div>
+      <div style="background:#f9fafb;border-radius:8px;padding:10px;">
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">{home_a} (Home)</div>
+        <div style="font-size:13px;font-weight:500;">{home_n}</div>
+        <div style="font-size:12px;color:#9ca3af;margin-top:2px;">ML: {os_(home_odds)}</div>
+        <div style="font-size:11px;color:#374151;margin-top:4px;">SP: {hp}</div>
+      </div>
+    </div>
+    <div style="text-align:center;"><span onclick="toggle('{uid}')" style="font-size:11px;color:#d1d5db;cursor:pointer;">collapse</span></div>
+  </div>
+</div>"""
+
+    return cards, day_w, day_l
+
+
 def generate_html(ml_preds, ou_preds, prop_preds, record, today_str, date_str):
     print("Generating HTML...")
     ml_rec=record["ml"]; ou_rec=record["ou"]; props_rec=record["props"]
     at_str,at_pct,mo_str,wk_str,ye_str,pct_w = record_strings(ml_rec)
 
-    # Nav
-    nav=f'<a href="mlb_predictor.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#111;color:#fff;">Today - {datetime.now().strftime("%b %d")}</a>'
-    for ds,d in sorted(ml_rec["daily"].items(),reverse=True)[:6]:
+    # Build history sections (last 8 days with picks)
+    history_days = sorted(ml_rec["daily"].items(), reverse=True)[:8]
+    history_sections = ""
+    nav_history = ""
+
+    for ds, d in history_days:
         try:
-            lbl=datetime.strptime(ds,"%Y-%m-%d").strftime("%b %d")
-            wlc="#16a34a" if d["w"]>d["l"] else ("#dc2626" if d["l"]>d["w"] else "#9ca3af")
-            nav+=f'<a href="history_{ds}.html" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;margin-right:6px;background:#f3f4f6;color:#374151;">{lbl}<span style="font-size:11px;color:{wlc};"> {d["w"]}-{d["l"]}</span></a>'
-        except: pass
+            lbl = datetime.strptime(ds, "%Y-%m-%d").strftime("%b %d")
+            wlc = "#16a34a" if d["w"]>d["l"] else ("#dc2626" if d["l"]>d["w"] else "#9ca3af")
+            hist_cards, hw, hl = build_history_section(ds)
+            if not hist_cards:
+                continue
+            ht = hw + hl
+            hpct = f"{hw/ht:.0%}" if ht > 0 else "--"
+            nav_history += f'<button onclick="showDay(\'{ds}\')" id="nav_{ds}" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;border:none;cursor:pointer;margin-right:6px;background:#f3f4f6;color:#374151;">{lbl}<span style="font-size:11px;color:{wlc};"> {d["w"]}-{d["l"]}</span></button>'
+            history_sections += f"""
+<div id="section-{ds}" style="display:none;">
+  <div style="margin-bottom:16px;">
+    <div style="font-size:18px;font-weight:600;color:{wlc};">{hw}–{hl} <span style="font-size:13px;font-weight:400;color:#9ca3af;">· {hpct} · {datetime.strptime(ds,'%Y-%m-%d').strftime('%B %d %Y')}</span></div>
+  </div>
+  {hist_cards}
+</div>"""
+        except:
+            pass
+
+    # Nav — today button + history buttons
+    nav = f'<button onclick="showDay(\'today\')" id="nav_today" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;border:none;cursor:pointer;margin-right:6px;background:#111;color:#fff;">Today · {datetime.now().strftime("%b %d")}</button>'
+    nav += nav_history
 
     # ML cards
     ml_cards=""
@@ -1629,6 +1801,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
     <p style="font-size:11px;color:#92400e;line-height:1.6;">AI-generated picks for informational purposes only. Always gamble responsibly.</p>
   </div>
 </div>
+
+<!-- History sections (hidden by default, shown via showDay()) -->
+<div id="history-container" style="display:none;max-width:680px;margin:0 auto;padding:0 14px 60px;">
+  {history_sections}
+</div>
+
 <script>
 function toggle(id){{
   var b=document.getElementById('body_'+id);
@@ -1645,6 +1823,30 @@ function showTab(t){{
     document.getElementById('tab-'+id).style.background=active?'#111':'#f3f4f6';
     document.getElementById('tab-'+id).style.color=active?'#fff':'#374151';
   }});
+}}
+function showDay(day){{
+  // Hide today's content or any open history section
+  document.querySelector('.wrap').style.display = day==='today' ? 'block' : 'none';
+  document.getElementById('history-container').style.display = day==='today' ? 'none' : 'block';
+
+  // Hide all history sections
+  document.querySelectorAll('[id^="section-202"]').forEach(function(el){{
+    el.style.display='none';
+  }});
+
+  // Show the selected history section
+  if(day!=='today'){{
+    var sec=document.getElementById('section-'+day);
+    if(sec) sec.style.display='block';
+  }}
+
+  // Update nav button styles
+  document.querySelectorAll('[id^="nav_"]').forEach(function(btn){{
+    btn.style.background='#f3f4f6';
+    btn.style.color='#374151';
+  }});
+  var active=document.getElementById('nav_'+day);
+  if(active){{ active.style.background='#111'; active.style.color='#fff'; }}
 }}
 </script></body></html>"""
 
