@@ -7745,27 +7745,18 @@ function showTab(t){
   });
 }
 function showDay(day){
-  // Hide today's content or any open history section
   document.querySelector('.wrap').style.display = day==='today' ? 'block' : 'none';
   document.getElementById('history-container').style.display = day==='today' ? 'none' : 'block';
-
-  // Hide all history sections
-  document.querySelectorAll('[id^="section-202"]').forEach(function(el){
-    el.style.display='none';
-  });
-
-  // Show the selected history section
+  document.querySelectorAll('[id^="section-202"]').forEach(function(el){ el.style.display='none'; });
   if(day!=='today'){
     var sec=document.getElementById('section-'+day);
     if(sec) sec.style.display='block';
   }
-
-  // Update nav button styles
   document.querySelectorAll('[id^="nav_"]').forEach(function(btn){
-    btn.style.background='#f3f4f6';
-    btn.style.color='#374151';
+    btn.style.background='#f3f4f6'; btn.style.color='#374151';
   });
   var active=document.getElementById('nav_'+day);
   if(active){ active.style.background='#111'; active.style.color='#fff'; }
+  window.scrollTo(0,0);
 }
 </script></body></html>

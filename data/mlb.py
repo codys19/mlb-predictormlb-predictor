@@ -298,7 +298,7 @@ def grade_ml_day(record, date_str, path):
     at=record["ml"]["all_time"]; tot=at["w"]+at["l"]
     pct=f"{at['w']/tot:.1%}" if tot>0 else "--"
     print(f"  ML {date_str}: {day_w}-{day_l}  |  All time: {at['w']}-{at['l']} ({pct})")
-    _save_history_html(graded, date_str, day_w, day_l)
+    # History HTML is now embedded inline in mlb_predictor.html — no separate file needed
     return record
 
 def grade_ou_day(record, date_str, path):
@@ -1581,6 +1581,7 @@ def generate_html(ml_preds, ou_preds, prop_preds, record, today_str, date_str):
             wlc = "#16a34a" if d["w"]>d["l"] else ("#dc2626" if d["l"]>d["w"] else "#9ca3af")
             result = build_history_section(ds)
             if not result or not result[0]:
+                print(f"  History: no picks found for {ds} — skipping nav button")
                 continue
             hist_ml, hist_ou, hist_props, hw, hl = result
             ht = hw + hl
@@ -1600,8 +1601,9 @@ def generate_html(ml_preds, ou_preds, prop_preds, record, today_str, date_str):
   <div id="hsec_{ds}_ou" style="display:none;">{hist_ou}</div>
   <div id="hsec_{ds}_props" style="display:none;">{hist_props}</div>
 </div>"""
-        except:
-            pass
+            print(f"  History: embedded {ds} ({hw}-{hl})")
+        except Exception as e:
+            print(f"  History: error building {ds}: {e}")
 
     # Nav — today button + history buttons
     nav = f'<button onclick="showDay(\'today\')" id="nav_today" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;border:none;cursor:pointer;margin-right:6px;background:#111;color:#fff;">Today · {datetime.now().strftime("%b %d")}</button>'
@@ -1903,28 +1905,19 @@ function showTab(t){{
   }});
 }}
 function showDay(day){{
-  // Hide today's content or any open history section
   document.querySelector('.wrap').style.display = day==='today' ? 'block' : 'none';
   document.getElementById('history-container').style.display = day==='today' ? 'none' : 'block';
-
-  // Hide all history sections
-  document.querySelectorAll('[id^="section-202"]').forEach(function(el){{
-    el.style.display='none';
-  }});
-
-  // Show the selected history section
+  document.querySelectorAll('[id^="section-202"]').forEach(function(el){{ el.style.display='none'; }});
   if(day!=='today'){{
     var sec=document.getElementById('section-'+day);
     if(sec) sec.style.display='block';
   }}
-
-  // Update nav button styles
   document.querySelectorAll('[id^="nav_"]').forEach(function(btn){{
-    btn.style.background='#f3f4f6';
-    btn.style.color='#374151';
+    btn.style.background='#f3f4f6'; btn.style.color='#374151';
   }});
   var active=document.getElementById('nav_'+day);
   if(active){{ active.style.background='#111'; active.style.color='#fff'; }}
+  window.scrollTo(0,0);
 }}
 </script></body></html>"""
 
