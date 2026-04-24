@@ -1845,7 +1845,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
 
   <div style="overflow-x:auto;white-space:nowrap;margin-bottom:16px;padding-bottom:4px;">{nav}</div>
 
-  <div style="display:flex;gap:6px;margin-bottom:16px;">
+  <div id="today-tabs" style="display:flex;gap:6px;margin-bottom:16px;">
     <button onclick="showTab('ml')" id="tab-ml" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#111;color:#fff;">ML</button>
     <button onclick="showTab('ou')" id="tab-ou" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#f3f4f6;color:#374151;">O/U</button>
     <button onclick="showTab('props')" id="tab-props" style="flex:1;padding:9px 0;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#f3f4f6;color:#374151;">Props</button>
@@ -1869,14 +1869,14 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
     {prop_cards}
   </div>
 
+  <!-- History sections — shown inline when a past day is selected -->
+  <div id="history-content" style="display:none;">
+    {history_sections}
+  </div>
+
   <div style="margin-top:20px;padding:12px 14px;background:#fffbeb;border-radius:8px;border:0.5px solid #fde68a;">
     <p style="font-size:11px;color:#92400e;line-height:1.6;">AI-generated picks for informational purposes only. Always gamble responsibly.</p>
   </div>
-</div>
-
-<!-- History sections (hidden by default, shown via showDay()) -->
-<div id="history-container" style="display:none;max-width:680px;margin:0 auto;padding:0 14px 60px;">
-  {history_sections}
 </div>
 
 <script>
@@ -1905,13 +1905,28 @@ function showTab(t){{
   }});
 }}
 function showDay(day){{
-  document.querySelector('.wrap').style.display = day==='today' ? 'block' : 'none';
-  document.getElementById('history-container').style.display = day==='today' ? 'none' : 'block';
+  var isToday = day==='today';
+  // Toggle today tabs visibility
+  document.getElementById('today-tabs').style.display = isToday ? 'flex' : 'none';
+  // Toggle today sections vs history
+  ['ml','ou','props'].forEach(function(t){{
+    var el=document.getElementById('section-'+t);
+    if(el) el.style.display=(isToday && t==='ml')?'block':'none';
+  }});
+  document.getElementById('history-content').style.display = isToday ? 'none' : 'block';
+  // Hide all history day sections
   document.querySelectorAll('[id^="section-202"]').forEach(function(el){{ el.style.display='none'; }});
-  if(day!=='today'){{
+  if(!isToday){{
     var sec=document.getElementById('section-'+day);
     if(sec) sec.style.display='block';
   }}
+  // Reset today tab buttons
+  if(isToday){{
+    document.getElementById('tab-ml').style.background='#111'; document.getElementById('tab-ml').style.color='#fff';
+    document.getElementById('tab-ou').style.background='#f3f4f6'; document.getElementById('tab-ou').style.color='#374151';
+    document.getElementById('tab-props').style.background='#f3f4f6'; document.getElementById('tab-props').style.color='#374151';
+  }}
+  // Update day nav buttons
   document.querySelectorAll('[id^="nav_"]').forEach(function(btn){{
     btn.style.background='#f3f4f6'; btn.style.color='#374151';
   }});
