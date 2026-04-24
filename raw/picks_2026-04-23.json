@@ -11,7 +11,10 @@
     "home_pitcher": "Payton Tolle",
     "away_pitcher": "Cam Schlittler",
     "game_id": 824770,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "COL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Ryan Feltner",
     "away_pitcher": "Matt Waldron",
     "game_id": 824368,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 8,
+    "away_score": 10
   },
   {
     "home_abbr": "TEX",
@@ -39,7 +45,10 @@
     "home_pitcher": "Jacob deGrom",
     "away_pitcher": "Bubba Chandler",
     "game_id": 822912,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "ARI",
@@ -53,7 +62,10 @@
     "home_pitcher": "Michael Soroka",
     "away_pitcher": "Davis Martin",
     "game_id": 825096,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHW",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "SFG",
@@ -67,7 +79,10 @@
     "home_pitcher": "Logan Webb",
     "away_pitcher": "Tyler Glasnow",
     "game_id": 823233,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 0,
+    "away_score": 3
   },
   {
     "home_abbr": "WSN",
@@ -81,7 +96,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "JR Ritchie",
     "game_id": 822745,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "CHC",
@@ -95,7 +113,10 @@
     "home_pitcher": "Edward Cabrera",
     "away_pitcher": "Cristopher S\u00e1nchez",
     "game_id": 824689,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 8,
+    "away_score": 7
   },
   {
     "home_abbr": "NYM",
@@ -109,7 +130,10 @@
     "home_pitcher": "Christian Scott",
     "away_pitcher": "Joe Ryan",
     "game_id": 823639,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 10,
+    "away_score": 8
   },
   {
     "home_abbr": "DET",
@@ -123,6 +147,9 @@
     "home_pitcher": "Tarik Skubal",
     "away_pitcher": "Brandon Sproat",
     "game_id": 824288,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 5,
+    "away_score": 4
   }
 ]
