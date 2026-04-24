@@ -11,7 +11,7 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "Michael Lorenzen",
     "game_id": 823638,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "TOR",
@@ -25,7 +25,7 @@
     "home_pitcher": "Max Scherzer",
     "away_pitcher": "Gavin Williams",
     "game_id": 822827,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "HOU",
@@ -39,7 +39,7 @@
     "home_pitcher": "Lance McCullers Jr.",
     "away_pitcher": "Will Warren",
     "game_id": 824204,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "TEX",
@@ -53,7 +53,7 @@
     "home_pitcher": "Nathan Eovaldi",
     "away_pitcher": "Luis Severino",
     "game_id": 822909,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "TBR",
@@ -67,7 +67,7 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Taj Bradley",
     "game_id": 822992,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "KCR",
@@ -81,7 +81,7 @@
     "home_pitcher": "Noah Cameron",
     "away_pitcher": "Yusei Kikuchi",
     "game_id": 824124,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "ATL",
@@ -95,7 +95,7 @@
     "home_pitcher": "Grant Holmes",
     "away_pitcher": "Andrew Painter",
     "game_id": 824932,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "CHW",
@@ -109,7 +109,7 @@
     "home_pitcher": "Bryan Hudson",
     "away_pitcher": "Miles Mikolas",
     "game_id": 824611,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "BAL",
@@ -123,7 +123,7 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Brayan Bello",
     "game_id": 824854,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "SFG",
@@ -137,7 +137,7 @@
     "home_pitcher": "Adrian Houser",
     "away_pitcher": "Sandy Alcantara",
     "game_id": 823232,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "STL",
@@ -151,7 +151,7 @@
     "home_pitcher": "Andre Pallante",
     "away_pitcher": "George Kirby",
     "game_id": 823069,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "MIL",
@@ -165,7 +165,7 @@
     "home_pitcher": "Brandon Woodruff",
     "away_pitcher": "Paul Skenes",
     "game_id": 823800,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "CIN",
@@ -179,7 +179,7 @@
     "home_pitcher": "Andrew Abbott",
     "away_pitcher": "Framber Valdez",
     "game_id": 824529,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "LAD",
@@ -193,6 +193,6 @@
     "home_pitcher": "Emmet Sheehan",
     "away_pitcher": "Jameson Taillon",
     "game_id": 823962,
-    "result": null
+    "result": "no_result"
   }
 ]
