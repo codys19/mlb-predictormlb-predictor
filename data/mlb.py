@@ -1102,29 +1102,23 @@ def predict_totals(games, ts, totals_odds):
 
 def build_pitcher_gamelogs():
     """
-    Build a name-keyed lookup of each pitcher's recent K/9 from their
-    last 5 starts using pybaseball game logs.
+    Build a name-keyed lookup of each pitcher's current season K/9
+    using pybaseball pitching_stats (FanGraphs season stats).
 
     Returns: {pitcher_name: {"recent_k_per_9": float, "recent_starts": int,
                               "recent_k_per_start": float, "recent_ip_per_start": float}}
-
-    Falls back gracefully if pybaseball is unavailable or rate-limited.
-    Uses a 30-day window to capture ~5 recent starts.
     """
-    print("Loading recent pitcher game logs (last 30 days)...")
+    print("Loading pitcher game logs (current season)...")
     try:
-        from pybaseball import pitching_stats_range
-        end   = datetime.now()
-        start = end - timedelta(days=30)
-        df = pitching_stats_range(
-            start.strftime("%Y-%m-%d"),
-            end.strftime("%Y-%m-%d")
-        )
+        from pybaseball import pitching_stats
+        season = datetime.now().year
+        df = pitching_stats(season, qual=1)
+
         if df is None or len(df) == 0:
-            print("  No recent game log data available")
+            print("  No pitcher stats available")
             return {}
 
-        # Filter to starters (GS > 0) with at least 1 start
+        # Filter to starters
         if "GS" in df.columns:
             df = df[df["GS"] >= 1]
 
@@ -1132,7 +1126,7 @@ def build_pitcher_gamelogs():
         name_col = "Name" if "Name" in df.columns else (
                    "PlayerName" if "PlayerName" in df.columns else None)
         if name_col is None:
-            print("  Could not find pitcher name column in game logs")
+            print("  Could not find pitcher name column")
             return {}
 
         for _, row in df.iterrows():
@@ -1143,9 +1137,9 @@ def build_pitcher_gamelogs():
             so  = float(row.get("SO", 0) or 0)
             ip  = float(row.get("IP", 0) or 0)
             if ip > 0:
-                k_per_9        = round(so / ip * 9, 2)
-                k_per_start    = round(so / gs, 2)
-                ip_per_start   = round(ip / gs, 2)
+                k_per_9      = round(so / ip * 9, 2)
+                k_per_start  = round(so / gs, 2)
+                ip_per_start = round(ip / gs, 2)
             else:
                 k_per_9 = 8.0; k_per_start = 5.0; ip_per_start = 5.5
             out[name] = {
@@ -1155,14 +1149,14 @@ def build_pitcher_gamelogs():
                 "recent_starts":       int(gs),
             }
 
-        print(f"  Recent game logs loaded: {len(out)} pitchers (last 30 days)")
+        print(f"  Pitcher stats loaded: {len(out)} starters ({season} season)")
         return out
 
     except ImportError:
         print("  pybaseball not available — props will use season K/9")
         return {}
     except Exception as e:
-        print(f"  Game log fetch failed ({e}) — props will use season K/9")
+        print(f"  Pitcher stats fetch failed ({e}) — props will use season K/9")
         return {}
 
 
