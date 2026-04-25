@@ -1314,8 +1314,15 @@ def prop_reasoning(p):
 
 def save_todays_picks(predictions, date_str):
     path=f"raw/picks_{date_str}.json"
+    if not predictions:
+        print(f"  No ML picks to save"); return
     if os.path.exists(path):
-        print(f"  ML picks already saved for {date_str}"); return
+        try:
+            existing=json.load(open(path))
+            graded=[p for p in existing if p.get("result") not in (None,"no_result")]
+            if graded:
+                print(f"  ML picks already graded for {date_str}"); return
+        except: pass
     with open(path,"w") as f:
         json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "home_name":g["home_name"],"away_name":g["away_name"],
@@ -1324,31 +1331,53 @@ def save_todays_picks(predictions, date_str):
             "home_pitcher":g.get("home_pitcher","TBD"),
             "away_pitcher":g.get("away_pitcher","TBD"),
             "game_id":g.get("game_id"),"result":None} for g in predictions],f,indent=2)
-    print(f"  ML picks saved -> {path}")
+    print(f"  ML picks saved -> {path} ({len(predictions)} games)")
 
 def save_ou_picks(predictions, date_str):
     path=f"raw/ou_{date_str}.json"
+    if not predictions:
+        print(f"  No O/U picks to save"); return
     if os.path.exists(path):
-        print(f"  O/U picks already saved for {date_str}"); return
+        try:
+            existing=json.load(open(path))
+            # Skip if file has real picks already graded
+            graded=[p for p in existing if p.get("result") not in (None,"no_result")]
+            real=[p for p in existing if p.get("pick")]  # non-empty
+            if graded or (real and len(real)==len(existing)):
+                print(f"  O/U picks already saved for {date_str}"); return
+        except: pass
     with open(path,"w") as f:
         json.dump([{"home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "home_name":g["home_name"],"away_name":g["away_name"],
             "pick":g["pick"],"line":g["line"],"confidence":g["confidence"],
-            "pick_odds":g.get("pick_odds"),"game_id":g.get("game_id"),"result":None}
+            "pick_odds":g.get("pick_odds"),"over_odds":g.get("over_odds"),
+            "under_odds":g.get("under_odds"),"proj_total":g.get("proj_total"),
+            "game_id":g.get("game_id"),"result":None}
             for g in predictions],f,indent=2)
-    print(f"  O/U picks saved -> {path}")
+    print(f"  O/U picks saved -> {path} ({len(predictions)} picks)")
 
 def save_props_picks(predictions, date_str):
     path=f"raw/props_{date_str}.json"
+    if not predictions:
+        print(f"  No Props picks to save"); return
     if os.path.exists(path):
-        print(f"  Props picks already saved for {date_str}"); return
+        try:
+            existing=json.load(open(path))
+            graded=[p for p in existing if p.get("result") not in (None,"no_result")]
+            real=[p for p in existing if p.get("pitcher")]
+            if graded or (real and len(real)==len(existing)):
+                print(f"  Props picks already saved for {date_str}"); return
+        except: pass
     with open(path,"w") as f:
         json.dump([{"pitcher":g["pitcher"],"team_abbr":g["team_abbr"],
             "home_abbr":g["home_abbr"],"away_abbr":g["away_abbr"],
             "pick":g["pick"],"line":g["line"],"confidence":g["confidence"],
-            "pick_odds":g.get("pick_odds"),"game_id":g.get("game_id"),"result":None}
+            "proj_k":g.get("proj_k"),"k_per_9":g.get("k_per_9"),
+            "pick_odds":g.get("pick_odds"),"over_odds":g.get("over_odds"),
+            "under_odds":g.get("under_odds"),
+            "game_id":g.get("game_id"),"result":None}
             for g in predictions],f,indent=2)
-    print(f"  Props picks saved -> {path}")
+    print(f"  Props picks saved -> {path} ({len(predictions)} picks)")
 
 
 # ═══════════════════════════════════════════════════════════════════
