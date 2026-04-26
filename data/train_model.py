@@ -24,6 +24,10 @@ BASE_FEATURES = [
     "away_rolling_runs_scored","away_rolling_runs_allowed",
     "away_rolling_win_rate","away_rolling_run_diff",
     "win_rate_diff","run_diff_diff","runs_scored_diff","is_home",
+    # 5-game streak features
+    "home_rolling_win_rate_5","home_rolling_run_diff_5",
+    "away_rolling_win_rate_5","away_rolling_run_diff_5",
+    "win_rate_diff_5","run_diff_diff_5",
 ]
 
 TEAM_PITCHER_FEATURES = [
@@ -79,7 +83,13 @@ def build_feature_list(df):
     else:
         print("  ℹ️  No bullpen features — run fetch_bullpen.py to add fatigue signal")
 
-    # Park factors excluded — captured by rolling run differential already
+    # Add park factor features if available
+    pk_available = [c for c in PARK_FEATURES if c in df.columns and df[c].notna().mean() > 0.5]
+    if pk_available:
+        feature_cols += pk_available
+        print(f"  ✅ Park factor features: {len(pk_available)}")
+    else:
+        print("  ℹ️  No park features — add raw/park_factors.csv and rebuild")
 
     # Add starter features if populated.
     # Threshold is 0.25 (not 0.5) because starter cols are intentionally NaN

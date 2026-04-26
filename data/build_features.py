@@ -259,7 +259,7 @@ def lookup_starter_stats(starter_name, season, n2s, lastname_to_names):
 # ── Step 3: Rolling team stats ────────────────────────────────────────────────
 
 def build_team_rolling_stats(games, window=ROLLING_WINDOW):
-    print(f"\n📊 Building rolling stats (last {window} games)...")
+    print(f"\n📊 Building rolling stats (last {window} games + 5-game streak)...")
     games = games.sort_values(["team","date"]).copy()
 
     games["rolling_runs_scored"] = (
@@ -276,6 +276,19 @@ def build_team_rolling_stats(games, window=ROLLING_WINDOW):
         .transform(lambda x: x.shift(1).rolling(window,min_periods=3).mean())
     )
     games["rolling_run_diff"] = games["rolling_runs_scored"] - games["rolling_runs_allowed"]
+
+    # ── 5-game streak features (hot/cold form) ────────────────────────
+    SHORT = 5
+    games["rolling_win_rate_5"] = (
+        games.groupby("team")["result_binary"]
+        .transform(lambda x: x.shift(1).rolling(SHORT, min_periods=2).mean())
+    )
+    games["rolling_run_diff_5"] = (
+        games.groupby("team")["runs_scored"]
+        .transform(lambda x: x.shift(1).rolling(SHORT, min_periods=2).mean()) -
+        games.groupby("team")["runs_allowed"]
+        .transform(lambda x: x.shift(1).rolling(SHORT, min_periods=2).mean())
+    )
 
     games = games.sort_values("date").reset_index(drop=True)
     print("  ✅ Done")
@@ -296,6 +309,8 @@ def build_game_rows(games):
         "rolling_runs_allowed":"home_rolling_runs_allowed",
         "rolling_win_rate":"home_rolling_win_rate",
         "rolling_run_diff":"home_rolling_run_diff",
+        "rolling_win_rate_5":"home_rolling_win_rate_5",
+        "rolling_run_diff_5":"home_rolling_run_diff_5",
     })
     away = away.rename(columns={
         "team":"away_team_check",
@@ -303,13 +318,18 @@ def build_game_rows(games):
         "rolling_runs_allowed":"away_rolling_runs_allowed",
         "rolling_win_rate":"away_rolling_win_rate",
         "rolling_run_diff":"away_rolling_run_diff",
+        "rolling_win_rate_5":"away_rolling_win_rate_5",
+        "rolling_run_diff_5":"away_rolling_run_diff_5",
     })
 
     home_cols = [c for c in ["date","date_str","season","home_team","away_team","home_team_won",
         "home_rolling_runs_scored","home_rolling_runs_allowed",
-        "home_rolling_win_rate","home_rolling_run_diff","recency_weight"] if c in home.columns]
+        "home_rolling_win_rate","home_rolling_run_diff",
+        "home_rolling_win_rate_5","home_rolling_run_diff_5",
+        "recency_weight"] if c in home.columns]
     away_cols = [c for c in ["date","away_team_check","away_rolling_runs_scored",
-        "away_rolling_runs_allowed","away_rolling_win_rate","away_rolling_run_diff"] if c in away.columns]
+        "away_rolling_runs_allowed","away_rolling_win_rate","away_rolling_run_diff",
+        "away_rolling_win_rate_5","away_rolling_run_diff_5"] if c in away.columns]
 
     merged = pd.merge(home[home_cols], away[away_cols],
         left_on=["date","away_team"], right_on=["date","away_team_check"],
@@ -507,6 +527,12 @@ def add_extra_features(games):
     games["win_rate_diff"]    = games["home_rolling_win_rate"]    - games["away_rolling_win_rate"]
     games["run_diff_diff"]    = games["home_rolling_run_diff"]    - games["away_rolling_run_diff"]
     games["runs_scored_diff"] = games["home_rolling_runs_scored"] - games["away_rolling_runs_scored"]
+
+    # 5-game streak diff features
+    if "home_rolling_win_rate_5" in games.columns and "away_rolling_win_rate_5" in games.columns:
+        games["win_rate_diff_5"] = games["home_rolling_win_rate_5"] - games["away_rolling_win_rate_5"]
+        games["run_diff_diff_5"] = games["home_rolling_run_diff_5"] - games["away_rolling_run_diff_5"]
+        print("  ✅ 5-game streak diff features added")
 
     if "home_avg_era" in games.columns and "away_avg_era" in games.columns:
         games["era_diff"]  = games["away_avg_era"]  - games["home_avg_era"]
