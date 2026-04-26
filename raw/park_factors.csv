@@ -1,0 +1,31 @@
+team_abbr,park_name,park_factor,notes
+ARI,Chase Field,1.05,Retractable roof but still warm/dry air
+ATL,Truist Park,1.00,Neutral park
+ATH,Sutter Health Park,0.97,Pitcher-friendly Sacramento park
+BAL,Camden Yards,1.02,Slightly hitter-friendly
+BOS,Fenway Park,1.08,Green Monster  short LF
+CHC,Wrigley Field,1.03,Wind variable  ivy walls
+CHW,Guaranteed Rate Field,1.01,Slightly hitter-friendly
+CIN,Great American Ball Park,1.07,Very hitter-friendly  short fences
+CLE,Progressive Field,0.97,Pitcher-friendly
+COL,Coors Field,1.18,Altitude massively inflates offense
+DET,Comerica Park,0.96,Large park  pitcher-friendly
+HOU,Minute Maid Park,1.02,Crawford Boxes help LHH
+KCR,Kauffman Stadium,0.97,Large park  pitcher-friendly
+LAA,Angel Stadium,0.99,Slightly pitcher-friendly
+LAD,Dodger Stadium,0.96,Pitcher-friendly  marine layer
+MIA,LoanDepot Park,0.97,Retractable roof  pitcher-friendly
+MIL,American Family Field,1.01,Retractable roof  neutral
+MIN,Target Field,0.98,Cold weather early season  pitcher-friendly
+NYM,Citi Field,0.97,Large park  pitcher-friendly
+NYY,Yankee Stadium,1.05,Short RF porch  hitter-friendly
+PHI,Citizens Bank Park,1.05,Hitter-friendly  short fences
+PIT,PNC Park,0.97,Large park  pitcher-friendly
+SDP,Petco Park,0.95,Most pitcher-friendly park in NL
+SEA,T-Mobile Park,0.97,Marine layer  pitcher-friendly
+SFG,Oracle Park,0.95,Cold/windy  very pitcher-friendly
+STL,Busch Stadium,0.99,Slightly pitcher-friendly
+TBR,Tropicana Field,0.98,Dome  neutral-pitcher
+TEX,Globe Life Field,1.03,Texas heat  hitter-friendly
+TOR,Rogers Centre,1.02,Dome  slight hitter advantage
+WSN,Nationals Park,1.01,Neutral-slightly hitter friendly

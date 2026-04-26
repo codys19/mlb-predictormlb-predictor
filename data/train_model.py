@@ -46,6 +46,11 @@ BULLPEN_FEATURES = [
     "bullpen_fatigue_diff",
 ]
 
+PARK_FEATURES = [
+    "home_park_factor",
+    "park_factor_is_known",
+]
+
 TARGET = "home_team_won"
 
 
@@ -73,6 +78,8 @@ def build_feature_list(df):
         print(f"  ✅ Bullpen fatigue features: {len(bp_available)}")
     else:
         print("  ℹ️  No bullpen features — run fetch_bullpen.py to add fatigue signal")
+
+    # Park factors excluded — captured by rolling run differential already
 
     # Add starter features if populated.
     # Threshold is 0.25 (not 0.5) because starter cols are intentionally NaN

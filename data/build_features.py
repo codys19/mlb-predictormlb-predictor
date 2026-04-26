@@ -26,6 +26,7 @@ STARTER_LOGS_PATH = "raw/starter_logs.csv"
 GAME_STARTERS_PATH= "raw/game_starters.csv"
 TEAM_POOL_PATH    = "raw/team_starter_pool.csv"
 BULLPEN_PATH      = "raw/bullpen_usage.csv"     # NEW: daily reliever IP/appearances
+PARK_FACTORS_PATH = "raw/park_factors.csv"        # Static park run-scoring factors
 OUTPUT_PATH       = "raw/training_data.csv"
 
 ROLLING_WINDOW   = 15
@@ -83,6 +84,15 @@ def load_data():
     else:
         bullpen = None
         print("  ⚠️  No bullpen_usage.csv — run fetch_bullpen.py for fatigue features")
+
+    # Load park factors
+    if os.path.exists(PARK_FACTORS_PATH):
+        park_df = pd.read_csv(PARK_FACTORS_PATH)
+        park_factors = dict(zip(park_df["team_abbr"], park_df["park_factor"]))
+        print(f"  ✅ Park factors: {len(park_factors)} teams")
+    else:
+        park_factors = {}
+        print("  ⚠️  No park_factors.csv — run will skip park features")
 
     # Team pool as fallback when individual starter not found
     team_pool = pd.read_csv(TEAM_POOL_PATH) if os.path.exists(TEAM_POOL_PATH) else None
@@ -142,7 +152,7 @@ def load_data():
 
     games = games.sort_values(["date","team"]).reset_index(drop=True)
     print(f"  ✅ Clean games: {len(games):,}")
-    return games, pitchers, starter_logs, game_starters, team_pool, bullpen
+    return games, pitchers, starter_logs, game_starters, team_pool, bullpen, park_factors
 
 
 # ── Step 2: Build individual starter lookup tables ────────────────────────────
@@ -463,6 +473,32 @@ def attach_bullpen_fatigue(games, bullpen):
     return games
 
 
+# ── Step 5c: Park factors ────────────────────────────────────────────────────
+
+def attach_park_factors(games, park_factors):
+    """
+    Attach home park run-scoring factor to each game.
+    Features:
+      home_park_factor     — run scoring index for home team park (1.0 = neutral)
+      park_factor_is_known — 1 if park factor available, 0 otherwise
+    """
+    if not park_factors:
+        print("\n⚠️  Skipping park factors (no park_factors.csv)")
+        games["home_park_factor"]     = 1.0
+        games["park_factor_is_known"] = 0
+        return games
+
+    print("\n🏟️  Attaching park factors...")
+    games["home_park_factor"]     = games["home_team"].map(park_factors).fillna(1.0)
+    games["park_factor_is_known"] = games["home_team"].isin(park_factors).astype(int)
+
+    covered = games["park_factor_is_known"].sum()
+    avg_pf  = games["home_park_factor"].mean()
+    print(f"  Park factors attached: {covered:,}/{len(games):,} games")
+    print(f"  Avg home park factor: {avg_pf:.3f}")
+    return games
+
+
 # ── Step 6: Difference features ──────────────────────────────────────────────
 
 def add_extra_features(games):
@@ -529,10 +565,11 @@ def save_training_data(games):
 # ── Run ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    games, pitchers, starter_logs, game_starters, team_pool, bullpen = load_data()
+    games, pitchers, starter_logs, game_starters, team_pool, bullpen, park_factors = load_data()
     games = build_team_rolling_stats(games)
     games = build_game_rows(games)
     games = attach_pitcher_stats(games, pitchers, starter_logs, game_starters, team_pool)
     games = attach_bullpen_fatigue(games, bullpen)
+    games = attach_park_factors(games, park_factors)
     games = add_extra_features(games)
     save_training_data(games)
