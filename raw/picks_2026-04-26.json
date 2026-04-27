@@ -11,7 +11,10 @@
     "home_pitcher": "Kodai Senga",
     "away_pitcher": "TBD",
     "game_id": 823635,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 0,
+    "away_score": 3
   },
   {
     "home_abbr": "NYM",
@@ -25,7 +28,10 @@
     "home_pitcher": "Kodai Senga",
     "away_pitcher": "TBD",
     "game_id": 823637,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 0,
+    "away_score": 3
   },
   {
     "home_abbr": "HOU",
@@ -39,7 +45,10 @@
     "home_pitcher": "Spencer Arrighetti",
     "away_pitcher": "Luis Gil",
     "game_id": 824202,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 7,
+    "away_score": 4
   },
   {
     "home_abbr": "TEX",
@@ -53,7 +62,10 @@
     "home_pitcher": "Kumar Rocker",
     "away_pitcher": "J.T. Ginn",
     "game_id": 822911,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "MIL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Kyle Harrison",
     "away_pitcher": "Carmen Mlodzinski",
     "game_id": 823797,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 5,
+    "away_score": 0
   },
   {
     "home_abbr": "CIN",
@@ -81,7 +96,10 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Keider Montero",
     "game_id": 824528,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 3,
+    "away_score": 8
   },
   {
     "home_abbr": "TOR",
@@ -95,7 +113,10 @@
     "home_pitcher": "Patrick Corbin",
     "away_pitcher": "Slade Cecconi",
     "game_id": 822824,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "TBR",
@@ -109,7 +130,10 @@
     "home_pitcher": "Jesse Scholtens",
     "away_pitcher": "Simeon Woods Richardson",
     "game_id": 822991,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "ATL",
@@ -123,7 +147,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Aaron Nola",
     "game_id": 824934,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "ARI",
@@ -137,7 +164,10 @@
     "home_pitcher": "Ryne Nelson",
     "away_pitcher": "Michael King",
     "game_id": 825094,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 12,
+    "away_score": 7
   },
   {
     "home_abbr": "KCR",
@@ -151,7 +181,7 @@
     "home_pitcher": "Seth Lugo",
     "away_pitcher": "Reid Detmers",
     "game_id": 824122,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "CHW",
@@ -165,7 +195,10 @@
     "home_pitcher": "Bryan Hudson",
     "away_pitcher": "Foster Griffin",
     "game_id": 824612,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "STL",
@@ -179,7 +212,10 @@
     "home_pitcher": "Michael McGreevy",
     "away_pitcher": "Emerson Hancock",
     "game_id": 823068,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "BAL",
@@ -193,7 +229,10 @@
     "home_pitcher": "Kyle Bradish",
     "away_pitcher": "Connelly Early",
     "game_id": 824852,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 3,
+    "away_score": 5
   },
   {
     "home_abbr": "LAD",
@@ -207,7 +246,10 @@
     "home_pitcher": "Justin Wrobleski",
     "away_pitcher": "Shota Imanaga",
     "game_id": 823959,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAD",
+    "home_score": 6,
+    "away_score": 0
   },
   {
     "home_abbr": "SFG",
@@ -221,6 +263,9 @@
     "home_pitcher": "Landen Roupp",
     "away_pitcher": "Max Meyer",
     "game_id": 823230,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 6,
+    "away_score": 3
   }
 ]
