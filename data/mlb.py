@@ -597,8 +597,12 @@ def build_team_stats():
         grp=grp.sort_values("date"); recent=grp.tail(ROLLING_WINDOW); last5=grp.tail(5)
         rs=recent["runs_scored"].mean(); ra=recent["runs_allowed"].mean()
         wr=recent["result_binary"].mean()
+        # 5-game streak stats
+        rs5=last5["runs_scored"].mean(); ra5=last5["runs_allowed"].mean()
+        wr5=last5["result_binary"].mean()
         out[team]={"rolling_runs_scored":rs,"rolling_runs_allowed":ra,
                    "rolling_win_rate":wr,"rolling_run_diff":rs-ra,
+                   "rolling_win_rate_5":wr5,"rolling_run_diff_5":rs5-ra5,
                    "last5":"".join(["W" if r==1 else "L" for r in last5["result_binary"]]),
                    "last5_w":int(last5["result_binary"].sum()),
                    "last5_l":int(5-last5["result_binary"].sum())}
@@ -957,13 +961,19 @@ def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,s
             "home_rolling_runs_allowed":hs.get("rolling_runs_allowed",4.5),
             "home_rolling_win_rate":    hs.get("rolling_win_rate",0.5),
             "home_rolling_run_diff":    hs.get("rolling_run_diff",0.0),
+            "home_rolling_win_rate_5":  hs.get("rolling_win_rate_5",0.5),
+            "home_rolling_run_diff_5":  hs.get("rolling_run_diff_5",0.0),
             "away_rolling_runs_scored": as_.get("rolling_runs_scored",4.5),
             "away_rolling_runs_allowed":as_.get("rolling_runs_allowed",4.5),
             "away_rolling_win_rate":    as_.get("rolling_win_rate",0.5),
             "away_rolling_run_diff":    as_.get("rolling_run_diff",0.0),
-            "win_rate_diff":  hs.get("rolling_win_rate",0.5)-as_.get("rolling_win_rate",0.5),
-            "run_diff_diff":  hs.get("rolling_run_diff",0.0)-as_.get("rolling_run_diff",0.0),
+            "away_rolling_win_rate_5":  as_.get("rolling_win_rate_5",0.5),
+            "away_rolling_run_diff_5":  as_.get("rolling_run_diff_5",0.0),
+            "win_rate_diff":   hs.get("rolling_win_rate",0.5) -as_.get("rolling_win_rate",0.5),
+            "run_diff_diff":   hs.get("rolling_run_diff",0.0) -as_.get("rolling_run_diff",0.0),
             "runs_scored_diff":hs.get("rolling_runs_scored",4.5)-as_.get("rolling_runs_scored",4.5),
+            "win_rate_diff_5": hs.get("rolling_win_rate_5",0.5)-as_.get("rolling_win_rate_5",0.5),
+            "run_diff_diff_5": hs.get("rolling_run_diff_5",0.0)-as_.get("rolling_run_diff_5",0.0),
             "is_home":1,
             "home_avg_era":  hp.get("avg_era",4.5),  "home_avg_whip": hp.get("avg_whip",1.3),
             "home_avg_so9":  hp.get("avg_so9",8.0),  "home_avg_so_per_w":hp.get("avg_so_per_w",2.5),
