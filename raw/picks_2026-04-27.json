@@ -11,7 +11,10 @@
     "home_pitcher": "Connor Prielipp",
     "away_pitcher": "Luis Castillo",
     "game_id": 823719,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 11,
+    "away_score": 4
   },
   {
     "home_abbr": "TEX",
@@ -25,7 +28,10 @@
     "home_pitcher": "Jack Leiter",
     "away_pitcher": "Max Fried",
     "game_id": 822906,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "LAD",
@@ -39,7 +45,10 @@
     "home_pitcher": "Yoshinobu Yamamoto",
     "away_pitcher": "Chris Paddack",
     "game_id": 823961,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "SDP",
@@ -53,7 +62,10 @@
     "home_pitcher": "Randy V\u00e1squez",
     "away_pitcher": "Matthew Boyd",
     "game_id": 823311,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 9,
+    "away_score": 7
   },
   {
     "home_abbr": "PIT",
@@ -67,7 +79,10 @@
     "home_pitcher": "Mason Montgomery",
     "away_pitcher": "Dustin May",
     "game_id": 823395,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "TOR",
@@ -81,7 +96,10 @@
     "home_pitcher": "Dylan Cease",
     "away_pitcher": "Ranger Suarez",
     "game_id": 822825,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 0,
+    "away_score": 5
   },
   {
     "home_abbr": "CLE",
@@ -95,7 +113,10 @@
     "home_pitcher": "Parker Messick",
     "away_pitcher": "Steven Matz",
     "game_id": 824446,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "CHW",
@@ -109,6 +130,9 @@
     "home_pitcher": "Anthony Kay",
     "away_pitcher": "Jack Kochanowicz",
     "game_id": 824609,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 8,
+    "away_score": 7
   }
 ]
