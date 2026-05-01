@@ -11,7 +11,10 @@
     "home_pitcher": "Andrew Abbott",
     "away_pitcher": "Michael Lorenzen",
     "game_id": 824524,
-    "result": null
+    "result": "W",
+    "actual_winner": "CIN",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "MIN",
@@ -25,7 +28,10 @@
     "home_pitcher": "Bailey Ober",
     "away_pitcher": "Kevin Gausman",
     "game_id": 823714,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 7,
+    "away_score": 1
   },
   {
     "home_abbr": "PIT",
@@ -39,7 +45,10 @@
     "home_pitcher": "Paul Skenes",
     "away_pitcher": "Hunter Dobbins",
     "game_id": 823391,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 5,
+    "away_score": 10
   },
   {
     "home_abbr": "NYM",
@@ -53,7 +62,10 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "Miles Mikolas",
     "game_id": 823634,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "MIL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Brandon Woodruff",
     "away_pitcher": "Michael Soroka",
     "game_id": 823795,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 13,
+    "away_score": 1
   },
   {
     "home_abbr": "PHI",
@@ -81,7 +96,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "TBD",
     "game_id": 823472,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "PHI",
@@ -95,7 +113,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "TBD",
     "game_id": 823471,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "BAL",
@@ -109,7 +130,10 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Lance McCullers Jr.",
     "game_id": 824848,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 5,
+    "away_score": 11
   },
   {
     "home_abbr": "BAL",
@@ -123,7 +147,10 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Lance McCullers Jr.",
     "game_id": 824850,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 5,
+    "away_score": 11
   },
   {
     "home_abbr": "ATL",
@@ -137,7 +164,10 @@
     "home_pitcher": "Bryce Elder",
     "away_pitcher": "Framber Valdez",
     "game_id": 824929,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 2,
+    "away_score": 5
   },
   {
     "home_abbr": "ATH",
@@ -151,6 +181,9 @@
     "home_pitcher": "Jeffrey Springs",
     "away_pitcher": "Noah Cameron",
     "game_id": 825016,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATH",
+    "home_score": 6,
+    "away_score": 3
   }
 ]
