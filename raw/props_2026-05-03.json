@@ -13,7 +13,7 @@
     "over_odds": 134,
     "under_odds": -180,
     "game_id": "341da475ed0042be75b5bc44221f8161",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Trey Gibson",
@@ -29,7 +29,7 @@
     "over_odds": 112,
     "under_odds": -148,
     "game_id": "092612a571aeb504211ec7f4950924e3",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Ranger Suarez",
@@ -45,7 +45,7 @@
     "over_odds": -146,
     "under_odds": 110,
     "game_id": "c07320ad7cda17703d445ae8f3b85376",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chase Burns",
@@ -61,7 +61,7 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": "b7ecafff68e95721e956a1a960acdd98",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chris Paddack",
@@ -77,7 +77,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "4c6f75a0f0a2e467d79983253235c3a9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jesus Luzardo",
@@ -93,7 +93,7 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": "4c6f75a0f0a2e467d79983253235c3a9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Merrill Kelly",
@@ -109,7 +109,7 @@
     "over_odds": -154,
     "under_odds": 116,
     "game_id": "b7ad1d7b238b8062d64011d24d284989",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Spencer Strider",
@@ -125,7 +125,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "9e48c32033c5db8cdc98fcd3ecdc2aa2",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kyle Freeland",
@@ -141,7 +141,7 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": "9e48c32033c5db8cdc98fcd3ecdc2aa2",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Aaron Civale",
@@ -157,7 +157,7 @@
     "over_odds": 124,
     "under_odds": -166,
     "game_id": "ba204fb233ca7bb67ee89a3dd893e188",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Anthony Kay",
@@ -173,7 +173,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "60f28cce3cfa86c53a2a227c6532203a",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Luis Castillo",
@@ -189,7 +189,7 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": "e05ec850dc5af5d56ee55a4acb831ae9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jack Leiter",
@@ -205,7 +205,7 @@
     "over_odds": -172,
     "under_odds": 128,
     "game_id": "b713b3ae079ed7d21c2a9f7edb043f6b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Max Fried",
@@ -221,7 +221,7 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": "092612a571aeb504211ec7f4950924e3",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Braxton Ashcraft",
@@ -237,7 +237,7 @@
     "over_odds": -125,
     "under_odds": -106,
     "game_id": "b7ecafff68e95721e956a1a960acdd98",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Parker Messick",
@@ -253,7 +253,7 @@
     "over_odds": -120,
     "under_odds": -110,
     "game_id": "ba204fb233ca7bb67ee89a3dd893e188",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jack Kochanowicz",
@@ -269,7 +269,7 @@
     "over_odds": -118,
     "under_odds": -114,
     "game_id": "257b715ef1fa8b967fb27a46de2d3021",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Joe Ryan",
@@ -285,7 +285,7 @@
     "over_odds": 108,
     "under_odds": -144,
     "game_id": "341da475ed0042be75b5bc44221f8161",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kris Bubic",
@@ -301,7 +301,7 @@
     "over_odds": -110,
     "under_odds": -120,
     "game_id": "e05ec850dc5af5d56ee55a4acb831ae9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Steven Matz",
@@ -317,7 +317,7 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": "83a816db7e0b75a4f8d0b9a486ad3113",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Justin Wrobleski",
@@ -333,7 +333,7 @@
     "over_odds": -166,
     "under_odds": 124,
     "game_id": "8ca3a46477683553d785413b73444311",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Matthew Boyd",
@@ -349,7 +349,7 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "b7ad1d7b238b8062d64011d24d284989",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Dustin May",
@@ -365,7 +365,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "8ca3a46477683553d785413b73444311",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Tyler Mahle",
@@ -381,7 +381,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "83a816db7e0b75a4f8d0b9a486ad3113",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Clay Holmes",
@@ -397,6 +397,6 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": "257b715ef1fa8b967fb27a46de2d3021",
-    "result": null
+    "result": "no_result"
   }
 ]
