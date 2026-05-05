@@ -13,7 +13,7 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "80044e6fc3586ebcf9f4df924a6f9519",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Payton Tolle",
@@ -29,7 +29,7 @@
     "over_odds": -148,
     "under_odds": 112,
     "game_id": "42cd2c9d9860ded679366dcdfe136ea7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Tarik Skubal",
@@ -45,7 +45,7 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": "42cd2c9d9860ded679366dcdfe136ea7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Janson Junk",
@@ -61,7 +61,7 @@
     "over_odds": -130,
     "under_odds": -102,
     "game_id": "a8b6869ab87cab44f73e7d8fe9c435f5",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Nick Martinez",
@@ -77,7 +77,7 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": "724956d85946d94ae169ea8b4f5299b3",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Cam Schlittler",
@@ -93,7 +93,7 @@
     "over_odds": -128,
     "under_odds": -104,
     "game_id": "1be0149112c46951b21b30f3277a53dd",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chase Petty",
@@ -109,7 +109,7 @@
     "over_odds": 126,
     "under_odds": -168,
     "game_id": "25d5af851ff059eb0a390e1f5908f926",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Tanner Bibee",
@@ -125,7 +125,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "286159b7ccc29dea1805a4ce6218be0e",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chad Patrick",
@@ -141,7 +141,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "6768391de7087c252e7f2dae8ec9bd0b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kyle Leahy",
@@ -157,7 +157,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "6768391de7087c252e7f2dae8ec9bd0b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -173,7 +173,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "29183afced82bafdf09738bf1fa00600",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Davis Martin",
@@ -189,7 +189,7 @@
     "over_odds": 112,
     "under_odds": -148,
     "game_id": "e07f1907da5ba8bebef841815c5cd9a1",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jose Soriano",
@@ -205,7 +205,7 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": "e07f1907da5ba8bebef841815c5cd9a1",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Logan Gilbert",
@@ -221,7 +221,7 @@
     "over_odds": -168,
     "under_odds": 126,
     "game_id": "6afb68c3e91d245e69a9eec05286476d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "JR Ritchie",
@@ -237,7 +237,7 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": "6afb68c3e91d245e69a9eec05286476d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Trevor McDonald",
@@ -253,7 +253,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "a6a446c7235d0fcd72e04a211f04e87a",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Shane Baz",
@@ -269,7 +269,7 @@
     "over_odds": -106,
     "under_odds": -125,
     "game_id": "1be0149112c46951b21b30f3277a53dd",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Edward Cabrera",
@@ -285,7 +285,7 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": "25d5af851ff059eb0a390e1f5908f926",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Michael Wacha",
@@ -301,7 +301,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "286159b7ccc29dea1805a4ce6218be0e",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Aaron Nola",
@@ -317,6 +317,6 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "a8b6869ab87cab44f73e7d8fe9c435f5",
-    "result": null
+    "result": "no_result"
   }
 ]
