@@ -11,7 +11,10 @@
     "home_pitcher": "Andrew Painter",
     "away_pitcher": "J.T. Ginn",
     "game_id": 823467,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 1,
+    "away_score": 12
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "Michael King",
     "away_pitcher": "Matthew Liberatore",
     "game_id": 823306,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "WSN",
@@ -39,7 +45,10 @@
     "home_pitcher": "Jake Irvin",
     "away_pitcher": "Simeon Woods Richardson",
     "game_id": 822741,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 7,
+    "away_score": 5
   },
   {
     "home_abbr": "COL",
@@ -53,7 +62,10 @@
     "home_pitcher": "Jose Quintana",
     "away_pitcher": "Christian Scott",
     "game_id": 824362,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "KCR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Seth Lugo",
     "away_pitcher": "Slade Cecconi",
     "game_id": 824117,
-    "result": null
+    "result": "L",
+    "actual_winner": "CLE",
+    "home_score": 5,
+    "away_score": 8
   },
   {
     "home_abbr": "CHC",
@@ -81,7 +96,10 @@
     "home_pitcher": "Shota Imanaga",
     "away_pitcher": "Rhett Lowder",
     "game_id": 824681,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 8,
+    "away_score": 3
   },
   {
     "home_abbr": "MIA",
@@ -95,7 +113,10 @@
     "home_pitcher": "Max Meyer",
     "away_pitcher": "Cade Povich",
     "game_id": 823870,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIA",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "BOS",
@@ -109,7 +130,10 @@
     "home_pitcher": "Jake Bennett",
     "away_pitcher": "Griffin Jax",
     "game_id": 824767,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 4,
+    "away_score": 8
   },
   {
     "home_abbr": "NYY",
@@ -123,7 +147,10 @@
     "home_pitcher": "Paul Blackburn",
     "away_pitcher": "MacKenzie Gore",
     "game_id": 823551,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYY",
+    "home_score": 9,
+    "away_score": 2
   },
   {
     "home_abbr": "ARI",
@@ -137,6 +164,9 @@
     "home_pitcher": "Zac Gallen",
     "away_pitcher": "Mitch Keller",
     "game_id": 825090,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 2,
+    "away_score": 4
   }
 ]

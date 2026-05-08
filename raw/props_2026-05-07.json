@@ -13,7 +13,7 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": "ba055e6ad1137117eef850d15d9c8c97",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Seth Lugo",
@@ -29,7 +29,7 @@
     "over_odds": 110,
     "under_odds": -146,
     "game_id": "6ea660d6d55e2a5168fd92eb01e16b87",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Slade Cecconi",
@@ -45,7 +45,7 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": "6ea660d6d55e2a5168fd92eb01e16b87",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Shota Imanaga",
@@ -61,7 +61,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "d995ce8d9df4c182c1ecade37bac292d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jose Quintana",
@@ -77,7 +77,7 @@
     "over_odds": 122,
     "under_odds": -162,
     "game_id": "db06eeec096bc60532c3b1aa5d4235a0",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Christian Scott",
@@ -93,7 +93,7 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": "db06eeec096bc60532c3b1aa5d4235a0",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Zac Gallen",
@@ -109,7 +109,7 @@
     "over_odds": -122,
     "under_odds": -106,
     "game_id": "4d8a7d6f10d4e381df3410c93345b071",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "JT Ginn",
@@ -125,7 +125,7 @@
     "over_odds": 110,
     "under_odds": -146,
     "game_id": "b24e92041f215692dc57c17a67275bcf",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Andrew Painter",
@@ -141,7 +141,7 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": "b24e92041f215692dc57c17a67275bcf",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Cade Povich",
@@ -157,7 +157,7 @@
     "over_odds": -130,
     "under_odds": -102,
     "game_id": "01ce87afc3b701c0bae09b62dc95f87c",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Griffin Jax",
@@ -173,7 +173,7 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "587e3aa8ddaf7a5719f0d0f55b446db9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jake Bennett",
@@ -189,7 +189,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "587e3aa8ddaf7a5719f0d0f55b446db9",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Michael King",
@@ -205,7 +205,7 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": "fb98c375df55f7f70d2f35b2209bdd61",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Matthew Liberatore",
@@ -221,7 +221,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "fb98c375df55f7f70d2f35b2209bdd61",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Rhett Lowder",
@@ -237,7 +237,7 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": "d995ce8d9df4c182c1ecade37bac292d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Mitch Keller",
@@ -253,7 +253,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "4d8a7d6f10d4e381df3410c93345b071",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Max Meyer",
@@ -269,7 +269,7 @@
     "over_odds": -122,
     "under_odds": -106,
     "game_id": "01ce87afc3b701c0bae09b62dc95f87c",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -285,7 +285,7 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": "1c3063ee80bf14181773650f89724edd",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jake Irvin",
@@ -301,6 +301,6 @@
     "over_odds": -122,
     "under_odds": -108,
     "game_id": "ba055e6ad1137117eef850d15d9c8c97",
-    "result": null
+    "result": "no_result"
   }
 ]
