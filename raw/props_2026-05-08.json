@@ -13,7 +13,7 @@
     "over_odds": 114,
     "under_odds": -152,
     "game_id": "0f65cc2fecae3661933682f1525e806d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jesus Luzardo",
@@ -29,7 +29,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "0f65cc2fecae3661933682f1525e806d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kyle Bradish",
@@ -45,7 +45,7 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": "76929aa734500b152f347bbddf390165",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jacob Lopez",
@@ -61,7 +61,7 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": "76929aa734500b152f347bbddf390165",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Dylan Cease",
@@ -77,7 +77,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "92c3e303601373eee3d37fbb858409af",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Reid Detmers",
@@ -93,7 +93,7 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": "92c3e303601373eee3d37fbb858409af",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Connelly Early",
@@ -109,7 +109,7 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": "739421696ed76f3cffaf12c7db22c763",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Connor Prielipp",
@@ -125,7 +125,7 @@
     "over_odds": -128,
     "under_odds": -104,
     "game_id": "d0f880a5482c5178286681a63048600f",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Sean Burke",
@@ -141,7 +141,7 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": "79db8c5227deae699a7b9c123aaf6d3f",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Keider Montero",
@@ -157,7 +157,7 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": "6aa50c59681975bb7beff37ab4f46bb5",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Ben Brown",
@@ -173,7 +173,7 @@
     "over_odds": 112,
     "under_odds": -148,
     "game_id": "d03f5e26dab4993281752b81c816fe4b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kumar Rocker",
@@ -189,7 +189,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "d03f5e26dab4993281752b81c816fe4b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chris Sale",
@@ -205,7 +205,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "9faf187505c47b0f5009cb7d7da5200c",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Mike Burrows",
@@ -221,7 +221,7 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": "40150285b21b0e818a39c0940eca75d7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -237,7 +237,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "3d859a4947ba1d62e82366cdebc59d78",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Max Fried",
@@ -253,7 +253,7 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": "3d859a4947ba1d62e82366cdebc59d78",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Nolan McLean",
@@ -269,7 +269,7 @@
     "over_odds": -120,
     "under_odds": -110,
     "game_id": "bb96582815dabc42936e794a19c74217",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Carmen Mlodzinski",
@@ -285,7 +285,7 @@
     "over_odds": 100,
     "under_odds": -132,
     "game_id": "41bf6d60c7067923fe9afa91c708aaa6",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Foster Griffin",
@@ -301,7 +301,7 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": "ad17b69505e6a7e7c4c06dc7f6b91ac6",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Ryne Nelson",
@@ -317,7 +317,7 @@
     "over_odds": 104,
     "under_odds": -138,
     "game_id": "bb96582815dabc42936e794a19c74217",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Michael McGreevy",
@@ -333,7 +333,7 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": "24892453777c4e3f95360ff530e09902",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Emmet Sheehan",
@@ -349,7 +349,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "9faf187505c47b0f5009cb7d7da5200c",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Nick Lodolo",
@@ -365,7 +365,7 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "40150285b21b0e818a39c0940eca75d7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Emerson Hancock",
@@ -381,7 +381,7 @@
     "over_odds": -178,
     "under_odds": 132,
     "game_id": "79db8c5227deae699a7b9c123aaf6d3f",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Parker Messick",
@@ -397,7 +397,7 @@
     "over_odds": -122,
     "under_odds": -108,
     "game_id": "d0f880a5482c5178286681a63048600f",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kris Bubic",
@@ -413,7 +413,7 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": "6aa50c59681975bb7beff37ab4f46bb5",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Griffin Canning",
@@ -429,6 +429,6 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": "24892453777c4e3f95360ff530e09902",
-    "result": null
+    "result": "no_result"
   }
 ]
