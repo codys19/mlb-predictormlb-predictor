@@ -1027,20 +1027,10 @@ def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,s
         prob_home=float(model.predict_proba(X)[0][1]); prob_away=1-prob_home
         go=odds.get(f"{ha}_{aa}",{}); home_odds_=go.get("home_odds"); away_odds_=go.get("away_odds")
 
-        # ── Blend model probability with market implied probability ──────
-        # Market captures injuries, weather, lineup changes the model can't see.
-        # Weight: 70% model + 30% market. Falls back to 100% model if no odds.
-        # This also archives signal for future training (see archive_odds).
-        if home_odds_ is not None and away_odds_ is not None:
-            mkt_home = american_to_prob(home_odds_)
-            mkt_away = american_to_prob(away_odds_)
-            # Normalise market probs (remove vig)
-            mkt_total = mkt_home + mkt_away
-            mkt_home_norm = mkt_home / mkt_total
-            # Blend
-            MARKET_WEIGHT = 0.30
-            prob_home = (1 - MARKET_WEIGHT) * prob_home + MARKET_WEIGHT * mkt_home_norm
-            prob_away = 1 - prob_home
+        # ── Market odds used for display and EV only — NOT blended into confidence ──
+        # Blending was pushing heavy favorites to 70%+ confidence at bad juice,
+        # inflating chalk picks without the accuracy to support them.
+        # Model probability is used pure for pick confidence.
 
         st=starters.get(f"{ha}_{aa}",{}); home_p=st.get("home_pitcher","TBD"); away_p=st.get("away_pitcher","TBD")
 
