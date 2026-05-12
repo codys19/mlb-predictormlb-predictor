@@ -1027,10 +1027,20 @@ def run_predictions(games,model,feature_names,ts,ps,odds,starters,starter_pool,s
         prob_home=float(model.predict_proba(X)[0][1]); prob_away=1-prob_home
         go=odds.get(f"{ha}_{aa}",{}); home_odds_=go.get("home_odds"); away_odds_=go.get("away_odds")
 
-        # ── Market odds used for display and EV only — NOT blended into confidence ──
-        # Blending was pushing heavy favorites to 70%+ confidence at bad juice,
-        # inflating chalk picks without the accuracy to support them.
-        # Model probability is used pure for pick confidence.
+        # ── Blend model probability with market implied probability ──────
+        # Market captures injuries, weather, lineup changes the model can't see.
+        # Weight: 70% model + 30% market. Falls back to 100% model if no odds.
+        # This also archives signal for future training (see archive_odds).
+        if home_odds_ is not None and away_odds_ is not None:
+            mkt_home = american_to_prob(home_odds_)
+            mkt_away = american_to_prob(away_odds_)
+            # Normalise market probs (remove vig)
+            mkt_total = mkt_home + mkt_away
+            mkt_home_norm = mkt_home / mkt_total
+            # Blend
+            MARKET_WEIGHT = 0.30
+            prob_home = (1 - MARKET_WEIGHT) * prob_home + MARKET_WEIGHT * mkt_home_norm
+            prob_away = 1 - prob_home
 
         st=starters.get(f"{ha}_{aa}",{}); home_p=st.get("home_pitcher","TBD"); away_p=st.get("away_pitcher","TBD")
 
@@ -1517,6 +1527,7 @@ def build_history_section(date_str):
                 actual_txt=f" \u00b7 Actual: {actual} runs" if actual!="" else ""
                 over_clr="#16a34a" if pick=="Over" else "#9ca3af"
                 under_clr="#16a34a" if pick=="Under" else "#9ca3af"
+                pick_label = "OVER" if pick=="Over" else "UNDER"
                 ou_cards+=f"""
 <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
   <div style="padding:16px 18px;">
@@ -1537,7 +1548,7 @@ def build_history_section(date_str):
     <div style="margin-top:10px;border-top:0.5px solid #f3f4f6;padding-top:10px;">
       <div style="font-size:10px;color:#9ca3af;margin-bottom:3px;">MODEL PICK</div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <span style="font-size:15px;font-weight:600;color:{clr};">{{'OVER' if pick=='Over' else 'UNDER'}} {line}</span>
+        <span style="font-size:15px;font-weight:600;color:{clr};">{pick_label} {line}</span>
         <span style="font-size:13px;padding:2px 10px;border-radius:20px;background:#f9fafb;color:#374151;">{os_(g.get('pick_odds'))}</span>
       </div>
     </div>
@@ -1564,6 +1575,7 @@ def build_history_section(date_str):
                 bg_clr="#eff6ff" if pick=="Over" else "#f5f3ff"
                 bd_clr="#bfdbfe" if pick=="Over" else "#ddd6fe"
                 arrow_clr="#2563eb" if pick=="Over" else "#7c3aed"
+                pick_label="OVER" if pick=="Over" else "UNDER"
                 actual_txt=f" \u00b7 Actual: {actual_k} K" if actual_k!="" else ""
                 prop_cards+=f"""
 <div style="background:#fff;border-radius:12px;border:0.5px solid #e5e7eb;margin-bottom:12px;overflow:hidden;">
@@ -1574,7 +1586,7 @@ def build_history_section(date_str):
     </div>
     <div style="font-size:16px;font-weight:600;color:#111;margin-bottom:8px;">{pitcher}</div>
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;border-radius:10px;background:{bg_clr};border:0.5px solid {bd_clr};">
-      <span style="font-size:18px;font-weight:600;color:{arrow_clr};">{{'OVER' if pick=='Over' else 'UNDER'}}</span>
+      <span style="font-size:18px;font-weight:600;color:{arrow_clr};">{pick_label}</span>
       <span style="font-size:16px;font-weight:500;color:#111;">{line} Strikeouts</span>
       <span style="font-size:13px;color:#374151;">{os_(p.get('pick_odds'))}</span>
     </div>
