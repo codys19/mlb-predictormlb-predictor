@@ -11,7 +11,10 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Ryan Weathers",
     "game_id": 824844,
-    "result": null
+    "result": "L",
+    "actual_winner": "BAL",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "LAD",
@@ -25,7 +28,10 @@
     "home_pitcher": "Roki Sasaki",
     "away_pitcher": "Trevor McDonald",
     "game_id": 823953,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 3,
+    "away_score": 9
   },
   {
     "home_abbr": "CLE",
@@ -39,7 +45,10 @@
     "home_pitcher": "Joey Cantillo",
     "away_pitcher": "TBD",
     "game_id": 824441,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 7,
+    "away_score": 2
   },
   {
     "home_abbr": "HOU",
@@ -53,7 +62,10 @@
     "home_pitcher": "Peter Lambert",
     "away_pitcher": "George Kirby",
     "game_id": 824199,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 1,
+    "away_score": 3
   },
   {
     "home_abbr": "TOR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Kevin Gausman",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 822818,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 5,
+    "away_score": 8
   },
   {
     "home_abbr": "TEX",
@@ -81,6 +96,9 @@
     "home_pitcher": "Nathan Eovaldi",
     "away_pitcher": "Michael Soroka",
     "game_id": 822901,
-    "result": null
+    "result": "L",
+    "actual_winner": "ARI",
+    "home_score": 0,
+    "away_score": 1
   }
 ]

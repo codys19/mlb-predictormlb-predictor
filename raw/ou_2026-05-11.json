@@ -12,7 +12,8 @@
     "under_odds": -119,
     "proj_total": 8.1,
     "game_id": 824844,
-    "result": null
+    "result": "W",
+    "actual_total": 5
   },
   {
     "home_abbr": "TOR",
@@ -27,7 +28,8 @@
     "under_odds": -106,
     "proj_total": 9.0,
     "game_id": 822818,
-    "result": null
+    "result": "W",
+    "actual_total": 13
   },
   {
     "home_abbr": "LAD",
@@ -42,7 +44,8 @@
     "under_odds": -110,
     "proj_total": 8.5,
     "game_id": 823953,
-    "result": null
+    "result": "L",
+    "actual_total": 12
   },
   {
     "home_abbr": "HOU",
@@ -57,7 +60,8 @@
     "under_odds": -113,
     "proj_total": 9.2,
     "game_id": 824199,
-    "result": null
+    "result": "L",
+    "actual_total": 4
   },
   {
     "home_abbr": "TEX",
@@ -72,7 +76,8 @@
     "under_odds": -106,
     "proj_total": 7.8,
     "game_id": 822901,
-    "result": null
+    "result": "L",
+    "actual_total": 1
   },
   {
     "home_abbr": "CLE",
@@ -87,6 +92,7 @@
     "under_odds": -117,
     "proj_total": 7.6,
     "game_id": 824441,
-    "result": null
+    "result": "W",
+    "actual_total": 9
   }
 ]
