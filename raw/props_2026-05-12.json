@@ -13,7 +13,7 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": "79fa6c856d2a95ff10cb955ab2d424e2",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Michael Lorenzen",
@@ -29,7 +29,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "79fa6c856d2a95ff10cb955ab2d424e2",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Shane McClanahan",
@@ -45,7 +45,7 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": "b2c44ca94237edf5b7270d7dde706835",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Patrick Corbin",
@@ -61,7 +61,7 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": "b2c44ca94237edf5b7270d7dde706835",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Erick Fedde",
@@ -77,7 +77,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "c125a2382938301b1e4462c3600de32b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Stephen Kolek",
@@ -93,7 +93,7 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": "c125a2382938301b1e4462c3600de32b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Brandon Sproat",
@@ -109,7 +109,7 @@
     "over_odds": 104,
     "under_odds": -138,
     "game_id": "a0a43f882e4a4ab92fa1024e42f33be0",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Grant Holmes",
@@ -125,7 +125,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "744c4597586797d5f7e9be094f031f11",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Andre Pallante",
@@ -141,7 +141,7 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": "265d87925f501ac50a2a12c6b5a91354",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jeffrey Springs",
@@ -157,7 +157,7 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": "265d87925f501ac50a2a12c6b5a91354",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Brady Singer",
@@ -173,7 +173,7 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": "6c8098ab353355d002d66e825b4217ab",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Zack Wheeler",
@@ -189,7 +189,7 @@
     "over_odds": -110,
     "under_odds": -120,
     "game_id": "07b1faa56850a94bfd3921725fe520a2",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jack Flaherty",
@@ -205,7 +205,7 @@
     "over_odds": -128,
     "under_odds": -104,
     "game_id": "fe40950314ca87c69985e8a1a37c8822",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Zac Gallen",
@@ -221,7 +221,7 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": "34393ecc2b2d109779095b1d4935225b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Tatsuya Imai",
@@ -237,7 +237,7 @@
     "over_odds": -146,
     "under_odds": 110,
     "game_id": "a1fa0d550bd68cf44d71f0657fa93d6a",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Adrian Houser",
@@ -253,7 +253,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "a0929cf66d445eec19f118010165e95c",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Freddy Peralta",
@@ -269,7 +269,7 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": "fe40950314ca87c69985e8a1a37c8822",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Bryan Woo",
@@ -285,7 +285,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "a1fa0d550bd68cf44d71f0657fa93d6a",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Slade Cecconi",
@@ -301,7 +301,7 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": "9936f843966ef49b29f8f61cd41491f1",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Will Warren",
@@ -317,7 +317,7 @@
     "over_odds": -154,
     "under_odds": 116,
     "game_id": "6d160243347bd35cdb3abf1b2690fda8",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Bailey Ober",
@@ -333,7 +333,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "ad3552c4909328a0be4de1ec98e97bcf",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -349,7 +349,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "34393ecc2b2d109779095b1d4935225b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Miles Mikolas",
@@ -365,7 +365,7 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": "6c8098ab353355d002d66e825b4217ab",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Colin Rea",
@@ -381,7 +381,7 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": "744c4597586797d5f7e9be094f031f11",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -397,6 +397,6 @@
     "over_odds": -174,
     "under_odds": 130,
     "game_id": "a0929cf66d445eec19f118010165e95c",
-    "result": null
+    "result": "no_result"
   }
 ]
