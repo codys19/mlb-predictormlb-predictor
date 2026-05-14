@@ -761,8 +761,11 @@ def fetch_totals_odds():
                             elif o["name"]=="Under":
                                 under_odds_list.append(o["price"])
             if lines:
+                avg_line = np.mean(lines)
+                # Round to nearest 0.5 — all real book lines are in 0.5 increments
+                snapped_line = round(avg_line * 2) / 2
                 out[f"{h}_{a}"]={
-                    "line": round(np.mean(lines),1),
+                    "line": snapped_line,
                     "over_odds": int(np.mean(over_odds_list)) if over_odds_list else -110,
                     "under_odds": int(np.mean(under_odds_list)) if under_odds_list else -110,
                 }
