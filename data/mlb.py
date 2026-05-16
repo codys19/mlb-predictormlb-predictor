@@ -1624,7 +1624,11 @@ def generate_html(ml_preds, ou_preds, prop_preds, record, today_str, date_str):
             hist_ml, hist_ou, hist_props, hw, hl = result
             ht = hw + hl
             hpct = f"{hw/ht:.0%}" if ht > 0 else "--"
-            nav_history += f'<button onclick="showDay(\'{ds}\')" id="nav_{ds}" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;border:none;cursor:pointer;margin-right:6px;background:#f3f4f6;color:#374151;">{lbl}<span style="font-size:11px;color:{wlc};"> {d["w"]}-{d["l"]}</span></button>'
+            # Get O/U daily record for this day
+            ou_day = record.get("ou",{}).get("daily",{}).get(ds,{})
+            ou_w = ou_day.get("w",0); ou_l = ou_day.get("l",0)
+            ou_tag = f' <span style="font-size:10px;color:#9ca3af;">O/U {ou_w}-{ou_l}</span>' if (ou_w+ou_l) > 0 else ""
+            nav_history += f'<button onclick="showDay(\'{ds}\')" id="nav_{ds}" style="display:inline-block;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:500;border:none;cursor:pointer;margin-right:6px;background:#f3f4f6;color:#374151;">{lbl}<span style="font-size:11px;color:{wlc};"> {d["w"]}-{d["l"]}</span>{ou_tag}</button>'
             history_sections += f"""
 <div id="section-{ds}" style="display:none;">
   <div style="margin-bottom:14px;">
@@ -1876,8 +1880,16 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgro
       {rec_row("ML",ml_rec)}{rec_row("O/U",ou_rec)}{rec_row("Props",props_rec)}
     </div>
     <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">ML record by confidence</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px;">
       {conf_cell_html(ml_rec,"50","50-59%")}{conf_cell_html(ml_rec,"55","60-69%")}{conf_cell_html(ml_rec,"60","70-79%")}{conf_cell_html(ml_rec,"70","80%+")}
+    </div>
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">O/U record by confidence</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px;">
+      {conf_cell_html(ou_rec,"50","50-59%")}{conf_cell_html(ou_rec,"55","60-69%")}{conf_cell_html(ou_rec,"60","70-79%")}{conf_cell_html(ou_rec,"70","80%+")}
+    </div>
+    <div style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:8px;">Props record by confidence</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+      {conf_cell_html(props_rec,"50","50-59%")}{conf_cell_html(props_rec,"55","60-69%")}{conf_cell_html(props_rec,"60","70-79%")}{conf_cell_html(props_rec,"70","80%+")}
     </div>
   </div>
 
