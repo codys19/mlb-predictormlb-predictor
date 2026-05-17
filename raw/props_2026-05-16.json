@@ -13,7 +13,7 @@
     "over_odds": -148,
     "under_odds": 122,
     "game_id": "6b2d5ebb90ade419f4d5c59b95c1b301",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Kyle Leahy",
@@ -29,7 +29,7 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": "f1f5588e7499f45638568bb30db784a3",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -45,7 +45,7 @@
     "over_odds": 128,
     "under_odds": -172,
     "game_id": "e794b5b54765be45db1d4e7681c62e39",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Tomoyuki Sugano",
@@ -61,7 +61,7 @@
     "over_odds": -128,
     "under_odds": 104,
     "game_id": "e794b5b54765be45db1d4e7681c62e39",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Bubba Chandler",
@@ -77,7 +77,7 @@
     "over_odds": 102,
     "under_odds": -124,
     "game_id": "2638aded4f2e2359a902072c9d2fba22",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Joey Cantillo",
@@ -93,7 +93,7 @@
     "over_odds": -154,
     "under_odds": 126,
     "game_id": "8cb0cf3de3f70a1993a155d8d3cfef98",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Davis Martin",
@@ -109,7 +109,7 @@
     "over_odds": 134,
     "under_odds": -164,
     "game_id": "4b228f8e92985dcf7be730bd8e8c2c5d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jameson Taillon",
@@ -125,7 +125,7 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": "4b228f8e92985dcf7be730bd8e8c2c5d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jacob deGrom",
@@ -141,7 +141,7 @@
     "over_odds": 110,
     "under_odds": -146,
     "game_id": "58b1dff480365011b5d7ad2e1c40baae",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Logan Henderson",
@@ -157,7 +157,7 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": "a5e515bbcd25515bb500f052064aa31d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Bryce Elder",
@@ -173,7 +173,7 @@
     "over_odds": 130,
     "under_odds": -162,
     "game_id": "ca5e359ff82548cecbaa7a8695e9fbf0",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Walker Buehler",
@@ -189,7 +189,7 @@
     "over_odds": -172,
     "under_odds": 128,
     "game_id": "d89740dbc48f3d782b0e473629494f6b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jose Soriano",
@@ -205,7 +205,7 @@
     "over_odds": -124,
     "under_odds": 102,
     "game_id": "a6224f9c00c2799d9f58de009bf48393",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Justin Wrobleski",
@@ -221,7 +221,7 @@
     "over_odds": 132,
     "under_odds": -178,
     "game_id": "a6224f9c00c2799d9f58de009bf48393",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Trevor McDonald",
@@ -237,7 +237,7 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": "8c4164a5b90b37ee80487fbe77607394",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chris Bassitt",
@@ -253,7 +253,7 @@
     "over_odds": 122,
     "under_odds": -162,
     "game_id": "cc7b9980605dd66040b354031b4491c8",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Connor Prielipp",
@@ -269,7 +269,7 @@
     "over_odds": -114,
     "under_odds": -106,
     "game_id": "a5e515bbcd25515bb500f052064aa31d",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Payton Tolle",
@@ -285,7 +285,7 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": "ca5e359ff82548cecbaa7a8695e9fbf0",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Noah Cameron",
@@ -301,7 +301,7 @@
     "over_odds": 124,
     "under_odds": -166,
     "game_id": "f1f5588e7499f45638568bb30db784a3",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Nick Martinez",
@@ -317,7 +317,7 @@
     "over_odds": 128,
     "under_odds": -158,
     "game_id": "c0881b4a195ada00f7db5d84c6cef8b7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Logan Gilbert",
@@ -333,7 +333,7 @@
     "over_odds": 102,
     "under_odds": -124,
     "game_id": "d89740dbc48f3d782b0e473629494f6b",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -349,7 +349,7 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": "c0881b4a195ada00f7db5d84c6cef8b7",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Luis Severino",
@@ -365,7 +365,7 @@
     "over_odds": -130,
     "under_odds": 106,
     "game_id": "8c4164a5b90b37ee80487fbe77607394",
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Cade Cavalli",
@@ -381,6 +381,6 @@
     "over_odds": -154,
     "under_odds": 126,
     "game_id": "cc7b9980605dd66040b354031b4491c8",
-    "result": null
+    "result": "no_result"
   }
 ]
