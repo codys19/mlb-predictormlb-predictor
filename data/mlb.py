@@ -1254,15 +1254,18 @@ def predict_props(games, starters, ps, starter_pool, props_odds, starter_stats_b
         ev        = calc_ev(conf, pick_odds)
         game_name = f"{aa} @ {ha}"
         game_time = "TBD"
+        statsapi_game_id = None  # integer game_id from statsapi (not Odds API hex)
         for g in games:
             if g["home_abbr"] == ha and g["away_abbr"] == aa:
-                game_time = g["time"]; break
+                game_time = g["time"]
+                statsapi_game_id = g.get("game_id")  # e.g. 823384, not b707c40c hex
+                break
 
         seen.add(pitcher)
         results.append({
             "pitcher":pitcher,"team_abbr":team_abbr,"opp_abbr":opp_abbr,
             "home_abbr":ha,"away_abbr":aa,"game_name":game_name,"time":game_time,
-            "game_id":prop.get("game_id"),
+            "game_id":statsapi_game_id,  # fixed: was prop.get("game_id") (Odds API hex)
             "line":line,"pick":pick,"confidence":conf,
             "pick_odds":pick_odds,"over_odds":prop["over_odds"],"under_odds":prop["under_odds"],
             "ev":ev,"proj_k":proj_k,"k_per_9":k_per_9,"is_home":is_home,
