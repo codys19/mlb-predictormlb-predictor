@@ -13,7 +13,8 @@
     "over_odds": 104,
     "under_odds": -138,
     "game_id": 823462,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Shane Baz",
@@ -29,7 +30,8 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": 822977,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Mike Burrows",
@@ -45,7 +47,8 @@
     "over_odds": -166,
     "under_odds": 124,
     "game_id": 823703,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Jack Leiter",
@@ -61,7 +64,8 @@
     "over_odds": -112,
     "under_odds": -114,
     "game_id": 824355,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Emerson Hancock",
@@ -77,7 +81,8 @@
     "over_odds": -122,
     "under_odds": 100,
     "game_id": 823134,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Chris Sale",
@@ -93,7 +98,8 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": 823866,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Janson Junk",
@@ -109,7 +115,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 823866,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Tanner Bibee",
@@ -125,7 +132,8 @@
     "over_odds": -174,
     "under_odds": 130,
     "game_id": 824273,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Zack Littell",
@@ -141,7 +149,8 @@
     "over_odds": -138,
     "under_odds": 112,
     "game_id": 822735,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Zach Thornton",
@@ -157,7 +166,8 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": 822735,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Trey Yesavage",
@@ -173,7 +183,8 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": 823547,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Connelly Early",
@@ -189,7 +200,8 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": 824111,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Kyle Harrison",
@@ -205,7 +217,8 @@
     "over_odds": 110,
     "under_odds": -146,
     "game_id": 824678,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Shohei Ohtani",
@@ -221,7 +234,8 @@
     "over_odds": 114,
     "under_odds": -152,
     "game_id": 823299,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Aaron Nola",
@@ -237,7 +251,8 @@
     "over_odds": -115,
     "under_odds": -105,
     "game_id": 823462,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Michael Wacha",
@@ -253,7 +268,8 @@
     "over_odds": -120,
     "under_odds": -102,
     "game_id": 824111,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Michael McGreevy",
@@ -269,7 +285,8 @@
     "over_odds": -158,
     "under_odds": 128,
     "game_id": 823057,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Merrill Kelly",
@@ -285,7 +302,8 @@
     "over_odds": 118,
     "under_odds": -144,
     "game_id": 825084,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Sean Burke",
@@ -301,7 +319,8 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": 823134,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jack Kochanowicz",
@@ -317,7 +336,8 @@
     "over_odds": -142,
     "under_odds": 116,
     "game_id": 824032,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Steven Matz",
@@ -333,7 +353,8 @@
     "over_odds": 116,
     "under_odds": -142,
     "game_id": 822977,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Joe Ryan",
@@ -349,7 +370,8 @@
     "over_odds": 112,
     "under_odds": -140,
     "game_id": 823703,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Cam Schlittler",
@@ -365,7 +387,8 @@
     "over_odds": -140,
     "under_odds": 114,
     "game_id": 823547,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Aaron Civale",
@@ -381,7 +404,8 @@
     "over_odds": -130,
     "under_odds": -102,
     "game_id": 824032,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Tyler Mahle",
@@ -397,7 +421,8 @@
     "over_odds": 124,
     "under_odds": -166,
     "game_id": 825084,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Kyle Freeland",
@@ -413,7 +438,8 @@
     "over_odds": 112,
     "under_odds": -144,
     "game_id": 824355,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Carmen Mlodzinski",
@@ -429,7 +455,8 @@
     "over_odds": 104,
     "under_odds": -138,
     "game_id": 823057,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   },
   {
     "pitcher": "Edward Cabrera",
@@ -445,6 +472,7 @@
     "over_odds": 136,
     "under_odds": -168,
     "game_id": 824678,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   }
 ]
