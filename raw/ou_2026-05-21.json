@@ -12,7 +12,8 @@
     "under_odds": -107,
     "proj_total": 9.3,
     "game_id": 823056,
-    "result": null
+    "result": "W",
+    "actual_total": 8
   },
   {
     "home_abbr": "WSN",
@@ -27,7 +28,8 @@
     "under_odds": 33,
     "proj_total": 10.4,
     "game_id": 822733,
-    "result": null
+    "result": "L",
+    "actual_total": 3
   },
   {
     "home_abbr": "ARI",
@@ -42,7 +44,8 @@
     "under_odds": -47,
     "proj_total": 8.3,
     "game_id": 825083,
-    "result": null
+    "result": "W",
+    "actual_total": 3
   },
   {
     "home_abbr": "MIA",
@@ -57,7 +60,8 @@
     "under_odds": -113,
     "proj_total": 7.9,
     "game_id": 823864,
-    "result": null
+    "result": "W",
+    "actual_total": 12
   },
   {
     "home_abbr": "LAA",
@@ -72,7 +76,8 @@
     "under_odds": -113,
     "proj_total": 8.3,
     "game_id": 824031,
-    "result": null
+    "result": "W",
+    "actual_total": 5
   },
   {
     "home_abbr": "DET",
@@ -87,7 +92,8 @@
     "under_odds": -103,
     "proj_total": 7.1,
     "game_id": 824274,
-    "result": null
+    "result": "L",
+    "actual_total": 4
   },
   {
     "home_abbr": "NYY",
@@ -102,6 +108,7 @@
     "under_odds": -109,
     "proj_total": 8.1,
     "game_id": 823545,
-    "result": null
+    "result": "L",
+    "actual_total": 2
   }
 ]

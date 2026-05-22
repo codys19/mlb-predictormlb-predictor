@@ -13,7 +13,8 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": 824274,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Casey Mize",
@@ -29,7 +30,8 @@
     "over_odds": -102,
     "under_odds": -120,
     "game_id": 824274,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Braxton Ashcraft",
@@ -45,7 +47,8 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": 823056,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Dustin May",
@@ -61,7 +64,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 823056,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Jose Soriano",
@@ -77,7 +81,8 @@
     "over_odds": 100,
     "under_odds": -122,
     "game_id": 824031,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Luis Severino",
@@ -93,7 +98,8 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": 824031,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -109,7 +115,8 @@
     "over_odds": 110,
     "under_odds": -134,
     "game_id": 825083,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "David Peterson",
@@ -125,7 +132,8 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": 822733,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Cade Cavalli",
@@ -141,7 +149,8 @@
     "over_odds": -140,
     "under_odds": 112,
     "game_id": 822733,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Spencer Strider",
@@ -157,7 +166,8 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": 823864,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -173,6 +183,7 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 823864,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]
