@@ -13,7 +13,8 @@
     "over_odds": -106,
     "under_odds": -114,
     "game_id": 824432,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Trevor McDonald",
@@ -29,7 +30,8 @@
     "over_odds": -172,
     "under_odds": 140,
     "game_id": 823217,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Jose Soriano",
@@ -45,7 +47,8 @@
     "over_odds": 134,
     "under_odds": -180,
     "game_id": 824270,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Connelly Early",
@@ -61,7 +64,8 @@
     "over_odds": 132,
     "under_odds": -162,
     "game_id": 824756,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Gerrit Cole",
@@ -77,7 +81,8 @@
     "over_odds": -106,
     "under_odds": -125,
     "game_id": 824104,
-    "result": null
+    "result": "W",
+    "actual_k": 10
   },
   {
     "pitcher": "Noah Cameron",
@@ -93,7 +98,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 824104,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Jacob deGrom",
@@ -109,7 +115,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 822897,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Mike Burrows",
@@ -125,7 +132,8 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": 822897,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Tomoyuki Sugano",
@@ -141,7 +149,8 @@
     "over_odds": -172,
     "under_odds": 128,
     "game_id": 823947,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Shohei Ohtani",
@@ -157,7 +166,8 @@
     "over_odds": 104,
     "under_odds": -128,
     "game_id": 823947,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Dustin May",
@@ -173,7 +183,8 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": 823783,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Logan Gilbert",
@@ -189,7 +200,8 @@
     "over_odds": 136,
     "under_odds": -182,
     "game_id": 825003,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Casey Mize",
@@ -205,7 +217,8 @@
     "over_odds": -104,
     "under_odds": -118,
     "game_id": 824270,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Andrew Abbott",
@@ -221,7 +234,8 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": 823626,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Connor Prielipp",
@@ -237,7 +251,8 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": 824596,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Kevin Gausman",
@@ -253,7 +268,8 @@
     "over_odds": -154,
     "under_odds": 126,
     "game_id": 822809,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Steven Matz",
@@ -269,7 +285,8 @@
     "over_odds": 107,
     "under_odds": -137,
     "game_id": 824836,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Jeffrey Springs",
@@ -285,7 +302,8 @@
     "over_odds": 102,
     "under_odds": -124,
     "game_id": 825003,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Michael Soroka",
@@ -301,7 +319,8 @@
     "over_odds": 124,
     "under_odds": -166,
     "game_id": 823217,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Bubba Chandler",
@@ -317,7 +336,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 823376,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Bryce Elder",
@@ -333,7 +353,8 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": 824756,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   },
   {
     "pitcher": "Walker Buehler",
@@ -349,7 +370,8 @@
     "over_odds": 124,
     "under_odds": -152,
     "game_id": 823295,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Jameson Taillon",
@@ -365,6 +387,7 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": 823376,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]
