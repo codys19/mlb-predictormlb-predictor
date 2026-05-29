@@ -13,7 +13,8 @@
     "over_odds": -120,
     "under_odds": -110,
     "game_id": 824272,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Davis Martin",
@@ -29,7 +30,8 @@
     "over_odds": -112,
     "under_odds": -110,
     "game_id": 824595,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Chris Sale",
@@ -45,7 +47,8 @@
     "over_odds": -106,
     "under_odds": -125,
     "game_id": 824757,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Chris Bassitt",
@@ -61,7 +64,8 @@
     "over_odds": -170,
     "under_odds": 138,
     "game_id": 824834,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Patrick Corbin",
@@ -77,7 +81,8 @@
     "over_odds": -172,
     "under_odds": 128,
     "game_id": 824834,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Paul Skenes",
@@ -93,7 +98,8 @@
     "over_odds": 100,
     "under_odds": -122,
     "game_id": 823378,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Spencer Arrighetti",
@@ -109,7 +115,8 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": 822896,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Nathan Eovaldi",
@@ -125,7 +132,8 @@
     "over_odds": 126,
     "under_odds": -154,
     "game_id": 822896,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Payton Tolle",
@@ -141,7 +149,8 @@
     "over_odds": 102,
     "under_odds": -124,
     "game_id": 824757,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Colin Rea",
@@ -157,6 +166,7 @@
     "over_odds": 110,
     "under_odds": -146,
     "game_id": 823378,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   }
 ]

@@ -12,7 +12,8 @@
     "under_odds": -36,
     "proj_total": 8.9,
     "game_id": 824595,
-    "result": null
+    "result": "W",
+    "actual_total": 8
   },
   {
     "home_abbr": "BOS",
@@ -27,7 +28,8 @@
     "under_odds": 102,
     "proj_total": 7.7,
     "game_id": 824757,
-    "result": null
+    "result": "W",
+    "actual_total": 12
   },
   {
     "home_abbr": "PIT",
@@ -42,7 +44,8 @@
     "under_odds": -112,
     "proj_total": 8.6,
     "game_id": 823378,
-    "result": null
+    "result": "W",
+    "actual_total": 9
   },
   {
     "home_abbr": "TEX",
@@ -57,7 +60,8 @@
     "under_odds": -123,
     "proj_total": 9.4,
     "game_id": 822896,
-    "result": null
+    "result": "L",
+    "actual_total": 6
   },
   {
     "home_abbr": "DET",
@@ -72,7 +76,8 @@
     "under_odds": -134,
     "proj_total": 8.2,
     "game_id": 824272,
-    "result": null
+    "result": "W",
+    "actual_total": 8
   },
   {
     "home_abbr": "BAL",
@@ -87,6 +92,7 @@
     "under_odds": -103,
     "proj_total": 8.3,
     "game_id": 824834,
-    "result": null
+    "result": "W",
+    "actual_total": 3
   }
 ]

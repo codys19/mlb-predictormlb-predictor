@@ -11,7 +11,10 @@
     "home_pitcher": "Chris Bassitt",
     "away_pitcher": "Patrick Corbin",
     "game_id": 824834,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "PIT",
@@ -25,7 +28,10 @@
     "home_pitcher": "Paul Skenes",
     "away_pitcher": "Colin Rea",
     "game_id": 823378,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "DET",
@@ -39,7 +45,10 @@
     "home_pitcher": "Jack Flaherty",
     "away_pitcher": "Grayson Rodriguez",
     "game_id": 824272,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAA",
+    "home_score": 1,
+    "away_score": 7
   },
   {
     "home_abbr": "CHW",
@@ -53,7 +62,10 @@
     "home_pitcher": "Davis Martin",
     "away_pitcher": "Simeon Woods Richardson",
     "game_id": 824595,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "BOS",
@@ -67,7 +79,10 @@
     "home_pitcher": "Payton Tolle",
     "away_pitcher": "Chris Sale",
     "game_id": 824757,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 2,
+    "away_score": 10
   },
   {
     "home_abbr": "TEX",
@@ -81,6 +96,9 @@
     "home_pitcher": "Nathan Eovaldi",
     "away_pitcher": "Spencer Arrighetti",
     "game_id": 822896,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 1,
+    "away_score": 5
   }
 ]
