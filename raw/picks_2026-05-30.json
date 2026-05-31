@@ -11,7 +11,10 @@
     "home_pitcher": "Parker Messick",
     "away_pitcher": "Sonny Gray",
     "game_id": 824431,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 1,
+    "away_score": 9
   },
   {
     "home_abbr": "NYM",
@@ -25,7 +28,10 @@
     "home_pitcher": "Christian Scott",
     "away_pitcher": "Tyler Phillips",
     "game_id": 823622,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "CHW",
@@ -39,7 +45,10 @@
     "home_pitcher": "Anthony Kay",
     "away_pitcher": "Framber Valdez",
     "game_id": 824593,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHW",
+    "home_score": 7,
+    "away_score": 1
   },
   {
     "home_abbr": "ATH",
@@ -53,7 +62,10 @@
     "home_pitcher": "J.T. Ginn",
     "away_pitcher": "Ryan Weathers",
     "game_id": 825000,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "SEA",
@@ -67,7 +79,10 @@
     "home_pitcher": "Bryan Woo",
     "away_pitcher": "Ryne Nelson",
     "game_id": 823132,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 5,
+    "away_score": 1
   },
   {
     "home_abbr": "COL",
@@ -81,7 +96,10 @@
     "home_pitcher": "Ryan Feltner",
     "away_pitcher": "Adrian Houser",
     "game_id": 824352,
-    "result": null
+    "result": "W",
+    "actual_winner": "COL",
+    "home_score": 8,
+    "away_score": 3
   },
   {
     "home_abbr": "BAL",
@@ -95,7 +113,10 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Trey Yesavage",
     "game_id": 824833,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "HOU",
@@ -109,7 +130,10 @@
     "home_pitcher": "Peter Lambert",
     "away_pitcher": "Brandon Sproat",
     "game_id": 824190,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 9,
+    "away_score": 2
   },
   {
     "home_abbr": "TEX",
@@ -123,7 +147,10 @@
     "home_pitcher": "Kumar Rocker",
     "away_pitcher": "Seth Lugo",
     "game_id": 822893,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "LAD",
@@ -137,7 +164,10 @@
     "home_pitcher": "Roki Sasaki",
     "away_pitcher": "Jes\u00fas Luzardo",
     "game_id": 823945,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -151,7 +181,10 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Reid Detmers",
     "game_id": 822975,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 3,
+    "away_score": 14
   },
   {
     "home_abbr": "STL",
@@ -165,7 +198,10 @@
     "home_pitcher": "Kyle Leahy",
     "away_pitcher": "Ben Brown",
     "game_id": 823054,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "PIT",
@@ -179,7 +215,10 @@
     "home_pitcher": "Mitch Keller",
     "away_pitcher": "Bailey Ober",
     "game_id": 823375,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 10,
+    "away_score": 9
   },
   {
     "home_abbr": "WSN",
@@ -193,7 +232,10 @@
     "home_pitcher": "Foster Griffin",
     "away_pitcher": "Michael King",
     "game_id": 822731,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 9,
+    "away_score": 4
   },
   {
     "home_abbr": "CIN",
@@ -207,6 +249,9 @@
     "home_pitcher": "Brady Singer",
     "away_pitcher": "Mart\u00edn P\u00e9rez",
     "game_id": 824513,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 2,
+    "away_score": 5
   }
 ]
