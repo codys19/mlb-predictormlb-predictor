@@ -11,7 +11,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Sandy Alcantara",
     "game_id": 822730,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIA",
+    "home_score": 3,
+    "away_score": 7
   },
   {
     "home_abbr": "LAA",
@@ -25,7 +28,10 @@
     "home_pitcher": "Jos\u00e9 Soriano",
     "away_pitcher": "Kyle Freeland",
     "game_id": 824027,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 8,
+    "away_score": 9
   },
   {
     "home_abbr": "SEA",
@@ -39,7 +45,10 @@
     "home_pitcher": "Emerson Hancock",
     "away_pitcher": "Austin Warren",
     "game_id": 823131,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "MIL",
@@ -53,7 +62,10 @@
     "home_pitcher": "Shane Drohan",
     "away_pitcher": "Landen Roupp",
     "game_id": 823781,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 16,
+    "away_score": 2
   },
   {
     "home_abbr": "TBR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Griffin Jax",
     "away_pitcher": "Ty Madden",
     "game_id": 822974,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 9,
+    "away_score": 10
   },
   {
     "home_abbr": "STL",
@@ -81,7 +96,10 @@
     "home_pitcher": "Michael McGreevy",
     "away_pitcher": "Jacob deGrom",
     "game_id": 823050,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "ARI",
@@ -95,7 +113,10 @@
     "home_pitcher": "Eduardo Rodriguez",
     "away_pitcher": "Emmet Sheehan",
     "game_id": 825078,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "CIN",
@@ -109,7 +130,10 @@
     "home_pitcher": "Lyon Richardson",
     "away_pitcher": "Luinder Avila",
     "game_id": 824510,
-    "result": null
+    "result": "L",
+    "actual_winner": "KCR",
+    "home_score": 2,
+    "away_score": 9
   },
   {
     "home_abbr": "MIN",
@@ -123,6 +147,9 @@
     "home_pitcher": "Joe Ryan",
     "away_pitcher": "TBD",
     "game_id": 823702,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 9,
+    "away_score": 6
   }
 ]

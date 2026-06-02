@@ -13,7 +13,8 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": 822974,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Cade Cavalli",
@@ -29,7 +30,8 @@
     "over_odds": 106,
     "under_odds": -130,
     "game_id": 822730,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -45,7 +47,8 @@
     "over_odds": -162,
     "under_odds": 122,
     "game_id": 822730,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Luinder Avila",
@@ -61,7 +64,8 @@
     "over_odds": 102,
     "under_odds": -136,
     "game_id": 824510,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Shane Drohan",
@@ -77,7 +81,8 @@
     "over_odds": -154,
     "under_odds": 126,
     "game_id": 823781,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jacob deGrom",
@@ -93,7 +98,8 @@
     "over_odds": 108,
     "under_odds": -144,
     "game_id": 823050,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Jose Soriano",
@@ -109,7 +115,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 824027,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -125,7 +132,8 @@
     "over_odds": -148,
     "under_odds": 120,
     "game_id": 825078,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Landen Roupp",
@@ -141,7 +149,8 @@
     "over_odds": -130,
     "under_odds": -102,
     "game_id": 823781,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Griffin Jax",
@@ -157,7 +166,8 @@
     "over_odds": -118,
     "under_odds": -104,
     "game_id": 822974,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Joe Ryan",
@@ -173,7 +183,8 @@
     "over_odds": -158,
     "under_odds": 128,
     "game_id": 823702,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Michael McGreevy",
@@ -189,7 +200,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 823050,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Emmet Sheehan",
@@ -205,7 +217,8 @@
     "over_odds": 100,
     "under_odds": -132,
     "game_id": 825078,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Emerson Hancock",
@@ -221,7 +234,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 823131,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Kyle Freeland",
@@ -237,6 +251,7 @@
     "over_odds": -166,
     "under_odds": 124,
     "game_id": 824027,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]
