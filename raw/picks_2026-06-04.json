@@ -11,7 +11,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "TBD",
     "game_id": 824919,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "PHI",
@@ -25,7 +28,10 @@
     "home_pitcher": "Zack Wheeler",
     "away_pitcher": "Lucas Giolito",
     "game_id": 823457,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "HOU",
@@ -39,7 +45,10 @@
     "home_pitcher": "Kai-Wei Teng",
     "away_pitcher": "Jared Jones",
     "game_id": 824185,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 1,
+    "away_score": 5
   },
   {
     "home_abbr": "NYY",
@@ -53,7 +62,10 @@
     "home_pitcher": "Carlos Rod\u00f3n",
     "away_pitcher": "Slade Cecconi",
     "game_id": 823542,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "home_abbr": "ARI",
@@ -67,7 +79,10 @@
     "home_pitcher": "Ryne Nelson",
     "away_pitcher": "Justin Wrobleski",
     "game_id": 825076,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "CHC",
@@ -81,7 +96,10 @@
     "home_pitcher": "Shota Imanaga",
     "away_pitcher": "J.T. Ginn",
     "game_id": 824672,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHC",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "BOS",
@@ -95,7 +113,10 @@
     "home_pitcher": "Brayan Bello",
     "away_pitcher": "Trevor Rogers",
     "game_id": 824753,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 2,
+    "away_score": 8
   },
   {
     "home_abbr": "MIN",
@@ -109,7 +130,10 @@
     "home_pitcher": "Andrew Morris",
     "away_pitcher": "Seth Lugo",
     "game_id": 823698,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 6,
+    "away_score": 8
   },
   {
     "home_abbr": "MIL",
@@ -123,6 +147,9 @@
     "home_pitcher": "Coleman Crow",
     "away_pitcher": "Adrian Houser",
     "game_id": 823779,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 9,
+    "away_score": 12
   }
 ]
