@@ -13,7 +13,8 @@
     "over_odds": -154,
     "under_odds": 116,
     "game_id": 822972,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Will Warren",
@@ -29,7 +30,8 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": 824427,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Patrick Corbin",
@@ -45,7 +47,8 @@
     "over_odds": -164,
     "under_odds": 134,
     "game_id": 822806,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Grayson Rodriguez",
@@ -61,7 +64,8 @@
     "over_odds": 114,
     "under_odds": -140,
     "game_id": 824025,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Spencer Arrighetti",
@@ -77,7 +81,8 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": 824025,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Kyle Harrison",
@@ -93,7 +98,8 @@
     "over_odds": -146,
     "under_odds": 110,
     "game_id": 824998,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Gavin Williams",
@@ -109,7 +115,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 824427,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Walker Buehler",
@@ -125,7 +132,8 @@
     "over_odds": -128,
     "under_odds": 104,
     "game_id": 823289,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Miles Mikolas",
@@ -141,7 +149,8 @@
     "over_odds": 134,
     "under_odds": -180,
     "game_id": 823218,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Emerson Hancock",
@@ -157,7 +166,8 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": 824829,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Andrew Abbott",
@@ -173,7 +183,8 @@
     "over_odds": 106,
     "under_odds": -140,
     "game_id": 823289,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Logan Webb",
@@ -189,7 +200,8 @@
     "over_odds": 120,
     "under_odds": -148,
     "game_id": 823218,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Jeffrey Springs",
@@ -205,6 +217,7 @@
     "over_odds": 120,
     "under_odds": -148,
     "game_id": 824998,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]

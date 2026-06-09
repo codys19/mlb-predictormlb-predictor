@@ -11,7 +11,10 @@
     "home_pitcher": "Jeffrey Springs",
     "away_pitcher": "Kyle Harrison",
     "game_id": 824998,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 14,
+    "away_score": 15
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "Walker Buehler",
     "away_pitcher": "Andrew Abbott",
     "game_id": 823289,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "BAL",
@@ -39,7 +45,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Emerson Hancock",
     "game_id": 824829,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 3,
+    "away_score": 6
   },
   {
     "home_abbr": "LAA",
@@ -53,7 +62,10 @@
     "home_pitcher": "Grayson Rodriguez",
     "away_pitcher": "Spencer Arrighetti",
     "game_id": 824025,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "CLE",
@@ -67,7 +79,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Will Warren",
     "game_id": 824427,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 5,
+    "away_score": 7
   },
   {
     "home_abbr": "SFG",
@@ -81,7 +96,10 @@
     "home_pitcher": "Logan Webb",
     "away_pitcher": "Miles Mikolas",
     "game_id": 823218,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -95,7 +113,10 @@
     "home_pitcher": "Ian Seymour",
     "away_pitcher": "Connelly Early",
     "game_id": 822972,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 3,
+    "away_score": 1
   },
   {
     "home_abbr": "TOR",
@@ -109,6 +130,9 @@
     "home_pitcher": "Patrick Corbin",
     "away_pitcher": "Cristopher S\u00e1nchez",
     "game_id": 822806,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 2,
+    "away_score": 5
   }
 ]
