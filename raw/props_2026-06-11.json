@@ -13,7 +13,8 @@
     "over_odds": 125,
     "under_odds": -170,
     "game_id": 823855,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Zebby Matthews",
@@ -29,7 +30,8 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 824265,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Hunter Dobbins",
@@ -45,7 +47,8 @@
     "over_odds": -120,
     "under_odds": -110,
     "game_id": 823619,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Kumar Rocker",
@@ -61,7 +64,8 @@
     "over_odds": -138,
     "under_odds": 104,
     "game_id": 824101,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Ryan Feltner",
@@ -77,7 +81,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 824346,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Kyle Bradish",
@@ -93,7 +98,8 @@
     "over_odds": -112,
     "under_odds": -108,
     "game_id": 824827,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Bryan Woo",
@@ -109,7 +115,8 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": 824827,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Keider Montero",
@@ -125,7 +132,8 @@
     "over_odds": 100,
     "under_odds": -130,
     "game_id": 824265,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Edward Cabrera",
@@ -141,7 +149,8 @@
     "over_odds": -114,
     "under_odds": -114,
     "game_id": 824346,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Michael Wacha",
@@ -157,7 +166,8 @@
     "over_odds": -104,
     "under_odds": -118,
     "game_id": 824101,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Justin Wrobleski",
@@ -173,7 +183,8 @@
     "over_odds": -144,
     "under_odds": 108,
     "game_id": 823371,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   },
   {
     "pitcher": "Mitch Keller",
@@ -189,6 +200,7 @@
     "over_odds": 122,
     "under_odds": -150,
     "game_id": 823371,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]

@@ -11,7 +11,7 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Mart\u00edn P\u00e9rez",
     "game_id": 824589,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "NYM",
@@ -25,7 +25,10 @@
     "home_pitcher": "Christian Scott",
     "away_pitcher": "Hunter Dobbins",
     "game_id": 823619,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "KCR",
@@ -39,7 +42,10 @@
     "home_pitcher": "Michael Wacha",
     "away_pitcher": "Kumar Rocker",
     "game_id": 824101,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "PIT",
@@ -53,7 +59,10 @@
     "home_pitcher": "Mitch Keller",
     "away_pitcher": "Justin Wrobleski",
     "game_id": 823371,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 6,
+    "away_score": 8
   },
   {
     "home_abbr": "DET",
@@ -67,7 +76,10 @@
     "home_pitcher": "Keider Montero",
     "away_pitcher": "Zebby Matthews",
     "game_id": 824265,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 11,
+    "away_score": 0
   },
   {
     "home_abbr": "MIA",
@@ -81,7 +93,10 @@
     "home_pitcher": "Tyler Phillips",
     "away_pitcher": "Merrill Kelly",
     "game_id": 823855,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIA",
+    "home_score": 2,
+    "away_score": 0
   },
   {
     "home_abbr": "BAL",
@@ -95,7 +110,10 @@
     "home_pitcher": "Kyle Bradish",
     "away_pitcher": "Bryan Woo",
     "game_id": 824827,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 7,
+    "away_score": 5
   },
   {
     "home_abbr": "COL",
@@ -109,6 +127,9 @@
     "home_pitcher": "Ryan Feltner",
     "away_pitcher": "Edward Cabrera",
     "game_id": 824346,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 3,
+    "away_score": 9
   }
 ]
