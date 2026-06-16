@@ -13,7 +13,8 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": 823452,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Andrew Alvarez",
@@ -29,7 +30,8 @@
     "over_odds": 110,
     "under_odds": -134,
     "game_id": 822724,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Mitch Spence",
@@ -45,7 +47,8 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": 822724,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Michael Lorenzen",
@@ -61,7 +64,8 @@
     "over_odds": -188,
     "under_odds": 140,
     "game_id": 824666,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Shota Imanaga",
@@ -77,7 +81,8 @@
     "over_odds": 114,
     "under_odds": -140,
     "game_id": 824666,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -93,7 +98,8 @@
     "over_odds": -132,
     "under_odds": 108,
     "game_id": 822887,
-    "result": null
+    "result": "W",
+    "actual_k": 10
   },
   {
     "pitcher": "Kai-Wei Teng",
@@ -109,7 +115,8 @@
     "over_odds": 132,
     "under_odds": -164,
     "game_id": 824181,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "JT Ginn",
@@ -125,7 +132,8 @@
     "over_odds": -140,
     "under_odds": 112,
     "game_id": 824993,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jared Jones",
@@ -141,7 +149,8 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": 824993,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Eric Lauer",
@@ -157,7 +166,8 @@
     "over_odds": 124,
     "under_odds": -152,
     "game_id": 823938,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Dustin May",
@@ -173,7 +183,8 @@
     "over_odds": -172,
     "under_odds": 140,
     "game_id": 823046,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Troy Melton",
@@ -189,7 +200,7 @@
     "over_odds": 132,
     "under_odds": -178,
     "game_id": 824181,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chase Burns",
@@ -205,7 +216,8 @@
     "over_odds": 116,
     "under_odds": -142,
     "game_id": 824505,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Ryne Nelson",
@@ -221,7 +233,8 @@
     "over_odds": -150,
     "under_odds": 122,
     "game_id": 825071,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Nick Martinez",
@@ -237,7 +250,8 @@
     "over_odds": 100,
     "under_odds": -132,
     "game_id": 823938,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Zack Wheeler",
@@ -253,6 +267,7 @@
     "over_odds": 110,
     "under_odds": -134,
     "game_id": 823452,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   }
 ]
