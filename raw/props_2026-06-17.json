@@ -13,7 +13,8 @@
     "over_odds": 118,
     "under_odds": -158,
     "game_id": 824503,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Zack Littell",
@@ -29,7 +30,8 @@
     "over_odds": 114,
     "under_odds": -140,
     "game_id": 822721,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Andrew Painter",
@@ -45,7 +47,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 823450,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Peter Lambert",
@@ -61,7 +64,8 @@
     "over_odds": 126,
     "under_odds": -154,
     "game_id": 824178,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Casey Mize",
@@ -77,7 +81,8 @@
     "over_odds": 114,
     "under_odds": -152,
     "game_id": 824178,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Kyle Leahy",
@@ -93,7 +98,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 823044,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Samuel Aldegheri",
@@ -109,7 +115,8 @@
     "over_odds": -128,
     "under_odds": -104,
     "game_id": 825072,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -125,7 +132,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 825072,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Max Scherzer",
@@ -141,7 +149,7 @@
     "over_odds": -106,
     "under_odds": -125,
     "game_id": 824746,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jake Bennett",
@@ -157,7 +165,8 @@
     "over_odds": 142,
     "under_odds": -176,
     "game_id": 824746,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Anthony Kay",
@@ -173,7 +182,8 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": 823536,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "JR Ritchie",
@@ -189,7 +199,7 @@
     "over_odds": -132,
     "under_odds": 108,
     "game_id": 824912,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Brandon Sproat",
@@ -205,7 +215,8 @@
     "over_odds": -118,
     "under_odds": -104,
     "game_id": 823774,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Gavin Williams",
@@ -221,7 +232,8 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": 823774,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Javier Assad",
@@ -237,7 +249,8 @@
     "over_odds": 130,
     "under_odds": -160,
     "game_id": 824668,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   },
   {
     "pitcher": "Aaron Civale",
@@ -253,7 +266,8 @@
     "over_odds": 100,
     "under_odds": -122,
     "game_id": 824992,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Kyle Bradish",
@@ -269,7 +283,8 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": 823127,
-    "result": null
+    "result": "W",
+    "actual_k": 12
   },
   {
     "pitcher": "George Kirby",
@@ -285,7 +300,8 @@
     "over_odds": 120,
     "under_odds": -148,
     "game_id": 823127,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Shane McClanahan",
@@ -301,7 +317,8 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": 823940,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Nick Lodolo",
@@ -317,7 +334,8 @@
     "over_odds": 118,
     "under_odds": -144,
     "game_id": 824503,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -333,7 +351,8 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": 823450,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Braxton Ashcraft",
@@ -349,7 +368,8 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": 824992,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Shohei Ohtani",
@@ -365,6 +385,7 @@
     "over_odds": 118,
     "under_odds": -144,
     "game_id": 823940,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   }
 ]
