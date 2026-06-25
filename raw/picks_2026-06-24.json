@@ -11,7 +11,10 @@
     "home_pitcher": "Sean Manaea",
     "away_pitcher": "TBD",
     "game_id": 823613,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 5,
+    "away_score": 10
   },
   {
     "home_abbr": "NYM",
@@ -25,7 +28,10 @@
     "home_pitcher": "Sean Manaea",
     "away_pitcher": "TBD",
     "game_id": 823611,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 5,
+    "away_score": 10
   },
   {
     "home_abbr": "CIN",
@@ -39,7 +45,10 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Shane Drohan",
     "game_id": 824500,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 5,
+    "away_score": 6
   },
   {
     "home_abbr": "DET",
@@ -53,7 +62,10 @@
     "home_pitcher": "Tarik Skubal",
     "away_pitcher": "Ryan Weathers",
     "game_id": 824259,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "WSN",
@@ -67,7 +79,10 @@
     "home_pitcher": "Miles Mikolas",
     "away_pitcher": "Aaron Nola",
     "game_id": 822719,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "COL",
@@ -81,7 +96,10 @@
     "home_pitcher": "Kyle Freeland",
     "away_pitcher": "Ranger Suarez",
     "game_id": 824341,
-    "result": null
+    "result": "W",
+    "actual_winner": "COL",
+    "home_score": 8,
+    "away_score": 6
   },
   {
     "home_abbr": "LAA",
@@ -95,7 +113,10 @@
     "home_pitcher": "Jos\u00e9 Soriano",
     "away_pitcher": "Trey Gibson",
     "game_id": 824018,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAA",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "MIA",
@@ -109,7 +130,10 @@
     "home_pitcher": "Eury P\u00e9rez",
     "away_pitcher": "Jacob deGrom",
     "game_id": 823850,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIA",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "SFG",
@@ -123,7 +147,10 @@
     "home_pitcher": "Tyler Mahle",
     "away_pitcher": "Gage Jump",
     "game_id": 823208,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "home_abbr": "SDP",
@@ -137,7 +164,10 @@
     "home_pitcher": "JP Sears",
     "away_pitcher": "Mart\u00edn P\u00e9rez",
     "game_id": 823284,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "MIN",
@@ -151,7 +181,10 @@
     "home_pitcher": "Joe Ryan",
     "away_pitcher": "Shohei Ohtani",
     "game_id": 823691,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -165,7 +198,10 @@
     "home_pitcher": "Griffin Jax",
     "away_pitcher": "Noah Cameron",
     "game_id": 822965,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "STL",
@@ -179,7 +215,10 @@
     "home_pitcher": "Matthew Liberatore",
     "away_pitcher": "Mitch Bratt",
     "game_id": 823041,
-    "result": null
+    "result": "L",
+    "actual_winner": "ARI",
+    "home_score": 4,
+    "away_score": 9
   },
   {
     "home_abbr": "CHW",
@@ -193,7 +232,10 @@
     "home_pitcher": "Erick Fedde",
     "away_pitcher": "Tanner Bibee",
     "game_id": 824583,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "PIT",
@@ -207,7 +249,10 @@
     "home_pitcher": "Braxton Ashcraft",
     "away_pitcher": "Bryan Woo",
     "game_id": 823367,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 11,
+    "away_score": 1
   },
   {
     "home_abbr": "TOR",
@@ -221,6 +266,9 @@
     "home_pitcher": "Trey Yesavage",
     "away_pitcher": "Mike Burrows",
     "game_id": 822798,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 1,
+    "away_score": 3
   }
 ]
