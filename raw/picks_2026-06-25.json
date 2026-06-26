@@ -11,7 +11,10 @@
     "home_pitcher": "Kevin Gausman",
     "away_pitcher": "MacKenzie Gore",
     "game_id": 822797,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 5,
+    "away_score": 6
   },
   {
     "home_abbr": "BOS",
@@ -25,7 +28,10 @@
     "home_pitcher": "Connelly Early",
     "away_pitcher": "Cam Schlittler",
     "game_id": 824747,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 6,
+    "away_score": 3
   },
   {
     "home_abbr": "SFG",
@@ -39,7 +45,10 @@
     "home_pitcher": "Landen Roupp",
     "away_pitcher": "Jeffrey Springs",
     "game_id": 823209,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATH",
+    "home_score": 6,
+    "away_score": 9
   },
   {
     "home_abbr": "NYM",
@@ -53,7 +62,10 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "Matthew Boyd",
     "game_id": 823612,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Casey Legumina",
     "away_pitcher": "Seth Lugo",
     "game_id": 822961,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 13,
+    "away_score": 2
   },
   {
     "home_abbr": "DET",
@@ -81,7 +96,10 @@
     "home_pitcher": "Troy Melton",
     "away_pitcher": "Tatsuya Imai",
     "game_id": 824258,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "STL",
@@ -95,7 +113,7 @@
     "home_pitcher": "Michael McGreevy",
     "away_pitcher": "Zac Gallen",
     "game_id": 823042,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "PIT",
@@ -109,7 +127,10 @@
     "home_pitcher": "Bubba Chandler",
     "away_pitcher": "Bryce Miller",
     "game_id": 823366,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 5,
+    "away_score": 1
   },
   {
     "home_abbr": "WSN",
@@ -123,6 +144,9 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Cristopher S\u00e1nchez",
     "game_id": 822717,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 5,
+    "away_score": 10
   }
 ]

@@ -13,7 +13,8 @@
     "over_odds": -104,
     "under_odds": -128,
     "game_id": 823366,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Cam Schlittler",
@@ -29,7 +30,8 @@
     "over_odds": -102,
     "under_odds": -130,
     "game_id": 824747,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Connelly Early",
@@ -45,7 +47,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 824747,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Michael McGreevy",
@@ -61,7 +64,7 @@
     "over_odds": -168,
     "under_odds": 136,
     "game_id": 823042,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Zac Gallen",
@@ -77,7 +80,7 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": 823042,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Landen Roupp",
@@ -93,7 +96,8 @@
     "over_odds": -150,
     "under_odds": 122,
     "game_id": 823209,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Troy Melton",
@@ -109,7 +113,8 @@
     "over_odds": 122,
     "under_odds": -150,
     "game_id": 824258,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Cade Cavalli",
@@ -125,7 +130,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 822717,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -141,7 +147,8 @@
     "over_odds": 126,
     "under_odds": -172,
     "game_id": 822797,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Kevin Gausman",
@@ -157,7 +164,8 @@
     "over_odds": -150,
     "under_odds": 122,
     "game_id": 822797,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Seth Lugo",
@@ -173,7 +181,8 @@
     "over_odds": 116,
     "under_odds": -154,
     "game_id": 822961,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Bubba Chandler",
@@ -189,7 +198,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 823366,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Matthew Boyd",
@@ -205,7 +215,8 @@
     "over_odds": 104,
     "under_odds": -138,
     "game_id": 823612,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Freddy Peralta",
@@ -221,7 +232,8 @@
     "over_odds": 106,
     "under_odds": -130,
     "game_id": 823612,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jeffrey Springs",
@@ -237,7 +249,8 @@
     "over_odds": -118,
     "under_odds": -112,
     "game_id": 823209,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Tatsuya Imai",
@@ -253,6 +266,7 @@
     "over_odds": 108,
     "under_odds": -144,
     "game_id": 824258,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   }
 ]

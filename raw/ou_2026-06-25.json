@@ -12,7 +12,8 @@
     "under_odds": -109,
     "proj_total": 8.9,
     "game_id": 822961,
-    "result": null
+    "result": "W",
+    "actual_total": 15
   },
   {
     "home_abbr": "PIT",
@@ -27,7 +28,8 @@
     "under_odds": -45,
     "proj_total": 7.3,
     "game_id": 823366,
-    "result": null
+    "result": "W",
+    "actual_total": 6
   },
   {
     "home_abbr": "WSN",
@@ -42,7 +44,8 @@
     "under_odds": -103,
     "proj_total": 10.1,
     "game_id": 822717,
-    "result": null
+    "result": "W",
+    "actual_total": 15
   },
   {
     "home_abbr": "DET",
@@ -57,7 +60,8 @@
     "under_odds": -114,
     "proj_total": 9.8,
     "game_id": 824258,
-    "result": null
+    "result": "L",
+    "actual_total": 3
   },
   {
     "home_abbr": "STL",
@@ -72,7 +76,7 @@
     "under_odds": -113,
     "proj_total": 9.6,
     "game_id": 823042,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "TOR",
@@ -87,7 +91,8 @@
     "under_odds": -117,
     "proj_total": 7.6,
     "game_id": 822797,
-    "result": null
+    "result": "L",
+    "actual_total": 11
   },
   {
     "home_abbr": "NYM",
@@ -102,7 +107,8 @@
     "under_odds": -106,
     "proj_total": 8.9,
     "game_id": 823612,
-    "result": null
+    "result": "L",
+    "actual_total": 7
   },
   {
     "home_abbr": "SFG",
@@ -117,7 +123,8 @@
     "under_odds": -103,
     "proj_total": 7.8,
     "game_id": 823209,
-    "result": null
+    "result": "L",
+    "actual_total": 15
   },
   {
     "home_abbr": "BOS",
@@ -132,6 +139,7 @@
     "under_odds": -108,
     "proj_total": 7.9,
     "game_id": 824747,
-    "result": null
+    "result": "L",
+    "actual_total": 9
   }
 ]
