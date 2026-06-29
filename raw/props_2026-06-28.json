@@ -13,7 +13,8 @@
     "over_odds": -110,
     "under_odds": -120,
     "game_id": 824821,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Kyle Bradish",
@@ -29,7 +30,8 @@
     "over_odds": -152,
     "under_odds": 124,
     "game_id": 824821,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Brady Singer",
@@ -45,7 +47,8 @@
     "over_odds": -136,
     "under_odds": 102,
     "game_id": 823362,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Merrill Kelly",
@@ -61,7 +64,8 @@
     "over_odds": -140,
     "under_odds": 106,
     "game_id": 822959,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Drew Rasmussen",
@@ -77,7 +81,8 @@
     "over_odds": -110,
     "under_odds": -110,
     "game_id": 822959,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Gavin Williams",
@@ -93,7 +98,8 @@
     "over_odds": -134,
     "under_odds": 110,
     "game_id": 824422,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Jack Flaherty",
@@ -109,7 +115,8 @@
     "over_odds": -108,
     "under_odds": -112,
     "game_id": 824256,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Jesus Luzardo",
@@ -125,7 +132,8 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": 823608,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Connor Prielipp",
@@ -141,7 +149,8 @@
     "over_odds": -119,
     "under_odds": -107,
     "game_id": 823686,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Ryan Feltner",
@@ -157,7 +166,8 @@
     "over_odds": 114,
     "under_odds": -145,
     "game_id": 823686,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Luinder Avila",
@@ -173,7 +183,8 @@
     "over_odds": -152,
     "under_odds": 114,
     "game_id": 824580,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Anthony Kay",
@@ -189,7 +200,8 @@
     "over_odds": -112,
     "under_odds": -108,
     "game_id": 824580,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Samuel Aldegheri",
@@ -205,7 +217,8 @@
     "over_odds": -188,
     "under_odds": 152,
     "game_id": 824011,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Chris Sale",
@@ -221,7 +234,8 @@
     "over_odds": -158,
     "under_odds": 118,
     "game_id": 823204,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Michael King",
@@ -237,7 +251,8 @@
     "over_odds": -162,
     "under_odds": 132,
     "game_id": 823281,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Sonny Gray",
@@ -253,7 +268,8 @@
     "over_odds": -132,
     "under_odds": 108,
     "game_id": 824744,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Shane Bieber",
@@ -269,7 +285,8 @@
     "over_odds": 138,
     "under_odds": -170,
     "game_id": 822795,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Hunter Brown",
@@ -285,7 +302,8 @@
     "over_odds": -146,
     "under_odds": 110,
     "game_id": 824256,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Kumar Rocker",
@@ -301,7 +319,8 @@
     "over_odds": 130,
     "under_odds": -174,
     "game_id": 822795,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Tyler Phillips",
@@ -317,7 +336,8 @@
     "over_odds": -122,
     "under_odds": -108,
     "game_id": 823037,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Aaron Civale",
@@ -333,7 +353,8 @@
     "over_odds": 106,
     "under_odds": -140,
     "game_id": 824011,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Emmet Sheehan",
@@ -349,7 +370,8 @@
     "over_odds": -108,
     "under_odds": -122,
     "game_id": 823281,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Brandon Woodruff",
@@ -365,7 +387,8 @@
     "over_odds": -132,
     "under_odds": 108,
     "game_id": 823769,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Robbie Ray",
@@ -381,7 +404,8 @@
     "over_odds": 116,
     "under_odds": -142,
     "game_id": 823204,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Mitch Keller",
@@ -397,7 +421,8 @@
     "over_odds": -168,
     "under_odds": 136,
     "game_id": 823362,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Emerson Hancock",
@@ -413,7 +438,8 @@
     "over_odds": -140,
     "under_odds": 106,
     "game_id": 824422,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Kyle Leahy",
@@ -429,6 +455,7 @@
     "over_odds": 104,
     "under_odds": -128,
     "game_id": 823037,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   }
 ]

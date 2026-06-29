@@ -11,7 +11,10 @@
     "home_pitcher": "Brandon Woodruff",
     "away_pitcher": "Ryan Rolison",
     "game_id": 823769,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "MIN",
@@ -25,7 +28,10 @@
     "home_pitcher": "Connor Prielipp",
     "away_pitcher": "Ryan Feltner",
     "game_id": 823686,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "TBR",
@@ -39,7 +45,10 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Merrill Kelly",
     "game_id": 822959,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 5,
+    "away_score": 1
   },
   {
     "home_abbr": "NYM",
@@ -53,7 +62,10 @@
     "home_pitcher": "Cionel P\u00e9rez",
     "away_pitcher": "Jes\u00fas Luzardo",
     "game_id": 823608,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "STL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Kyle Leahy",
     "away_pitcher": "Tyler Phillips",
     "game_id": 823037,
-    "result": null
+    "result": "W",
+    "actual_winner": "STL",
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "home_abbr": "LAA",
@@ -81,7 +96,10 @@
     "home_pitcher": "Sam Aldegheri",
     "away_pitcher": "Aaron Civale",
     "game_id": 824011,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAA",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "CHW",
@@ -95,7 +113,10 @@
     "home_pitcher": "Anthony Kay",
     "away_pitcher": "Luinder Avila",
     "game_id": 824580,
-    "result": null
+    "result": "L",
+    "actual_winner": "KCR",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "TOR",
@@ -109,7 +130,10 @@
     "home_pitcher": "Shane Bieber",
     "away_pitcher": "Kumar Rocker",
     "game_id": 822795,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "CLE",
@@ -123,7 +147,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Emerson Hancock",
     "game_id": 824422,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "DET",
@@ -137,7 +164,10 @@
     "home_pitcher": "Jack Flaherty",
     "away_pitcher": "Hunter Brown",
     "game_id": 824256,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 5,
+    "away_score": 7
   },
   {
     "home_abbr": "SDP",
@@ -151,7 +181,10 @@
     "home_pitcher": "Michael King",
     "away_pitcher": "Emmet Sheehan",
     "game_id": 823281,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "SFG",
@@ -165,7 +198,10 @@
     "home_pitcher": "Robbie Ray",
     "away_pitcher": "Chris Sale",
     "game_id": 823204,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "BAL",
@@ -179,7 +215,10 @@
     "home_pitcher": "Kyle Bradish",
     "away_pitcher": "Zack Littell",
     "game_id": 824821,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 4,
+    "away_score": 6
   },
   {
     "home_abbr": "BOS",
@@ -193,7 +232,10 @@
     "home_pitcher": "Sonny Gray",
     "away_pitcher": "Carlos Rod\u00f3n",
     "game_id": 824744,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "PIT",
@@ -207,6 +249,9 @@
     "home_pitcher": "Mitch Keller",
     "away_pitcher": "Brady Singer",
     "game_id": 823362,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 9,
+    "away_score": 4
   }
 ]
