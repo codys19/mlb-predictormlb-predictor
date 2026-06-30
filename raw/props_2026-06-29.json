@@ -13,7 +13,8 @@
     "over_odds": 114,
     "under_odds": -152,
     "game_id": 823444,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Ryan Weathers",
@@ -29,7 +30,8 @@
     "over_odds": 104,
     "under_odds": -128,
     "game_id": 823529,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Trey Yesavage",
@@ -45,7 +47,8 @@
     "over_odds": -138,
     "under_odds": 112,
     "game_id": 822792,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Sean Manaea",
@@ -61,7 +64,8 @@
     "over_odds": -172,
     "under_odds": 128,
     "game_id": 822792,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Ranger Suarez",
@@ -77,7 +81,8 @@
     "over_odds": -102,
     "under_odds": -120,
     "game_id": 824741,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Parker Messick",
@@ -93,7 +98,8 @@
     "over_odds": 120,
     "under_odds": -148,
     "game_id": 824420,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Nick Lodolo",
@@ -109,7 +115,8 @@
     "over_odds": -132,
     "under_odds": 100,
     "game_id": 823771,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Robert Gasser",
@@ -125,7 +132,8 @@
     "over_odds": -105,
     "under_odds": -115,
     "game_id": 823771,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Zebby Matthews",
@@ -141,7 +149,8 @@
     "over_odds": 124,
     "under_odds": -166,
     "game_id": 824176,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -157,7 +166,8 @@
     "over_odds": -122,
     "under_odds": -108,
     "game_id": 824339,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -173,7 +183,8 @@
     "over_odds": -144,
     "under_odds": 118,
     "game_id": 825065,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Eric Lauer",
@@ -189,7 +200,8 @@
     "over_odds": -166,
     "under_odds": 124,
     "game_id": 824986,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "George Kirby",
@@ -205,7 +217,8 @@
     "over_odds": -104,
     "under_odds": -118,
     "game_id": 823121,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Peter Lambert",
@@ -221,7 +234,8 @@
     "over_odds": -152,
     "under_odds": 124,
     "game_id": 824176,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Sean Burke",
@@ -237,7 +251,8 @@
     "over_odds": -112,
     "under_odds": -118,
     "game_id": 824822,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Tyler Mahle",
@@ -253,7 +268,8 @@
     "over_odds": 126,
     "under_odds": -168,
     "game_id": 825065,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Ryan Johnson",
@@ -269,7 +285,8 @@
     "over_odds": 108,
     "under_odds": -144,
     "game_id": 823121,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Casey Mize",
@@ -285,7 +302,8 @@
     "over_odds": 114,
     "under_odds": -152,
     "game_id": 823529,
-    "result": null
+    "result": "W",
+    "actual_k": 10
   },
   {
     "pitcher": "Gage Jump",
@@ -301,7 +319,8 @@
     "over_odds": -170,
     "under_odds": 138,
     "game_id": 824986,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Shane Baz",
@@ -317,7 +336,8 @@
     "over_odds": 102,
     "under_odds": -124,
     "game_id": 824822,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Aaron Nola",
@@ -333,7 +353,8 @@
     "over_odds": -115,
     "under_odds": -105,
     "game_id": 823444,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Shota Imanaga",
@@ -349,6 +370,7 @@
     "over_odds": -152,
     "under_odds": 124,
     "game_id": 824662,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]
