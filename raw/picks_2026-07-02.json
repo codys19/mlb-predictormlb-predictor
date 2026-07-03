@@ -11,7 +11,10 @@
     "home_pitcher": "Hurston Waldrep",
     "away_pitcher": "Dustin May",
     "game_id": 824906,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 5,
+    "away_score": 11
   },
   {
     "home_abbr": "CLE",
@@ -25,7 +28,10 @@
     "home_pitcher": "Slade Cecconi",
     "away_pitcher": "Davis Martin",
     "game_id": 824416,
-    "result": null
+    "result": "L",
+    "actual_winner": "CLE",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "COL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Michael Lorenzen",
     "away_pitcher": "Ryan Gusto",
     "game_id": 824335,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 14,
+    "away_score": 4
   },
   {
     "home_abbr": "KCR",
@@ -53,7 +62,10 @@
     "home_pitcher": "Stephen Kolek",
     "away_pitcher": "Ian Seymour",
     "game_id": 824093,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 2,
+    "away_score": 5
   },
   {
     "home_abbr": "PHI",
@@ -67,7 +79,10 @@
     "home_pitcher": "Alan Rangel",
     "away_pitcher": "Jared Jones",
     "game_id": 823442,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "SEA",
@@ -81,7 +96,10 @@
     "home_pitcher": "Bryce Miller",
     "away_pitcher": "Walbert Ure\u00f1a",
     "game_id": 823119,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "LAD",
@@ -95,7 +113,10 @@
     "home_pitcher": "Roki Sasaki",
     "away_pitcher": "Randy V\u00e1squez",
     "game_id": 823935,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 12,
+    "away_score": 7
   },
   {
     "home_abbr": "MIL",
@@ -109,7 +130,10 @@
     "home_pitcher": "Jacob Misiorowski",
     "away_pitcher": "Chase Burns",
     "game_id": 823765,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "TEX",
@@ -123,6 +147,9 @@
     "home_pitcher": "Nathan Eovaldi",
     "away_pitcher": "Framber Valdez",
     "game_id": 822884,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 10,
+    "away_score": 4
   }
 ]
