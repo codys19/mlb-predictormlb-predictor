@@ -12,7 +12,8 @@
     "under_odds": -107,
     "proj_total": 7.8,
     "game_id": 823526,
-    "result": null
+    "result": "L",
+    "actual_total": 15
   },
   {
     "home_abbr": "CIN",
@@ -27,7 +28,8 @@
     "under_odds": -35,
     "proj_total": 7.6,
     "game_id": 824499,
-    "result": null
+    "result": "L",
+    "actual_total": 13
   },
   {
     "home_abbr": "HOU",
@@ -42,7 +44,8 @@
     "under_odds": -41,
     "proj_total": 10.8,
     "game_id": 824171,
-    "result": null
+    "result": "W",
+    "actual_total": 18
   },
   {
     "home_abbr": "CHC",
@@ -57,7 +60,8 @@
     "under_odds": -108,
     "proj_total": 10.0,
     "game_id": 824658,
-    "result": null
+    "result": "L",
+    "actual_total": 3
   },
   {
     "home_abbr": "COL",
@@ -72,7 +76,8 @@
     "under_odds": -112,
     "proj_total": 7.9,
     "game_id": 824334,
-    "result": null
+    "result": "W",
+    "actual_total": 10
   },
   {
     "home_abbr": "KCR",
@@ -87,7 +92,8 @@
     "under_odds": -114,
     "proj_total": 8.0,
     "game_id": 824092,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   },
   {
     "home_abbr": "ATH",
@@ -102,7 +108,8 @@
     "under_odds": -110,
     "proj_total": 8.2,
     "game_id": 824983,
-    "result": null
+    "result": "W",
+    "actual_total": 9
   },
   {
     "home_abbr": "CLE",
@@ -117,7 +124,8 @@
     "under_odds": -104,
     "proj_total": 8.3,
     "game_id": 824415,
-    "result": null
+    "result": "L",
+    "actual_total": 4
   },
   {
     "home_abbr": "ARI",
@@ -132,7 +140,8 @@
     "under_odds": -115,
     "proj_total": 9.0,
     "game_id": 825063,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   },
   {
     "home_abbr": "WSN",
@@ -147,7 +156,8 @@
     "under_odds": -115,
     "proj_total": 10.1,
     "game_id": 822716,
-    "result": null
+    "result": "W",
+    "actual_total": 8
   },
   {
     "home_abbr": "LAA",
@@ -162,7 +172,8 @@
     "under_odds": -111,
     "proj_total": 8.3,
     "game_id": 824012,
-    "result": null
+    "result": "L",
+    "actual_total": 9
   },
   {
     "home_abbr": "TEX",
@@ -177,7 +188,8 @@
     "under_odds": -106,
     "proj_total": 7.4,
     "game_id": 822882,
-    "result": null
+    "result": "W",
+    "actual_total": 3
   },
   {
     "home_abbr": "ATL",
@@ -192,7 +204,8 @@
     "under_odds": -106,
     "proj_total": 7.9,
     "game_id": 824903,
-    "result": null
+    "result": "L",
+    "actual_total": 17
   },
   {
     "home_abbr": "LAD",
@@ -207,7 +220,8 @@
     "under_odds": -106,
     "proj_total": 8.4,
     "game_id": 823932,
-    "result": null
+    "result": "W",
+    "actual_total": 3
   },
   {
     "home_abbr": "SEA",
@@ -222,6 +236,7 @@
     "under_odds": -105,
     "proj_total": 7.5,
     "game_id": 823118,
-    "result": null
+    "result": "L",
+    "actual_total": 11
   }
 ]
