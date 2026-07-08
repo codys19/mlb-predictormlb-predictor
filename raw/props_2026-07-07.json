@@ -13,7 +13,8 @@
     "over_odds": 110,
     "under_odds": -140,
     "game_id": 824820,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Tarik Skubal",
@@ -29,7 +30,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 824254,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Hurston Waldrep",
@@ -45,7 +47,8 @@
     "over_odds": -108,
     "under_odds": -118,
     "game_id": 823361,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Paul Skenes",
@@ -61,7 +64,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 823361,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Max Meyer",
@@ -77,7 +81,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823847,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Will Warren",
@@ -93,7 +98,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 822956,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Ian Seymour",
@@ -109,7 +115,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 822956,
-    "result": null
+    "result": "W",
+    "actual_k": 12
   },
   {
     "pitcher": "Andrew Alvarez",
@@ -125,7 +132,8 @@
     "over_odds": -108,
     "under_odds": -118,
     "game_id": 822713,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Taj Bradley",
@@ -141,7 +149,8 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 823687,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Joey Cantillo",
@@ -157,7 +166,8 @@
     "over_odds": -170,
     "under_odds": 132,
     "game_id": 823687,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Jose Soriano",
@@ -173,7 +183,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 822881,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Jacob deGrom",
@@ -189,7 +200,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 822881,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Zac Gallen",
@@ -205,7 +217,8 @@
     "over_odds": -148,
     "under_odds": 116,
     "game_id": 823280,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Trevor McDonald",
@@ -221,7 +234,8 @@
     "over_odds": 134,
     "under_odds": -172,
     "game_id": 823203,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Justin Wrobleski",
@@ -237,7 +251,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 823929,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Michael Lorenzen",
@@ -253,7 +268,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 823929,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "JT Ginn",
@@ -269,7 +285,8 @@
     "over_odds": 130,
     "under_odds": -166,
     "game_id": 824254,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Tatsuya Imai",
@@ -285,7 +302,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 822713,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Andrew Abbott",
@@ -301,7 +319,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 824495,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Payton Tolle",
@@ -317,7 +336,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 824579,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Seth Lugo",
@@ -333,7 +353,8 @@
     "over_odds": -120,
     "under_odds": -106,
     "game_id": 823607,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Matthew Boyd",
@@ -349,7 +370,8 @@
     "over_odds": -160,
     "under_odds": 124,
     "game_id": 824820,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Noah Schultz",
@@ -365,6 +387,7 @@
     "over_odds": -128,
     "under_odds": 100,
     "game_id": 824579,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   }
 ]

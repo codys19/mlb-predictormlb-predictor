@@ -11,7 +11,10 @@
     "home_pitcher": "Justin Wrobleski",
     "away_pitcher": "Michael Lorenzen",
     "game_id": 823929,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "STL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Hunter Dobbins",
     "away_pitcher": "Robert Gasser",
     "game_id": 823062,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 10
   },
   {
     "home_abbr": "STL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Hunter Dobbins",
     "away_pitcher": "Robert Gasser",
     "game_id": 823035,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 10
   },
   {
     "home_abbr": "SDP",
@@ -53,7 +62,10 @@
     "home_pitcher": "Germ\u00e1n M\u00e1rquez",
     "away_pitcher": "Zac Gallen",
     "game_id": 823280,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "TBR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Ian Seymour",
     "away_pitcher": "Will Warren",
     "game_id": 822956,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "MIN",
@@ -81,7 +96,10 @@
     "home_pitcher": "Taj Bradley",
     "away_pitcher": "Joey Cantillo",
     "game_id": 823687,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 3,
+    "away_score": 1
   },
   {
     "home_abbr": "NYM",
@@ -95,7 +113,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Seth Lugo",
     "game_id": 823607,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 12,
+    "away_score": 16
   },
   {
     "home_abbr": "SFG",
@@ -109,7 +130,10 @@
     "home_pitcher": "Trevor McDonald",
     "away_pitcher": "Spencer Miles",
     "game_id": 823203,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 3,
+    "away_score": 9
   },
   {
     "home_abbr": "MIA",
@@ -123,7 +147,10 @@
     "home_pitcher": "Max Meyer",
     "away_pitcher": "TBD",
     "game_id": 823847,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIA",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "CIN",
@@ -137,7 +164,10 @@
     "home_pitcher": "Andrew Abbott",
     "away_pitcher": "Zack Wheeler",
     "game_id": 824495,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "BAL",
@@ -151,7 +181,10 @@
     "home_pitcher": "Shane Baz",
     "away_pitcher": "Matthew Boyd",
     "game_id": 824820,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHC",
+    "home_score": 2,
+    "away_score": 5
   },
   {
     "home_abbr": "CHW",
@@ -165,7 +198,10 @@
     "home_pitcher": "Noah Schultz",
     "away_pitcher": "Payton Tolle",
     "game_id": 824579,
-    "result": null
+    "result": "W",
+    "actual_winner": "BOS",
+    "home_score": 1,
+    "away_score": 8
   },
   {
     "home_abbr": "WSN",
@@ -179,7 +215,10 @@
     "home_pitcher": "Andrew Alvarez",
     "away_pitcher": "Tatsuya Imai",
     "game_id": 822713,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 3,
+    "away_score": 6
   },
   {
     "home_abbr": "PIT",
@@ -193,7 +232,10 @@
     "home_pitcher": "Paul Skenes",
     "away_pitcher": "Hurston Waldrep",
     "game_id": 823361,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 12,
+    "away_score": 4
   },
   {
     "home_abbr": "DET",
@@ -207,7 +249,10 @@
     "home_pitcher": "Tarik Skubal",
     "away_pitcher": "J.T. Ginn",
     "game_id": 824254,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "TEX",
@@ -221,6 +266,9 @@
     "home_pitcher": "Jacob deGrom",
     "away_pitcher": "Jos\u00e9 Soriano",
     "game_id": 822881,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 8,
+    "away_score": 3
   }
 ]
