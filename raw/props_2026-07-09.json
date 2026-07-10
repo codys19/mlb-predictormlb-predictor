@@ -13,7 +13,8 @@
     "over_odds": -142,
     "under_odds": 112,
     "game_id": 823359,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Drew Rasmussen",
@@ -29,7 +30,8 @@
     "over_odds": 118,
     "under_odds": -151,
     "game_id": 822954,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Sean Manaea",
@@ -45,7 +47,8 @@
     "over_odds": -164,
     "under_odds": 128,
     "game_id": 823606,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Bailey Ober",
@@ -61,7 +64,8 @@
     "over_odds": -148,
     "under_odds": 120,
     "game_id": 823683,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Gavin Williams",
@@ -77,7 +81,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 823683,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Anthony Kay",
@@ -93,7 +98,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 824577,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Bryce Miller",
@@ -109,7 +115,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 823846,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Jesus Luzardo",
@@ -125,7 +132,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 824494,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Brady Singer",
@@ -141,7 +149,8 @@
     "over_odds": -166,
     "under_odds": 130,
     "game_id": 824494,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Logan Henderson",
@@ -157,7 +166,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823034,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Nathan Eovaldi",
@@ -173,7 +183,8 @@
     "over_odds": -162,
     "under_odds": 126,
     "game_id": 822877,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Merrill Kelly",
@@ -189,7 +200,8 @@
     "over_odds": -164,
     "under_odds": 128,
     "game_id": 823277,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Griffin Canning",
@@ -205,7 +217,8 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 823277,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Ryan Feltner",
@@ -221,7 +234,8 @@
     "over_odds": -156,
     "under_odds": 122,
     "game_id": 823201,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Janson Junk",
@@ -237,7 +251,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823846,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Andre Pallante",
@@ -253,7 +268,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 823034,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Framber Valdez",
@@ -269,7 +285,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 824251,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Reid Detmers",
@@ -285,7 +302,8 @@
     "over_odds": 110,
     "under_odds": -140,
     "game_id": 822877,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Bryce Elder",
@@ -301,7 +319,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 823359,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Michael Wacha",
@@ -317,7 +336,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823606,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "David Peterson",
@@ -333,7 +353,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 824816,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Trevor Rogers",
@@ -349,6 +370,7 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 824816,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]
