@@ -11,7 +11,10 @@
     "home_pitcher": "PJ Poulin",
     "away_pitcher": "Cam Schlittler",
     "game_id": 822711,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "Walker Buehler",
     "away_pitcher": "Trey Yesavage",
     "game_id": 823276,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 8,
+    "away_score": 7
   },
   {
     "home_abbr": "DET",
@@ -39,7 +45,10 @@
     "home_pitcher": "Casey Mize",
     "away_pitcher": "Cristopher S\u00e1nchez",
     "game_id": 824249,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "NYM",
@@ -53,7 +62,10 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "TBD",
     "game_id": 823603,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 0,
+    "away_score": 4
   },
   {
     "home_abbr": "CIN",
@@ -67,7 +79,10 @@
     "home_pitcher": "Nick Lodolo",
     "away_pitcher": "Javier Assad",
     "game_id": 824492,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 3,
+    "away_score": 5
   },
   {
     "home_abbr": "LAD",
@@ -81,7 +96,10 @@
     "home_pitcher": "Yoshinobu Yamamoto",
     "away_pitcher": "Brandon Pfaadt",
     "game_id": 823926,
-    "result": null
+    "result": "L",
+    "actual_winner": "ARI",
+    "home_score": 2,
+    "away_score": 9
   },
   {
     "home_abbr": "MIA",
@@ -95,7 +113,10 @@
     "home_pitcher": "Eury P\u00e9rez",
     "away_pitcher": "Tanner Bibee",
     "game_id": 823844,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "PIT",
@@ -109,7 +130,10 @@
     "home_pitcher": "Bubba Chandler",
     "away_pitcher": "Shane Drohan",
     "game_id": 823357,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "PIT",
@@ -123,7 +147,10 @@
     "home_pitcher": "Bubba Chandler",
     "away_pitcher": "Shane Drohan",
     "game_id": 823356,
-    "result": null
+    "result": "L",
+    "actual_winner": "PIT",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "TBR",
@@ -137,7 +164,10 @@
     "home_pitcher": "Griffin Jax",
     "away_pitcher": "Logan Gilbert",
     "game_id": 822953,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "STL",
@@ -151,7 +181,10 @@
     "home_pitcher": "Matthew Liberatore",
     "away_pitcher": "Reynaldo L\u00f3pez",
     "game_id": 823030,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "BAL",
@@ -165,7 +198,10 @@
     "home_pitcher": "Kyle Bradish",
     "away_pitcher": "Noah Cameron",
     "game_id": 824813,
-    "result": null
+    "result": "L",
+    "actual_winner": "BAL",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "CHW",
@@ -179,7 +215,10 @@
     "home_pitcher": "Bryan Hudson",
     "away_pitcher": "Gage Jump",
     "game_id": 824576,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "SFG",
@@ -193,7 +232,10 @@
     "home_pitcher": "Tyler Mahle",
     "away_pitcher": "Kyle Freeland",
     "game_id": 823198,
-    "result": null
+    "result": "W",
+    "actual_winner": "SFG",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "MIN",
@@ -207,7 +249,10 @@
     "home_pitcher": "Joe Ryan",
     "away_pitcher": "Ryan Johnson",
     "game_id": 823682,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "TEX",
@@ -221,6 +266,9 @@
     "home_pitcher": "Kumar Rocker",
     "away_pitcher": "Peter Lambert",
     "game_id": 822875,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 3,
+    "away_score": 9
   }
 ]
