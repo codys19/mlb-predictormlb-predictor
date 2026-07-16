@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "PHI",
+    "away_abbr": "NYM",
+    "home_name": "Philadelphia Phillies",
+    "away_name": "New York Mets",
+    "pick_abbr": "NYM",
+    "pick": "New York Mets",
+    "confidence": 0.5650220872915157,
+    "pick_odds": 109,
+    "home_pitcher": "Aaron Nola",
+    "away_pitcher": "Christian Scott",
+    "game_id": 823440,
+    "result": null
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "PHI",
+    "away_abbr": "NYM",
+    "home_name": "Philadelphia Phillies",
+    "away_name": "New York Mets",
+    "pick": "Under",
+    "line": 9.5,
+    "confidence": 0.8,
+    "pick_odds": -110,
+    "over_odds": -109,
+    "under_odds": -110,
+    "proj_total": 8.2,
+    "game_id": 823440,
+    "result": null
+  }
+]
