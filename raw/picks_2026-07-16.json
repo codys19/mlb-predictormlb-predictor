@@ -11,6 +11,9 @@
     "home_pitcher": "Aaron Nola",
     "away_pitcher": "Christian Scott",
     "game_id": 823440,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 1,
+    "away_score": 4
   }
 ]

@@ -13,7 +13,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 823440,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Aaron Nola",
@@ -29,6 +30,7 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 823440,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   }
 ]
