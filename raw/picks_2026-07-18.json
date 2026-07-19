@@ -11,7 +11,7 @@
     "home_pitcher": "Ryan Weathers",
     "away_pitcher": "Emmet Sheehan",
     "game_id": 823523,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "COL",
@@ -25,7 +25,10 @@
     "home_pitcher": "Tomoyuki Sugano",
     "away_pitcher": "Rhett Lowder",
     "game_id": 824331,
-    "result": null
+    "result": "L",
+    "actual_winner": "COL",
+    "home_score": 10,
+    "away_score": 3
   },
   {
     "home_abbr": "ARI",
@@ -39,7 +42,10 @@
     "home_pitcher": "Brandon Pfaadt",
     "away_pitcher": "Dustin May",
     "game_id": 825059,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "ATL",
@@ -53,7 +59,10 @@
     "home_pitcher": "Owen Murphy",
     "away_pitcher": "MacKenzie Gore",
     "game_id": 824899,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "SEA",
@@ -67,7 +76,10 @@
     "home_pitcher": "Bryan Woo",
     "away_pitcher": "Logan Webb",
     "game_id": 823116,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "MIL",
@@ -81,7 +93,10 @@
     "home_pitcher": "Shane Drohan",
     "away_pitcher": "Max Meyer",
     "game_id": 823763,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 8,
+    "away_score": 6
   },
   {
     "home_abbr": "PHI",
@@ -95,7 +110,10 @@
     "home_pitcher": "Jes\u00fas Luzardo",
     "away_pitcher": "Sean Manaea",
     "game_id": 823441,
-    "result": null
+    "result": "L",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "BOS",
@@ -109,7 +127,10 @@
     "home_pitcher": "Patrick Sandoval",
     "away_pitcher": "Ian Seymour",
     "game_id": 824738,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "ATH",
@@ -123,7 +144,10 @@
     "home_pitcher": "J.T. Ginn",
     "away_pitcher": "Zack Littell",
     "game_id": 824979,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 15,
+    "away_score": 1
   },
   {
     "home_abbr": "TOR",
@@ -137,7 +161,10 @@
     "home_pitcher": "Shane Bieber",
     "away_pitcher": "Davis Martin",
     "game_id": 822790,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "KCR",
@@ -151,7 +178,10 @@
     "home_pitcher": "Randy Dobnak",
     "away_pitcher": "Griffin Canning",
     "game_id": 824088,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "LAA",
@@ -165,7 +195,10 @@
     "home_pitcher": "Grayson Rodriguez",
     "away_pitcher": "Tarik Skubal",
     "game_id": 824008,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 0,
+    "away_score": 7
   },
   {
     "home_abbr": "CHC",
@@ -179,7 +212,10 @@
     "home_pitcher": "Matthew Boyd",
     "away_pitcher": "Taj Bradley",
     "game_id": 824657,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "HOU",
@@ -193,7 +229,10 @@
     "home_pitcher": "Spencer Arrighetti",
     "away_pitcher": "Trevor Rogers",
     "game_id": 824169,
-    "result": null
+    "result": "L",
+    "actual_winner": "BAL",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "CLE",
@@ -207,7 +246,10 @@
     "home_pitcher": "Logan Allen",
     "away_pitcher": "TBD",
     "game_id": 824414,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "CLE",
@@ -221,6 +263,9 @@
     "home_pitcher": "Logan Allen",
     "away_pitcher": "TBD",
     "game_id": 824412,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 5,
+    "away_score": 3
   }
 ]
