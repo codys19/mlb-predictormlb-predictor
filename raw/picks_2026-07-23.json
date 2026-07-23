@@ -1,0 +1,72 @@
+[
+  {
+    "home_abbr": "STL",
+    "away_abbr": "ARI",
+    "home_name": "St. Louis Cardinals",
+    "away_name": "Arizona Diamondbacks",
+    "pick_abbr": "STL",
+    "pick": "St. Louis Cardinals",
+    "confidence": 0.5882864286119631,
+    "pick_odds": -122,
+    "home_pitcher": "Michael McGreevy",
+    "away_pitcher": "Brandon Pfaadt",
+    "game_id": 823042,
+    "result": null
+  },
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "SDP",
+    "home_name": "Atlanta Braves",
+    "away_name": "San Diego Padres",
+    "pick_abbr": "ATL",
+    "pick": "Atlanta Braves",
+    "confidence": 0.5483796464022799,
+    "pick_odds": -256,
+    "home_pitcher": "Chris Sale",
+    "away_pitcher": "Kyle Hart",
+    "game_id": 824893,
+    "result": null
+  },
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "MIN",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Minnesota Twins",
+    "pick_abbr": "MIN",
+    "pick": "Minnesota Twins",
+    "confidence": 0.5453202553319287,
+    "pick_odds": 122,
+    "home_pitcher": "Gavin Williams",
+    "away_pitcher": "Taj Bradley",
+    "game_id": 824406,
+    "result": null
+  },
+  {
+    "home_abbr": "TOR",
+    "away_abbr": "TBR",
+    "home_name": "Toronto Blue Jays",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "TBR",
+    "pick": "Tampa Bay Rays",
+    "confidence": 0.5378894046321234,
+    "pick_odds": -111,
+    "home_pitcher": "Shane Bieber",
+    "away_pitcher": "Casey Legumina",
+    "game_id": 822785,
+    "result": null
+  },
+  {
+    "home_abbr": "DET",
+    "away_abbr": "KCR",
+    "home_name": "Detroit Tigers",
+    "away_name": "Kansas City Royals",
+    "pick_abbr": "DET",
+    "pick": "Detroit Tigers",
+    "confidence": 0.5356078828769906,
+    "pick_odds": -219,
+    "home_pitcher": "Troy Melton",
+    "away_pitcher": "Randy Dobnak",
+    "game_id": 824247,
+    "result": null
+  }
+]
