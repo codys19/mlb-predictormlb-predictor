@@ -12,7 +12,8 @@
     "under_odds": -115,
     "proj_total": 9.4,
     "game_id": 823042,
-    "result": null
+    "result": "W",
+    "actual_total": 16
   },
   {
     "home_abbr": "ATL",
@@ -27,7 +28,8 @@
     "under_odds": -108,
     "proj_total": 7.4,
     "game_id": 824893,
-    "result": null
+    "result": "L",
+    "actual_total": 11
   },
   {
     "home_abbr": "DET",
@@ -42,7 +44,8 @@
     "under_odds": -117,
     "proj_total": 7.9,
     "game_id": 824247,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   },
   {
     "home_abbr": "TOR",
@@ -57,7 +60,8 @@
     "under_odds": -109,
     "proj_total": 9.0,
     "game_id": 822785,
-    "result": null
+    "result": "L",
+    "actual_total": 4
   },
   {
     "home_abbr": "CLE",
@@ -72,6 +76,7 @@
     "under_odds": -47,
     "proj_total": 7.1,
     "game_id": 824406,
-    "result": null
+    "result": "W",
+    "actual_total": 4
   }
 ]

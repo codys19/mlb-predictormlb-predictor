@@ -11,7 +11,10 @@
     "home_pitcher": "Michael McGreevy",
     "away_pitcher": "Brandon Pfaadt",
     "game_id": 823042,
-    "result": null
+    "result": "L",
+    "actual_winner": "ARI",
+    "home_score": 6,
+    "away_score": 10
   },
   {
     "home_abbr": "ATL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Kyle Hart",
     "game_id": 824893,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "CLE",
@@ -39,7 +45,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Taj Bradley",
     "game_id": 824406,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 1,
+    "away_score": 3
   },
   {
     "home_abbr": "TOR",
@@ -53,7 +62,10 @@
     "home_pitcher": "Shane Bieber",
     "away_pitcher": "Casey Legumina",
     "game_id": 822785,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 3,
+    "away_score": 1
   },
   {
     "home_abbr": "DET",
@@ -67,6 +79,9 @@
     "home_pitcher": "Troy Melton",
     "away_pitcher": "Randy Dobnak",
     "game_id": 824247,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 4,
+    "away_score": 3
   }
 ]
