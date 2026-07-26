@@ -13,7 +13,8 @@
     "over_odds": 138,
     "under_odds": -180,
     "game_id": 824244,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Casey Mize",
@@ -29,7 +30,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 824244,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Mitch Bratt",
@@ -45,7 +47,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 822704,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Ryan Johnson",
@@ -61,7 +64,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 823197,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Sonny Gray",
@@ -77,7 +81,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 824734,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Dylan Cease",
@@ -93,7 +98,8 @@
     "over_odds": -111,
     "under_odds": -115,
     "game_id": 824734,
-    "result": null
+    "result": "L",
+    "actual_k": 12
   },
   {
     "pitcher": "JP Sears",
@@ -109,7 +115,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 823841,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Ryan Weathers",
@@ -125,7 +132,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 823435,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Nick Martinez",
@@ -141,7 +149,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 822948,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Paul Skenes",
@@ -157,7 +166,8 @@
     "over_odds": -148,
     "under_odds": 116,
     "game_id": 823355,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Shota Imanaga",
@@ -173,7 +183,8 @@
     "over_odds": -118,
     "under_odds": -108,
     "game_id": 823355,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Robert Gasser",
@@ -189,7 +200,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 823758,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Andre Pallante",
@@ -205,7 +217,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823027,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Hunter Greene",
@@ -221,7 +234,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 823027,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -237,7 +251,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 823600,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Nolan McLean",
@@ -253,7 +268,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 823600,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Nathan Eovaldi",
@@ -269,7 +285,8 @@
     "over_odds": 110,
     "under_odds": -140,
     "game_id": 822869,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Tanner Bibee",
@@ -285,7 +302,8 @@
     "over_odds": 132,
     "under_odds": -170,
     "game_id": 822948,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Foster Griffin",
@@ -301,7 +319,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 822704,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Hunter Brown",
@@ -317,7 +336,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 824571,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Sean Burke",
@@ -333,7 +353,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 824571,
-    "result": null
+    "result": "W",
+    "actual_k": 10
   },
   {
     "pitcher": "Robbie Ray",
@@ -349,7 +370,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 823197,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Ryan Feltner",
@@ -365,7 +387,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 823758,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Bryan Woo",
@@ -381,7 +404,8 @@
     "over_odds": -142,
     "under_odds": 112,
     "game_id": 822869,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Bryce Elder",
@@ -397,7 +421,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 824811,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Brandon Young",
@@ -413,6 +438,7 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 824811,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   }
 ]
