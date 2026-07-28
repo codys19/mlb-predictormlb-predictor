@@ -12,7 +12,8 @@
     "under_odds": -115,
     "proj_total": 6.8,
     "game_id": 822868,
-    "result": null
+    "result": "L",
+    "actual_total": 10
   },
   {
     "home_abbr": "PIT",
@@ -27,7 +28,8 @@
     "under_odds": -120,
     "proj_total": 8.5,
     "game_id": 823353,
-    "result": null
+    "result": "W",
+    "actual_total": 5
   },
   {
     "home_abbr": "CIN",
@@ -42,7 +44,7 @@
     "under_odds": -110,
     "proj_total": 6.7,
     "game_id": 824490,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "LAA",
@@ -57,7 +59,8 @@
     "under_odds": -39,
     "proj_total": 10.2,
     "game_id": 824001,
-    "result": null
+    "result": "W",
+    "actual_total": 10
   },
   {
     "home_abbr": "ATH",
@@ -72,7 +75,8 @@
     "under_odds": -110,
     "proj_total": 8.0,
     "game_id": 824977,
-    "result": null
+    "result": "W",
+    "actual_total": 6
   },
   {
     "home_abbr": "WSN",
@@ -87,7 +91,8 @@
     "under_odds": -109,
     "proj_total": 10.3,
     "game_id": 822705,
-    "result": null
+    "result": "L",
+    "actual_total": 5
   },
   {
     "home_abbr": "MIA",
@@ -102,7 +107,8 @@
     "under_odds": -105,
     "proj_total": 8.2,
     "game_id": 823839,
-    "result": null
+    "result": "W",
+    "actual_total": 15
   },
   {
     "home_abbr": "NYM",
@@ -117,7 +123,8 @@
     "under_odds": 32,
     "proj_total": 7.9,
     "game_id": 823597,
-    "result": null
+    "result": "L",
+    "actual_total": 17
   },
   {
     "home_abbr": "DET",
@@ -132,7 +139,8 @@
     "under_odds": -109,
     "proj_total": 8.0,
     "game_id": 824245,
-    "result": null
+    "result": "L",
+    "actual_total": 13
   },
   {
     "home_abbr": "CHW",
@@ -147,7 +155,8 @@
     "under_odds": -113,
     "proj_total": 8.9,
     "game_id": 824570,
-    "result": null
+    "result": "W",
+    "actual_total": 14
   },
   {
     "home_abbr": "STL",
@@ -162,7 +171,8 @@
     "under_odds": -109,
     "proj_total": 9.9,
     "game_id": 823025,
-    "result": null
+    "result": "W",
+    "actual_total": 10
   },
   {
     "home_abbr": "SFG",
@@ -177,6 +187,7 @@
     "under_odds": -114,
     "proj_total": 8.6,
     "game_id": 823195,
-    "result": null
+    "result": "L",
+    "actual_total": 3
   }
 ]
