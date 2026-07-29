@@ -11,7 +11,10 @@
     "home_pitcher": "Anthony Kay",
     "away_pitcher": "Gerrit Cole",
     "game_id": 824569,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "Michael King",
     "away_pitcher": "Michael Lorenzen",
     "game_id": 823275,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 8,
+    "away_score": 7
   },
   {
     "home_abbr": "MIA",
@@ -39,7 +45,10 @@
     "home_pitcher": "Sandy Alcantara",
     "away_pitcher": "Aaron Nola",
     "game_id": 823838,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIA",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "LAA",
@@ -53,7 +62,10 @@
     "home_pitcher": "Reid Detmers",
     "away_pitcher": "Peter Lambert",
     "game_id": 824003,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "MIN",
@@ -67,7 +79,10 @@
     "home_pitcher": "Taj Bradley",
     "away_pitcher": "Seth Lugo",
     "game_id": 823676,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "CIN",
@@ -81,7 +96,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Gavin Williams",
     "game_id": 824490,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 2,
+    "away_score": 0
   },
   {
     "home_abbr": "CIN",
@@ -95,7 +113,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Gavin Williams",
     "game_id": 824489,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 2,
+    "away_score": 0
   },
   {
     "home_abbr": "SFG",
@@ -109,7 +130,10 @@
     "home_pitcher": "Landen Roupp",
     "away_pitcher": "Logan Henderson",
     "game_id": 823193,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 8
   },
   {
     "home_abbr": "TBR",
@@ -123,7 +147,10 @@
     "home_pitcher": "Griffin Jax",
     "away_pitcher": "TBD",
     "game_id": 822949,
-    "result": null
+    "result": "W",
+    "actual_winner": "TEX",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "WSN",
@@ -137,7 +164,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Shane Bieber",
     "game_id": 822703,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 8,
+    "away_score": 6
   },
   {
     "home_abbr": "STL",
@@ -151,7 +181,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Colin Rea",
     "game_id": 823026,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 2,
+    "away_score": 10
   },
   {
     "home_abbr": "NYM",
@@ -165,7 +198,7 @@
     "home_pitcher": "Christian Scott",
     "away_pitcher": "Chris Sale",
     "game_id": 823598,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "DET",
@@ -179,7 +212,10 @@
     "home_pitcher": "Troy Melton",
     "away_pitcher": "Dean Kremer",
     "game_id": 824243,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 14,
+    "away_score": 0
   },
   {
     "home_abbr": "LAD",
@@ -193,7 +229,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Luis Castillo",
     "game_id": 823923,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "ATH",
@@ -207,7 +246,10 @@
     "home_pitcher": "Gage Jump",
     "away_pitcher": "Jake Bennett",
     "game_id": 824976,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATH",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "PIT",
@@ -221,6 +263,9 @@
     "home_pitcher": "Bubba Chandler",
     "away_pitcher": "Brandon Pfaadt",
     "game_id": 823350,
-    "result": null
+    "result": "L",
+    "actual_winner": "ARI",
+    "home_score": 7,
+    "away_score": 8
   }
 ]
