@@ -13,7 +13,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 823837,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Ryan Gusto",
@@ -29,7 +30,8 @@
     "over_odds": -128,
     "under_odds": 100,
     "game_id": 823837,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jared Jones",
@@ -45,7 +47,8 @@
     "over_odds": -158,
     "under_odds": 124,
     "game_id": 823351,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -61,7 +64,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823351,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Zack Littell",
@@ -77,7 +81,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 822702,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Trey Yesavage",
@@ -93,7 +98,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 822702,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Trevor Rogers",
@@ -109,7 +115,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 824242,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Tarik Skubal",
@@ -125,7 +132,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 824242,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Christian Scott",
@@ -141,7 +149,7 @@
     "over_odds": 104,
     "under_odds": -132,
     "game_id": 823596,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Chris Sale",
@@ -157,7 +165,7 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 823596,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Joey Cantillo",
@@ -173,7 +181,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 824487,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Brady Singer",
@@ -189,7 +198,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824487,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Cam Schlittler",
@@ -205,7 +215,8 @@
     "over_odds": 104,
     "under_odds": -132,
     "game_id": 824567,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Randy Dobnak",
@@ -221,7 +232,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 823677,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Joe Ryan",
@@ -237,7 +249,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 823677,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Grayson Rodriguez",
@@ -253,7 +266,8 @@
     "over_odds": 118,
     "under_odds": -148,
     "game_id": 824002,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Jacob Lopez",
@@ -269,7 +283,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824973,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Patrick Sandoval",
@@ -285,7 +300,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 824973,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Emerson Hancock",
@@ -301,7 +317,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 823924,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Hayden Wesneski",
@@ -317,7 +334,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 824002,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Eric Lauer",
@@ -333,7 +351,8 @@
     "over_odds": 138,
     "under_odds": -178,
     "game_id": 823924,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Davis Martin",
@@ -349,7 +368,8 @@
     "over_odds": -146,
     "under_odds": 114,
     "game_id": 824567,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Gabriel Hughes",
@@ -365,7 +385,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823273,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -381,7 +402,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 822947,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Matthew Boyd",
@@ -397,7 +419,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 823022,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Shane Drohan",
@@ -413,7 +436,7 @@
     "over_odds": 136,
     "under_odds": -174,
     "game_id": 823192,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Logan Webb",
@@ -429,7 +452,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 823192,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Dustin May",
@@ -445,6 +469,7 @@
     "over_odds": -162,
     "under_odds": 128,
     "game_id": 823022,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]
