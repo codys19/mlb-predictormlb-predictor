@@ -11,7 +11,10 @@
     "home_pitcher": "Nolan McLean",
     "away_pitcher": "Eury P\u00e9rez",
     "game_id": 823595,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "JP Sears",
     "away_pitcher": "TBD",
     "game_id": 823271,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "ATL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Grant Holmes",
     "away_pitcher": "Jake Irvin",
     "game_id": 824894,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "CIN",
@@ -53,7 +62,10 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Yohan Ram\u00edrez",
     "game_id": 824488,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "MIN",
@@ -67,7 +79,10 @@
     "home_pitcher": "Bailey Ober",
     "away_pitcher": "Noah Cameron",
     "game_id": 823674,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "ATH",
@@ -81,7 +96,10 @@
     "home_pitcher": "Mason Barnett",
     "away_pitcher": "Sonny Gray",
     "game_id": 824974,
-    "result": null
+    "result": "W",
+    "actual_winner": "BOS",
+    "home_score": 4,
+    "away_score": 5
   },
   {
     "home_abbr": "LAD",
@@ -95,7 +113,10 @@
     "home_pitcher": "Roki Sasaki",
     "away_pitcher": "Bryan Woo",
     "game_id": 823921,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAD",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "STL",
@@ -109,7 +130,10 @@
     "home_pitcher": "Andre Pallante",
     "away_pitcher": "Javier Assad",
     "game_id": 823023,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -123,7 +147,10 @@
     "home_pitcher": "Shane McClanahan",
     "away_pitcher": "Cole Winn",
     "game_id": 822946,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "CHW",
@@ -137,6 +164,9 @@
     "home_pitcher": "Sean Burke",
     "away_pitcher": "Ryan Weathers",
     "game_id": 824568,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 2,
+    "away_score": 1
   }
 ]
