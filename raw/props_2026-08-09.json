@@ -13,7 +13,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 824724,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Cam Schlittler",
@@ -29,7 +30,8 @@
     "over_odds": -132,
     "under_odds": 103,
     "game_id": 823513,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Grant Holmes",
@@ -45,7 +47,8 @@
     "over_odds": -158,
     "under_odds": 124,
     "game_id": 823513,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Sean Manaea",
@@ -61,7 +64,8 @@
     "over_odds": 114,
     "under_odds": -145,
     "game_id": 823345,
-    "result": null
+    "result": "W",
+    "actual_k": 11
   },
   {
     "pitcher": "Shane Bieber",
@@ -77,7 +81,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823425,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Ryan Gusto",
@@ -93,7 +98,8 @@
     "over_odds": -132,
     "under_odds": 103,
     "game_id": 823835,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Matthew Boyd",
@@ -109,7 +115,8 @@
     "over_odds": -153,
     "under_odds": 120,
     "game_id": 824078,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Davis Martin",
@@ -125,7 +132,8 @@
     "over_odds": -128,
     "under_odds": 100,
     "game_id": 824564,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -141,7 +149,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 823751,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Michael Lorenzen",
@@ -157,7 +166,8 @@
     "over_odds": 129,
     "under_odds": -165,
     "game_id": 823020,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Kumar Rocker",
@@ -173,7 +183,8 @@
     "over_odds": 112,
     "under_odds": -143,
     "game_id": 822862,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Cade Povich",
@@ -189,7 +200,8 @@
     "over_odds": -116,
     "under_odds": -110,
     "game_id": 822862,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Troy Melton",
@@ -205,7 +217,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 823190,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Logan Webb",
@@ -221,7 +234,8 @@
     "over_odds": -151,
     "under_odds": 118,
     "game_id": 823190,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -237,7 +251,8 @@
     "over_odds": -145,
     "under_odds": 114,
     "game_id": 825050,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Cristian Javier",
@@ -253,7 +268,8 @@
     "over_odds": -103,
     "under_odds": -123,
     "game_id": 823268,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Jesus Luzardo",
@@ -269,7 +285,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 823425,
-    "result": null
+    "result": "L",
+    "actual_k": 12
   },
   {
     "pitcher": "Randy Dobnak",
@@ -285,7 +302,8 @@
     "over_odds": -142,
     "under_odds": 112,
     "game_id": 824078,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Connor Prielipp",
@@ -301,7 +319,8 @@
     "over_odds": 111,
     "under_odds": -141,
     "game_id": 823751,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Brady Singer",
@@ -317,7 +336,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 822700,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Michael McGreevy",
@@ -333,7 +353,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 823020,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Justin Wrobleski",
@@ -349,7 +370,8 @@
     "over_odds": 127,
     "under_odds": -163,
     "game_id": 825050,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Joey Cantillo",
@@ -365,7 +387,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 824564,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Grayson Rodriguez",
@@ -381,7 +404,8 @@
     "over_odds": 119,
     "under_odds": -152,
     "game_id": 823835,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Emerson Hancock",
@@ -397,7 +421,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 823104,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Jared Jones",
@@ -413,6 +438,7 @@
     "over_odds": 103,
     "under_odds": -132,
     "game_id": 823345,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   }
 ]
