@@ -11,7 +11,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Logan Gilbert",
     "game_id": 823508,
-    "result": null
+    "result": "L",
+    "actual_winner": "SEA",
+    "home_score": 0,
+    "away_score": 1
   },
   {
     "home_abbr": "MIA",
@@ -25,7 +28,10 @@
     "home_pitcher": "Tyler Phillips",
     "away_pitcher": "Braxton Ashcraft",
     "game_id": 823829,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 1,
+    "away_score": 13
   },
   {
     "home_abbr": "WSN",
@@ -39,7 +45,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Kevin Gausman",
     "game_id": 822696,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 7,
+    "away_score": 0
   },
   {
     "home_abbr": "DET",
@@ -53,7 +62,10 @@
     "home_pitcher": "Keider Montero",
     "away_pitcher": "Parker Messick",
     "game_id": 824238,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 3,
+    "away_score": 0
   },
   {
     "home_abbr": "LAA",
@@ -67,7 +79,10 @@
     "home_pitcher": "Walbert Ure\u00f1a",
     "away_pitcher": "Jacob deGrom",
     "game_id": 823995,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 7,
+    "away_score": 0
   },
   {
     "home_abbr": "MIN",
@@ -81,7 +96,10 @@
     "home_pitcher": "Taj Bradley",
     "away_pitcher": "Aaron Nola",
     "game_id": 823669,
-    "result": null
+    "result": "L",
+    "actual_winner": "PHI",
+    "home_score": 1,
+    "away_score": 7
   },
   {
     "home_abbr": "CHW",
@@ -95,7 +113,10 @@
     "home_pitcher": "Davis Martin",
     "away_pitcher": "Andrew Abbott",
     "game_id": 824561,
-    "result": null
+    "result": "W",
+    "actual_winner": "CIN",
+    "home_score": 8,
+    "away_score": 9
   },
   {
     "home_abbr": "TOR",
@@ -109,7 +130,10 @@
     "home_pitcher": "Max Scherzer",
     "away_pitcher": "Payton Tolle",
     "game_id": 822776,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 0,
+    "away_score": 7
   },
   {
     "home_abbr": "LAD",
@@ -123,6 +147,9 @@
     "home_pitcher": "Roki Sasaki",
     "away_pitcher": "Shane Drohan",
     "game_id": 823915,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 4,
+    "away_score": 5
   }
 ]
