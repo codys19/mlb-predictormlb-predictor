@@ -11,7 +11,10 @@
     "home_pitcher": "Tomoyuki Sugano",
     "away_pitcher": "Blake Snell",
     "game_id": 824320,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 5,
+    "away_score": 11
   },
   {
     "home_abbr": "PIT",
@@ -25,7 +28,10 @@
     "home_pitcher": "Carmen Mlodzinski",
     "away_pitcher": "Framber Valdez",
     "game_id": 823343,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 5,
+    "away_score": 8
   },
   {
     "home_abbr": "TBR",
@@ -39,7 +45,10 @@
     "home_pitcher": "Shane McClanahan",
     "away_pitcher": "Brandon Young",
     "game_id": 822939,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 7,
+    "away_score": 6
   },
   {
     "home_abbr": "CHC",
@@ -53,7 +62,10 @@
     "home_pitcher": "Shota Imanaga",
     "away_pitcher": "Luis Castillo",
     "game_id": 824641,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 7,
+    "away_score": 5
   },
   {
     "home_abbr": "KCR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Michael Wacha",
     "away_pitcher": "Mason Barnett",
     "game_id": 824077,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 9,
+    "away_score": 5
   },
   {
     "home_abbr": "NYM",
@@ -81,7 +96,10 @@
     "home_pitcher": "Nolan McLean",
     "away_pitcher": "Walker Buehler",
     "game_id": 823589,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "home_abbr": "PHI",
@@ -95,7 +113,10 @@
     "home_pitcher": "Cristopher S\u00e1nchez",
     "away_pitcher": "Janson Junk",
     "game_id": 823427,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "BOS",
@@ -109,7 +130,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Mitch Bratt",
     "game_id": 824725,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 11,
+    "away_score": 1
   },
   {
     "home_abbr": "MIN",
@@ -123,7 +147,10 @@
     "home_pitcher": "Bailey Ober",
     "away_pitcher": "Mart\u00edn P\u00e9rez",
     "game_id": 823668,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "CIN",
@@ -137,7 +164,10 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Andre Pallante",
     "game_id": 824514,
-    "result": null
+    "result": "W",
+    "actual_winner": "CIN",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "CIN",
@@ -151,6 +181,9 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Andre Pallante",
     "game_id": 824478,
-    "result": null
+    "result": "W",
+    "actual_winner": "CIN",
+    "home_score": 6,
+    "away_score": 5
   }
 ]

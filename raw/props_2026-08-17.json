@@ -13,7 +13,8 @@
     "over_odds": -128,
     "under_odds": 101,
     "game_id": 822939,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Brandon Young",
@@ -29,7 +30,8 @@
     "over_odds": -134,
     "under_odds": 105,
     "game_id": 822939,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Janson Junk",
@@ -45,7 +47,8 @@
     "over_odds": 127,
     "under_odds": -163,
     "game_id": 823427,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Andre Pallante",
@@ -61,7 +64,7 @@
     "over_odds": -108,
     "under_odds": -118,
     "game_id": 824514,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Rhett Lowder",
@@ -77,7 +80,7 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 824514,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Carmen Mlodzinski",
@@ -93,7 +96,8 @@
     "over_odds": -158,
     "under_odds": 124,
     "game_id": 823343,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Mitch Bratt",
@@ -109,7 +113,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 824725,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Walker Buehler",
@@ -125,7 +130,8 @@
     "over_odds": -156,
     "under_odds": 122,
     "game_id": 823589,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Mason Barnett",
@@ -141,7 +147,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 824077,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Bailey Ober",
@@ -157,7 +164,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 823668,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Shota Imanaga",
@@ -173,7 +181,8 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 824641,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Tomoyuki Sugano",
@@ -189,7 +198,8 @@
     "over_odds": -156,
     "under_odds": 122,
     "game_id": 824320,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Blake Snell",
@@ -205,7 +215,8 @@
     "over_odds": -148,
     "under_odds": 116,
     "game_id": 824320,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Nolan McLean",
@@ -221,7 +232,8 @@
     "over_odds": -146,
     "under_odds": 114,
     "game_id": 823589,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Michael Wacha",
@@ -237,7 +249,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 824077,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Framber Valdez",
@@ -253,7 +266,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823343,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Luis Castillo",
@@ -269,6 +283,7 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 824641,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   }
 ]
