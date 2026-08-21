@@ -11,7 +11,10 @@
     "home_pitcher": "Ian Seymour",
     "away_pitcher": "Shane Bieber",
     "game_id": 822934,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 1,
+    "away_score": 5
   },
   {
     "home_abbr": "CLE",
@@ -25,7 +28,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Landen Roupp",
     "game_id": 824395,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "MIL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Robert Gasser",
     "away_pitcher": "George Kirby",
     "game_id": 823747,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 7,
+    "away_score": 4
   },
   {
     "home_abbr": "KCR",
@@ -53,7 +62,10 @@
     "home_pitcher": "Randy Dobnak",
     "away_pitcher": "Gage Jump",
     "game_id": 824074,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "BAL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Kyle Bradish",
     "away_pitcher": "Gerrit Cole",
     "game_id": 824802,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "CHW",
@@ -81,7 +96,10 @@
     "home_pitcher": "Anthony Kay",
     "away_pitcher": "Grant Holmes",
     "game_id": 824589,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATL",
+    "home_score": 0,
+    "away_score": 2
   },
   {
     "home_abbr": "CIN",
@@ -95,7 +113,10 @@
     "home_pitcher": "Brady Singer",
     "away_pitcher": "Michael McGreevy",
     "game_id": 824474,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 9,
+    "away_score": 10
   },
   {
     "home_abbr": "TEX",
@@ -109,7 +130,10 @@
     "home_pitcher": "Jacob deGrom",
     "away_pitcher": "Andrew Alvarez",
     "game_id": 822861,
-    "result": null
+    "result": "W",
+    "actual_winner": "TEX",
+    "home_score": 2,
+    "away_score": 0
   },
   {
     "home_abbr": "HOU",
@@ -123,6 +147,9 @@
     "home_pitcher": "Peter Lambert",
     "away_pitcher": "Grayson Rodriguez",
     "game_id": 824153,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 3,
+    "away_score": 18
   }
 ]
