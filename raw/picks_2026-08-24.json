@@ -11,7 +11,10 @@
     "home_pitcher": "Cade Cavalli",
     "away_pitcher": "Ryan Feltner",
     "game_id": 822695,
-    "result": null
+    "result": "W",
+    "actual_winner": "WSN",
+    "home_score": 13,
+    "away_score": 3
   },
   {
     "home_abbr": "DET",
@@ -25,7 +28,10 @@
     "home_pitcher": "Framber Valdez",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 824235,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "LAA",
@@ -39,7 +45,10 @@
     "home_pitcher": "George Klassen",
     "away_pitcher": "Parker Messick",
     "game_id": 823992,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "ARI",
@@ -53,7 +62,10 @@
     "home_pitcher": "Merrill Kelly",
     "away_pitcher": "Kevin Gausman",
     "game_id": 825041,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 0,
+    "away_score": 7
   },
   {
     "home_abbr": "CHW",
@@ -67,7 +79,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Kumar Rocker",
     "game_id": 824557,
-    "result": null
+    "result": "L",
+    "actual_winner": "TEX",
+    "home_score": 2,
+    "away_score": 11
   },
   {
     "home_abbr": "SDP",
@@ -81,7 +96,10 @@
     "home_pitcher": "Robbie Ray",
     "away_pitcher": "Braxton Ashcraft",
     "game_id": 823260,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "ATH",
@@ -95,7 +113,10 @@
     "home_pitcher": "Jeffrey Springs",
     "away_pitcher": "Zebby Matthews",
     "game_id": 824964,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 6,
+    "away_score": 9
   },
   {
     "home_abbr": "SFG",
@@ -109,7 +130,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Chase Burns",
     "game_id": 823183,
-    "result": null
+    "result": "W",
+    "actual_winner": "SFG",
+    "home_score": 5,
+    "away_score": 0
   },
   {
     "home_abbr": "SEA",
@@ -123,7 +147,10 @@
     "home_pitcher": "Logan Gilbert",
     "away_pitcher": "Zack Wheeler",
     "game_id": 823097,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 9,
+    "away_score": 2
   },
   {
     "home_abbr": "MIA",
@@ -137,6 +164,9 @@
     "home_pitcher": "Sandy Alcantara",
     "away_pitcher": "Ranger Suarez",
     "game_id": 823828,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 2,
+    "away_score": 4
   }
 ]
