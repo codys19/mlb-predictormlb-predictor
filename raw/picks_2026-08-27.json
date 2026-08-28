@@ -11,7 +11,10 @@
     "home_pitcher": "Spencer Arrighetti",
     "away_pitcher": "Noah Cameron",
     "game_id": 822771,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 2,
+    "away_score": 13
   },
   {
     "home_abbr": "NYY",
@@ -25,7 +28,10 @@
     "home_pitcher": "Gerrit Cole",
     "away_pitcher": "Hayden Wesneski",
     "game_id": 823503,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 1,
+    "away_score": 5
   },
   {
     "home_abbr": "SFG",
@@ -39,7 +45,10 @@
     "home_pitcher": "Landen Roupp",
     "away_pitcher": "Jose Cabrera",
     "game_id": 823179,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 6,
+    "away_score": 1
   },
   {
     "home_abbr": "NYM",
@@ -53,7 +62,10 @@
     "home_pitcher": "Sean Manaea",
     "away_pitcher": "Jacob Misiorowski",
     "game_id": 823581,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 8
   },
   {
     "home_abbr": "ATL",
@@ -67,6 +79,9 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Yoshinobu Yamamoto",
     "game_id": 824879,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATL",
+    "home_score": 1,
+    "away_score": 0
   }
 ]

@@ -13,7 +13,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 823581,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -29,7 +30,8 @@
     "over_odds": -128,
     "under_odds": 100,
     "game_id": 823581,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -45,7 +47,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 824879,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Chris Sale",
@@ -61,7 +64,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 824879,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Hayden Wesneski",
@@ -77,7 +81,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 823503,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Jose Cabrera",
@@ -93,7 +98,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 823179,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Landen Roupp",
@@ -109,7 +115,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 823179,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Noah Cameron",
@@ -125,7 +132,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 822771,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Gerrit Cole",
@@ -141,6 +149,7 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 823503,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   }
 ]
