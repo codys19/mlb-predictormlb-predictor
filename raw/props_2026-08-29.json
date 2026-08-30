@@ -13,7 +13,8 @@
     "over_odds": 120,
     "under_odds": -160,
     "game_id": 824230,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Erick Fedde",
@@ -29,7 +30,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 823665,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Bailey Ober",
@@ -45,7 +47,8 @@
     "over_odds": -166,
     "under_odds": 130,
     "game_id": 823665,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Kyle Leahy",
@@ -61,7 +64,8 @@
     "over_odds": -146,
     "under_odds": 114,
     "game_id": 823011,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Kevin Gausman",
@@ -77,7 +81,8 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 824637,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Andrew Abbott",
@@ -93,7 +98,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 824637,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Jose Soriano",
@@ -109,7 +115,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 822770,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Cade Cavalli",
@@ -125,7 +132,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 822690,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Ryan Feltner",
@@ -141,7 +149,7 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 824874,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Daniel Lynch IV",
@@ -157,7 +165,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824392,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Foster Griffin",
@@ -173,7 +182,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 824392,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Nolan McLean",
@@ -189,7 +199,8 @@
     "over_odds": -146,
     "under_odds": 114,
     "game_id": 823582,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Walker Buehler",
@@ -205,7 +216,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 822936,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Nick Martinez",
@@ -221,7 +233,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 822936,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Cal Quantrill",
@@ -237,7 +250,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 823741,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Mitch Bratt",
@@ -253,7 +267,7 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823177,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Jack Perkins",
@@ -269,7 +283,8 @@
     "over_odds": -111,
     "under_odds": -115,
     "game_id": 824961,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Kade Anderson",
@@ -285,7 +300,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 822770,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Max Fried",
@@ -301,7 +317,7 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 823539,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Shane Drohan",
@@ -317,7 +333,8 @@
     "over_odds": -111,
     "under_odds": -115,
     "game_id": 823741,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Shane Baz",
@@ -333,7 +350,8 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 824961,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -349,6 +367,7 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 822690,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]
