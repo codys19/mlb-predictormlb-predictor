@@ -11,7 +11,10 @@
     "home_pitcher": "Walbert Ure\u00f1a",
     "away_pitcher": "Elmer Rodr\u00edguez",
     "game_id": 823982,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 10,
+    "away_score": 1
   },
   {
     "home_abbr": "ATL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Bryce Elder",
     "away_pitcher": "Anthony Molina",
     "game_id": 824911,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 3,
+    "away_score": 7
   },
   {
     "home_abbr": "CIN",
@@ -39,7 +45,10 @@
     "home_pitcher": "Brady Singer",
     "away_pitcher": "Michael King",
     "game_id": 824473,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 0,
+    "away_score": 5
   },
   {
     "home_abbr": "HOU",
@@ -53,7 +62,10 @@
     "home_pitcher": "Peter Lambert",
     "away_pitcher": "Anthony Kay",
     "game_id": 824149,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 6,
+    "away_score": 3
   },
   {
     "home_abbr": "WSN",
@@ -67,7 +79,10 @@
     "home_pitcher": "Will Dion",
     "away_pitcher": "Ryan Gusto",
     "game_id": 822689,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 6,
+    "away_score": 3
   },
   {
     "home_abbr": "CHC",
@@ -81,7 +96,10 @@
     "home_pitcher": "Clay Holmes",
     "away_pitcher": "Kyle Harrison",
     "game_id": 824635,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 17,
+    "away_score": 3
   },
   {
     "home_abbr": "MIN",
@@ -95,7 +113,10 @@
     "home_pitcher": "Taj Bradley",
     "away_pitcher": "Jackson Jobe",
     "game_id": 823663,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIN",
+    "home_score": 11,
+    "away_score": 1
   },
   {
     "home_abbr": "TBR",
@@ -109,7 +130,10 @@
     "home_pitcher": "Ian Seymour",
     "away_pitcher": "Robert Stock",
     "game_id": 822932,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "ARI",
@@ -123,7 +147,10 @@
     "home_pitcher": "Brandon Pfaadt",
     "away_pitcher": "Aaron Nola",
     "game_id": 825040,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "COL",
@@ -137,7 +164,10 @@
     "home_pitcher": "Tanner Gordon",
     "away_pitcher": "Cade Povich",
     "game_id": 824314,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "BOS",
@@ -151,7 +181,10 @@
     "home_pitcher": "Payton Tolle",
     "away_pitcher": "George Kirby",
     "game_id": 824719,
-    "result": null
+    "result": "W",
+    "actual_winner": "BOS",
+    "home_score": 9,
+    "away_score": 8
   },
   {
     "home_abbr": "TEX",
@@ -165,6 +198,9 @@
     "home_pitcher": "Jacob deGrom",
     "away_pitcher": "Gage Jump",
     "game_id": 822855,
-    "result": null
+    "result": "W",
+    "actual_winner": "TEX",
+    "home_score": 8,
+    "away_score": 1
   }
 ]
