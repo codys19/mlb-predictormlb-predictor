@@ -13,7 +13,8 @@
     "over_odds": -170,
     "under_odds": 125,
     "game_id": 823337,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Hunter Brown",
@@ -29,7 +30,8 @@
     "over_odds": 106,
     "under_odds": -135,
     "game_id": 824144,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Luis Castillo",
@@ -45,7 +47,8 @@
     "over_odds": 103,
     "under_odds": -132,
     "game_id": 824144,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -61,7 +64,8 @@
     "over_odds": -145,
     "under_odds": 113,
     "game_id": 824069,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Cal Quantrill",
@@ -77,7 +81,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 822853,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Shane McClanahan",
@@ -93,7 +98,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 822853,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jack Perkins",
@@ -109,7 +115,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 823095,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Kade Anderson",
@@ -125,7 +132,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823095,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Tarik Skubal",
@@ -141,7 +149,8 @@
     "over_odds": 121,
     "under_odds": -155,
     "game_id": 823907,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Quinn Mathews",
@@ -157,7 +166,8 @@
     "over_odds": -117,
     "under_odds": -109,
     "game_id": 823907,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Tanner Bibee",
@@ -173,7 +183,8 @@
     "over_odds": -125,
     "under_odds": -105,
     "game_id": 824388,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Jake Bennett",
@@ -189,7 +200,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 824796,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Kevin Gausman",
@@ -205,7 +217,8 @@
     "over_odds": 104,
     "under_odds": -133,
     "game_id": 824632,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Logan Henderson",
@@ -221,7 +234,8 @@
     "over_odds": -116,
     "under_odds": -110,
     "game_id": 824632,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Brandon Young",
@@ -237,7 +251,8 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 824796,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Michael Wacha",
@@ -253,6 +268,7 @@
     "over_odds": -151,
     "under_odds": 118,
     "game_id": 824069,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   }
 ]

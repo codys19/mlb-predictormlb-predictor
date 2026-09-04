@@ -11,7 +11,10 @@
     "home_pitcher": "Tarik Skubal",
     "away_pitcher": "Quinn Mathews",
     "game_id": 823907,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "PIT",
@@ -25,7 +28,10 @@
     "home_pitcher": "Lake Bachar",
     "away_pitcher": "Blade Tidwell",
     "game_id": 823337,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "CLE",
@@ -39,7 +45,10 @@
     "home_pitcher": "Tanner Bibee",
     "away_pitcher": "Jos\u00e9 Soriano",
     "game_id": 824388,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 3,
+    "away_score": 6
   },
   {
     "home_abbr": "SEA",
@@ -53,7 +62,10 @@
     "home_pitcher": "Kade Anderson",
     "away_pitcher": "Jack Perkins",
     "game_id": 823095,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 4,
+    "away_score": 7
   },
   {
     "home_abbr": "KCR",
@@ -67,7 +79,10 @@
     "home_pitcher": "Michael Wacha",
     "away_pitcher": "Sandy Alcantara",
     "game_id": 824069,
-    "result": null
+    "result": "W",
+    "actual_winner": "KCR",
+    "home_score": 7,
+    "away_score": 3
   },
   {
     "home_abbr": "HOU",
@@ -81,7 +96,10 @@
     "home_pitcher": "Hunter Brown",
     "away_pitcher": "Luis Castillo",
     "game_id": 824144,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 6,
+    "away_score": 2
   },
   {
     "home_abbr": "TEX",
@@ -95,7 +113,10 @@
     "home_pitcher": "Cal Quantrill",
     "away_pitcher": "Shane McClanahan",
     "game_id": 822853,
-    "result": null
+    "result": "W",
+    "actual_winner": "TEX",
+    "home_score": 6,
+    "away_score": 0
   },
   {
     "home_abbr": "BAL",
@@ -109,7 +130,10 @@
     "home_pitcher": "Brandon Young",
     "away_pitcher": "Jake Bennett",
     "game_id": 824796,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 5,
+    "away_score": 6
   },
   {
     "home_abbr": "CHC",
@@ -123,6 +147,9 @@
     "home_pitcher": "Kevin Gausman",
     "away_pitcher": "Logan Henderson",
     "game_id": 824632,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 2,
+    "away_score": 1
   }
 ]
