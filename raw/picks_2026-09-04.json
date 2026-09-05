@@ -11,7 +11,10 @@
     "home_pitcher": "Daniel Lynch IV",
     "away_pitcher": "Jameson Taillon",
     "game_id": 824067,
-    "result": null
+    "result": "L",
+    "actual_winner": "TOR",
+    "home_score": 2,
+    "away_score": 9
   },
   {
     "home_abbr": "LAD",
@@ -25,7 +28,10 @@
     "home_pitcher": "Blake Snell",
     "away_pitcher": "Jackson Kent",
     "game_id": 823905,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "NYM",
@@ -39,7 +45,10 @@
     "home_pitcher": "Nolan McLean",
     "away_pitcher": "Matt Wilkinson",
     "game_id": 823579,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYM",
+    "home_score": 10,
+    "away_score": 6
   },
   {
     "home_abbr": "CIN",
@@ -53,7 +62,10 @@
     "home_pitcher": "Rhett Lowder",
     "away_pitcher": "Shane Drohan",
     "game_id": 824471,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 7,
+    "away_score": 10
   },
   {
     "home_abbr": "SEA",
@@ -67,7 +79,10 @@
     "home_pitcher": "Logan Gilbert",
     "away_pitcher": "Kade Morris",
     "game_id": 823093,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "SDP",
@@ -81,7 +96,10 @@
     "home_pitcher": "Walker Buehler",
     "away_pitcher": "Max Fried",
     "game_id": 823256,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "PIT",
@@ -95,7 +113,10 @@
     "home_pitcher": "Jared Jones",
     "away_pitcher": "Ryan Johnson",
     "game_id": 823338,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "CHW",
@@ -109,7 +130,10 @@
     "home_pitcher": "Erick Fedde",
     "away_pitcher": "Zebby Matthews",
     "game_id": 824554,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHW",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "MIA",
@@ -123,7 +147,10 @@
     "home_pitcher": "Janson Junk",
     "away_pitcher": "Shota Imanaga",
     "game_id": 823824,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "TEX",
@@ -137,7 +164,10 @@
     "home_pitcher": "Trevor Williams",
     "away_pitcher": "Nick Martinez",
     "game_id": 822852,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "COL",
@@ -151,7 +181,10 @@
     "home_pitcher": "Ryan Feltner",
     "away_pitcher": "Andre Pallante",
     "game_id": 824311,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 6,
+    "away_score": 7
   },
   {
     "home_abbr": "BAL",
@@ -165,7 +198,10 @@
     "home_pitcher": "Shane Baz",
     "away_pitcher": "Ranger Suarez",
     "game_id": 824797,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 0,
+    "away_score": 1
   },
   {
     "home_abbr": "CLE",
@@ -179,7 +215,10 @@
     "home_pitcher": "Foster Griffin",
     "away_pitcher": "Andrew Sears",
     "game_id": 824424,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "CLE",
@@ -193,7 +232,10 @@
     "home_pitcher": "Foster Griffin",
     "away_pitcher": "Andrew Sears",
     "game_id": 824387,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "PHI",
@@ -207,7 +249,10 @@
     "home_pitcher": "Cristopher S\u00e1nchez",
     "away_pitcher": "Chris Sale",
     "game_id": 823418,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 2,
+    "away_score": 5
   },
   {
     "home_abbr": "HOU",
@@ -221,6 +266,9 @@
     "home_pitcher": "Cristian Javier",
     "away_pitcher": "Merrill Kelly",
     "game_id": 824146,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 3,
+    "away_score": 1
   }
 ]
