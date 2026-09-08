@@ -12,7 +12,8 @@
     "under_odds": -119,
     "proj_total": 7.2,
     "game_id": 823415,
-    "result": null
+    "result": "L",
+    "actual_total": 1
   },
   {
     "home_abbr": "BAL",
@@ -27,7 +28,8 @@
     "under_odds": -102,
     "proj_total": 7.4,
     "game_id": 824793,
-    "result": null
+    "result": "L",
+    "actual_total": 10
   },
   {
     "home_abbr": "KCR",
@@ -42,7 +44,8 @@
     "under_odds": -105,
     "proj_total": 8.3,
     "game_id": 824062,
-    "result": null
+    "result": "W",
+    "actual_total": 9
   },
   {
     "home_abbr": "MIL",
@@ -57,7 +60,8 @@
     "under_odds": -117,
     "proj_total": 9.4,
     "game_id": 823742,
-    "result": null
+    "result": "L",
+    "actual_total": 7
   },
   {
     "home_abbr": "SDP",
@@ -72,7 +76,8 @@
     "under_odds": -109,
     "proj_total": 9.9,
     "game_id": 823254,
-    "result": null
+    "result": "L",
+    "actual_total": 5
   },
   {
     "home_abbr": "ATH",
@@ -87,7 +92,8 @@
     "under_odds": -6,
     "proj_total": 8.1,
     "game_id": 824958,
-    "result": null
+    "result": "L",
+    "actual_total": 11
   },
   {
     "home_abbr": "DET",
@@ -102,7 +108,8 @@
     "under_odds": -118,
     "proj_total": 7.7,
     "game_id": 824229,
-    "result": null
+    "result": "L",
+    "actual_total": 9
   },
   {
     "home_abbr": "BOS",
@@ -117,7 +124,8 @@
     "under_odds": -118,
     "proj_total": 8.7,
     "game_id": 824715,
-    "result": null
+    "result": "L",
+    "actual_total": 7
   },
   {
     "home_abbr": "SFG",
@@ -132,7 +140,8 @@
     "under_odds": -112,
     "proj_total": 8.7,
     "game_id": 823175,
-    "result": null
+    "result": "W",
+    "actual_total": 9
   },
   {
     "home_abbr": "LAD",
@@ -147,7 +156,8 @@
     "under_odds": -112,
     "proj_total": 7.9,
     "game_id": 823902,
-    "result": null
+    "result": "L",
+    "actual_total": 9
   },
   {
     "home_abbr": "MIA",
@@ -162,6 +172,7 @@
     "under_odds": -109,
     "proj_total": 8.5,
     "game_id": 823820,
-    "result": null
+    "result": "W",
+    "actual_total": 13
   }
 ]

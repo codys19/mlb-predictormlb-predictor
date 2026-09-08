@@ -13,7 +13,8 @@
     "over_odds": -105,
     "under_odds": -130,
     "game_id": 823415,
-    "result": null
+    "result": "L",
+    "actual_k": 12
   },
   {
     "pitcher": "Jonah Tong",
@@ -29,7 +30,8 @@
     "over_odds": 100,
     "under_odds": -135,
     "game_id": 823820,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Joey Cantillo",
@@ -45,7 +47,8 @@
     "over_odds": 110,
     "under_odds": -150,
     "game_id": 824793,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Grayson Rodriguez",
@@ -61,7 +64,8 @@
     "over_odds": -140,
     "under_odds": 105,
     "game_id": 824715,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Matthew Boyd",
@@ -77,7 +81,8 @@
     "over_odds": -105,
     "under_odds": -125,
     "game_id": 823742,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Joe Ryan",
@@ -93,7 +98,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 824229,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Nick Pivetta",
@@ -109,7 +115,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 823254,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Chase Burns",
@@ -125,7 +132,8 @@
     "over_odds": -120,
     "under_odds": -106,
     "game_id": 823902,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jacob Lopez",
@@ -141,7 +149,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 824958,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Dylan Cease",
@@ -157,7 +166,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 824958,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Troy Melton",
@@ -173,7 +183,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 824229,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Logan Webb",
@@ -189,7 +200,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 823175,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Jake Irvin",
@@ -205,7 +217,8 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 823254,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Michael McGreevy",
@@ -221,7 +234,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 823175,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Noah Cameron",
@@ -237,6 +251,7 @@
     "over_odds": 100,
     "under_odds": -135,
     "game_id": 824062,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   }
 ]
