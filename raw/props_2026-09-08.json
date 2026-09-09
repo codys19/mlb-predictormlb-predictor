@@ -13,7 +13,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 824792,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Tanner Bibee",
@@ -29,7 +30,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 824792,
-    "result": null
+    "result": "W",
+    "actual_k": 1
   },
   {
     "pitcher": "Hayden Wesneski",
@@ -45,7 +47,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823414,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Andrew Painter",
@@ -61,7 +64,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 823414,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Sean Manaea",
@@ -77,7 +81,8 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 823821,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Cam Schlittler",
@@ -93,7 +98,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823500,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Freddy Peralta",
@@ -109,7 +115,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 824875,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "AJ Smith-Shawver",
@@ -125,7 +132,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 824875,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Corbin Burnes",
@@ -141,7 +149,8 @@
     "over_odds": -175,
     "under_odds": 137,
     "game_id": 824063,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -157,7 +166,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 823738,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Sean Burke",
@@ -173,7 +183,8 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 824551,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Jose Soriano",
@@ -189,7 +200,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 824957,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Jack Perkins",
@@ -205,7 +217,8 @@
     "over_odds": -156,
     "under_odds": 124,
     "game_id": 824957,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Quinn Mathews",
@@ -221,7 +234,8 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 823174,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Landen Roupp",
@@ -237,7 +251,8 @@
     "over_odds": 132,
     "under_odds": -170,
     "game_id": 823174,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Nick Lodolo",
@@ -253,7 +268,8 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 823901,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Tarik Skubal",
@@ -269,7 +285,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 823901,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Bubba Chandler",
@@ -285,7 +302,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 824551,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Dean Kremer",
@@ -301,7 +319,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824228,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Reid Detmers",
@@ -317,7 +336,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 824714,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Casey Mize",
@@ -333,7 +353,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 823250,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Gabriel Hughes",
@@ -349,7 +370,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 823500,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Michael Wacha",
@@ -365,7 +387,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 824063,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Drew Anderson",
@@ -381,7 +404,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 824228,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "David Peterson",
@@ -397,7 +421,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 823738,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -413,7 +438,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 823821,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Patrick Sandoval",
@@ -429,6 +455,7 @@
     "over_odds": -148,
     "under_odds": 114,
     "game_id": 824714,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   }
 ]
