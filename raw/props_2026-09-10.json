@@ -13,7 +13,8 @@
     "over_odds": 135,
     "under_odds": -185,
     "game_id": 823413,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jacob deGrom",
@@ -29,7 +30,8 @@
     "over_odds": -114,
     "under_odds": -112,
     "game_id": 823088,
-    "result": null
+    "result": "L",
+    "actual_k": 12
   },
   {
     "pitcher": "Max Fried",
@@ -45,7 +47,8 @@
     "over_odds": -105,
     "under_odds": -122,
     "game_id": 823499,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Ryan Feltner",
@@ -61,7 +64,8 @@
     "over_odds": -104,
     "under_odds": -123,
     "game_id": 823499,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Nick Martinez",
@@ -77,7 +81,8 @@
     "over_odds": 135,
     "under_odds": -185,
     "game_id": 824872,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Logan Gilbert",
@@ -93,7 +98,8 @@
     "over_odds": -148,
     "under_odds": 116,
     "game_id": 823088,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Jared Jones",
@@ -109,6 +115,7 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 824550,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   }
 ]
