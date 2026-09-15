@@ -13,7 +13,8 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 824386,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Tarik Skubal",
@@ -29,7 +30,8 @@
     "over_odds": -118,
     "under_odds": -108,
     "game_id": 824465,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Troy Melton",
@@ -45,7 +47,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 822765,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Brandon Young",
@@ -61,7 +64,8 @@
     "over_odds": -172,
     "under_odds": 134,
     "game_id": 823575,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Will Warren",
@@ -77,7 +81,8 @@
     "over_odds": 110,
     "under_odds": -140,
     "game_id": 823656,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Dean Kremer",
@@ -93,7 +98,8 @@
     "over_odds": -142,
     "under_odds": 112,
     "game_id": 823656,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Tomoyuki Sugano",
@@ -109,7 +115,8 @@
     "over_odds": -184,
     "under_odds": 142,
     "game_id": 824308,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Casey Mize",
@@ -125,7 +132,8 @@
     "over_odds": -148,
     "under_odds": 116,
     "game_id": 824308,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Kade Anderson",
@@ -141,7 +149,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 823981,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Corbin Burnes",
@@ -157,7 +166,8 @@
     "over_odds": -160,
     "under_odds": 124,
     "game_id": 825034,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Sandy Alcantara",
@@ -173,7 +183,8 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 825034,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Reid Detmers",
@@ -189,7 +200,8 @@
     "over_odds": -113,
     "under_odds": -113,
     "game_id": 823981,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Nick Lodolo",
@@ -205,7 +217,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 824465,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Jose Soriano",
@@ -221,7 +234,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 822765,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jonah Tong",
@@ -237,7 +251,8 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 823575,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "David Peterson",
@@ -253,7 +268,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 824629,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Quinn Mathews",
@@ -269,7 +285,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 823006,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Landen Roupp",
@@ -285,6 +302,7 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 823006,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]

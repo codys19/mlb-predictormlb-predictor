@@ -11,7 +11,10 @@
     "home_pitcher": "David Peterson",
     "away_pitcher": "Reynaldo L\u00f3pez",
     "game_id": 824629,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHC",
+    "home_score": 7,
+    "away_score": 3
   },
   {
     "home_abbr": "NYM",
@@ -25,7 +28,10 @@
     "home_pitcher": "Jonah Tong",
     "away_pitcher": "Brandon Young",
     "game_id": 823575,
-    "result": null
+    "result": "L",
+    "actual_winner": "BAL",
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "home_abbr": "COL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Tomoyuki Sugano",
     "away_pitcher": "Casey Mize",
     "game_id": 824308,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 7,
+    "away_score": 8
   },
   {
     "home_abbr": "TOR",
@@ -53,7 +62,10 @@
     "home_pitcher": "Jos\u00e9 Soriano",
     "away_pitcher": "Troy Melton",
     "game_id": 822765,
-    "result": null
+    "result": "L",
+    "actual_winner": "DET",
+    "home_score": 5,
+    "away_score": 6
   },
   {
     "home_abbr": "ARI",
@@ -67,7 +79,10 @@
     "home_pitcher": "Corbin Burnes",
     "away_pitcher": "Sandy Alcantara",
     "game_id": 825034,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 8,
+    "away_score": 7
   },
   {
     "home_abbr": "LAA",
@@ -81,7 +96,10 @@
     "home_pitcher": "Reid Detmers",
     "away_pitcher": "Kade Anderson",
     "game_id": 823981,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "CLE",
@@ -95,7 +113,10 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Sean Newcomb",
     "game_id": 824386,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 3,
+    "away_score": 7
   },
   {
     "home_abbr": "CIN",
@@ -109,7 +130,10 @@
     "home_pitcher": "Nick Lodolo",
     "away_pitcher": "Tarik Skubal",
     "game_id": 824465,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "MIN",
@@ -123,7 +147,10 @@
     "home_pitcher": "Dean Kremer",
     "away_pitcher": "Will Warren",
     "game_id": 823656,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 3,
+    "away_score": 8
   },
   {
     "home_abbr": "STL",
@@ -137,6 +164,9 @@
     "home_pitcher": "Quinn Mathews",
     "away_pitcher": "Landen Roupp",
     "game_id": 823006,
-    "result": null
+    "result": "W",
+    "actual_winner": "STL",
+    "home_score": 2,
+    "away_score": 1
   }
 ]
