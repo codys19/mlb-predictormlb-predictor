@@ -11,7 +11,10 @@
     "home_pitcher": "Brady Singer",
     "away_pitcher": "Justin Wrobleski",
     "game_id": 824464,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 2,
+    "away_score": 8
   },
   {
     "home_abbr": "TEX",
@@ -25,7 +28,10 @@
     "home_pitcher": "Tyler Alexander",
     "away_pitcher": "Sonny Gray",
     "game_id": 822845,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "PIT",
@@ -39,7 +45,10 @@
     "home_pitcher": "Wilber Dotel",
     "away_pitcher": "Kyle Harrison",
     "game_id": 823334,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 7,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -53,7 +62,10 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Jeffrey Springs",
     "game_id": 822924,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 10,
+    "away_score": 1
   },
   {
     "home_abbr": "COL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Tanner Gordon",
     "away_pitcher": "Michael King",
     "game_id": 824305,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 2,
+    "away_score": 9
   },
   {
     "home_abbr": "CHW",
@@ -81,7 +96,10 @@
     "home_pitcher": "Erick Fedde",
     "away_pitcher": "Framber Valdez",
     "game_id": 824548,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 3,
+    "away_score": 1
   },
   {
     "home_abbr": "LAA",
@@ -95,7 +113,10 @@
     "home_pitcher": "Walbert Ure\u00f1a",
     "away_pitcher": "Taj Bradley",
     "game_id": 823978,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAA",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "NYM",
@@ -109,7 +130,10 @@
     "home_pitcher": "Nolan McLean",
     "away_pitcher": "Aaron Nola",
     "game_id": 823573,
-    "result": null
+    "result": "W",
+    "actual_winner": "PHI",
+    "home_score": 0,
+    "away_score": 3
   },
   {
     "home_abbr": "HOU",
@@ -123,6 +147,9 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Seth Lugo",
     "game_id": 824141,
-    "result": null
+    "result": "W",
+    "actual_winner": "HOU",
+    "home_score": 6,
+    "away_score": 2
   }
 ]

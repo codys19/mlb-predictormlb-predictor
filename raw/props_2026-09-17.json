@@ -13,7 +13,8 @@
     "over_odds": 140,
     "under_odds": -190,
     "game_id": 822924,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Tanner Gordon",
@@ -29,7 +30,8 @@
     "over_odds": -116,
     "under_odds": -110,
     "game_id": 824305,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Nolan McLean",
@@ -45,7 +47,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 823573,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Seth Lugo",
@@ -61,7 +64,8 @@
     "over_odds": 132,
     "under_odds": -170,
     "game_id": 824141,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Framber Valdez",
@@ -77,7 +81,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824548,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Erick Fedde",
@@ -93,7 +98,8 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 824548,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Taj Bradley",
@@ -109,7 +115,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823978,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Michael King",
@@ -125,7 +132,8 @@
     "over_odds": 104,
     "under_odds": -133,
     "game_id": 824305,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Aaron Nola",
@@ -141,7 +149,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 823573,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Sonny Gray",
@@ -157,6 +166,7 @@
     "over_odds": -120,
     "under_odds": -106,
     "game_id": 822845,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   }
 ]
