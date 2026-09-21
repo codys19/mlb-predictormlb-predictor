@@ -1,0 +1,44 @@
+[
+  {
+    "home_abbr": "SFG",
+    "away_abbr": "MIN",
+    "home_name": "San Francisco Giants",
+    "away_name": "Minnesota Twins",
+    "pick_abbr": "MIN",
+    "pick": "Minnesota Twins",
+    "confidence": 0.6633015976116163,
+    "pick_odds": -132,
+    "home_pitcher": "Blade Tidwell",
+    "away_pitcher": "Zebby Matthews",
+    "game_id": 823169,
+    "result": null
+  },
+  {
+    "home_abbr": "BAL",
+    "away_abbr": "TOR",
+    "home_name": "Baltimore Orioles",
+    "away_name": "Toronto Blue Jays",
+    "pick_abbr": "BAL",
+    "pick": "Baltimore Orioles",
+    "confidence": 0.6405241996127424,
+    "pick_odds": -120,
+    "home_pitcher": "Shane Baz",
+    "away_pitcher": "Trey Yesavage",
+    "game_id": 824787,
+    "result": null
+  },
+  {
+    "home_abbr": "DET",
+    "away_abbr": "WSN",
+    "home_name": "Detroit Tigers",
+    "away_name": "Washington Nationals",
+    "pick_abbr": "DET",
+    "pick": "Detroit Tigers",
+    "confidence": 0.6304966100379922,
+    "pick_odds": -159,
+    "home_pitcher": "River Ryan",
+    "away_pitcher": "DJ Herz",
+    "game_id": 824221,
+    "result": null
+  }
+]
