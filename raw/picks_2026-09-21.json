@@ -11,7 +11,10 @@
     "home_pitcher": "Blade Tidwell",
     "away_pitcher": "Zebby Matthews",
     "game_id": 823169,
-    "result": null
+    "result": "L",
+    "actual_winner": "SFG",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "BAL",
@@ -25,7 +28,10 @@
     "home_pitcher": "Shane Baz",
     "away_pitcher": "Trey Yesavage",
     "game_id": 824787,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 4,
+    "away_score": 3
   },
   {
     "home_abbr": "DET",
@@ -39,6 +45,9 @@
     "home_pitcher": "River Ryan",
     "away_pitcher": "DJ Herz",
     "game_id": 824221,
-    "result": null
+    "result": "W",
+    "actual_winner": "DET",
+    "home_score": 9,
+    "away_score": 2
   }
 ]
