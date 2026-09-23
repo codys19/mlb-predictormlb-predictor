@@ -11,7 +11,10 @@
     "home_pitcher": "Jared Jones",
     "away_pitcher": "Andre Pallante",
     "game_id": 823328,
-    "result": null
+    "result": "W",
+    "actual_winner": "PIT",
+    "home_score": 2,
+    "away_score": 0
   },
   {
     "home_abbr": "BAL",
@@ -25,7 +28,7 @@
     "home_pitcher": "Chris Bassitt",
     "away_pitcher": "Max Scherzer",
     "game_id": 824785,
-    "result": null
+    "result": "no_result"
   },
   {
     "home_abbr": "COL",
@@ -39,7 +42,10 @@
     "home_pitcher": "Kyle Freeland",
     "away_pitcher": "Michael Soroka",
     "game_id": 824302,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "BOS",
@@ -53,7 +59,10 @@
     "home_pitcher": "Payton Tolle",
     "away_pitcher": "Parker Messick",
     "game_id": 824709,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "SEA",
@@ -67,7 +76,10 @@
     "home_pitcher": "Logan Gilbert",
     "away_pitcher": "Cristian Javier",
     "game_id": 823089,
-    "result": null
+    "result": "L",
+    "actual_winner": "HOU",
+    "home_score": 0,
+    "away_score": 7
   },
   {
     "home_abbr": "DET",
@@ -81,7 +93,10 @@
     "home_pitcher": "Drew Anderson",
     "away_pitcher": "Riley Cornelio",
     "game_id": 824222,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 1,
+    "away_score": 3
   },
   {
     "home_abbr": "ATL",
@@ -95,7 +110,10 @@
     "home_pitcher": "JR Ritchie",
     "away_pitcher": "Brandon Williamson",
     "game_id": 824867,
-    "result": null
+    "result": "L",
+    "actual_winner": "CIN",
+    "home_score": 0,
+    "away_score": 4
   },
   {
     "home_abbr": "TEX",
@@ -109,7 +127,10 @@
     "home_pitcher": "MacKenzie Gore",
     "away_pitcher": "Sean Manaea",
     "game_id": 822840,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYM",
+    "home_score": 3,
+    "away_score": 6
   },
   {
     "home_abbr": "LAD",
@@ -123,7 +144,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "Michael King",
     "game_id": 823897,
-    "result": null
+    "result": "L",
+    "actual_winner": "LAD",
+    "home_score": 7,
+    "away_score": 0
   },
   {
     "home_abbr": "ATH",
@@ -137,7 +161,10 @@
     "home_pitcher": "Brady Basso",
     "away_pitcher": "Yusei Kikuchi",
     "game_id": 824953,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 9,
+    "away_score": 7
   },
   {
     "home_abbr": "CHC",
@@ -151,7 +178,10 @@
     "home_pitcher": "Shota Imanaga",
     "away_pitcher": "Janson Junk",
     "game_id": 824624,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIA",
+    "home_score": 2,
+    "away_score": 8
   },
   {
     "home_abbr": "SFG",
@@ -165,7 +195,10 @@
     "home_pitcher": "Anthony Molina",
     "away_pitcher": "Taj Bradley",
     "game_id": 823166,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "NYY",
@@ -179,7 +212,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 823543,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "NYY",
@@ -193,7 +229,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 823494,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 1,
+    "away_score": 6
   },
   {
     "home_abbr": "PHI",
@@ -207,7 +246,10 @@
     "home_pitcher": "Zack Wheeler",
     "away_pitcher": "Dustin May",
     "game_id": 823412,
-    "result": null
+    "result": "L",
+    "actual_winner": "PHI",
+    "home_score": 6,
+    "away_score": 4
   },
   {
     "home_abbr": "KCR",
@@ -221,6 +263,9 @@
     "home_pitcher": "Daniel Lynch IV",
     "away_pitcher": "Anthony Kay",
     "game_id": 824061,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHW",
+    "home_score": 11,
+    "away_score": 14
   }
 ]
