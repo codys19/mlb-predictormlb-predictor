@@ -11,7 +11,10 @@
     "home_pitcher": "Lake Bachar",
     "away_pitcher": "Matthew Liberatore",
     "game_id": 823327,
-    "result": null
+    "result": "L",
+    "actual_winner": "STL",
+    "home_score": 1,
+    "away_score": 5
   },
   {
     "home_abbr": "DET",
@@ -25,7 +28,10 @@
     "home_pitcher": "Framber Valdez",
     "away_pitcher": "Richard Lovelady",
     "game_id": 824223,
-    "result": null
+    "result": "L",
+    "actual_winner": "WSN",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "BAL",
@@ -39,7 +45,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "TBD",
     "game_id": 824785,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "BAL",
@@ -53,7 +62,10 @@
     "home_pitcher": "TBD",
     "away_pitcher": "TBD",
     "game_id": 824784,
-    "result": null
+    "result": "W",
+    "actual_winner": "BAL",
+    "home_score": 4,
+    "away_score": 2
   },
   {
     "home_abbr": "ATL",
@@ -67,7 +79,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Andrew Abbott",
     "game_id": 824868,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 3,
+    "away_score": 2
   },
   {
     "home_abbr": "KCR",
@@ -81,7 +96,10 @@
     "home_pitcher": "Seth Lugo",
     "away_pitcher": "Bryan Hudson",
     "game_id": 824060,
-    "result": null
+    "result": "L",
+    "actual_winner": "KCR",
+    "home_score": 5,
+    "away_score": 4
   },
   {
     "home_abbr": "BOS",
@@ -95,7 +113,10 @@
     "home_pitcher": "Sonny Gray",
     "away_pitcher": "Foster Griffin",
     "game_id": 824710,
-    "result": null
+    "result": "L",
+    "actual_winner": "BOS",
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "home_abbr": "COL",
@@ -109,7 +130,10 @@
     "home_pitcher": "Mason Adams",
     "away_pitcher": "Merrill Kelly",
     "game_id": 824301,
-    "result": null
+    "result": "W",
+    "actual_winner": "ARI",
+    "home_score": 3,
+    "away_score": 5
   },
   {
     "home_abbr": "SEA",
@@ -123,7 +147,10 @@
     "home_pitcher": "George Kirby",
     "away_pitcher": "Ethan Pecko",
     "game_id": 823086,
-    "result": null
+    "result": "W",
+    "actual_winner": "SEA",
+    "home_score": 6,
+    "away_score": 5
   },
   {
     "home_abbr": "LAD",
@@ -137,7 +164,10 @@
     "home_pitcher": "Yoshinobu Yamamoto",
     "away_pitcher": "Robbie Ray",
     "game_id": 823894,
-    "result": null
+    "result": "L",
+    "actual_winner": "SDP",
+    "home_score": 1,
+    "away_score": 5
   },
   {
     "home_abbr": "PHI",
@@ -151,7 +181,10 @@
     "home_pitcher": "Aaron Nola",
     "away_pitcher": "Logan Henderson",
     "game_id": 823410,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "ATH",
@@ -165,7 +198,10 @@
     "home_pitcher": "Jeffrey Springs",
     "away_pitcher": "Walbert Ure\u00f1a",
     "game_id": 824951,
-    "result": null
+    "result": "L",
+    "actual_winner": "ATH",
+    "home_score": 7,
+    "away_score": 3
   },
   {
     "home_abbr": "TEX",
@@ -179,7 +215,10 @@
     "home_pitcher": "Cody Bradford",
     "away_pitcher": "Nolan McLean",
     "game_id": 822841,
-    "result": null
+    "result": "L",
+    "actual_winner": "NYM",
+    "home_score": 2,
+    "away_score": 7
   },
   {
     "home_abbr": "NYY",
@@ -193,7 +232,10 @@
     "home_pitcher": "Gerrit Cole",
     "away_pitcher": "Mason Englert",
     "game_id": 823492,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 9,
+    "away_score": 2
   },
   {
     "home_abbr": "SFG",
@@ -207,7 +249,10 @@
     "home_pitcher": "Cesar Perdomo",
     "away_pitcher": "Connor Prielipp",
     "game_id": 823168,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIN",
+    "home_score": 2,
+    "away_score": 4
   },
   {
     "home_abbr": "CHC",
@@ -221,6 +266,9 @@
     "home_pitcher": "Kevin Gausman",
     "away_pitcher": "Ryan Gusto",
     "game_id": 824625,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIA",
+    "home_score": 2,
+    "away_score": 3
   }
 ]
