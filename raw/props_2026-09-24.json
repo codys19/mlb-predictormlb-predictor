@@ -13,7 +13,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 824059,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Tanner Gordon",
@@ -29,7 +30,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 824298,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Andrew Painter",
@@ -45,7 +47,8 @@
     "over_odds": -162,
     "under_odds": 126,
     "game_id": 823411,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Ranger Suarez",
@@ -61,7 +64,8 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 824707,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Cam Schlittler",
@@ -77,7 +81,8 @@
     "over_odds": 114,
     "under_odds": -146,
     "game_id": 823493,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Brady Singer",
@@ -93,7 +98,8 @@
     "over_odds": -128,
     "under_odds": 100,
     "game_id": 824866,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Tyler Mahle",
@@ -109,7 +115,8 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 824866,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Grayson Rodriguez",
@@ -125,7 +132,8 @@
     "over_odds": -148,
     "under_odds": 118,
     "game_id": 823087,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Bryan Woo",
@@ -141,7 +149,8 @@
     "over_odds": -138,
     "under_odds": 108,
     "game_id": 823087,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Tyler Glasnow",
@@ -157,7 +166,8 @@
     "over_odds": -140,
     "under_odds": 110,
     "game_id": 823895,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Nick Pivetta",
@@ -173,7 +183,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 823895,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Tyler Phillips",
@@ -189,7 +200,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824623,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Matthew Boyd",
@@ -205,7 +217,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 824623,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Zach Thornton",
@@ -221,7 +234,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 822842,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Kumar Rocker",
@@ -237,7 +251,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 822842,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Eduardo Rodriguez",
@@ -253,7 +268,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 824298,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Ian Seymour",
@@ -269,7 +285,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823493,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Randy Dobnak",
@@ -285,7 +302,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 824059,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Peter Lambert",
@@ -301,6 +319,7 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 824950,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   }
 ]
