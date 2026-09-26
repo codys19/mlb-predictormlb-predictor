@@ -13,7 +13,8 @@
     "over_odds": 124,
     "under_odds": -158,
     "game_id": 824220,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Bubba Chandler",
@@ -29,7 +30,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 824220,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Freddy Peralta",
@@ -45,7 +47,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823409,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Nick Lodolo",
@@ -61,7 +64,8 @@
     "over_odds": 124,
     "under_odds": -160,
     "game_id": 822760,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Sean Burke",
@@ -77,7 +81,8 @@
     "over_odds": -157,
     "under_odds": 123,
     "game_id": 824544,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Tomoyuki Sugano",
@@ -93,7 +98,8 @@
     "over_odds": -102,
     "under_odds": -126,
     "game_id": 824544,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Robert Gasser",
@@ -109,7 +115,8 @@
     "over_odds": -160,
     "under_odds": 124,
     "game_id": 823735,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Joe Ryan",
@@ -125,7 +132,8 @@
     "over_odds": 126,
     "under_odds": -162,
     "game_id": 823652,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Brandon Pfaadt",
@@ -141,7 +149,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 823248,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Jacob Lopez",
@@ -157,7 +166,8 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 824947,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Bryce Miller",
@@ -173,7 +183,8 @@
     "over_odds": 118,
     "under_odds": -150,
     "game_id": 823085,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Noah Cameron",
@@ -189,7 +200,8 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 824058,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jacob deGrom",
@@ -205,7 +217,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 823652,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Reid Detmers",
@@ -221,7 +234,8 @@
     "over_odds": -111,
     "under_odds": -115,
     "game_id": 823085,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Andrew Alvarez",
@@ -237,7 +251,8 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 822681,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Gavin Williams",
@@ -253,7 +268,8 @@
     "over_odds": -132,
     "under_odds": 104,
     "game_id": 824058,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Michael McGreevy",
@@ -269,7 +285,8 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 823735,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Hunter Brown",
@@ -285,6 +302,7 @@
     "over_odds": -108,
     "under_odds": -118,
     "game_id": 824947,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]
