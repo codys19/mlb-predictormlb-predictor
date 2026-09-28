@@ -13,7 +13,8 @@
     "over_odds": -103,
     "under_odds": -124,
     "game_id": 822679,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Nick Martinez",
@@ -29,7 +30,8 @@
     "over_odds": -119,
     "under_odds": -107,
     "game_id": 823408,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Max Scherzer",
@@ -45,7 +47,8 @@
     "over_odds": 134,
     "under_odds": -172,
     "game_id": 822761,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "JR Ritchie",
@@ -61,7 +64,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 823814,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Janson Junk",
@@ -77,7 +81,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 823814,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Anthony Kay",
@@ -93,7 +98,8 @@
     "over_odds": -103,
     "under_odds": -123,
     "game_id": 824542,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "River Ryan",
@@ -109,7 +115,8 @@
     "over_odds": -107,
     "under_odds": -119,
     "game_id": 824217,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Logan Gilbert",
@@ -125,7 +132,8 @@
     "over_odds": 113,
     "under_odds": -144,
     "game_id": 823084,
-    "result": null
+    "result": "L",
+    "actual_k": 8
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -141,7 +149,8 @@
     "over_odds": 107,
     "under_odds": -137,
     "game_id": 823731,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Michael Soroka",
@@ -157,7 +166,8 @@
     "over_odds": 109,
     "under_odds": -139,
     "game_id": 823246,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Parker Messick",
@@ -173,7 +183,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 824055,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "MacKenzie Gore",
@@ -189,7 +200,8 @@
     "over_odds": -164,
     "under_odds": 128,
     "game_id": 823650,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Shane Baz",
@@ -205,7 +217,7 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 823490,
-    "result": null
+    "result": "no_result"
   },
   {
     "pitcher": "Yusei Kikuchi",
@@ -221,7 +233,8 @@
     "over_odds": 113,
     "under_odds": -144,
     "game_id": 823084,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Andre Pallante",
@@ -237,7 +250,8 @@
     "over_odds": -135,
     "under_odds": 106,
     "game_id": 823731,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Sean Manaea",
@@ -253,7 +267,8 @@
     "over_odds": -109,
     "under_odds": -116,
     "game_id": 822679,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Jared Jones",
@@ -269,7 +284,8 @@
     "over_odds": -132,
     "under_odds": 103,
     "game_id": 824217,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Shota Imanaga",
@@ -285,7 +301,8 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 824705,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   },
   {
     "pitcher": "Zack Wheeler",
@@ -301,7 +318,8 @@
     "over_odds": 103,
     "under_odds": -131,
     "game_id": 823408,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Dean Kremer",
@@ -317,7 +335,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 823650,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Kyle Freeland",
@@ -333,6 +352,7 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 824542,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   }
 ]
