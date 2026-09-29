@@ -1,0 +1,58 @@
+[
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "PHI",
+    "home_name": "Atlanta Braves",
+    "away_name": "Philadelphia Phillies",
+    "pick_abbr": "ATL",
+    "pick": "Atlanta Braves",
+    "confidence": 0.6139888342576212,
+    "pick_odds": -223,
+    "home_pitcher": "Chris Sale",
+    "away_pitcher": "Jes\u00fas Luzardo",
+    "game_id": 849845,
+    "result": null
+  },
+  {
+    "home_abbr": "NYY",
+    "away_abbr": "BOS",
+    "home_name": "New York Yankees",
+    "away_name": "Boston Red Sox",
+    "pick_abbr": "NYY",
+    "pick": "New York Yankees",
+    "confidence": 0.5988466895501962,
+    "pick_odds": -136,
+    "home_pitcher": "Cam Schlittler",
+    "away_pitcher": "Payton Tolle",
+    "game_id": 849851,
+    "result": null
+  },
+  {
+    "home_abbr": "HOU",
+    "away_abbr": "CHW",
+    "home_name": "Houston Astros",
+    "away_name": "Chicago White Sox",
+    "pick_abbr": "CHW",
+    "pick": "Chicago White Sox",
+    "confidence": 0.593769005063955,
+    "pick_odds": 104,
+    "home_pitcher": "AJ Blubaugh",
+    "away_pitcher": "Hagen Smith",
+    "game_id": 849849,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "CHC",
+    "home_name": "San Diego Padres",
+    "away_name": "Chicago Cubs",
+    "pick_abbr": "SDP",
+    "pick": "San Diego Padres",
+    "confidence": 0.5828343475793863,
+    "pick_odds": -125,
+    "home_pitcher": "Michael King",
+    "away_pitcher": "Matthew Boyd",
+    "game_id": 849843,
+    "result": null
+  }
+]

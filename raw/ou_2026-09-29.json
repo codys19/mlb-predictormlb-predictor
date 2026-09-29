@@ -1,0 +1,62 @@
+[
+  {
+    "home_abbr": "HOU",
+    "away_abbr": "CHW",
+    "home_name": "Houston Astros",
+    "away_name": "Chicago White Sox",
+    "pick": "Over",
+    "line": 8.0,
+    "confidence": 0.8,
+    "pick_odds": -45,
+    "over_odds": -45,
+    "under_odds": -108,
+    "proj_total": 10.9,
+    "game_id": 849849,
+    "result": null
+  },
+  {
+    "home_abbr": "NYY",
+    "away_abbr": "BOS",
+    "home_name": "New York Yankees",
+    "away_name": "Boston Red Sox",
+    "pick": "Over",
+    "line": 6.0,
+    "confidence": 0.8,
+    "pick_odds": -43,
+    "over_odds": -43,
+    "under_odds": -43,
+    "proj_total": 8.1,
+    "game_id": 849851,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "CHC",
+    "home_name": "San Diego Padres",
+    "away_name": "Chicago Cubs",
+    "pick": "Over",
+    "line": 7.5,
+    "confidence": 0.8,
+    "pick_odds": -33,
+    "over_odds": -33,
+    "under_odds": -120,
+    "proj_total": 8.4,
+    "game_id": 849843,
+    "result": null
+  },
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "PHI",
+    "home_name": "Atlanta Braves",
+    "away_name": "Philadelphia Phillies",
+    "pick": "Over",
+    "line": 6.5,
+    "confidence": 0.733,
+    "pick_odds": -137,
+    "over_odds": -137,
+    "under_odds": 105,
+    "proj_total": 7.2,
+    "game_id": 849845,
+    "result": null
+  }
+]
