@@ -1,0 +1,58 @@
+[
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "PHI",
+    "home_name": "Atlanta Braves",
+    "away_name": "Philadelphia Phillies",
+    "pick_abbr": "ATL",
+    "pick": "Atlanta Braves",
+    "confidence": 0.633084139506228,
+    "pick_odds": -138,
+    "home_pitcher": "Tyler Mahle",
+    "away_pitcher": "Cristopher S\u00e1nchez",
+    "game_id": 849841,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "CHC",
+    "home_name": "San Diego Padres",
+    "away_name": "Chicago Cubs",
+    "pick_abbr": "SDP",
+    "pick": "San Diego Padres",
+    "confidence": 0.5569304187866388,
+    "pick_odds": -144,
+    "home_pitcher": "Nick Pivetta",
+    "away_pitcher": "Kevin Gausman",
+    "game_id": 849842,
+    "result": null
+  },
+  {
+    "home_abbr": "NYY",
+    "away_abbr": "BOS",
+    "home_name": "New York Yankees",
+    "away_name": "Boston Red Sox",
+    "pick_abbr": "NYY",
+    "pick": "New York Yankees",
+    "confidence": 0.5501103758091465,
+    "pick_odds": -138,
+    "home_pitcher": "Max Fried",
+    "away_pitcher": "Sonny Gray",
+    "game_id": 849848,
+    "result": null
+  },
+  {
+    "home_abbr": "HOU",
+    "away_abbr": "CHW",
+    "home_name": "Houston Astros",
+    "away_name": "Chicago White Sox",
+    "pick_abbr": "CHW",
+    "pick": "Chicago White Sox",
+    "confidence": 0.5309871784970314,
+    "pick_odds": 127,
+    "home_pitcher": "Hunter Brown",
+    "away_pitcher": "Sean Burke",
+    "game_id": 849846,
+    "result": null
+  }
+]

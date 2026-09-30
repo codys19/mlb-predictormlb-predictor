@@ -11,7 +11,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Jes\u00fas Luzardo",
     "game_id": 849845,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "home_abbr": "NYY",
@@ -25,7 +28,10 @@
     "home_pitcher": "Cam Schlittler",
     "away_pitcher": "Payton Tolle",
     "game_id": 849851,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 9,
+    "away_score": 0
   },
   {
     "home_abbr": "HOU",
@@ -39,7 +45,10 @@
     "home_pitcher": "AJ Blubaugh",
     "away_pitcher": "Hagen Smith",
     "game_id": 849849,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 3,
+    "away_score": 6
   },
   {
     "home_abbr": "SDP",
@@ -53,6 +62,9 @@
     "home_pitcher": "Michael King",
     "away_pitcher": "Matthew Boyd",
     "game_id": 849843,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 8,
+    "away_score": 0
   }
 ]

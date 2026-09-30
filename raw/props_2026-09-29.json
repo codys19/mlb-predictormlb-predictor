@@ -13,7 +13,8 @@
     "over_odds": 105,
     "under_odds": -145,
     "game_id": 849845,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Cam Schlittler",
@@ -29,7 +30,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 849851,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Payton Tolle",
@@ -45,7 +47,8 @@
     "over_odds": -150,
     "under_odds": 117,
     "game_id": 849851,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Matthew Boyd",
@@ -61,7 +64,8 @@
     "over_odds": -108,
     "under_odds": -118,
     "game_id": 849843,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Michael King",
@@ -77,6 +81,7 @@
     "over_odds": 102,
     "under_odds": -130,
     "game_id": 849843,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   }
 ]
