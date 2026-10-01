@@ -12,7 +12,8 @@
     "under_odds": -113,
     "proj_total": 10.9,
     "game_id": 849846,
-    "result": null
+    "result": "W",
+    "actual_total": 10
   },
   {
     "home_abbr": "NYY",
@@ -27,7 +28,8 @@
     "under_odds": 100,
     "proj_total": 8.1,
     "game_id": 849848,
-    "result": null
+    "result": "W",
+    "actual_total": 11
   },
   {
     "home_abbr": "SDP",
@@ -42,7 +44,8 @@
     "under_odds": -46,
     "proj_total": 8.4,
     "game_id": 849842,
-    "result": null
+    "result": "L",
+    "actual_total": 5
   },
   {
     "home_abbr": "ATL",
@@ -57,6 +60,7 @@
     "under_odds": 33,
     "proj_total": 7.2,
     "game_id": 849841,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   }
 ]

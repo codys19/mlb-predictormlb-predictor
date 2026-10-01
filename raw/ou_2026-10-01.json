@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "PHI",
+    "home_name": "Atlanta Braves",
+    "away_name": "Philadelphia Phillies",
+    "pick": "Under",
+    "line": 7.5,
+    "confidence": 0.6,
+    "pick_odds": -118,
+    "over_odds": -35,
+    "under_odds": -118,
+    "proj_total": 7.2,
+    "game_id": 849844,
+    "result": null
+  }
+]

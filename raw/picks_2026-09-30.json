@@ -11,7 +11,10 @@
     "home_pitcher": "Tyler Mahle",
     "away_pitcher": "Cristopher S\u00e1nchez",
     "game_id": 849841,
-    "result": null
+    "result": "L",
+    "actual_winner": "PHI",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "SDP",
@@ -25,7 +28,10 @@
     "home_pitcher": "Nick Pivetta",
     "away_pitcher": "Kevin Gausman",
     "game_id": 849842,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "home_abbr": "NYY",
@@ -39,7 +45,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Sonny Gray",
     "game_id": 849848,
-    "result": null
+    "result": "W",
+    "actual_winner": "NYY",
+    "home_score": 9,
+    "away_score": 2
   },
   {
     "home_abbr": "HOU",
@@ -53,6 +62,9 @@
     "home_pitcher": "Hunter Brown",
     "away_pitcher": "Sean Burke",
     "game_id": 849846,
-    "result": null
+    "result": "W",
+    "actual_winner": "CHW",
+    "home_score": 3,
+    "away_score": 7
   }
 ]

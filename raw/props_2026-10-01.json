@@ -1,0 +1,18 @@
+[
+  {
+    "pitcher": "Aaron Nola",
+    "team_abbr": "PHI",
+    "home_abbr": "ATL",
+    "away_abbr": "PHI",
+    "pick": "Over",
+    "line": 3.5,
+    "confidence": 0.78,
+    "proj_k": 5.3,
+    "k_per_9": 9.3,
+    "pick_odds": -128,
+    "over_odds": -128,
+    "under_odds": 100,
+    "game_id": 849844,
+    "result": null
+  }
+]

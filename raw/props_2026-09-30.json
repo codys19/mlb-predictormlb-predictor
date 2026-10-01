@@ -13,7 +13,8 @@
     "over_odds": 103,
     "under_odds": -131,
     "game_id": 849846,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Sean Burke",
@@ -29,7 +30,8 @@
     "over_odds": -156,
     "under_odds": 122,
     "game_id": 849846,
-    "result": null
+    "result": "W",
+    "actual_k": 8
   },
   {
     "pitcher": "Max Fried",
@@ -45,7 +47,8 @@
     "over_odds": -102,
     "under_odds": -125,
     "game_id": 849848,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   },
   {
     "pitcher": "Sonny Gray",
@@ -61,7 +64,8 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 849848,
-    "result": null
+    "result": "L",
+    "actual_k": 5
   },
   {
     "pitcher": "Kevin Gausman",
@@ -77,7 +81,8 @@
     "over_odds": 104,
     "under_odds": -132,
     "game_id": 849842,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Nick Pivetta",
@@ -93,6 +98,7 @@
     "over_odds": -122,
     "under_odds": -104,
     "game_id": 849842,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   }
 ]
