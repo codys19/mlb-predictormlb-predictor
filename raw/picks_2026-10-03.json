@@ -1,0 +1,58 @@
+[
+  {
+    "home_abbr": "LAD",
+    "away_abbr": "ATL",
+    "home_name": "Los Angeles Dodgers",
+    "away_name": "Atlanta Braves",
+    "pick_abbr": "ATL",
+    "pick": "Atlanta Braves",
+    "confidence": 0.6082860506723187,
+    "pick_odds": 181,
+    "home_pitcher": "Tarik Skubal",
+    "away_pitcher": "Dylan Dodd",
+    "game_id": 849828,
+    "result": null
+  },
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "SDP",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "San Diego Padres",
+    "pick_abbr": "MIL",
+    "pick": "Milwaukee Brewers",
+    "confidence": 0.5969334858755825,
+    "pick_odds": -216,
+    "home_pitcher": "Jacob Misiorowski",
+    "away_pitcher": "Robbie Ray",
+    "game_id": 849830,
+    "result": null
+  },
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "NYY",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "New York Yankees",
+    "pick_abbr": "NYY",
+    "pick": "New York Yankees",
+    "confidence": 0.5683447386302201,
+    "pick_odds": 113,
+    "home_pitcher": "Drew Rasmussen",
+    "away_pitcher": "Gerrit Cole",
+    "game_id": 849835,
+    "result": null
+  },
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Chicago White Sox",
+    "pick_abbr": "CHW",
+    "pick": "Chicago White Sox",
+    "confidence": 0.5306312017770509,
+    "pick_odds": 113,
+    "home_pitcher": "Parker Messick",
+    "away_pitcher": "Hagen Smith",
+    "game_id": 849829,
+    "result": null
+  }
+]
