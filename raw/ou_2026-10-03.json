@@ -12,7 +12,8 @@
     "under_odds": 21,
     "proj_total": 8.3,
     "game_id": 849829,
-    "result": null
+    "result": "L",
+    "actual_total": 3
   },
   {
     "home_abbr": "TBR",
@@ -27,7 +28,8 @@
     "under_odds": -38,
     "proj_total": 8.7,
     "game_id": 849835,
-    "result": null
+    "result": "L",
+    "actual_total": 1
   },
   {
     "home_abbr": "MIL",
@@ -42,7 +44,8 @@
     "under_odds": -36,
     "proj_total": 8.5,
     "game_id": 849830,
-    "result": null
+    "result": "L",
+    "actual_total": 5
   },
   {
     "home_abbr": "LAD",
@@ -57,6 +60,7 @@
     "under_odds": -117,
     "proj_total": 7.8,
     "game_id": 849828,
-    "result": null
+    "result": "W",
+    "actual_total": 8
   }
 ]

@@ -13,7 +13,8 @@
     "over_odds": -105,
     "under_odds": -125,
     "game_id": 849829,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Hagen Smith",
@@ -29,7 +30,8 @@
     "over_odds": -110,
     "under_odds": -120,
     "game_id": 849829,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Tarik Skubal",
@@ -45,7 +47,8 @@
     "over_odds": 120,
     "under_odds": -154,
     "game_id": 849828,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Drew Rasmussen",
@@ -61,7 +64,8 @@
     "over_odds": 112,
     "under_odds": -142,
     "game_id": 849835,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -77,7 +81,8 @@
     "over_odds": 107,
     "under_odds": -136,
     "game_id": 849830,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   },
   {
     "pitcher": "Robbie Ray",
@@ -93,7 +98,8 @@
     "over_odds": -149,
     "under_odds": 117,
     "game_id": 849830,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   },
   {
     "pitcher": "Gerrit Cole",
@@ -109,6 +115,7 @@
     "over_odds": 134,
     "under_odds": -172,
     "game_id": 849835,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   }
 ]

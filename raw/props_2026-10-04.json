@@ -1,0 +1,50 @@
+[
+  {
+    "pitcher": "Blake Snell",
+    "team_abbr": "LAD",
+    "home_abbr": "LAD",
+    "away_abbr": "ATL",
+    "pick": "Under",
+    "line": 6.5,
+    "confidence": 0.78,
+    "proj_k": 5.9,
+    "k_per_9": 10.7,
+    "pick_odds": -106,
+    "over_odds": -120,
+    "under_odds": -106,
+    "game_id": 849823,
+    "result": null
+  },
+  {
+    "pitcher": "Logan Henderson",
+    "team_abbr": "MIL",
+    "home_abbr": "MIL",
+    "away_abbr": "SDP",
+    "pick": "Under",
+    "line": 6.5,
+    "confidence": 0.6,
+    "proj_k": 6.3,
+    "k_per_9": 11.7,
+    "pick_odds": -166,
+    "over_odds": 130,
+    "under_odds": -166,
+    "game_id": 849825,
+    "result": null
+  },
+  {
+    "pitcher": "Michael King",
+    "team_abbr": "SDP",
+    "home_abbr": "MIL",
+    "away_abbr": "SDP",
+    "pick": "Under",
+    "line": 5.5,
+    "confidence": 0.55,
+    "proj_k": 5.4,
+    "k_per_9": 9.6,
+    "pick_odds": -162,
+    "over_odds": 126,
+    "under_odds": -162,
+    "game_id": 849825,
+    "result": null
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "home_abbr": "LAD",
+    "away_abbr": "ATL",
+    "home_name": "Los Angeles Dodgers",
+    "away_name": "Atlanta Braves",
+    "pick_abbr": "ATL",
+    "pick": "Atlanta Braves",
+    "confidence": 0.5356803108998923,
+    "pick_odds": 129,
+    "home_pitcher": "Blake Snell",
+    "away_pitcher": "TBD",
+    "game_id": 849823,
+    "result": null
+  },
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "SDP",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "San Diego Padres",
+    "pick_abbr": "MIL",
+    "pick": "Milwaukee Brewers",
+    "confidence": 0.5344308500208912,
+    "pick_odds": -135,
+    "home_pitcher": "Logan Henderson",
+    "away_pitcher": "Michael King",
+    "game_id": 849825,
+    "result": null
+  }
+]
