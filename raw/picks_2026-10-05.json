@@ -1,0 +1,30 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "NYY",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "New York Yankees",
+    "pick_abbr": "NYY",
+    "pick": "New York Yankees",
+    "confidence": 0.6340585367768091,
+    "pick_odds": -123,
+    "home_pitcher": "Freddy Peralta",
+    "away_pitcher": "Cam Schlittler",
+    "game_id": 849839,
+    "result": null
+  },
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Chicago White Sox",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.502849157769668,
+    "pick_odds": -808,
+    "home_pitcher": "Gavin Williams",
+    "away_pitcher": "Anthony Kay",
+    "game_id": 849834,
+    "result": null
+  }
+]

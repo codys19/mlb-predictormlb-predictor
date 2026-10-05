@@ -1,0 +1,32 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "NYY",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "New York Yankees",
+    "pick": "Over",
+    "line": 6.5,
+    "confidence": 0.8,
+    "pick_odds": -116,
+    "over_odds": -116,
+    "under_odds": -104,
+    "proj_total": 8.7,
+    "game_id": 849839,
+    "result": null
+  },
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Chicago White Sox",
+    "pick": "Under",
+    "line": 9.0,
+    "confidence": 0.733,
+    "pick_odds": -132,
+    "over_odds": 34,
+    "under_odds": -132,
+    "proj_total": 8.3,
+    "game_id": 849834,
+    "result": null
+  }
+]

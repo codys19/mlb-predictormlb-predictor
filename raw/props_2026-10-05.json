@@ -1,0 +1,50 @@
+[
+  {
+    "pitcher": "Gavin Williams",
+    "team_abbr": "CLE",
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "pick": "Under",
+    "line": 7.5,
+    "confidence": 0.78,
+    "proj_k": 5.4,
+    "k_per_9": 9.4,
+    "pick_odds": 100,
+    "over_odds": -135,
+    "under_odds": 100,
+    "game_id": 849834,
+    "result": null
+  },
+  {
+    "pitcher": "Cam Schlittler",
+    "team_abbr": "NYY",
+    "home_abbr": "TBR",
+    "away_abbr": "NYY",
+    "pick": "Under",
+    "line": 6.5,
+    "confidence": 0.78,
+    "proj_k": 5.7,
+    "k_per_9": 10.1,
+    "pick_odds": -102,
+    "over_odds": -125,
+    "under_odds": -102,
+    "game_id": 849839,
+    "result": null
+  },
+  {
+    "pitcher": "Freddy Peralta",
+    "team_abbr": "TBR",
+    "home_abbr": "TBR",
+    "away_abbr": "NYY",
+    "pick": "Over",
+    "line": 4.5,
+    "confidence": 0.78,
+    "proj_k": 6.4,
+    "k_per_9": 10.5,
+    "pick_odds": -158,
+    "over_odds": -158,
+    "under_odds": 124,
+    "game_id": 849839,
+    "result": null
+  }
+]

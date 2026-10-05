@@ -11,7 +11,10 @@
     "home_pitcher": "Blake Snell",
     "away_pitcher": "TBD",
     "game_id": 849823,
-    "result": null
+    "result": "W",
+    "actual_winner": "ATL",
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "home_abbr": "MIL",
@@ -25,6 +28,9 @@
     "home_pitcher": "Logan Henderson",
     "away_pitcher": "Michael King",
     "game_id": 849825,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 4,
+    "away_score": 3
   }
 ]
