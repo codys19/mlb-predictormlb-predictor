@@ -13,7 +13,8 @@
     "over_odds": -135,
     "under_odds": 100,
     "game_id": 849834,
-    "result": null
+    "result": "L",
+    "actual_k": 11
   },
   {
     "pitcher": "Cam Schlittler",
@@ -29,7 +30,8 @@
     "over_odds": -125,
     "under_odds": -102,
     "game_id": 849839,
-    "result": null
+    "result": "W",
+    "actual_k": 2
   },
   {
     "pitcher": "Freddy Peralta",
@@ -45,6 +47,7 @@
     "over_odds": -158,
     "under_odds": 124,
     "game_id": 849839,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "LAD",
+    "home_name": "Atlanta Braves",
+    "away_name": "Los Angeles Dodgers",
+    "pick": "Over",
+    "line": 6.5,
+    "confidence": 0.8,
+    "pick_odds": -111,
+    "over_odds": -111,
+    "under_odds": -108,
+    "proj_total": 7.8,
+    "game_id": 849819,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "MIL",
+    "home_name": "San Diego Padres",
+    "away_name": "Milwaukee Brewers",
+    "pick": "Over",
+    "line": 7.5,
+    "confidence": 0.8,
+    "pick_odds": -105,
+    "over_odds": -105,
+    "under_odds": -115,
+    "proj_total": 8.5,
+    "game_id": 849826,
+    "result": null
+  }
+]

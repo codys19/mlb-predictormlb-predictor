@@ -11,7 +11,10 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "Cam Schlittler",
     "game_id": 849839,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 5,
+    "away_score": 2
   },
   {
     "home_abbr": "CLE",
@@ -25,6 +28,9 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Anthony Kay",
     "game_id": 849834,
-    "result": null
+    "result": "L",
+    "actual_winner": "CHW",
+    "home_score": 3,
+    "away_score": 4
   }
 ]

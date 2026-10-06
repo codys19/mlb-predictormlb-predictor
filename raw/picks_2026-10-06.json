@@ -1,0 +1,30 @@
+[
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "LAD",
+    "home_name": "Atlanta Braves",
+    "away_name": "Los Angeles Dodgers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.5518921841828838,
+    "pick_odds": -110,
+    "home_pitcher": "Chris Sale",
+    "away_pitcher": "Yoshinobu Yamamoto",
+    "game_id": 849819,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "MIL",
+    "home_name": "San Diego Padres",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "SDP",
+    "pick": "San Diego Padres",
+    "confidence": 0.5268741982567424,
+    "pick_odds": -140,
+    "home_pitcher": "Nick Pivetta",
+    "away_pitcher": "Dustin May",
+    "game_id": 849826,
+    "result": null
+  }
+]

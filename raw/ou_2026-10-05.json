@@ -12,7 +12,8 @@
     "under_odds": -104,
     "proj_total": 8.7,
     "game_id": 849839,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   },
   {
     "home_abbr": "CLE",
@@ -27,6 +28,7 @@
     "under_odds": -132,
     "proj_total": 8.3,
     "game_id": 849834,
-    "result": null
+    "result": "W",
+    "actual_total": 7
   }
 ]
