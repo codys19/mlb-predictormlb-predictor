@@ -11,7 +11,10 @@
     "home_pitcher": "Chris Sale",
     "away_pitcher": "Yoshinobu Yamamoto",
     "game_id": 849819,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 1,
+    "away_score": 3
   },
   {
     "home_abbr": "SDP",
@@ -25,6 +28,9 @@
     "home_pitcher": "Nick Pivetta",
     "away_pitcher": "Dustin May",
     "game_id": 849826,
-    "result": null
+    "result": "W",
+    "actual_winner": "SDP",
+    "home_score": 4,
+    "away_score": 3
   }
 ]

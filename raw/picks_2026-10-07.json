@@ -1,0 +1,58 @@
+[
+  {
+    "home_abbr": "NYY",
+    "away_abbr": "TBR",
+    "home_name": "New York Yankees",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "NYY",
+    "pick": "New York Yankees",
+    "confidence": 0.686686454913007,
+    "pick_odds": -168,
+    "home_pitcher": "Max Fried",
+    "away_pitcher": "Nick Martinez",
+    "game_id": 849838,
+    "result": null
+  },
+  {
+    "home_abbr": "CHW",
+    "away_abbr": "CLE",
+    "home_name": "Chicago White Sox",
+    "away_name": "Cleveland Guardians",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.6238370432992655,
+    "pick_odds": 109,
+    "home_pitcher": "Sean Newcomb",
+    "away_pitcher": "Daniel Espino",
+    "game_id": 849833,
+    "result": null
+  },
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "LAD",
+    "home_name": "Atlanta Braves",
+    "away_name": "Los Angeles Dodgers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.5468127705529183,
+    "pick_odds": -152,
+    "home_pitcher": "Tyler Mahle",
+    "away_pitcher": "Tyler Glasnow",
+    "game_id": 849822,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "MIL",
+    "home_name": "San Diego Padres",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "SDP",
+    "pick": "San Diego Padres",
+    "confidence": 0.5333564586759562,
+    "pick_odds": -110,
+    "home_pitcher": "Walker Buehler",
+    "away_pitcher": "TBD",
+    "game_id": 849827,
+    "result": null
+  }
+]

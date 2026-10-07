@@ -13,7 +13,8 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 849819,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -29,7 +30,8 @@
     "over_odds": 112,
     "under_odds": -143,
     "game_id": 849819,
-    "result": null
+    "result": "L",
+    "actual_k": 10
   },
   {
     "pitcher": "Nick Pivetta",
@@ -45,7 +47,8 @@
     "over_odds": 134,
     "under_odds": -172,
     "game_id": 849826,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   },
   {
     "pitcher": "Dustin May",
@@ -61,6 +64,7 @@
     "over_odds": -150,
     "under_odds": 118,
     "game_id": 849826,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "home_abbr": "NYY",
+    "away_abbr": "TBR",
+    "home_name": "New York Yankees",
+    "away_name": "Tampa Bay Rays",
+    "pick": "Over",
+    "line": 7.0,
+    "confidence": 0.8,
+    "pick_odds": -46,
+    "over_odds": -46,
+    "under_odds": 25,
+    "proj_total": 8.7,
+    "game_id": 849838,
+    "result": null
+  },
+  {
+    "home_abbr": "SDP",
+    "away_abbr": "MIL",
+    "home_name": "San Diego Padres",
+    "away_name": "Milwaukee Brewers",
+    "pick": "Over",
+    "line": 7.5,
+    "confidence": 0.8,
+    "pick_odds": -109,
+    "over_odds": -109,
+    "under_odds": -110,
+    "proj_total": 8.5,
+    "game_id": 849827,
+    "result": null
+  },
+  {
+    "home_abbr": "CHW",
+    "away_abbr": "CLE",
+    "home_name": "Chicago White Sox",
+    "away_name": "Cleveland Guardians",
+    "pick": "Over",
+    "line": 8.0,
+    "confidence": 0.6,
+    "pick_odds": -110,
+    "over_odds": -110,
+    "under_odds": -43,
+    "proj_total": 8.3,
+    "game_id": 849833,
+    "result": null
+  },
+  {
+    "home_abbr": "ATL",
+    "away_abbr": "LAD",
+    "home_name": "Atlanta Braves",
+    "away_name": "Los Angeles Dodgers",
+    "pick": "Over",
+    "line": 7.5,
+    "confidence": 0.6,
+    "pick_odds": -110,
+    "over_odds": -110,
+    "under_odds": -109,
+    "proj_total": 7.8,
+    "game_id": 849822,
+    "result": null
+  }
+]
