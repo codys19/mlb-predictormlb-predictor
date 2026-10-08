@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "CHW",
+    "away_abbr": "CLE",
+    "home_name": "Chicago White Sox",
+    "away_name": "Cleveland Guardians",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.6284460904022223,
+    "pick_odds": -115,
+    "home_pitcher": "Hagen Smith",
+    "away_pitcher": "Parker Messick",
+    "game_id": 849832,
+    "result": null
+  }
+]

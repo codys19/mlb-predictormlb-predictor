@@ -13,7 +13,8 @@
     "over_odds": -104,
     "under_odds": -122,
     "game_id": 849822,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Nick Martinez",
@@ -29,7 +30,8 @@
     "over_odds": 138,
     "under_odds": -178,
     "game_id": 849838,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Max Fried",
@@ -45,7 +47,8 @@
     "over_odds": -106,
     "under_odds": -120,
     "game_id": 849838,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   },
   {
     "pitcher": "Walker Buehler",
@@ -61,7 +64,8 @@
     "over_odds": -154,
     "under_odds": 120,
     "game_id": 849827,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Tyler Mahle",
@@ -77,6 +81,7 @@
     "over_odds": -168,
     "under_odds": 131,
     "game_id": 849822,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   }
 ]

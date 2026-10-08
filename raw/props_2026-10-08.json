@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Hagen Smith",
+    "team_abbr": "CHW",
+    "home_abbr": "CHW",
+    "away_abbr": "CLE",
+    "pick": "Over",
+    "line": 1.5,
+    "confidence": 0.78,
+    "proj_k": 6.0,
+    "k_per_9": 9.8,
+    "pick_odds": -174,
+    "over_odds": -174,
+    "under_odds": 136,
+    "game_id": 849832,
+    "result": null
+  },
+  {
+    "pitcher": "Parker Messick",
+    "team_abbr": "CLE",
+    "home_abbr": "CHW",
+    "away_abbr": "CLE",
+    "pick": "Under",
+    "line": 5.5,
+    "confidence": 0.7,
+    "proj_k": 5.1,
+    "k_per_9": 8.6,
+    "pick_odds": 118,
+    "over_odds": -150,
+    "under_odds": 118,
+    "game_id": 849832,
+    "result": null
+  }
+]

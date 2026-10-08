@@ -11,7 +11,10 @@
     "home_pitcher": "Max Fried",
     "away_pitcher": "Nick Martinez",
     "game_id": 849838,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 3,
+    "away_score": 4
   },
   {
     "home_abbr": "CHW",
@@ -25,7 +28,10 @@
     "home_pitcher": "Sean Newcomb",
     "away_pitcher": "Daniel Espino",
     "game_id": 849833,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 3,
+    "away_score": 9
   },
   {
     "home_abbr": "ATL",
@@ -39,7 +45,10 @@
     "home_pitcher": "Tyler Mahle",
     "away_pitcher": "Tyler Glasnow",
     "game_id": 849822,
-    "result": null
+    "result": "W",
+    "actual_winner": "LAD",
+    "home_score": 1,
+    "away_score": 4
   },
   {
     "home_abbr": "SDP",
@@ -53,6 +62,9 @@
     "home_pitcher": "Walker Buehler",
     "away_pitcher": "TBD",
     "game_id": 849827,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 1,
+    "away_score": 3
   }
 ]
