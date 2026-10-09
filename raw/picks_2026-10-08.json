@@ -11,6 +11,9 @@
     "home_pitcher": "Hagen Smith",
     "away_pitcher": "Parker Messick",
     "game_id": 849832,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 5,
+    "away_score": 9
   }
 ]

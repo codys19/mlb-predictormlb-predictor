@@ -13,7 +13,8 @@
     "over_odds": -174,
     "under_odds": 136,
     "game_id": 849832,
-    "result": null
+    "result": "L",
+    "actual_k": 0
   },
   {
     "pitcher": "Parker Messick",
@@ -29,6 +30,7 @@
     "over_odds": -150,
     "under_odds": 118,
     "game_id": 849832,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   }
 ]
