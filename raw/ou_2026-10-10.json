@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Chicago White Sox",
+    "pick": "Over",
+    "line": 7.0,
+    "confidence": 0.8,
+    "pick_odds": -47,
+    "over_odds": -47,
+    "under_odds": 22,
+    "proj_total": 8.3,
+    "game_id": 849831,
+    "result": null
+  }
+]

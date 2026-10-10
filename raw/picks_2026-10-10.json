@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "CHW",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Chicago White Sox",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.5061534852984197,
+    "pick_odds": -140,
+    "home_pitcher": "Gavin Williams",
+    "away_pitcher": "Sean Burke",
+    "game_id": 849831,
+    "result": null
+  }
+]
