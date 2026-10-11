@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Jacob Misiorowski",
+    "team_abbr": "MIL",
+    "home_abbr": "MIL",
+    "away_abbr": "LAD",
+    "pick": "Under",
+    "line": 7.5,
+    "confidence": 0.78,
+    "proj_k": 6.0,
+    "k_per_9": 11.9,
+    "pick_odds": -138,
+    "over_odds": 108,
+    "under_odds": -138,
+    "game_id": 849809,
+    "result": null
+  },
+  {
+    "pitcher": "Tarik Skubal",
+    "team_abbr": "LAD",
+    "home_abbr": "MIL",
+    "away_abbr": "LAD",
+    "pick": "Under",
+    "line": 7.5,
+    "confidence": 0.78,
+    "proj_k": 6.2,
+    "k_per_9": 11.5,
+    "pick_odds": -148,
+    "over_odds": 116,
+    "under_odds": -148,
+    "game_id": 849809,
+    "result": null
+  }
+]

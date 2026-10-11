@@ -13,7 +13,8 @@
     "over_odds": -142,
     "under_odds": 112,
     "game_id": 849831,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Gavin Williams",
@@ -29,6 +30,7 @@
     "over_odds": -136,
     "under_odds": 106,
     "game_id": 849831,
-    "result": null
+    "result": "L",
+    "actual_k": 12
   }
 ]

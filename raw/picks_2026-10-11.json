@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "LAD",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Los Angeles Dodgers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.5778143788167176,
+    "pick_odds": -112,
+    "home_pitcher": "Jacob Misiorowski",
+    "away_pitcher": "Tarik Skubal",
+    "game_id": 849809,
+    "result": null
+  }
+]

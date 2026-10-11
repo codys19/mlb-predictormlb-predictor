@@ -11,6 +11,9 @@
     "home_pitcher": "Gavin Williams",
     "away_pitcher": "Sean Burke",
     "game_id": 849831,
-    "result": null
+    "result": "W",
+    "actual_winner": "CLE",
+    "home_score": 2,
+    "away_score": 0
   }
 ]

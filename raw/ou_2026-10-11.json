@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "LAD",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Los Angeles Dodgers",
+    "pick": "Over",
+    "line": 6.0,
+    "confidence": 0.8,
+    "pick_odds": -35,
+    "over_odds": -35,
+    "under_odds": -120,
+    "proj_total": 9.2,
+    "game_id": 849809,
+    "result": null
+  }
+]
