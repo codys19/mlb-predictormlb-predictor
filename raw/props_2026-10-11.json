@@ -13,7 +13,8 @@
     "over_odds": 108,
     "under_odds": -138,
     "game_id": 849809,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Tarik Skubal",
@@ -29,6 +30,7 @@
     "over_odds": 116,
     "under_odds": -148,
     "game_id": 849809,
-    "result": null
+    "result": "W",
+    "actual_k": 7
   }
 ]

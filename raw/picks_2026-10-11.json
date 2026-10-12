@@ -11,6 +11,9 @@
     "home_pitcher": "Jacob Misiorowski",
     "away_pitcher": "Tarik Skubal",
     "game_id": 849809,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 1
   }
 ]

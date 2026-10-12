@@ -1,0 +1,30 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "LAD",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Los Angeles Dodgers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.6048816910999716,
+    "pick_odds": -205,
+    "home_pitcher": "Logan Henderson",
+    "away_pitcher": "Yoshinobu Yamamoto",
+    "game_id": 849812,
+    "result": null
+  },
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Cleveland Guardians",
+    "pick_abbr": "TBR",
+    "pick": "Tampa Bay Rays",
+    "confidence": 0.567195471650768,
+    "pick_odds": -170,
+    "home_pitcher": "Drew Rasmussen",
+    "away_pitcher": "Foster Griffin",
+    "game_id": 849820,
+    "result": null
+  }
+]
