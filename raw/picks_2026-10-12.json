@@ -11,7 +11,10 @@
     "home_pitcher": "Logan Henderson",
     "away_pitcher": "Yoshinobu Yamamoto",
     "game_id": 849812,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 7,
+    "away_score": 4
   },
   {
     "home_abbr": "TBR",
@@ -25,6 +28,9 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Foster Griffin",
     "game_id": 849820,
-    "result": null
+    "result": "L",
+    "actual_winner": "CLE",
+    "home_score": 3,
+    "away_score": 7
   }
 ]

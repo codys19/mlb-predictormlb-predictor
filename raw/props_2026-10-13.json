@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Freddy Peralta",
+    "team_abbr": "TBR",
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "pick": "Over",
+    "line": 3.5,
+    "confidence": 0.78,
+    "proj_k": 6.2,
+    "k_per_9": 10.5,
+    "pick_odds": -130,
+    "over_odds": -130,
+    "under_odds": 102,
+    "game_id": 849813,
+    "result": null
+  },
+  {
+    "pitcher": "Parker Messick",
+    "team_abbr": "CLE",
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "pick": "Over",
+    "line": 4.5,
+    "confidence": 0.78,
+    "proj_k": 5.1,
+    "k_per_9": 8.6,
+    "pick_odds": -120,
+    "over_odds": -120,
+    "under_odds": -106,
+    "game_id": 849813,
+    "result": null
+  }
+]

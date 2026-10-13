@@ -13,7 +13,8 @@
     "over_odds": 105,
     "under_odds": -140,
     "game_id": 849812,
-    "result": null
+    "result": "L",
+    "actual_k": 2
   },
   {
     "pitcher": "Foster Griffin",
@@ -29,7 +30,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 849820,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Drew Rasmussen",
@@ -45,7 +47,8 @@
     "over_odds": -115,
     "under_odds": -111,
     "game_id": 849820,
-    "result": null
+    "result": "L",
+    "actual_k": 7
   },
   {
     "pitcher": "Yoshinobu Yamamoto",
@@ -61,6 +64,7 @@
     "over_odds": 125,
     "under_odds": -165,
     "game_id": 849812,
-    "result": null
+    "result": "L",
+    "actual_k": 1
   }
 ]

@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Cleveland Guardians",
+    "pick_abbr": "TBR",
+    "pick": "Tampa Bay Rays",
+    "confidence": 0.524721518608168,
+    "pick_odds": -134,
+    "home_pitcher": "Freddy Peralta",
+    "away_pitcher": "Parker Messick",
+    "game_id": 849813,
+    "result": null
+  }
+]
