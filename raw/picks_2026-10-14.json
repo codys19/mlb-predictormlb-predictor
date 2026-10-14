@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "LAD",
+    "away_abbr": "MIL",
+    "home_name": "Los Angeles Dodgers",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.5634621602392111,
+    "pick_odds": -175,
+    "home_pitcher": "Blake Snell",
+    "away_pitcher": "Robert Gasser",
+    "game_id": 849811,
+    "result": null
+  }
+]
