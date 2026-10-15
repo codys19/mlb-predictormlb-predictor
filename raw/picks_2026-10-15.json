@@ -1,0 +1,30 @@
+[
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.6980740938264329,
+    "pick_odds": -270,
+    "home_pitcher": "Gavin Williams",
+    "away_pitcher": "Griffin Jax",
+    "game_id": 849818,
+    "result": null
+  },
+  {
+    "home_abbr": "LAD",
+    "away_abbr": "MIL",
+    "home_name": "Los Angeles Dodgers",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "LAD",
+    "pick": "Los Angeles Dodgers",
+    "confidence": 0.6292380836619598,
+    "pick_odds": -156,
+    "home_pitcher": "Tyler Glasnow",
+    "away_pitcher": "Shane Drohan",
+    "game_id": 849810,
+    "result": null
+  }
+]

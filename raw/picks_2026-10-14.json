@@ -11,6 +11,9 @@
     "home_pitcher": "Blake Snell",
     "away_pitcher": "Robert Gasser",
     "game_id": 849811,
-    "result": null
+    "result": "L",
+    "actual_winner": "MIL",
+    "home_score": 2,
+    "away_score": 6
   }
 ]

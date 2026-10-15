@@ -13,7 +13,8 @@
     "over_odds": 106,
     "under_odds": -136,
     "game_id": 849811,
-    "result": null
+    "result": "L",
+    "actual_k": 9
   },
   {
     "pitcher": "Robert Gasser",
@@ -29,6 +30,7 @@
     "over_odds": 100,
     "under_odds": -128,
     "game_id": 849811,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]

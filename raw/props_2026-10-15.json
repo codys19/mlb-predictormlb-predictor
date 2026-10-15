@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Gavin Williams",
+    "team_abbr": "CLE",
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "pick": "Under",
+    "line": 9.5,
+    "confidence": 0.78,
+    "proj_k": 5.4,
+    "k_per_9": 9.4,
+    "pick_odds": -160,
+    "over_odds": 115,
+    "under_odds": -160,
+    "game_id": 849818,
+    "result": null
+  },
+  {
+    "pitcher": "Tyler Glasnow",
+    "team_abbr": "LAD",
+    "home_abbr": "LAD",
+    "away_abbr": "MIL",
+    "pick": "Under",
+    "line": 6.5,
+    "confidence": 0.78,
+    "proj_k": 5.8,
+    "k_per_9": 10.6,
+    "pick_odds": -156,
+    "over_odds": 122,
+    "under_odds": -156,
+    "game_id": 849810,
+    "result": null
+  }
+]
