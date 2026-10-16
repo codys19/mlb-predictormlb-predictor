@@ -13,7 +13,8 @@
     "over_odds": 115,
     "under_odds": -160,
     "game_id": 849818,
-    "result": null
+    "result": "W",
+    "actual_k": 9
   },
   {
     "pitcher": "Tyler Glasnow",
@@ -29,6 +30,7 @@
     "over_odds": 122,
     "under_odds": -156,
     "game_id": 849810,
-    "result": null
+    "result": "W",
+    "actual_k": 6
   }
 ]

@@ -12,7 +12,8 @@
     "under_odds": -140,
     "proj_total": 8.0,
     "game_id": 849818,
-    "result": null
+    "result": "L",
+    "actual_total": 5
   },
   {
     "home_abbr": "LAD",
@@ -27,6 +28,7 @@
     "under_odds": -106,
     "proj_total": 9.2,
     "game_id": 849810,
-    "result": null
+    "result": "W",
+    "actual_total": 10
   }
 ]

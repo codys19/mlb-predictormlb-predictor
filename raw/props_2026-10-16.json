@@ -1,0 +1,18 @@
+[
+  {
+    "pitcher": "Nick Martinez",
+    "team_abbr": "TBR",
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "pick": "Over",
+    "line": 2.5,
+    "confidence": 0.78,
+    "proj_k": 4.6,
+    "k_per_9": 6.3,
+    "pick_odds": 118,
+    "over_odds": 118,
+    "under_odds": -150,
+    "game_id": 849817,
+    "result": null
+  }
+]

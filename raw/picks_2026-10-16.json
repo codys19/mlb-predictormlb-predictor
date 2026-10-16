@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.5166174860228923,
+    "pick_odds": -105,
+    "home_pitcher": "Shawn Armstrong",
+    "away_pitcher": "Nick Martinez",
+    "game_id": 849817,
+    "result": null
+  }
+]
