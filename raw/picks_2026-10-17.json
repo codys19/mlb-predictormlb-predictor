@@ -11,6 +11,9 @@
     "home_pitcher": "Shawn Armstrong",
     "away_pitcher": "Nick Martinez",
     "game_id": 849816,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 3,
+    "away_score": 7
   }
 ]

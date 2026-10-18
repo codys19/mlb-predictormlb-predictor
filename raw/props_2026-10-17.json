@@ -13,6 +13,7 @@
     "over_odds": 128,
     "under_odds": -164,
     "game_id": 849816,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]

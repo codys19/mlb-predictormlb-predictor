@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "home_name": "Cleveland Guardians",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.6373806260186111,
+    "pick_odds": 110,
+    "home_pitcher": "Parker Messick",
+    "away_pitcher": "Drew Rasmussen",
+    "game_id": 849817,
+    "result": null
+  }
+]

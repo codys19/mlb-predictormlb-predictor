@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Parker Messick",
+    "team_abbr": "CLE",
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "pick": "Over",
+    "line": 4.5,
+    "confidence": 0.78,
+    "proj_k": 5.1,
+    "k_per_9": 8.6,
+    "pick_odds": -130,
+    "over_odds": -130,
+    "under_odds": 102,
+    "game_id": 849817,
+    "result": null
+  },
+  {
+    "pitcher": "Drew Rasmussen",
+    "team_abbr": "TBR",
+    "home_abbr": "CLE",
+    "away_abbr": "TBR",
+    "pick": "Under",
+    "line": 5.5,
+    "confidence": 0.7,
+    "proj_k": 5.1,
+    "k_per_9": 7.6,
+    "pick_odds": -137,
+    "over_odds": 107,
+    "under_odds": -137,
+    "game_id": 849817,
+    "result": null
+  }
+]
