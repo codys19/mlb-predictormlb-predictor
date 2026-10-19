@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Cleveland Guardians",
+    "pick": "Over",
+    "line": 6.5,
+    "confidence": 0.8,
+    "pick_odds": -48,
+    "over_odds": -48,
+    "under_odds": 27,
+    "proj_total": 8.0,
+    "game_id": 849815,
+    "result": null
+  }
+]

@@ -11,6 +11,9 @@
     "home_pitcher": "Parker Messick",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 849817,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 1,
+    "away_score": 3
   }
 ]

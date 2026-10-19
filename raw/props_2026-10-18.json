@@ -13,7 +13,8 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 849817,
-    "result": null
+    "result": "L",
+    "actual_k": 3
   },
   {
     "pitcher": "Drew Rasmussen",
@@ -29,6 +30,7 @@
     "over_odds": 107,
     "under_odds": -137,
     "game_id": 849817,
-    "result": null
+    "result": "L",
+    "actual_k": 6
   }
 ]

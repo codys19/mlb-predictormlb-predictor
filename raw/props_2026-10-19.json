@@ -1,0 +1,18 @@
+[
+  {
+    "pitcher": "Freddy Peralta",
+    "team_abbr": "TBR",
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "pick": "Over",
+    "line": 4.5,
+    "confidence": 0.78,
+    "proj_k": 6.2,
+    "k_per_9": 10.5,
+    "pick_odds": 130,
+    "over_odds": 130,
+    "under_odds": -166,
+    "game_id": 849815,
+    "result": null
+  }
+]

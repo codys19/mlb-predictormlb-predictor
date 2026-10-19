@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "CLE",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Cleveland Guardians",
+    "pick_abbr": "CLE",
+    "pick": "Cleveland Guardians",
+    "confidence": 0.5698385271416443,
+    "pick_odds": 130,
+    "home_pitcher": "Freddy Peralta",
+    "away_pitcher": "Shawn Armstrong",
+    "game_id": 849815,
+    "result": null
+  }
+]
