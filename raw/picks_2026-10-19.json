@@ -11,6 +11,9 @@
     "home_pitcher": "Freddy Peralta",
     "away_pitcher": "Shawn Armstrong",
     "game_id": 849815,
-    "result": null
+    "result": "L",
+    "actual_winner": "TBR",
+    "home_score": 7,
+    "away_score": 3
   }
 ]
