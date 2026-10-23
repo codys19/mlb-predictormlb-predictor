@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Nick Martinez",
+    "team_abbr": "TBR",
+    "home_abbr": "MIL",
+    "away_abbr": "TBR",
+    "pick": "Over",
+    "line": 3.5,
+    "confidence": 0.78,
+    "proj_k": 4.1,
+    "k_per_9": 6.3,
+    "pick_odds": 148,
+    "over_odds": 148,
+    "under_odds": -192,
+    "game_id": 849805,
+    "result": null
+  },
+  {
+    "pitcher": "Jacob Misiorowski",
+    "team_abbr": "MIL",
+    "home_abbr": "MIL",
+    "away_abbr": "TBR",
+    "pick": "Under",
+    "line": 6.5,
+    "confidence": 0.55,
+    "proj_k": 6.4,
+    "k_per_9": 11.9,
+    "pick_odds": 102,
+    "over_odds": -130,
+    "under_odds": 102,
+    "game_id": 849805,
+    "result": null
+  }
+]

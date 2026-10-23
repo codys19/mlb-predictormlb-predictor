@@ -1,0 +1,17 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "TBR",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Tampa Bay Rays",
+    "pick": "Over",
+    "line": 6.5,
+    "confidence": 0.8,
+    "pick_odds": -110,
+    "over_odds": -110,
+    "under_odds": -109,
+    "proj_total": 9.5,
+    "game_id": 849805,
+    "result": null
+  }
+]

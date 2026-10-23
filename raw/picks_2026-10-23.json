@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "TBR",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "MIL",
+    "pick": "Milwaukee Brewers",
+    "confidence": 0.7069864504373076,
+    "pick_odds": -192,
+    "home_pitcher": "Jacob Misiorowski",
+    "away_pitcher": "Nick Martinez",
+    "game_id": 849805,
+    "result": null
+  }
+]
