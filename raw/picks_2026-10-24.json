@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "MIL",
+    "away_abbr": "TBR",
+    "home_name": "Milwaukee Brewers",
+    "away_name": "Tampa Bay Rays",
+    "pick_abbr": "MIL",
+    "pick": "Milwaukee Brewers",
+    "confidence": 0.7472567216209742,
+    "pick_odds": -120,
+    "home_pitcher": "Logan Henderson",
+    "away_pitcher": "Drew Rasmussen",
+    "game_id": 849802,
+    "result": null
+  }
+]

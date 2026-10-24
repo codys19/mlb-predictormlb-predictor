@@ -13,7 +13,8 @@
     "over_odds": 148,
     "under_odds": -192,
     "game_id": 849805,
-    "result": null
+    "result": "W",
+    "actual_k": 5
   },
   {
     "pitcher": "Jacob Misiorowski",
@@ -29,6 +30,7 @@
     "over_odds": -130,
     "under_odds": 102,
     "game_id": 849805,
-    "result": null
+    "result": "W",
+    "actual_k": 3
   }
 ]
