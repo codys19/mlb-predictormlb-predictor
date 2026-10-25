@@ -13,7 +13,8 @@
     "over_odds": -149,
     "under_odds": 117,
     "game_id": 849802,
-    "result": null
+    "result": "W",
+    "actual_k": 4
   },
   {
     "pitcher": "Logan Henderson",
@@ -29,6 +30,7 @@
     "over_odds": -127,
     "under_odds": 100,
     "game_id": 849802,
-    "result": null
+    "result": "L",
+    "actual_k": 4
   }
 ]

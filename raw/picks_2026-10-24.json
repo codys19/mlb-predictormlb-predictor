@@ -11,6 +11,9 @@
     "home_pitcher": "Logan Henderson",
     "away_pitcher": "Drew Rasmussen",
     "game_id": 849802,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 5,
+    "away_score": 4
   }
 ]
