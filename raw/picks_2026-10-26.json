@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "TBR",
+    "pick": "Tampa Bay Rays",
+    "confidence": 0.5626829841159107,
+    "pick_odds": -118,
+    "home_pitcher": "Freddy Peralta",
+    "away_pitcher": "Robert Gasser",
+    "game_id": 849804,
+    "result": null
+  }
+]

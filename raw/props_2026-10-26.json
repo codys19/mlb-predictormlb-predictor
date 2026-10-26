@@ -1,0 +1,34 @@
+[
+  {
+    "pitcher": "Freddy Peralta",
+    "team_abbr": "TBR",
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "pick": "Over",
+    "line": 4.5,
+    "confidence": 0.78,
+    "proj_k": 5.8,
+    "k_per_9": 10.5,
+    "pick_odds": -128,
+    "over_odds": -128,
+    "under_odds": 100,
+    "game_id": 849804,
+    "result": null
+  },
+  {
+    "pitcher": "Robert Gasser",
+    "team_abbr": "MIL",
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "pick": "Over",
+    "line": 3.5,
+    "confidence": 0.6,
+    "proj_k": 3.7,
+    "k_per_9": 5.1,
+    "pick_odds": 114,
+    "over_odds": 114,
+    "under_odds": -146,
+    "game_id": 849804,
+    "result": null
+  }
+]
