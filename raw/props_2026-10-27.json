@@ -1,0 +1,18 @@
+[
+  {
+    "pitcher": "Griffin Jax",
+    "team_abbr": "TBR",
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "pick": "Over",
+    "line": 3.5,
+    "confidence": 0.78,
+    "proj_k": 4.4,
+    "k_per_9": 7.1,
+    "pick_odds": -113,
+    "over_odds": -113,
+    "under_odds": -113,
+    "game_id": 849803,
+    "result": null
+  }
+]
