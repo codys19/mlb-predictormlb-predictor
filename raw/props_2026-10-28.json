@@ -1,0 +1,18 @@
+[
+  {
+    "pitcher": "Jacob Misiorowski",
+    "team_abbr": "MIL",
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "pick": "Over",
+    "line": 5.5,
+    "confidence": 0.78,
+    "proj_k": 6.4,
+    "k_per_9": 11.9,
+    "pick_odds": -140,
+    "over_odds": -140,
+    "under_odds": 110,
+    "game_id": 849799,
+    "result": null
+  }
+]

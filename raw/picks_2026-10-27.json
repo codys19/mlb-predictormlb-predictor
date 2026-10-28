@@ -11,6 +11,9 @@
     "home_pitcher": "Griffin Jax",
     "away_pitcher": "TBD",
     "game_id": 849803,
-    "result": null
+    "result": "W",
+    "actual_winner": "TBR",
+    "home_score": 4,
+    "away_score": 3
   }
 ]

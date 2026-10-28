@@ -1,0 +1,16 @@
+[
+  {
+    "home_abbr": "TBR",
+    "away_abbr": "MIL",
+    "home_name": "Tampa Bay Rays",
+    "away_name": "Milwaukee Brewers",
+    "pick_abbr": "MIL",
+    "pick": "Milwaukee Brewers",
+    "confidence": 0.5081044757112751,
+    "pick_odds": -155,
+    "home_pitcher": "Drew Rasmussen",
+    "away_pitcher": "Jacob Misiorowski",
+    "game_id": 849799,
+    "result": null
+  }
+]
