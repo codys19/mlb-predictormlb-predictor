@@ -11,6 +11,9 @@
     "home_pitcher": "Drew Rasmussen",
     "away_pitcher": "Jacob Misiorowski",
     "game_id": 849799,
-    "result": null
+    "result": "W",
+    "actual_winner": "MIL",
+    "home_score": 1,
+    "away_score": 4
   }
 ]
